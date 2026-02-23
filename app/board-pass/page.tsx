@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { boardPassQuestions } from '../data/boardPassQuestions'
 import RationaleFeedback from '../components/RationaleFeedback'
 import StrategyFeedback from '../components/StrategyFeedback'
-
+import { createBrowserClient } from '@supabase/ssr'
 export default function BoardPassPage() {
   const [questions, setQuestions] = useState<typeof boardPassQuestions>([])
 
@@ -18,6 +18,15 @@ export default function BoardPassPage() {
   const [score, setScore] = useState(0)
   const [attempted, setAttempted] = useState(0)
   const [missedTopics, setMissedTopics] = useState<Record<string, number>>({})
+  const supabase = createBrowserClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+)
+
+const handleLogout = async () => {
+  await supabase.auth.signOut()
+  window.location.href = '/login'
+}
 
 
  useEffect(() => {
@@ -190,7 +199,18 @@ if (!subject) {
   return (
     <main style={{ padding: 24, maxWidth: 700, margin: '0 auto' }}>
       <h1>Board Pass</h1>
-
+<button
+  onClick={handleLogout}
+  style={{
+    float: 'right',
+    backgroundColor: '#eee',
+    border: '1px solid #ccc',
+    padding: 6,
+    cursor: 'pointer'
+  }}
+>
+  Logout
+</button>
       <p style={{ fontWeight: 600 }}>
         Score: {score} / {attempted}
       </p>
