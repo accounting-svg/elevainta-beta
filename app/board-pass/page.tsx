@@ -99,13 +99,15 @@ const handleLogout = async () => {
 
   const totalQuestions = questions.length
 
-  const submitAnswer = (key: string) => {
-  if (!question) return
+  const submitAnswer = async (key: string) => {
+  if (!question || !subject) return
 
   setSelected(key)
   setAttempted(prev => prev + 1)
 
-  if (key === question.correctAnswer) {
+  const isCorrect = key === question.correctAnswer
+
+  if (isCorrect) {
     setScore(prev => prev + 1)
   } else {
     setMissedTopics(prev => ({
@@ -113,6 +115,15 @@ const handleLogout = async () => {
       [question.topic]: (prev[question.topic] || 0) + 1,
     }))
   }
+
+  // ✅ THIS IS THE FIX
+  await updatePerformance(
+    subject,
+    question.topic,
+    1,                         // attempted
+    isCorrect ? 1 : 0,         // correct
+    isCorrect ? 0 : 1          // missed
+  )
 
   setView('rationale')
 }
