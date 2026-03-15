@@ -1,34 +1,45 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Sleek, Architectural Progress Track */
+.progress-track {
+  width: 100%;
+  height: 12px;
+  background: #e0e0e0;
+  border-radius: 2px; /* Sharper edges for a technical, professional look */
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0;
 }
 
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Subtle Background Zones: Red (0-50), Yellow (50-80), Green (80-100) */
+.progress-track::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 100%;
+  background: linear-gradient(to right, 
+    rgba(239, 68, 68, 0.08) 0% 50%, 
+    rgba(234, 179, 8, 0.08) 50% 80%, 
+    rgba(34, 197, 94, 0.08) 80% 100%);
+  z-index: 1;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* The actual bar that moves */
+.progress-fill {
+  height: 100%;
+  transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+  position: relative;
+  z-index: 2;
 }
-.correct-block {
-  background-color: #e6f7ea;
-  border-left: 6px solid #2e7d32;
-  padding: 16px;
-  border-radius: 6px;
-  margin-bottom: 20px;
-}
-.board-trap-block {
-  background-color: #fdf6e3;
-  border-left: 6px solid #c9a227;
-  padding: 16px;
-  border-radius: 6px;
-  margin-bottom: 20px;
+
+/* Professional Zone Colors */
+.fill-red { background-color: #ef4444; }
+.fill-yellow { background-color: #eab308; }
+.fill-green { background-color: #22c55e; }
+
+/* Refined Blueprint Card */
+.blueprint-card {
+  background: #ffffff;
+  border: 1px solid #C5A46D;
+  border-radius: 4px; /* Matches the progress bar for a unified look */
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }

@@ -7,29 +7,21 @@ import { createBrowserClient } from '@supabase/ssr'
 export default function BoardPassPage() {
   const [answeredIds, setAnsweredIds] = useState<Set<string>>(new Set())
   const [questions, setQuestions] = useState<any[]>([]);
-  const [subject, setSubject] = useState<string | null>(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [selected, setSelected] = useState<string | null>(null);
-  const [view, setView] = useState<'question' | 'rationale' | 'strategy' | 'complete' | 'vault_flashcard' | 'create_experience'>('question');
-  const [score, setScore] = useState(0);
-  const [attempted, setAttempted] = useState(0);
-  const [sessionMissed, setSessionMissed] = useState<any[]>([]) ;
-  const [isFlipped, setIsFlipped] = useState(false);
-  const [customCounts, setCustomCounts] = useState<Record<string, number>>({});
+  const [subject, setSubject] = useState<string | null>(null)
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [selected, setSelected] = useState<string | null>(null)
+  const [view, setView] = useState<'question' | 'rationale' | 'strategy' | 'complete' | 'vault_flashcard' | 'create_experience'>('question')
+  const [score, setScore] = useState(0)
+  const [attempted, setAttempted] = useState(0)
+  const [sessionMissed, setSessionMissed] = useState<any[]>([]) 
+  const [isFlipped, setIsFlipped] = useState(false)
+  const [customCounts, setCustomCounts] = useState<Record<string, number>>({})
 
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL as string,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string
-  );
-const trackEvent = async (event: string) => {
-  const { data: { user } } = await supabase.auth.getUser();
-  if (!user) return;
+  )
 
-  await supabase.from('usage_events').insert({
-    user_id: user.id,
-    event: event
-  });
-};
   const categories = [
     'Oral Disease Mastery', 'Radiology & Structural Analysis', 'Clinical Execution & Materials', 
     'Pharmacology & Patient Safety', 'Prevention Science & Public Health', 'Ethics & Professional Practice', 'Anatomy & Physiology'
@@ -46,7 +38,6 @@ const trackEvent = async (event: string) => {
 
   // 15 QUESTION RANDOM BLUEPRINT
   const startAutomatedBlueprint = () => {
-    trackEvent("blueprint_start");
     const pool = [...boardPassQuestions]
       .sort(() => Math.random() - 0.5)
       .slice(0, 15);
@@ -57,7 +48,6 @@ const trackEvent = async (event: string) => {
 
   // CUSTOM EXPERIENCE LOGIC
   const startCustomExperience = () => {
-   trackEvent("custom_session_start"); 
     let pool: any[] = [];
     Object.entries(customCounts).forEach(([cat, count]) => {
       const catQuestions = boardPassQuestions
@@ -146,15 +136,13 @@ if (!subject) {
    <button 
   onClick={startAutomatedBlueprint}
   className="gold-button"
- style={{ 
-  width: '100%',
-  fontWeight: '700', // Made bolder
-  fontSize: '1.1rem', // Made larger
-  letterSpacing: '0.5px',
-  backgroundColor: '#C5A46D',
-  padding: '12px 0', // Added height
-  color: '#000000' // Solid black for readability
-}}
+  style={{ 
+    width: '100%',
+    fontWeight: '600',
+    letterSpacing: '0.5px',
+    backgroundColor: '#C5A46D',
+    color: '#171717'
+  }}
 >
   Suggested Blueprint
 </button>
@@ -168,22 +156,13 @@ if (!subject) {
             setCustomCounts({}); 
           }}
   className="secondary-button" 
- style={{ 
-  width: '100%',
-  border: '2px solid #C5A46D', // Thicker border
-  fontWeight: '700', 
-  fontSize: '1.1rem',
-  padding: '12px 0',
-  color: '#171717',
-  backgroundColor: '#ffffff'
-}}
+  style={{ border: '1px solid #C5A46D' }}
 >
   Create Your Own Experience
 </button>
-        {/* 3. REVIEW VAULT */}
+         {/* 3. REVIEW VAULT (Now Below Experience) */}
           <button 
             onClick={async () => { 
-              trackEvent("vault_review_start");
               const { data: { user } } = await supabase.auth.getUser();
               if (user) {
                 const { data } = await supabase
@@ -193,6 +172,7 @@ if (!subject) {
                   .order('mastery_level', { ascending: true });
                 
                 if (data && data.length > 0) {
+                  // This part shuffles the deck and resets the index for a fresh start
                   setQuestions(data.sort(() => Math.random() - 0.5));
                   setSubject("Opportunity Vault"); 
                   setCurrentIndex(0); 
@@ -200,60 +180,53 @@ if (!subject) {
                   setView('vault_flashcard'); 
                 } else {
                   alert("Your Vault is currently empty. Miss some questions to add them here!");
-                }
+               }
               }
-            }}
-            className="gold-button"
-           style={{ 
-  width: '100%',
-  backgroundColor: '#171717', 
-  color: '#FFFFFF', // Pure white is much easier to read than gold on black
-  fontWeight: '700',
-  fontSize: '1.1rem',
-  padding: '12px 0',
-  marginTop: '5px',
-  border: '1px solid #C5A46D' // Thin gold border to keep the theme
-}}
-          >
-            Review Opportunity Vault
-          </button>
-        </div>
-      </main>
-    );
-  }
+}
+  
+<button 
+  onClick={async () => { 
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) {
+      const { data } = await supabase
+        .from('opportunity_flashcards')
+        .select('*')
+        .eq('user_id', user.id)
+        .order('mastery_level', { ascending: true });
 
-  if (subject === "Custom Experience" && questions.length === 0) {
+      if (data && data.length > 0) {
+        setQuestions(data.sort(() => Math.random() - 0.5));
+        setSubject("Opportunity Vault"); 
+        setCurrentIndex(0); 
+        setIsFlipped(false);
+        setView('vault_flashcard'); 
+      } else {
+        alert("Your Vault is currently empty. Miss some questions to add them here!");
+      }
+    }
+  }}>
+  className="gold-button"
+  style={{ backgroundColor: '#171717', color: '#ccae7a', marginTop: '5px' }}
+>
+Review Opportunity Vault
+</button>
+
+if (subject === "Custom Experience" && questions.length === 0 && view !== 'complete') {
     return (
-      <main style={{ maxWidth: 600, margin: '40px auto', padding: '0 20px' }}>
-        <h2 style={{ textAlign: 'center', color: '#C5A46D', marginBottom: '30px', fontWeight: 'bold' }}>Customize Your Session</h2>
-        {categories.map(cat => {
-          const totalAvailable = boardPassQuestions.filter(q => q.subject === cat).length;
-          return (
-            <div key={cat} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 0', borderBottom: '1px solid #eee' }}>
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <span style={{ fontWeight: '700', color: '#171717' }}>{cat}</span>
-                <span 
-                  onClick={() => setCustomCounts(prev => ({ ...prev, [cat]: totalAvailable }))}
-                  style={{ fontSize: '0.8rem', color: '#C5A46D', cursor: 'pointer', textDecoration: 'underline' }}
-                >
-                  Select All ({totalAvailable})
-                </span>
-              </div>
-              <input 
-                type="number" min="0" max={totalAvailable}
-                value={customCounts[cat] || 0}
-                onChange={(e) => setCustomCounts(prev => ({ ...prev, [cat]: parseInt(e.target.value) || 0 }))}
-                style={{ width: '60px', textAlign: 'center', border: '2px solid #8a7550', fontWeight: 'bold' }}
-              />
-            </div>
-         );
-})}   
-      <button onClick={startCustomExperience} className="gold-button" style={{ width: '100%', marginTop: '30px', padding: '15px', fontWeight: '700' }}>
-          Start Custom Session
-        </button>
-        <button onClick={() => setSubject(null)} style={{ display: 'block', margin: '20px auto', background: 'none', border: 'none', color: 'grey', cursor: 'pointer' }}>
-          Cancel
-        </button>
+      <main style={{ maxWidth: 600, margin: '40px auto' }}>
+        <h2 style={{ textAlign: 'center', color: '#C5A46D' }}>Customize Your Session</h2>
+        {categories.map(cat => (
+          <div key={cat} style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0', borderBottom: '1px solid #eee' }}>
+            <span>{cat}</span>
+            <input 
+              type="number" min="0" max="20" placeholder="0"
+              onChange={(e) => setCustomCounts(prev => ({ ...prev, [cat]: parseInt(e.target.value) || 0 }))}
+              style={{ width: '60px', textAlign: 'center' }}
+            />
+          </div>
+        ))}
+        <button onClick={startCustomExperience} className="gold-button" style={{ width: '100%', marginTop: '30px' }}>Start Custom Session</button>
+        <button onClick={() => setSubject(null)} style={{ display: 'block', margin: '20px auto', background: 'none', border: 'none', color: 'grey', cursor: 'pointer' }}>Cancel</button>
       </main>
     );
   }
@@ -404,9 +377,10 @@ Session Analysis
           >
             Review Opportunity Vault Now
           </button>
-         <button onClick={() => setSubject(null)} className="gold-button" style={{ marginTop: 10, width: '100%' }}>Return to Concierge</button>
+          <button onClick={() => setSubject(null)} className="gold-button" style={{ marginTop: 10, width: '100%' }}>Return to Concierge</button>
         </div>
       )}
-    </main>
-  );
+</div>
+</main>
+)
 }
