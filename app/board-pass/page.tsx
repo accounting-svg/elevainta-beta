@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { boardPassQuestions } from '../data/boardPassQuestions'
+import { boardPassQuestions, SUBJECTS } from '../data/boardPassQuestions'
 import StrategyFeedback from '../components/StrategyFeedback'
 import { createBrowserClient } from '@supabase/ssr'
 
@@ -86,11 +86,19 @@ export default function BoardPassPage() {
         .select('subject')
         .eq('user_id', user.id);
 
+      const normalizeSubject = (raw: string): string => {
+        const match = SUBJECTS.find(s => s.toLowerCase() === raw.toLowerCase())
+        return match ?? raw
+      }
+
       let weakCategories: string[] = [];
       if (flashcards && flashcards.length > 0) {
         const catCounts: Record<string, number> = {};
         flashcards.forEach((f: any) => {
-          if (f.subject) catCounts[f.subject] = (catCounts[f.subject] || 0) + 1;
+          if (f.subject) {
+            const normalized = normalizeSubject(f.subject)
+            catCounts[normalized] = (catCounts[normalized] || 0) + 1
+          }
         });
         weakCategories = Object.entries(catCounts)
           .sort((a, b) => b[1] - a[1])
@@ -277,7 +285,7 @@ export default function BoardPassPage() {
               marginTop: '5px', border: '1px solid #C5A46D'
             }}
           >
-            Review Opportunity Vault
+            Review Flashcards
           </button>
           <p style={{ marginTop: 10, color: '#555', fontSize: '0.95rem' }}>
             Review flashcards and reinforce weak areas
@@ -611,10 +619,10 @@ export default function BoardPassPage() {
             className="gold-button"
             style={{ width: '100%', marginTop: '30px', backgroundColor: '#171717', color: '#C5A46D' }}
           >
-            Review Opportunity Vault Now
+            Review Flashcards
           </button>
           <button onClick={() => setSubject(null)} className="gold-button" style={{ marginTop: 10, width: '100%' }}>
-            Return to Concierge
+            Return Home
           </button>
         </div>
       )}
