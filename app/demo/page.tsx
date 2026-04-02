@@ -13,8 +13,11 @@ export default function DemoPage() {
   const [missedQuestions, setMissedQuestions] = useState<any[]>([])
   const [vaultIndex, setVaultIndex] = useState(0)
 const [isFlipped, setIsFlipped] = useState(false)
+const [explanation, setExplanation] = useState("")
+const [loadingExplain, setLoadingExplain] = useState(false)
 
   const question = questions[currentIndex]
+ 
 
   const startBlueprint = () => {
     const shuffled = [...demoQuestions].sort(() => Math.random() - 0.5).slice(0, 7)
@@ -29,7 +32,129 @@ const [isFlipped, setIsFlipped] = useState(false)
   const [questionsLocal, setQuestionsLocal] = useState(demoQuestions)
 
   const activeQuestion = questionsLocal[currentIndex]
+const handleExplain = async (shouldListen = false) => {
+  setLoadingExplain(true);
+  setExplanation("");
 
+  try {
+    const res = await fetch("/api/explain", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        question: activeQuestion.question,
+        correctAnswer: activeQuestion.correctAnswer,
+      }),
+    });
+
+    const data = await res.json();
+    const listenSpeech = new SpeechSynthesisUtterance(data.explanation);
+    listenSpeech.onend = () => {
+  if (shouldListen) {
+    handleListen();
+  }
+};
+   
+
+// reuse SAME voice logic as handleExplain
+const listenVoices = window.speechSynthesis.getVoices();
+
+const listenPreferredVoice =
+  listenVoices.find(v => v.name === "Samantha") ||
+  listenVoices.find(v => v.name === "Google US English") ||
+  listenVoices.find(v => v.name.includes("Google") && v.name.includes("Female")) ||
+  listenVoices.find(v => v.lang === "en-US" && v.name.toLowerCase().includes("female")) ||
+  listenVoices.find(v => v.lang === "en-US");
+
+if (listenPreferredVoice) listenSpeech.voice = listenPreferredVoice;
+
+listenSpeech.rate = 0.9;
+listenSpeech.pitch = 1.05;
+listenSpeech.volume = 1;
+
+if (window.speechSynthesis.speaking) {
+  window.speechSynthesis.cancel();
+}
+window.speechSynthesis.speak(listenSpeech);
+
+
+
+// ❌ do NOT speak if error text
+if (!data.explanation || data.explanation.includes("Error")) return;
+
+
+  } catch (error) {
+    console.error(error);
+    setExplanation("Something went wrong.");
+  }
+
+  setLoadingExplain(false);
+}; 
+const handleListen = () => {
+  const SpeechRecognition =
+    (window as any).SpeechRecognition ||
+    (window as any).webkitSpeechRecognition;
+
+  if (!SpeechRecognition) {
+    alert("Voice input not supported on this browser");
+    return;
+  }
+
+  const recognition = new SpeechRecognition();
+  recognition.continuous = false;
+  recognition.lang = "en-US";
+  recognition.interimResults = false;
+
+  recognition.onresult = async (event: any) => {
+    const transcript = event.results[0][0].transcript;
+
+    const res = await fetch("/api/explain", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        question: transcript,
+        correctAnswer: "",
+      }),
+    });
+
+  const data = await res.json();
+
+const listenSpeech = new SpeechSynthesisUtterance(data.explanation);
+
+const voices = window.speechSynthesis.getVoices();
+
+const preferredVoice =
+  voices.find(v => v.name === "Samantha") ||
+  voices.find(v => v.name === "Google US English") ||
+  voices.find(v => v.name.includes("Google") && v.name.includes("Female")) ||
+  voices.find(v => v.lang === "en-US" && v.name.toLowerCase().includes("female")) ||
+  voices.find(v => v.lang === "en-US");
+
+if (preferredVoice) listenSpeech.voice = preferredVoice;
+
+listenSpeech.rate = 0.9;
+listenSpeech.pitch = 1.05;
+listenSpeech.volume = 1;
+
+if (window.speechSynthesis.speaking) {
+  window.speechSynthesis.cancel();
+}
+
+listenSpeech.onend = () => {
+  setTimeout(() => {
+    handleListen();
+  }, 400);
+};
+
+window.speechSynthesis.speak(listenSpeech);
+};
+   
+
+  recognition.start();
+};
  const handleAnswer = (key: string) => {
   setSelected(key)
   setAttempted(prev => prev + 1)
@@ -75,14 +200,15 @@ const [isFlipped, setIsFlipped] = useState(false)
     : 0
 
   return (
-    <main style={{ padding: 24, maxWidth: 700, margin: '0 auto' }}>
+    <div style={{ maxWidth: 600, margin: '40px auto', textAlign: 'center' }}>
       {view === 'home' && (
         <main style={{ maxWidth: 600, margin: '40px auto', textAlign: 'center' }}>
           <h1 style={{ color: '#C5A46D', fontSize: '3.5rem' }}>Coach Elevé</h1>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', marginTop: '30px' }}>
-
-  {/* 1. WORKING BUTTON */}
+              
+        
+{/* 1. WORKING BUTTON */}
   <div>
     <button
       onClick={startBlueprint}
@@ -143,11 +269,10 @@ const [isFlipped, setIsFlipped] = useState(false)
     >
       Review Opportunity Vault
     </button>
-  </div>
-
-</div>
-        </main>
-      )}
+ </div>
+ </div>   
+</main>
+)}
 
       {(view === 'question' || view === 'rationale' || view === 'strategy') && questionsLocal.length > 0 && (
         <>
@@ -284,43 +409,204 @@ const [isFlipped, setIsFlipped] = useState(false)
 
 {/* REVIEW VAULT */}
 {view === 'vault' && missedQuestions.length > 0 && (
-  <div className="blueprint-card">
-    <h2 style={{ marginBottom: 20 }}>Review Opportunity Vault</h2>
+  <div className="blueprint-card" style={{ textAlign: 'center' }}>
 
-    <h3 style={{ color: '#C5A46D' }}>
+    {/* FLASHCARD */}
+    {view === 'vault' && (
+    <div
+      onClick={() => setIsFlipped(prev => !prev)}
+      style={{
+        border: '2px solid #C5A46D',
+        borderRadius: 12,
+        padding: 30,
+        minHeight: 180,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        cursor: 'pointer',
+        backgroundColor: isFlipped ? '#F8F5F0' : '#ffffff'
+      }}
+    >{!isFlipped ? (
+  <div>
+    <h3 style={{ color: '#C5A46D' }}>Concept</h3>
+    <p style={{ fontSize: '1.2rem', fontWeight: 600 }}>
       {missedQuestions[vaultIndex].topic}
-    </h3>
+    </p>
 
-    <p>{missedQuestions[vaultIndex].rationale}</p>
+    <button
+      onClick={(e) => {
+        e.stopPropagation()
+        setIsFlipped(true)
+      }}
+      style={{
+        marginTop: 14,
+        padding: '12px 0',
+        width: '100%',
+        backgroundColor: '#C5A46D',
+        color: '#000',
+        fontWeight: 700,
+        border: 'none',
+        borderRadius: 8,
+        fontSize: '0.95rem',
+        letterSpacing: '0.5px',
+        cursor: 'pointer',
+        boxShadow: '0 2px 6px rgba(0,0,0,0.15)'
+      }}
+    
+    >
+      Reveal Answer
+    </button>
+  </div>
+) : (
+  <div style={{ textAlign: 'left' }}>
+    <p>
+      {missedQuestions[vaultIndex].rationale
+        ?.replace(/^\*\*[A-D]\.\s.*?\*\*\s*/i, '')
+        ?.replace(/^[A-D]\.\s.*/i, '')
+      }
+    </p>
 
-    <div style={{ borderLeft: '4px solid #C5A46D', paddingLeft: 12, marginBottom: 20 }}>
+    <div style={{ borderLeft: '4px solid #C5A46D', paddingLeft: 10 }}>
       <strong>Memory Hook</strong>
       <p style={{ fontStyle: 'italic' }}>
         {missedQuestions[vaultIndex].memoryHook}
       </p>
     </div>
+  </div>
+)}
+</div>
+)}
 
-    <button
-      onClick={() => {
-        if (vaultIndex + 1 < missedQuestions.length) {
-          setVaultIndex(vaultIndex + 1)
-        } else {
-          setView('complete')
-        }
-      }}
-      className="gold-button"
-      style={{ width: '100%', marginBottom: 10 }}
-    >
-      Next Concept
-    </button>
+    {/* BUTTONS */}
 
-    <button
-      onClick={() => alert('Ask Coach Elevé voice preview coming soon')}
-      className="secondary-button"
-      style={{ width: '100%', marginBottom: 10 }}
-    >
-      Ask Coach Elevé
-    </button>
+     
+ <div style={{
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: 10,
+  marginTop: 10,
+  width: '100%',
+  maxWidth: 320,
+  marginLeft: 'auto',
+  marginRight: 'auto'
+}}>
+
+  
+
+
+  
+
+ <button
+  onClick={() => {
+    const updated = [...missedQuestions]
+    updated.splice(vaultIndex, 1)
+    setMissedQuestions(updated)
+    setIsFlipped(false)
+
+    if (updated.length === 0) {
+      setView('complete')
+      return
+    }
+
+    setVaultIndex(0)
+  }}
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 44,
+    width: 150,
+    padding: '0 16px',
+    border: '1.5px solid #C5A46D',
+    borderRadius: 6,
+    backgroundColor: '#fff',
+    fontWeight: 600,
+    fontSize: '0.95rem',
+    letterSpacing: '0.3px',
+    cursor: 'pointer',
+    boxShadow: '0 2px 6px rgba(0,0,0,0.1)'
+  }}
+>
+  <span style={{
+    backgroundColor: '#C5A46D',
+    color: '#000',
+    borderRadius: 4,
+    padding: '4px 8px',
+    marginRight: 8
+  }}>
+    ✓
+  </span>
+  Mastered
+</button>
+
+
+  <button
+    onClick={() => {
+      setIsFlipped(false)
+
+      if (vaultIndex + 1 < missedQuestions.length) {
+        setVaultIndex(vaultIndex + 1)
+      } else {
+        setView('complete')
+      }
+    }}
+    style={{
+ padding: '12px 16px',
+  backgroundColor: '#ffffff',
+  border: '1.5px solid #C5A46D',
+  borderRadius: 6,
+  height: 44,
+  width: 150,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontWeight: 600,
+  fontSize: '0.95rem',
+  letterSpacing: '0.3px',
+  cursor: 'pointer',
+  boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+  marginLeft: 6,
+  lineHeight: '1',
+ 
+}}
+  >
+    Next →
+  </button>
+
+    </div>
+    
+
+  <div
+    onClick={() => {
+  handleExplain(true);
+}}
+  style={{
+  width: '100%',
+  marginTop: 10,
+  display: isFlipped ? 'block' : 'none'
+}}
+>
+    
+   <div style={{ textAlign: 'center', marginTop: 20 }}>
+  <img
+    src="/coach-eleve-logo.png"
+    alt="Coach Elevé"
+    style={{
+      width: 110,
+      height: 110,
+      borderRadius: '50%',
+      objectFit: 'cover',
+     border: '2px solid #C5A46D'
+    }}
+  />
+
+  <div style={{ marginTop: 10, fontSize: '1.1rem', fontWeight: 500 }}>
+    Ask Coach Elevé
+ </div>
+</div>
+
+    </div>
 
     <button
       onClick={returnHome}
@@ -329,13 +615,14 @@ const [isFlipped, setIsFlipped] = useState(false)
         margin: '20px auto 0 auto',
         background: 'none',
         border: 'none',
-        color: 'grey',
+        color: 'blackS',
         cursor: 'pointer'
       }}
     >
       Return to Home Page
     </button>
-  </div>
+</div>
+ 
 )}
 
      {view === 'complete' && (
@@ -365,7 +652,7 @@ const [isFlipped, setIsFlipped] = useState(false)
       You experienced the Elevainta method: question logic, rationale, board trap, and memory hook.
     </p>
 
-    {/* 🔥 REVIEW VAULT BUTTON (ONLY IF MISSED QUESTIONS EXIST) */}
+    {/* REVIEW VAULT BUTTON (ONLY IF MISSED QUESTIONS EXIST) */}
     {missedQuestions.length > 0 && (
       <button
         onClick={() => setView('vault')}
@@ -410,6 +697,7 @@ const [isFlipped, setIsFlipped] = useState(false)
     </button>
  </div>
 )}
-</main>
+
+</div> 
 )
 }

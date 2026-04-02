@@ -1,10 +1,15 @@
 export const SUBJECTS = [
-  'Oral Disease Mastery',
-  'Radiology & Structural Analysis',
-  'Clinical Execution & Materials',
-  'Pharmacology & Patient Safety',
-  'Prevention Science & Public Health',
+  'Periodontics',
+  'Oral Pathology',
+  'Radiology',
+  'Head & Neck Anatomy',
+  'Pharmacology',
+  'Microbiology & Immunology',
+  'Community Health & Prevention',
+  'Nutrition',
   'Ethics & Professional Practice',
+  'Instrumentation',
+  'Dental Materials',
 ] as const
 export type Subject = typeof SUBJECTS[number]
 
@@ -31,7 +36,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
   id: "perio-001",
   type: "board",
 
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Periodontal Pocket Formation",
   difficulty: "medium",
   question: "What is the gingival sulcus called when it becomes pathologically deepened due to disease?",
@@ -57,7 +62,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
   id: "perio-002",
   type: "board",
 
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Gingival vs Periodontal Pocket",
   difficulty: "medium",
   question: "Which of the following best describes a gingival pocket?",
@@ -83,7 +88,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
   id: "perio-003",
   type: "board",
 
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Clinical Gingival Assessment",
   difficulty: "difficult",
   question: "Which statement regarding stippling is most accurate?",
@@ -108,7 +113,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
   id: "perio-004",
   type: "board",
 
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Osseous Defects",
   difficulty: "critical",
   question: "A patient presents with 6 mm interproximal probing depths on adjacent molars. Radiographs show a concave interproximal bone defect with facial and lingual walls remaining. Which defect is most likely present?",
@@ -132,7 +137,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-005",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Col Anatomy and Susceptibility",
   difficulty: "difficult",
   question: "Which factor best explains why the col area is particularly susceptible to periodontal breakdown?",
@@ -157,7 +162,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-006",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Necrotizing Periodontal Diseases",
   difficulty: "critical",
   question: "A 22-year-old patient presents with sudden gingival pain, spontaneous bleeding, fetid odor, metallic taste, and cratered anterior papillae covered by a gray pseudomembrane. What is the most likely diagnosis?",
@@ -182,7 +187,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-007",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Papillary Morphology",
   difficulty: "medium",
   question: "Interdental papillae appear enlarged, bulbous, and extend beyond their normal contour while still filling the embrasure space. How are these papillae best described?",
@@ -207,7 +212,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-008",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Papillary Trauma and Clefting",
   difficulty: "difficult",
   question: "Interdental papillae appear narrowed with a V-shaped notch extending toward the attached gingiva on the facial of #24. The patient reports aggressive brushing and snapping floss. What best describes this papillary appearance?",
@@ -232,7 +237,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-009",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Papillary Enlargement",
   difficulty: "medium",
   question: "Interdental papillae appear swollen, rounded, and over-contoured, completely filling the embrasure without bone loss. What best describes this condition?",
@@ -257,7 +262,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-010",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Marginal Gingival Contour",
   difficulty: "difficult",
   question: "Marginal gingiva appears rolled and lifebuoy-shaped around the cervical third of the teeth without attachment loss. What term best describes this appearance?",
@@ -282,7 +287,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-011",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Surgical Papillary Changes",
   difficulty: "critical",
   question: "Post-surgical papillae appear shortened, flat, and angular without inflammation. What best describes this condition?",
@@ -307,7 +312,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-012",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Papillary Height Loss",
   difficulty: "difficult",
   question: "Papillae between #8 and #9 appear shortened and fail to fully occupy the embrasure. There is no surgical history but prior inflammation and smoking. What best describes this appearance?",
@@ -331,7 +336,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-013",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Drug-Induced Gingival Enlargement",
   difficulty: "critical",
   question: "A patient taking nifedipine and phenytoin presents with firm, lobulated gingival overgrowth extending over posterior crowns with minimal bleeding. What best describes this condition?",
@@ -355,7 +360,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-014",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Gingival Crevicular Fluid",
   difficulty: "difficult",
   question: "Gingival crevicular fluid (GCF) volume is highest in patients with active periodontitis and lowest in those with healthy tissues. What does this indicate about GCF levels?",
@@ -379,7 +384,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-015",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Cementum vs Bone",
   difficulty: "difficult",
   question: "Which feature functionally differentiates cementum from alveolar bone?",
@@ -403,7 +408,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-016",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "PDL Fiber Groups",
   difficulty: "critical",
   question: "Which PDL fiber group is typically the first affected during early alveolar bone loss?",
@@ -427,7 +432,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-017",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "PDL Fiber Function",
   difficulty: "medium",
   question: "Which PDL fiber group is most numerous and primarily resists intrusive occlusal forces?",
@@ -451,7 +456,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-018",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Sharpey's Fibers",
   difficulty: "medium",
   question: "Which principal fiber group accounts for the greatest number of Sharpey's fibers in a healthy periodontium?",
@@ -475,7 +480,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-019",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Apical Fiber Function",
   difficulty: "critical",
   question: "Which PDL fiber group primarily resists extrusive forces at the root apex?",
@@ -499,7 +504,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-020",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Interradicular Fibers",
   difficulty: "medium",
   question: "Which PDL fiber group is found exclusively in multirooted teeth and stabilizes the furcation region?",
@@ -522,7 +527,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 },
 {
   id: "perio-021",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Gingival Fiber Groups",
   difficulty: "difficult",
   type: "application",
@@ -547,7 +552,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 
 {
   id: "perio-022",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Orthodontic Relapse",
   difficulty: "critical",
   type: "critical-thinking",
@@ -572,7 +577,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 
 {
   id: "perio-023",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Gingival Fiber Groups",
   difficulty: "difficult",
   type: "application",
@@ -597,7 +602,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 
 {
   id: "perio-024",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Periodontal Pocket Classification",
   difficulty: "critical",
   type: "application",
@@ -622,7 +627,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 
 {
   id: "perio-025",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Bleeding on Probing",
   difficulty: "critical",
   type: "critical-thinking",
@@ -647,7 +652,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-026",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Bleeding on Probing",
   difficulty: "critical",
   question: "A patient presents with no visible plaque or gingival enlargement, but bleeding on probing is noted across multiple sites using gentle calibrated probing force. What histologic change most directly explains this bleeding?",
@@ -672,7 +677,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-027",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Drug-Influenced Gingival Enlargement",
   difficulty: "critical",
   question: "A patient taking a calcium channel blocker presents with firm, fibrotic gingival overgrowth despite excellent oral hygiene. What is the most likely etiology?",
@@ -697,7 +702,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-028",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Recurrent Aphthous Stomatitis",
   difficulty: "medium",
   question: "A painful ulcer with a yellow-white center and red halo appears on nonkeratinized mucosa and heals within 10 days without scarring. What is the most likely diagnosis?",
@@ -722,7 +727,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-029",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Localized Aggressive Periodontitis",
   difficulty: "critical",
   question: "A 16-year-old with minimal plaque presents with rapid attachment loss localized to first molars and incisors and elevated Aggregatibacter actinomycetemcomitans levels. What is the diagnosis?",
@@ -747,7 +752,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-030",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Mucogingival Deformity",
   difficulty: "difficult",
   question: "A site shows no attached gingiva but no recession or interproximal attachment loss. How is this condition classified?",
@@ -772,7 +777,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-031",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Miller Classification",
   difficulty: "difficult",
   question: "Recession extends beyond the mucogingival junction with intact interdental papillae and no bone loss. What is the classification?",
@@ -797,7 +802,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-032",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Miller Classification",
   difficulty: "critical",
   question: "Recession extends beyond the mucogingival junction with mild interproximal bone loss and blunted papillae. What is the classification?",
@@ -822,7 +827,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-033",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Miller Classification",
   difficulty: "critical",
   question: "Severe recession extends beyond the mucogingival junction with complete loss of the interdental papilla and advanced interproximal bone loss. What is the classification?",
@@ -847,7 +852,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-034",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Iatrogenic Factors",
   difficulty: "medium",
   question: "An overhanging restoration contributing to plaque accumulation and localized inflammation is classified as what type of factor?",
@@ -872,7 +877,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-035",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Clinical Attachment Level",
   difficulty: "critical",
   question: "A site has a probing depth of 5 mm and documented 3 mm of facial recession. What is the clinical attachment level?",
@@ -897,7 +902,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-036",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Furcation Classification",
   difficulty: "difficult",
   question: "A Nabers probe enters a furcation slightly but does not pass through, and there is no radiographic evidence of involvement. What is the classification?",
@@ -922,7 +927,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-037",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Furcation Classification",
   difficulty: "critical",
   question: "A furcation allows complete probe passage and is clinically visible due to gingival recession. What is the classification?",
@@ -947,7 +952,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-038",
   type: "board",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Furcation Anatomy",
   difficulty: "medium",
   question: "Which teeth most commonly require furcation probing?",
@@ -972,7 +977,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-039",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Occlusal Trauma",
   difficulty: "medium",
   question: "Palpable vibration of a tooth during occlusal contact is known as what?",
@@ -997,7 +1002,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-040",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Osseous Defects",
   difficulty: "critical",
   question: "Radiographs show a window-like facial bone defect over a root with an intact alveolar crest. What is this defect called?",
@@ -1021,7 +1026,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-041",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Implant Types",
   difficulty: "critical",
   question: "An implant that traverses the mandible from the inferior border to the alveolar ridge and is secured with transosseous pins is classified as what type?",
@@ -1046,7 +1051,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-042",
   type: "difficult",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Implant Components",
   difficulty: "difficult",
   question: "Which implant component directly osseointegrates with bone and serves as the biologic anchor?",
@@ -1071,7 +1076,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-043",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Osseointegration",
   difficulty: "critical",
   question: "Osseointegration is best defined as what?",
@@ -1096,7 +1101,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-044",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Early Implant Failure",
   difficulty: "critical",
   question: "What is the earliest detectable clinical sign of potential implant failure?",
@@ -1121,7 +1126,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-045",
   type: "difficult",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Laser Safety Around Implants",
   difficulty: "difficult",
   question: "Which laser has been shown under proper protocol to be safe for use on or around dental implants?",
@@ -1146,7 +1151,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-046",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Acute Inflammation",
   difficulty: "medium",
   question: "Which white blood cell is most prevalent and active in the initial host response to acute periodontal infection?",
@@ -1170,7 +1175,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-047",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Cardinal Signs of Inflammation",
   difficulty: "medium",
   question: "Which list correctly identifies the five classic cardinal signs of inflammation?",
@@ -1195,7 +1200,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-048",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Inflammatory Mediators",
   difficulty: "medium",
   question: "Which inflammatory mediator primarily directs leukocytes to migrate toward a site of infection?",
@@ -1220,7 +1225,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-049",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Pro-Inflammatory Cytokines",
   difficulty: "critical",
   question: "Which cytokines are most predominant in periodontal tissue destruction and are also associated with adipose tissue inflammation?",
@@ -1245,7 +1250,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-050",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "IL-6 and IL-8",
   difficulty: "medium",
   question: "What is the role of IL-6 and IL-8 in periodontal disease?",
@@ -1270,7 +1275,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-051",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Prostaglandins",
   difficulty: "difficult",
   question: "Which prostaglandin is most associated with pain and alveolar bone resorption in periodontitis?",
@@ -1295,7 +1300,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-052",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Matrix Metalloproteinases",
   difficulty: "critical",
   question: "What is the primary function of matrix metalloproteinases (MMPs) in periodontal disease?",
@@ -1320,7 +1325,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-053",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "MMP-1 and MMP-8",
   difficulty: "critical",
   question: "MMP-1 and MMP-8 are best classified as what type of enzymes in periodontal disease?",
@@ -1345,7 +1350,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-054",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Microbial Shift",
   difficulty: "medium",
   question: "What microbial shift occurs as periodontal disease progresses from health to periodontitis?",
@@ -1369,7 +1374,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-055",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Red Complex Bacteria",
   difficulty: "critical",
   question: "All of the following are part of the red complex bacteria associated with periodontitis EXCEPT:",
@@ -1394,7 +1399,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-056",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Fusobacterium nucleatum",
   difficulty: "medium",
   question: "What is the primary role of Fusobacterium nucleatum in periodontal disease?",
@@ -1419,7 +1424,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-057",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Prevotella intermedia",
   difficulty: "medium",
   question: "Prevotella intermedia is best described as:",
@@ -1444,7 +1449,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-058",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Pregnancy Gingivitis",
   difficulty: "medium",
   question: "Prevotella intermedia contributes to pregnancy-associated gingivitis because:",
@@ -1469,7 +1474,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-059",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Campylobacter rectus",
   difficulty: "medium",
   question: "Campylobacter rectus in pregnancy is best described as:",
@@ -1494,7 +1499,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-060",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Acquired Pellicle",
   difficulty: "medium",
   question: "The first film to form on clean enamel after prophylaxis is:",
@@ -1519,7 +1524,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-061",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Healing After Flap Surgery",
   difficulty: "difficult",
   question: "The most common healing outcome after conventional periodontal flap surgery is:",
@@ -1544,7 +1549,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-062",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Periodontal Dressings",
   difficulty: "medium",
   question: "All of the following are true regarding periodontal dressings EXCEPT:",
@@ -1569,7 +1574,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-063",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Local Antimicrobials",
   difficulty: "critical",
   question: "Persistent 5–6 mm pockets after SRP are best treated with:",
@@ -1594,7 +1599,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-064",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Periodontal Agent Ingredients",
   difficulty: "medium",
   question: "All of the following pair periodontal agents correctly EXCEPT:",
@@ -1619,7 +1624,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-065",
   type: "critical-thinking",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Tetracycline Allergy",
   difficulty: "critical",
   question: "A patient allergic to tetracyclines requires local antimicrobial therapy. Which is appropriate?",
@@ -1644,7 +1649,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-066",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Suturing Purpose",
   difficulty: "medium",
   question: "The primary purpose of suturing in periodontal surgery is to:",
@@ -1669,7 +1674,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "perio-067",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Periodontics",
   topic: "Suture Types",
   difficulty: "medium",
   question: "All of the following are absorbable sutures EXCEPT:",
@@ -1693,7 +1698,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-001",
   type: "clinical-execution",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Instrumentation Strokes",
   difficulty: "medium",
   question: "During periodontal maintenance therapy, burnished deposits remain after initial instrumentation. Which clinician error most likely contributed to this outcome?",
@@ -1718,7 +1723,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-002",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Insertion Angulation",
   difficulty: "medium",
   question: "During insertion of a curette beneath the gingival margin, what angulation should be used to prevent tissue trauma?",
@@ -1743,7 +1748,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-003",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Removal Angulation",
   difficulty: "medium",
   question: "What is the ideal blade-to-tooth angulation for effective calculus removal during working strokes?",
@@ -1768,7 +1773,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-004",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Assessment Stroke",
   difficulty: "medium",
   question: "Residual burnished calculus was missed during assessment. Which technique error most likely occurred?",
@@ -1793,7 +1798,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-005",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Removal Stroke Technique",
   difficulty: "medium",
   question: "Tenacious deposits remain after initial instrumentation. What modification would most improve removal?",
@@ -1817,7 +1822,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-006",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Sickle Scaler Design",
   difficulty: "medium",
   question: "An instrument has two cutting edges per working end and a pointed tip. Which is the most appropriate clinical application?",
@@ -1841,7 +1846,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-007",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Sickle vs Jacquette",
   difficulty: "medium",
   question: "To improve adaptation in tight anterior contacts, which scaler design modification is most appropriate?",
@@ -1865,7 +1870,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-008",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Curette Design",
   difficulty: "medium",
   question: "An instrument has a rounded toe, rounded back, and semicircular cross-section. What is its primary use?",
@@ -1889,7 +1894,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-009",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "After Five Gracey",
   difficulty: "medium",
   question: "Which instrument modification improves access in deep periodontal pockets (≥5 mm)?",
@@ -1913,7 +1918,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-010",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Mini Five Gracey",
   difficulty: "medium",
   question: "Which instrument modification improves adaptation in narrow or tight posterior pockets?",
@@ -1937,7 +1942,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-011",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Micro Mini Five",
   difficulty: "medium",
   question: "Which instrument modification provides the thinnest blade for delicate deep narrow pockets?",
@@ -1961,7 +1966,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-012",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Working File",
   difficulty: "medium",
   question: "Which instrument is used to crush or roughen tenacious burnished calculus before scaling?",
@@ -1985,7 +1990,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-013",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "File Design",
   difficulty: "medium",
   question: "An instrument with a rectangular working end and multiple cutting edges at 90° to the shank is used to crush heavy calculus. What is it?",
@@ -2009,7 +2014,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-014",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Finishing File",
   difficulty: "medium",
   question: "Which instrument is used after curette instrumentation to smooth root surfaces?",
@@ -2033,7 +2038,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-015",
   type: "recall",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Gracey 1/2",
   difficulty: "medium",
   question: "The Gracey 1/2 curette is designed for which area?",
@@ -2057,7 +2062,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-016",
   type: "recall",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Gracey 3/4",
   difficulty: "medium",
   question: "The Gracey 3/4 curette is specifically designed for which area of the dentition?",
@@ -2081,7 +2086,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-017",
   type: "recall",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Gracey 5/6",
   difficulty: "medium",
   question: "The Gracey 5/6 curette is designed for which area?",
@@ -2105,7 +2110,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-018",
   type: "recall",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Gracey 7/8",
   difficulty: "medium",
   question: "The Gracey 7/8 curette is designed for which area?",
@@ -2129,7 +2134,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-019",
   type: "recall",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Gracey 9/10",
   difficulty: "medium",
   question: "The Gracey 9/10 curette is designed for which area?",
@@ -2153,7 +2158,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-020",
   type: "recall",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Gracey 11/12",
   difficulty: "medium",
   question: "The Gracey 11/12 curette is designed for which area?",
@@ -2177,7 +2182,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-021",
   type: "recall",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Gracey 13/14",
   difficulty: "medium",
   question: "The Gracey 13/14 curette is designed for which area?",
@@ -2201,7 +2206,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-022",
   type: "recall",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Gracey 15/16",
   difficulty: "medium",
   question: "The Gracey 15/16 curette is designed for which area?",
@@ -2225,7 +2230,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "inst-023",
   type: "recall",
-  subject: "Clinical Execution & Materials",
+  subject: "Instrumentation",
   topic: "Gracey 17/18",
   difficulty: "medium",
   question: "The Gracey 17/18 curette is designed for which area?",
@@ -2249,7 +2254,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-001",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Coefficient of Thermal Expansion",
   difficulty: "hard",
   question: "When comparing restorative materials, which property most accurately explains why microleakage may occur at the margins of a composite restoration when exposed to temperature changes?",
@@ -2273,7 +2278,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-002",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Knoop Hardness",
   difficulty: "hard",
   question: "Which statement best explains why enamel demonstrates a higher Knoop hardness number compared with dentin when measured under identical testing conditions?",
@@ -2298,7 +2303,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-003",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Knoop Hardness Ranking",
   difficulty: "medium",
   question: "When comparing dental materials using Knoop hardness values, which sequence correctly lists materials from highest to lowest hardness?",
@@ -2322,7 +2327,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-004",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Knoop Hardness Values",
   difficulty: "hard",
   question: "Which of the following materials has the lowest Knoop hardness value?",
@@ -2346,7 +2351,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-005",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Gelation",
   difficulty: "hard",
   question: "During an impression procedure, the material thickened rapidly before complete seating. Which factor most likely caused this problem?",
@@ -2370,7 +2375,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-006",
   type: "recall",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Yield Strength",
   difficulty: "medium",
   question: "Which property represents the point at which a material begins permanent deformation beyond its elastic limit?",
@@ -2394,7 +2399,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-007",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Zinc Phosphate Cement",
   difficulty: "hard",
   question: "During crown cementation, a clinician mixes a luting agent on a chilled glass slab using small powder increments to control heat production. Which characteristic justifies this technique?",
@@ -2418,7 +2423,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-008",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Zinc Oxide Eugenol",
   difficulty: "medium",
   question: "Which material provides a sedative effect on the pulp during temporary restoration placement?",
@@ -2442,7 +2447,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-009",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Calcium Hydroxide",
   difficulty: "hard",
   question: "A medicated liner is placed after a pinpoint pulpal exposure to stimulate reparative dentin formation. Which material was most likely used?",
@@ -2466,7 +2471,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-010",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Bonding Agents",
   difficulty: "medium",
   question: "Which agent is used to create microporosities in enamel for micromechanical retention during composite bonding?",
@@ -2490,7 +2495,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-011",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Pit and Fissure Sealants",
   difficulty: "medium",
   question: "Which preventive procedure is most appropriate for caries-free molars with deep pits and fissures?",
@@ -2514,7 +2519,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-012",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Coalesced Enamel",
   difficulty: "hard",
   question: "Smooth, shallow occlusal grooves without distinct pits and fissures are best described as which condition, and what is the implication for sealant placement?",
@@ -2538,7 +2543,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-013",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Sealant Classification",
   difficulty: "hard",
   question: "Which sealant classification provides superior wear resistance due to incorporation of inorganic filler particles?",
@@ -2562,7 +2567,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-014",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Amalgam Composition - Tin",
   difficulty: "hard",
   question: "What is the primary function of tin in dental amalgam composition?",
@@ -2586,7 +2591,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-015",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Stainless Steel Crown",
   difficulty: "medium",
   question: "Which restoration is most appropriate for a primary molar following pulpotomy with significant loss of coronal structure?",
@@ -2610,7 +2615,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-016",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Gold Alloy Inlay",
   difficulty: "medium",
   question: "Which type of restoration is fabricated outside the mouth, fits within cusp boundaries, and is cemented after try-in?",
@@ -2634,7 +2639,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-017",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Polishing Gold Restorations",
   difficulty: "hard",
   question: "Which polishing agents are most appropriate for cast gold restorations extraorally and intraorally?",
@@ -2658,7 +2663,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-018",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Implant Success",
   difficulty: "hard",
   question: "Which factor is the most critical determinant of long-term dental implant success?",
@@ -2682,7 +2687,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-019",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Impression Materials",
   difficulty: "medium",
   question: "Why is strict adherence to manufacturer’s directions essential when working with impression materials?",
@@ -2706,7 +2711,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-020",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Reversible Hydrocolloid",
   difficulty: "hard",
   question: "Which statement accurately describes gelation of reversible hydrocolloid (agar)?",
@@ -2730,7 +2735,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-021",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Hysteresis",
   difficulty: "hard",
   question: "The difference between liquefaction and gelation temperatures in reversible hydrocolloid represents which property?",
@@ -2754,7 +2759,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-022",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Alginate - Syneresis",
   difficulty: "hard",
   question: "An alginate impression left exposed to air shrinks and produces a smaller cast. Which phenomenon caused this distortion?",
@@ -2778,7 +2783,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-023",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Alginate Working Time",
   difficulty: "medium",
   question: "Which factors primarily control working and setting time of alginate?",
@@ -2802,7 +2807,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-024",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Alginate Temperature Effect",
   difficulty: "hard",
   question: "How does water temperature affect alginate setting characteristics?",
@@ -2826,7 +2831,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-025",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Nonaqueous Elastomers",
   difficulty: "hard",
   question: "Which classification describes impression materials that set by polymerization and contain no water component?",
@@ -2850,7 +2855,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-026",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Polysulfide",
   difficulty: "hard",
   question: "Which elastomeric impression material is brown, has a sulfur odor, and high tear strength?",
@@ -2874,7 +2879,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-027",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Vinyl Polysiloxane",
   difficulty: "hard",
   question: "Which impression material sets by addition polymerization with no byproduct release?",
@@ -2898,7 +2903,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-028",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Alginate Technique",
   difficulty: "hard",
   question: "Which technique combination minimizes distortion when taking alginate impressions?",
@@ -2922,7 +2927,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-029",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Gypsum Chemistry",
   difficulty: "hard",
   question: "Which compound forms the basis of all dental gypsum products before mixing with water?",
@@ -2946,7 +2951,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-030",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Gypsum Types",
   difficulty: "hard",
   question: "Which sequence correctly lists gypsum products in order of increasing strength and density?",
@@ -2971,7 +2976,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-031",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Coronal Polishing Technique",
   difficulty: "medium",
   question: "What is the appropriate pressure technique during coronal polishing to minimize heat and abrasion?",
@@ -2995,7 +3000,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-032",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Kerr's Rules of Thumb",
   difficulty: "hard",
   question: "Which statement aligns with Kerr’s Rules of Thumb for dental material manipulation?",
@@ -3019,7 +3024,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-033",
   type: "recall",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Hyperalgesia",
   difficulty: "medium",
   question: "What term describes an exaggerated pain response to stimulation?",
@@ -3043,7 +3048,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-034",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Potassium Nitrate",
   difficulty: "hard",
   question: "Which desensitizing agent reduces nerve excitability and is commonly used at 5% concentration?",
@@ -3067,7 +3072,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-035",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Fluoride Varnish",
   difficulty: "hard",
   question: "Which fluoride concentration is typical for professional varnish used in desensitization?",
@@ -3091,7 +3096,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-036",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Oxalate Agents",
   difficulty: "medium",
   question: "Which desensitizing agent forms calcium oxalate crystals to block dentinal tubules?",
@@ -3115,7 +3120,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-037",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "CPP-ACP",
   difficulty: "hard",
   question: "Which compound stabilizes calcium and phosphate ions to enhance remineralization?",
@@ -3139,7 +3144,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-038",
   type: "critical-thinking",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "CPP-ACP Contraindication",
   difficulty: "hard",
   question: "Which condition contraindicates use of CPP–ACP products?",
@@ -3163,7 +3168,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-039",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Fluoride Concentration",
   difficulty: "medium",
   question: "What fluoride concentration is found in professional desensitizing varnish?",
@@ -3187,7 +3192,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-040",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Glutaraldehyde",
   difficulty: "hard",
   question: "A reusable metal instrument is immersed for 10 hours in a chemical solution effective against spores, viruses, and fungi. The solution produces irritating fumes and is not recommended for surface disinfection. Which agent is described?",
@@ -3211,7 +3216,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-041",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Pyrophosphate",
   difficulty: "medium",
   question: "Which ingredient in tartar-control toothpaste binds calcium and magnesium ions to prevent supragingival calculus formation?",
@@ -3235,7 +3240,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-042",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Potassium Nitrate",
   difficulty: "medium",
   question: "Which ingredient in desensitizing toothpaste reduces dentinal hypersensitivity by interfering with nerve transmission?",
@@ -3259,7 +3264,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-043",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Stannous Fluoride",
   difficulty: "medium",
   question: "Which fluoride compound provides caries protection, antimicrobial effects, and dentinal desensitization through surface precipitate formation?",
@@ -3283,7 +3288,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-044",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Triclosan",
   difficulty: "hard",
   question: "Which dentifrice ingredient provides antibacterial and anti-inflammatory effects by inhibiting microbial enzyme activity?",
@@ -3307,7 +3312,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-045",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Cetylpyridinium Chloride",
   difficulty: "medium",
   question: "Which over-the-counter mouthrinse ingredient may cause extrinsic brown staining with prolonged use?",
@@ -3331,7 +3336,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-046",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Essential Oils",
   difficulty: "hard",
   question: "A mouthrinse containing thymol, menthol, eucalyptol, and methyl salicylate provides which primary therapeutic benefit?",
@@ -3355,7 +3360,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-047",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Chlorine Dioxide",
   difficulty: "medium",
   question: "Which mouthrinse ingredient neutralizes volatile sulfur compounds through oxidation rather than masking odor?",
@@ -3379,7 +3384,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-048",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Xylitol",
   difficulty: "medium",
   question: "Which sugar substitute inhibits Streptococcus mutans metabolism and reduces acid production?",
@@ -3403,7 +3408,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-049",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "GV Black Classification",
   difficulty: "medium",
   question: "A lesion on the interproximal surface of an anterior tooth that extends to the incisal edge is classified as which G.V. Black class?",
@@ -3427,7 +3432,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-050",
   type: "application",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "Sodium Fluoride",
   difficulty: "medium",
   question: "Which toothpaste ingredient enhances remineralization by forming fluorapatite within enamel?",
@@ -3451,7 +3456,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "mat-051",
   type: "mastery",
-  subject: "Clinical Execution & Materials",
+  subject: "Dental Materials",
   topic: "CPP-ACP Remineralization",
   difficulty: "hard",
   question: "Which compound enhances enamel remineralization by binding and stabilizing calcium and phosphate ions at the tooth surface?",
@@ -3475,7 +3480,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-001",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Supernumerary Teeth",
   difficulty: "medium",
   question: "A 9-year-old child presents for a routine radiographic exam. An unerupted, peg-shaped tooth-like structure is seen between the maxillary central incisors. Based on this presentation, which of the following is the most likely diagnosis?",
@@ -3498,7 +3503,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-002",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Supernumerary Teeth",
   difficulty: "medium",
   question: "A panoramic radiograph reveals an unerupted rudimentary tooth distal to the maxillary third molar. Which of the following best describes this finding?",
@@ -3521,7 +3526,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-003",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Dens Invaginatus",
   difficulty: "hard",
   question: "A maxillary lateral incisor presents radiographically with a 'tooth within a tooth' appearance and pulpal necrosis without trauma. Which anomaly is most likely?",
@@ -3545,7 +3550,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-004",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Root Anomalies",
   difficulty: "medium",
   question: "An unerupted maxillary canine displays a sharp root curvature greater than 45 degrees. Which anomaly is most likely?",
@@ -3568,7 +3573,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-005",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Gemination vs Fusion",
   difficulty: "medium",
   question: "A maxillary incisor appears bifid with one root and normal tooth count. Which anomaly is present?",
@@ -3592,7 +3597,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-006",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Gemination vs Fusion",
   difficulty: "medium",
   question: "A child presents with a wide mandibular incisor and reduced tooth count. Radiograph shows partially joined pulp chambers. Which anomaly is most likely?",
@@ -3615,7 +3620,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-007",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Tooth Surface Loss",
   difficulty: "medium",
   question: "Smooth saucer-shaped lesions on lingual maxillary anteriors in a patient with acid reflux are most likely caused by:",
@@ -3638,7 +3643,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-008",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Vascular Lesions",
   difficulty: "medium",
   question: "Bluish-purple blanching lesions on the ventral tongue of a 66-year-old are most likely:",
@@ -3661,7 +3666,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-009",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Palatal Lesions",
   difficulty: "medium",
   question: "Diffuse white hard palate with red pinpoint dots in a pipe smoker indicates:",
@@ -3684,7 +3689,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-010",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Candidiasis",
   difficulty: "medium",
   question: "Diffuse erythema under a maxillary denture worn overnight is most consistent with:",
@@ -3708,7 +3713,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-011",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Leukoplakia",
   difficulty: "medium",
   question: "A well-demarcated white plaque on the lateral border of the tongue does not wipe off and has been present for several months without trauma. What is the most likely diagnosis?",
@@ -3731,7 +3736,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-012",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Leukoedema",
   difficulty: "medium",
   question: "Diffuse bilateral milky-white buccal mucosa that fades when stretched is most consistent with:",
@@ -3754,7 +3759,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-013",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Linea Alba",
   difficulty: "medium",
   question: "A bilateral horizontal white line along the buccal mucosa at the occlusal plane is most likely:",
@@ -3778,7 +3783,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-014",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Candidiasis",
   difficulty: "medium",
   question: "White plaques that partially rub off revealing erythematous mucosa following antibiotic use are most consistent with:",
@@ -3801,7 +3806,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-015",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Denture Stomatitis",
   difficulty: "medium",
   question: "Diffuse erythema beneath a denture worn overnight is best managed initially by:",
@@ -3825,7 +3830,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-016",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Addison Disease",
   difficulty: "hard",
   question: "Diffuse brown oral pigmentation with bronzed skin and hypotension is most consistent with:",
@@ -3848,7 +3853,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-017",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Amalgam Tattoo",
   difficulty: "medium",
   question: "A bluish-gray macule near a restored molar with radiopaque particles visible on radiograph is most likely:",
@@ -3871,7 +3876,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-018",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Urticaria",
   difficulty: "medium",
   question: "Transient itchy raised wheals that resolve within hours are most consistent with:",
@@ -3894,7 +3899,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-019",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Geographic Tongue",
   difficulty: "medium",
   question: "Migrating erythematous patches with white borders on the dorsal tongue are most consistent with:",
@@ -3917,7 +3922,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-020",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Hairy Tongue",
   difficulty: "medium",
   question: "A brownish-black discoloration with elongated filiform papillae on the posterior dorsal tongue following bismuth use is most consistent with:",
@@ -3940,7 +3945,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-021",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Scarlet Fever",
   difficulty: "medium",
   question: "A child with fever, sore throat, sandpaper-like rash, and a \"strawberry tongue\" is most likely experiencing:",
@@ -3963,7 +3968,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-022",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Squamous Papilloma",
   difficulty: "medium",
   question: "A pedunculated, cauliflower-like lesion on the soft palate that is asymptomatic and stable is most consistent with:",
@@ -3986,7 +3991,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-023",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Hemangioma",
   difficulty: "medium",
   question: "A soft, compressible blue lesion that blanches on pressure in a child is most consistent with:",
@@ -4009,7 +4014,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-024",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Drug-Induced Gingival Hyperplasia",
   difficulty: "medium",
   question: "Firm, generalized gingival enlargement in a patient taking cyclosporine and nifedipine is most consistent with:",
@@ -4032,7 +4037,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-025",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Epulis Fissuratum",
   difficulty: "medium",
   question: "Redundant vestibular tissue folds associated with a long-term ill-fitting denture are most consistent with:",
@@ -4055,7 +4060,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-026",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Mucocele",
   difficulty: "medium",
   question: "A recurrent, fluctuant bluish lesion on the lower lip in a teenager is most consistent with:",
@@ -4078,7 +4083,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-027",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Herpes Zoster",
   difficulty: "hard",
   question: "Unilateral clustered ulcers on the palate and lip following a burning prodrome are most consistent with:",
@@ -4101,7 +4106,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-028",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Kaposi Sarcoma",
   difficulty: "hard",
   question: "Purple, non-blanching nodules on the hard palate in an HIV-positive patient are most consistent with:",
@@ -4124,7 +4129,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-029",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Systemic Lupus Erythematosus",
   difficulty: "hard",
   question: "Butterfly rash, photosensitivity, fatigue, and recurrent oral ulcers are most consistent with:",
@@ -4147,7 +4152,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-030",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Lichen Planus",
   difficulty: "medium",
   question: "Bilateral lace-like white striae on the buccal mucosa that do not wipe off are most consistent with:",
@@ -4170,7 +4175,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-031",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Sjögren’s Syndrome",
   difficulty: "hard",
   question: "Severe xerostomia, dry eyes, cervical caries, and use of cevimeline are most consistent with:",
@@ -4193,7 +4198,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-032",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Sjögren’s Physiology",
   difficulty: "hard",
   question: "Dry mouth and dry eyes in Sjögren’s syndrome are due to:",
@@ -4216,7 +4221,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-033",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Periapical Cemental Dysplasia",
   difficulty: "hard",
   question: "Radiolucent to radiopaque periapical lesions in vital mandibular anterior teeth of a middle-aged African American woman are most consistent with:",
@@ -4240,7 +4245,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-034",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Paget’s Disease",
   difficulty: "hard",
   question: "Cotton-wool radiopacities, ill-fitting dentures, increased hat size, and elevated alkaline phosphatase are most consistent with:",
@@ -4263,7 +4268,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-035",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Treacher Collins Syndrome",
   difficulty: "hard",
   question: "Bilateral zygomatic hypoplasia, downward slanting eyes, malformed ears, and conductive hearing loss indicate:",
@@ -4286,7 +4291,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-036",
   type: "recall",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Pathology Terminology",
   difficulty: "medium",
   question: "The suffix '-oma' most commonly indicates:",
@@ -4309,7 +4314,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-037",
   type: "recall",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Carcinoma",
   difficulty: "medium",
   question: "The term 'carcinoma' refers to a:",
@@ -4332,7 +4337,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-038",
   type: "recall",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Odontogenic Cyst Definition",
   difficulty: "medium",
   question: "An odontogenic cyst is best defined as a cyst arising from:",
@@ -4355,7 +4360,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-039",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Radicular Cyst",
   difficulty: "medium",
   question: "A non-vital tooth with a unilocular radiolucency at the apex most likely indicates:",
@@ -4378,7 +4383,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-040",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Odontogenic Keratocyst",
   difficulty: "hard",
   question: "A posterior mandibular radiolucency with parakeratinized lining and high recurrence rate is most consistent with:",
@@ -4401,7 +4406,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-041",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Primordial Cyst",
   difficulty: "medium",
   question: "A radiolucency in an area where a tooth never developed is most consistent with:",
@@ -4424,7 +4429,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-042",
   type: "application",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Residual Cyst",
   difficulty: "medium",
   question: "A radiolucency in an edentulous site years after extraction most likely represents:",
@@ -4447,7 +4452,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-043",
   type: "recall",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Neurologic Terminology",
   difficulty: "medium",
   question: "Difficulty forming or understanding language after a stroke is termed:",
@@ -4470,7 +4475,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-044",
   type: "recall",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Voice Disorders",
   difficulty: "medium",
   question: "Hoarseness and vocal strain without language or swallowing difficulty is termed:",
@@ -4493,7 +4498,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-045",
   type: "recall",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Respiratory Terminology",
   difficulty: "medium",
   question: "The term 'dyspnea' refers to:",
@@ -4516,7 +4521,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-046",
   type: "recall",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Clinical Terminology",
   difficulty: "medium",
   question: "Objective findings observed by a clinician are called:",
@@ -4539,7 +4544,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-047",
   type: "recall",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "True Cyst Definition",
   difficulty: "medium",
   question: "A true cyst is best defined as a:",
@@ -4562,7 +4567,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-048",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Langerhans Cell Histiocytosis",
   difficulty: "hard",
   question: "Pediatric jaw lesion with floating teeth appearance and Birbeck granules is most consistent with:",
@@ -4585,7 +4590,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-049",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Pemphigus Vulgaris",
   difficulty: "hard",
   question: "Painful desquamative gingivitis with a positive Nikolsky sign is most consistent with:",
@@ -4608,7 +4613,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-050",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Multiple Myeloma",
   difficulty: "hard",
   question: "Multiple punched-out radiolucencies of the jaw with Bence Jones proteins are most consistent with:",
@@ -4631,7 +4636,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "path-051",
   type: "mastery",
-  subject: "Oral Disease Mastery",
+  subject: "Oral Pathology",
   topic: "Geographic Tongue vs Erythroplakia",
   difficulty: "hard",
   question: "A 42-year-old male presents with a single red patch on the dorsal surface of his tongue. The lesion is oval, has a smooth, shiny surface, and appears to have lost filiform papillae. It has been present for three weeks without change in size or shape. The patient denies pain, irritation, or changes in taste. There is no white border, and no other lesions are noted. Which of the following is the most appropriate next step?",
@@ -4654,7 +4659,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-001",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Carbohydrates",
   difficulty: "medium",
   question: "A dental hygiene patient reports feeling unusually tired during morning classes and says she is thinking about cutting carbohydrates from her diet. Which statement best describes the body’s use of carbohydrates and the recommended daily intake for adults?",
@@ -4677,7 +4682,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-002",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Sugar Alcohols",
   difficulty: "medium",
   question: "A patient mentions switching to several 'sugar-free' products to reduce caries risk. Which statement best describes the characteristics of sugar alcohols used in these products?",
@@ -4700,7 +4705,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-003",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Sugar Conversions",
   difficulty: "easy",
   question: "How many grams of sugar are contained in one teaspoon of table sugar?",
@@ -4723,7 +4728,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-004",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Diet Definition",
   difficulty: "easy",
   question: "Which definition best reflects the correct meaning of the term 'diet' in health recommendations?",
@@ -4746,7 +4751,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-005",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Nutrients",
   difficulty: "easy",
   question: "Which definition best describes nutrients?",
@@ -4769,7 +4774,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-006",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Enriched Foods",
   difficulty: "medium",
   question: "Which term describes refined foods that have had specific nutrients added back after processing to replace what was lost?",
@@ -4792,7 +4797,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-007",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Fortified Foods",
   difficulty: "medium",
   question: "Which term describes adding nutrients that were not originally present in a food?",
@@ -4815,7 +4820,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-008",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Bioavailability",
   difficulty: "medium",
   question: "Which term describes the extent to which a nutrient is absorbed and utilized by the body?",
@@ -4838,7 +4843,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-009",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Organic Nutrients",
   difficulty: "medium",
   question: "In nutrition science, what does it mean when a nutrient is described as organic?",
@@ -4861,7 +4866,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-010",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Inorganic Nutrients",
   difficulty: "medium",
   question: "In nutrition science, what does it mean when a nutrient is classified as inorganic?",
@@ -4884,7 +4889,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-011",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Legumes",
   difficulty: "medium",
   question: "All of the following are considered legumes EXCEPT:",
@@ -4907,7 +4912,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-012",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Oral pH",
   difficulty: "medium",
   question: "Which value best represents the normal resting pH of the oral cavity?",
@@ -4930,7 +4935,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-013",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Caries Process",
   difficulty: "medium",
   question: "Which combination represents the essential requirements for dental caries formation?",
@@ -4953,7 +4958,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-014",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Thermic Effect of Food",
   difficulty: "hard",
   question: "Which concept describes the energy required for digestion, absorption, and metabolism of nutrients after eating?",
@@ -4976,7 +4981,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-015",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "BMI",
   difficulty: "medium",
   question: "Which statement best describes Body Mass Index (BMI)?",
@@ -4999,7 +5004,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-016",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Hypothalamus",
   difficulty: "medium",
   question: "Which brain structure regulates hunger, thirst, temperature, and homeostasis?",
@@ -5022,7 +5027,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-017",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Monosaccharides",
   difficulty: "hard",
   question: "Which statement correctly describes major monosaccharides?",
@@ -5045,7 +5050,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-018",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Disaccharides",
   difficulty: "hard",
   question: "Which pairing correctly identifies major disaccharides?",
@@ -5068,7 +5073,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-019",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Saccharin",
   difficulty: "medium",
   question: "Which artificial sweetener is most associated with a bitter or metallic aftertaste?",
@@ -5091,7 +5096,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-020",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Aspartame",
   difficulty: "hard",
   question: "Which artificial sweetener requires a PKU warning due to phenylalanine content?",
@@ -5114,7 +5119,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-021",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Acesulfame-K",
   difficulty: "medium",
   question: "Which artificial sweetener is heat-stable and suitable for cooking and baking?",
@@ -5137,7 +5142,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-022",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Neotame",
   difficulty: "hard",
   question: "Which statement correctly describes Neotame?",
@@ -5160,7 +5165,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-023",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Post-Eruptive Carbohydrate Effect",
   difficulty: "medium",
   question: "Which statement best describes a key post-eruptive effect of carbohydrate intake on dental tissues?",
@@ -5183,7 +5188,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-024",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "HbA1c Interpretation",
   difficulty: "hard",
   question: "Which statement correctly describes HbA1c interpretation?",
@@ -5206,7 +5211,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-025",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Obesity & Periodontal Disease",
   difficulty: "hard",
   question: "Which mechanism best explains how obesity may worsen periodontal breakdown?",
@@ -5229,7 +5234,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-026",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Thiamine Deficiency",
   difficulty: "hard",
   question: "Which deficiency is associated with neurologic changes, nystagmus, and cardiac abnormalities in chronic alcohol use?",
@@ -5252,7 +5257,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-027",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Vitamin B12 Deficiency",
   difficulty: "hard",
   question: "Which deficiency causes macrocytic anemia with neurologic symptoms in patients avoiding animal products?",
@@ -5275,7 +5280,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-028",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Vitamin C Deficiency",
   difficulty: "hard",
   question: "Which deficiency leads to gingival bleeding, petechiae, and impaired wound healing?",
@@ -5298,7 +5303,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-029",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Vitamin A Deficiency",
   difficulty: "hard",
   question: "Which nutritional deficiency best explains night blindness, xerophthalmia, hyperkeratinized oral mucosa, and delayed epithelial healing?",
@@ -5321,7 +5326,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-030",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Vitamin D & Bone Density",
   difficulty: "hard",
   question: "Which nutritional deficiency most likely contributes to generalized bone pain, increased periodontal bone loss, and delayed healing in patients with low sun exposure?",
@@ -5344,7 +5349,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-031",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Vitamin K & Bone Remodeling",
   difficulty: "hard",
   question: "Which deficiency is associated with delayed postoperative bone maturation and mild persistent bleeding following periodontal surgery, especially in patients with long-term antibiotic use?",
@@ -5367,7 +5372,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-032",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Iodine Deficiency",
   difficulty: "hard",
   question: "Which nutritional deficiency causes delayed tooth eruption, enlarged tongue, fatigue, and growth delay in children using non-iodized salt?",
@@ -5390,7 +5395,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-033",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Selenium & Antioxidant Defense",
   difficulty: "hard",
   question: "Which deficiency impairs glutathione peroxidase activity, increasing oxidative stress and prolonging periodontal inflammation?",
@@ -5413,7 +5418,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-034",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Folate Deficiency",
   difficulty: "hard",
   question: "Which nutritional deficiency is associated with smooth, erythematous tongue, fatigue, and long-term oral contraceptive use without neurologic symptoms?",
@@ -5436,7 +5441,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-035",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Chromium & Glucose Control",
   difficulty: "hard",
   question: "Which nutrient deficiency is most likely contributing to impaired insulin sensitivity, elevated fasting glucose, and exaggerated inflammatory response in a patient consuming a diet high in refined carbohydrates?",
@@ -5459,7 +5464,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-036",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Protein & Wound Healing",
   difficulty: "hard",
   question: "Which macronutrient deficiency most directly impairs collagen synthesis, fibroblast proliferation, and postoperative wound healing?",
@@ -5482,7 +5487,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-037",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Potassium & Electrolyte Balance",
   difficulty: "hard",
   question: "Which electrolyte imbalance is most commonly associated with diuretic use, muscle weakness, fatigue, and cardiac arrhythmias?",
@@ -5505,7 +5510,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-038",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Omega-3 & Inflammation",
   difficulty: "hard",
   question: "Which deficiency contributes to exaggerated periodontal inflammation despite excellent plaque control and absence of local irritants?",
@@ -5528,7 +5533,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-039",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Glycemic Index & Inflammation",
   difficulty: "hard",
   question: "Which dietary pattern most directly increases oxidative stress and inflammatory cytokine production, worsening periodontal inflammation?",
@@ -5551,7 +5556,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-040",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Dietary Fiber & Glycemic Control",
   difficulty: "hard",
   question: "Which nutritional deficiency contributes to glycemic instability, constipation, increased cravings, and exaggerated inflammatory response?",
@@ -5574,7 +5579,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-041",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Protein-Energy Malnutrition",
   difficulty: "hard",
   question: "Which nutritional concern most likely explains frailty, muscle weakness, unintentional weight loss, and delayed periodontal healing in older adults?",
@@ -5597,7 +5602,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "nut-042",
   type: "mastery",
-  subject: "Prevention Science & Public Health",
+  subject: "Nutrition",
   topic: "Hydration & Salivary Flow",
   difficulty: "hard",
   question: "Which nutrition-related issue most directly reduces salivary flow, buffering capacity, and increases cervical caries risk?",
@@ -5620,7 +5625,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-001",
   type: "recall",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "X-ray Properties",
   difficulty: "medium",
   question: "Which of the following describes the characteristics of X-rays that produce the greatest image quality and diagnostic strength?",
@@ -5644,7 +5649,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-002",
   type: "recall",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Electromagnetic Radiation",
   difficulty: "medium",
   question: "Which of the following best represents the speed of X-rays as they travel through space?",
@@ -5668,7 +5673,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-003",
   type: "recall",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "X-ray Tube Components",
   difficulty: "medium",
   question: "Which component of the X-ray tube supplies the electrons that are accelerated toward the target to produce X-radiation?",
@@ -5692,7 +5697,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-004",
   type: "recall",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "X-ray Tube Components",
   difficulty: "medium",
   question: "All of the following are components of the anode in the dental X-ray tube EXCEPT:",
@@ -5716,7 +5721,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-005",
   type: "recall",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Filtration",
   difficulty: "hard",
   question: "Which statement correctly describes the required total aluminum filtration for a dental X-ray unit operating at 70 kVp or higher?",
@@ -5740,7 +5745,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-006",
   type: "recall",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Filtration",
   difficulty: "medium",
   question: "Each aluminum disc used for added filtration in a dental X-ray tubehead is approximately how thick?",
@@ -5764,7 +5769,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-007",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Filtration Calculations",
   difficulty: "hard",
   question: "How many 0.5 mm aluminum discs are required to meet filtration standards for a dental X-ray machine operating below 70 kVp?",
@@ -5788,7 +5793,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-008",
   type: "recall",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Filtration vs Collimation",
   difficulty: "medium",
   question: "What is the primary function of the aluminum discs positioned within the dental X-ray tubehead?",
@@ -5812,7 +5817,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-009",
   type: "recall",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Electrical Impulses",
   difficulty: "medium",
   question: "How many X-ray impulses are produced per second in a standard dental X-ray unit operating on 60-cycle alternating current?",
@@ -5836,7 +5841,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-010",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Exposure Time and Density",
   difficulty: "medium",
   question: "A radiograph exposed at 1/2 second appears slightly darker than ideal. If exposure time is reduced to 1/4 second and all other factors remain constant, what will occur?",
@@ -5859,7 +5864,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-011",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Exposure Time and Density",
   difficulty: "medium",
   question: "A dental radiograph is exposed at 1/2 second, producing an image of ideal density. If exposure time is reduced to 1/4 second, how many impulses are produced, and how does this affect image density?",
@@ -5883,7 +5888,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-012",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "kVp and Image Quality",
   difficulty: "medium",
   question: "A patient presents with very dense bone structure and thick soft tissues in the posterior mandible. The initial radiograph appears light and lacks contrast. To improve image quality while maintaining exposure time and mA constant, which adjustment is most appropriate?",
@@ -5907,7 +5912,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-013",
   type: "recall",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Radiographic Density",
   difficulty: "medium",
   question: "All of the following factors influence the density of a dental radiograph EXCEPT:",
@@ -5931,7 +5936,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-014",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Contrast Scale",
   difficulty: "medium",
   question: "A bitewing radiograph displays fewer shades of gray and strong visual separation between enamel and dentin. Which image quality is demonstrated?",
@@ -5955,7 +5960,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-015",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Periodontal Radiographic Interpretation",
   difficulty: "medium",
   question: "A full-mouth radiographic series shows numerous subtle gray tones with minimal difference between enamel and bone densities. Which contrast scale is demonstrated?",
@@ -5979,7 +5984,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-016",
   type: "recall",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Beam Quality and Contrast",
   difficulty: "medium",
   question: "The quality of an X-ray beam, as demonstrated by image contrast, is primarily controlled by which exposure factor?",
@@ -6003,7 +6008,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-017",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Vertical Angulation Errors",
   difficulty: "medium",
   question: "A periapical radiograph shows teeth that appear significantly longer than their actual dimensions. The apices are visible, but the crowns appear stretched. Assuming proper receptor placement, which error most likely occurred?",
@@ -6027,7 +6032,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-018",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Horizontal Angulation Errors",
   difficulty: "medium",
   question: "During a bitewing exposure, the interproximal contacts appear overlapped on the radiograph. Which technical error most likely occurred?",
@@ -6051,7 +6056,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-019",
   type: "recall",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Radiographic Techniques",
   difficulty: "medium",
   question: "Which radiographic technique provides the most accurate representation of tooth length and surrounding bone dimensions?",
@@ -6075,7 +6080,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-020",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Inverse Square Law",
   difficulty: "medium",
   question: "If the distance between the X-ray source and receptor is doubled while all other settings remain constant, what happens to beam intensity?",
@@ -6099,7 +6104,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-021",
   type: "recall",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Automatic Processing",
   difficulty: "medium",
   question: "All of the following statements regarding automatic film processing are correct EXCEPT:",
@@ -6123,7 +6128,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-022",
   type: "recall",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Radiation Production",
   difficulty: "medium",
   question: "How many X-ray impulses are produced per second in a standard 60-cycle dental X-ray unit?",
@@ -6147,7 +6152,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-023",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Film Speed and Crystal Size",
   difficulty: "medium",
   question: "One film produces sharper detail but requires more radiation exposure. Another requires less exposure but appears grainier. What explains this difference?",
@@ -6171,7 +6176,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-024",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Panoramic Air Spaces",
   difficulty: "medium",
   question: "Radiolucent bands appear above maxillary apices and below the mandible on a panoramic radiograph. What is the most likely cause?",
@@ -6195,7 +6200,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-025",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Interproximal Caries Classification",
   difficulty: "medium",
   question: "A radiolucent lesion extends less than halfway through enamel toward the DEJ. How is this classified?",
@@ -6220,7 +6225,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-026",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Interproximal Caries Classification",
   difficulty: "medium",
   question: "A radiolucent lesion extends more than halfway through enamel but does not reach the dentinoenamel junction (DEJ). How is this lesion classified?",
@@ -6244,7 +6249,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-027",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Anterior Interproximal Caries",
   difficulty: "medium",
   question: "A radiolucent lesion on the mesial surface of an anterior tooth extends to the DEJ with minimal dentin involvement. How is this classified?",
@@ -6268,7 +6273,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-028",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Anterior Severe Caries",
   difficulty: "medium",
   question: "A radiolucent lesion on the distal surface of an anterior tooth extends deep into dentin approaching the pulp. How is this classified?",
@@ -6292,7 +6297,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-029",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Occlusal Caries Detection",
   difficulty: "medium",
   question: "An occlusal lesion is clinically visible as enamel opacity but is not radiographically detectable. How is it classified?",
@@ -6316,7 +6321,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-030",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Occlusal Dentin Caries",
   difficulty: "medium",
   question: "A radiolucent shadow appears beneath intact occlusal enamel and extends into outer dentin. How is this classified?",
@@ -6340,7 +6345,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-031",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Caries Classification – Occlusal",
   difficulty: "medium",
   question: "A bitewing radiograph of tooth #3 shows a large, irregular radiolucent area beneath the occlusal enamel that extends deep into dentin and approaches the pulp chamber. The enamel surface appears cavitated upon clinical inspection. How should this lesion be classified?",
@@ -6363,7 +6368,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-032",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Caries Identification – Buccal/Lingual",
   difficulty: "medium",
   question: "A periapical radiograph reveals a well-defined, circular radiolucency near the cervical third of the root on tooth #6. The surrounding lamina dura and alveolar crest appear normal. Clinical examination shows no interproximal caries. Which of the following best describes this radiographic finding?",
@@ -6386,7 +6391,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-033",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Caries Identification – Root Surface",
   difficulty: "medium",
   question: "A radiograph of tooth #30 shows a broad, irregular radiolucent area located apical to the cementoenamel junction (CEJ) on the mesial root surface. The lesion has an ill-defined, saucer-like appearance. The patient reports a history of gingival recession and xerostomia. Which of the following best describes this lesion?",
@@ -6409,7 +6414,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-034",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Cervical Burnout",
   difficulty: "medium",
   question: "A periapical radiograph of the mandibular premolar region reveals a well-defined, radiolucent band along the cervical area of several teeth near the cementoenamel junction (CEJ). The lamina dura and alveolar crest appear intact, and no clinical evidence of decay is present. Which of the following best explains this radiographic appearance?",
@@ -6432,7 +6437,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-035",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Cervical Abrasion",
   difficulty: "medium",
   question: "A radiograph of the mandibular canine region reveals a small, well-defined radiolucent notch along the cervical area of tooth #27. The patient reports a history of aggressive horizontal toothbrushing and uses a hard-bristled brush. The lamina dura and alveolar crest appear normal. Which of the following best explains this radiographic appearance?",
@@ -6455,7 +6460,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-035",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Cervical Abrasion",
   difficulty: "medium",
   question: "A radiograph of the mandibular canine region reveals a small, well-defined radiolucent notch along the cervical area of tooth #27. The patient reports a history of aggressive horizontal toothbrushing and uses a hard-bristled brush. The lamina dura and alveolar crest appear normal. Which of the following best explains this radiographic appearance?",
@@ -6478,7 +6483,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-036",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Traumatic Injuries – Luxation",
   difficulty: "medium",
   question: "A periapical radiograph of tooth #9 reveals widening of the periodontal ligament (PDL) space and displacement of the tooth from its alveolus following trauma. The lamina dura appears discontinuous, and no crown fracture is evident. Which of the following best describes this radiographic finding?",
@@ -6501,7 +6506,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-038",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "SLOB Rule",
   difficulty: "medium",
   question: "A periapical radiograph is taken of a mandibular premolar. A second radiograph is exposed with the tube head shifted mesially. On the second image, a small radiopaque object appears to have shifted mesially in relation to the tooth structure. Based on the SLOB rule, where is the object located?",
@@ -6524,7 +6529,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-039",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "SLOB Rule – Opposite Movement",
   difficulty: "medium",
   question: "A periapical radiograph of a maxillary first molar is taken. A second radiograph is exposed with the tube head shifted distally. On the second image, a separated endodontic file fragment appears to have shifted mesially relative to the crown of the tooth. According to the SLOB (Same-Lingual, Opposite-Buccal) rule, where is the fragment located?",
@@ -6551,7 +6556,7 @@ export const boardPassQuestions: BoardPassQuestion[] = [
 {
   id: "rad-041",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "SLOB Rule – Vertical Angulation",
   difficulty: "medium",
   question: "A periapical radiograph of a maxillary canine is taken. A second radiograph is made with the tube head positioned more superiorly (angled downward toward the tooth). On the second image, a small radiopaque object appears to have moved toward the incisal edge of the tooth compared with the first image. According to the SLOB rule, where is the object located?",
@@ -6578,7 +6583,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "rad-042",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Geometric Distortion and Magnification",
   difficulty: "medium",
   question: "A periapical radiograph of the mandibular left molars is taken during an evaluation for possible apical pathology. The resulting image shows both molars, but the crowns and roots appear magnified and slightly blurred, with widened periodontal ligament spaces that do not correlate clinically. The apices are captured, and no cone cutting or angulation issues are evident. The patient reports they remained still, and the clinician confirms proper vertical and horizontal angulations. Which error most likely occurred?",
@@ -6601,7 +6606,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "rad-043",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Object–Film Distance Error",
   difficulty: "medium",
   question: "A periapical radiograph of the mandibular anterior region is taken during an evaluation for vague pressure sensitivity. The resulting image shows the incisors appearing magnified, elongated, and slightly blurred, with the roots projected away from the surrounding bone. The apices are present, but fine bony detail is significantly reduced. The clinician confirms that vertical and horizontal angulations were correct, the patient remained still, and the PID was fully aligned with the aiming ring. Which error most likely occurred?",
@@ -6624,7 +6629,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "rad-044",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "PID Length and Beam Divergence",
   difficulty: "medium",
   question: "Two radiographs of the same patient are taken using identical exposure factors. One uses an 8-inch PID and the other uses a 16-inch PID. The image made with the 16-inch PID shows slightly sharper detail and less magnification. Which of the following best explains this difference?",
@@ -6647,7 +6652,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "rad-045",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Collimation and PID Length",
   difficulty: "medium",
   question: "A dental hygienist compares two radiographs of the same patient. One was taken with a short, round PID, and the other with a long, rectangular PID. Both were exposed at the same kVp and mA settings. The image made with the long, rectangular PID shows improved sharpness and reduced patient dose. Which of the following best explains this outcome?",
@@ -6670,7 +6675,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "rad-046",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Panoramic Errors and Intensifying Screens",
   difficulty: "medium",
   question: "A panoramic image taken in a dental office appears excessively light even though the exposure settings were correct and the film was processed properly. The hygienist inspects the cassette and finds no visible damage or fogging. Which of the following is the most likely cause of the radiographic error?",
@@ -6693,7 +6698,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "rad-047",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Digital Resolution and Spatial Detail",
   difficulty: "medium",
   question: "A dental hygienist compares two digital radiographs of the same patient. One image was taken with a high-resolution sensor set at 20 line pairs per millimeter, while the other was produced with a lower-resolution sensor at 10 line pairs per millimeter. Both images show correct exposure and contrast, but one allows clearer visualization of incipient interproximal caries. Based on this information, which of the following characteristics best explains the difference in diagnostic detail between the two images?",
@@ -6716,7 +6721,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "rad-048",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Digital Spatial vs Contrast Resolution",
   difficulty: "medium",
   question: "A dental hygienist is evaluating two digital imaging systems for use in a periodontal charting study. System X produces images with exceptional fine detail, while System Y allows for subtle differentiation between soft and hard tissues. Both are properly calibrated and use identical exposure settings. Which of the following best describes the primary difference between these two systems?",
@@ -6739,7 +6744,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "rad-049",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Digital Exposure Latitude",
   difficulty: "medium",
   question: "Two dental hygienists use different imaging systems to capture full-mouth series on patients with varying bone density. Hygienist A uses a conventional film-based system, while Hygienist B uses a digital system. Despite minor overexposure on one of the images, the digital radiograph remains diagnostically acceptable after brightness and contrast adjustment. Which of the following properties of digital imaging explains this outcome?",
@@ -6762,7 +6767,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "rad-050",
   type: "application",
-  subject: "Radiology & Structural Analysis",
+  subject: "Radiology",
   topic: "Digital Receptor Systems",
   difficulty: "medium",
   question: "A dental hygiene clinic is transitioning from traditional film radiography to digital imaging. During training, the instructor explains that one type of receptor uses a reusable plate that must be processed through a scanning device before viewing, while another type provides an instant image directly on the computer screen. Which of the following statements accurately distinguishes these two systems?",
@@ -7595,7 +7600,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-001",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Potency vs Efficacy",
   difficulty: "medium",
   question: "Two drugs produce the same therapeutic effect. Drug A requires 50 mg to achieve the desired outcome, while Drug B requires only 10 mg. What does this indicate about Drug B compared to Drug A?",
@@ -7622,7 +7627,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-002",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Potency",
   difficulty: "medium",
   question: "Two drugs produce the same therapeutic effect. Drug A requires 50 mg to achieve the desired outcome, while Drug B requires only 10 mg. What does this indicate about Drug B compared to Drug A?",
@@ -7649,7 +7654,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-003",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Efficacy",
   difficulty: "medium",
   question: "A patient with moderate postoperative pain is prescribed two different analgesic medications at separate times. After taking the maximum recommended dose of Drug A, the patient reports only mild relief. Later, after taking the maximum recommended dose of Drug B, the patient reports complete pain relief. What does this suggest about Drug B compared to Drug A?",
@@ -7676,7 +7681,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-004",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Efficacy Determination",
   difficulty: "medium",
   question: "During a clinical trial, several new pain medications are being compared. Each drug is given at various doses until no further increase in pain relief is observed. Which method best determines the efficacy of a drug?",
@@ -7703,7 +7708,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-005",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "First-Order Kinetics and Half-Life",
   difficulty: "medium",
   question: "A patient is prescribed aspirin for chronic joint pain. The drug follows first-order kinetics, meaning a constant percentage of the drug is eliminated per unit time. If the half-life of aspirin in this patient is 3 hours, how much of the drug remains in the body six hours after a single dose?",
@@ -7730,7 +7735,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-006",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "First-Pass Metabolism and Bioavailability",
   difficulty: "medium",
   question: "A patient is prescribed an oral medication that is extensively metabolized by the liver before reaching systemic circulation. The drug’s effectiveness decreases significantly due to rapid enzymatic activity involving the cytochrome P450 system. What process is primarily responsible for this reduced bioavailability?",
@@ -7757,7 +7762,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-007",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "First-Pass Metabolism and Bioavailability",
   difficulty: "medium",
   question: "A patient is prescribed an oral medication that is extensively metabolized by the liver before reaching systemic circulation. The drug’s effectiveness decreases significantly due to rapid enzymatic activity involving the cytochrome P450 system. What process is primarily responsible for this reduced bioavailability?",
@@ -7784,7 +7789,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-008",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Pharmacokinetics – Absorption",
   difficulty: "medium",
   question: "A 47-year-old patient is prescribed an oral antifungal medication. The clinician instructs the patient to take the drug with a small meal to improve absorption. During a follow-up, the patient reports that she has been crushing the tablets and taking them on an empty stomach with black coffee. Her symptoms have not improved despite adherence to dosing times. Which phase of pharmacokinetics most directly explains the drug’s reduced effectiveness in this situation?",
@@ -7811,7 +7816,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-010",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Pharmacokinetics – Biotransformation",
   difficulty: "medium",
   question: "A 62-year-old patient taking multiple medications develops signs of drug toxicity after starting a new prescription. The clinician explains that the patient’s liver enzymes are responsible for chemically altering drugs to prepare them for elimination. What is the term for this process in which drugs are converted into more water-soluble compounds in the liver?",
@@ -7838,7 +7843,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-011",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Pharmacokinetics – Excretion",
   difficulty: "medium",
   question: "A patient is prescribed a medication for hypertension. The drug is filtered at the glomerulus, partially reabsorbed in the renal tubules, and ultimately eliminated in the urine. The clinician reminds the patient to maintain adequate hydration to support proper drug removal. Which stage of pharmacokinetics is most directly responsible for eliminating this medication from the body?",
@@ -7865,7 +7870,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-012",
   type: "recall",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Fluoride Pharmacokinetics – Excretion",
   difficulty: "medium",
   question: "A 9-year-old dental patient reports using a fluoride rinse at home in addition to fluoridated community water. During a hygiene visit, the clinician explains that the body does not retain all the fluoride that is ingested. Which organ system is primarily responsible for the elimination of fluoride from the body?",
@@ -7892,7 +7897,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-013",
   type: "recall",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Pregnancy Drug Safety – Teratogenic Risk",
   difficulty: "medium",
   question: "All of the following drugs are considered unsafe for use during pregnancy due to their known or potential teratogenic effects except:",
@@ -7919,7 +7924,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-014",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Hypersensitivity Reactions – Drug Allergy",
   difficulty: "medium",
   question: "During a prophylaxis appointment, a 56-year-old patient reports developing widespread urticaria, facial swelling, and difficulty breathing approximately one hour after taking an antibiotic previously prescribed after scaling and root planing. The hygienist notes this reaction occurred despite the patient having tolerated the same medication a year ago without issue. What is the most likely explanation for this adverse reaction?",
@@ -7946,7 +7951,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-015",
   type: "recall",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Therapeutic Index",
   difficulty: "medium",
   question: "A dental hygiene student reviews a chart noting that Drug X has a therapeutic index of 2, while Drug Y has a therapeutic index of 20. Both drugs are used to manage inflammation. What does the higher therapeutic index of Drug Y suggest compared to Drug X?",
@@ -7973,7 +7978,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-016",
   type: "recall",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Routes of Administration",
   difficulty: "medium",
   question: "A dental patient presents documentation of a recent tuberculosis screening using the Mantoux method. The hygienist notes that the procedure involved injecting a small volume of purified protein derivative (PPD) just beneath the skin’s surface, creating a visible wheal. Which route of drug administration was used to deliver the TB test?",
@@ -8000,7 +8005,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-017",
   type: "recall",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Drug References",
   difficulty: "medium",
   question: "A dental hygiene student is reviewing drug reference tools to look up the brand name, generic name, indications, and side effects of a patient’s prescription medication. Which resource is specifically designed to provide this type of detailed drug information, including package insert data?",
@@ -8027,7 +8032,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-018",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Controlled Substances",
   difficulty: "medium",
   question: "During a dental hygiene appointment, a patient casually mentions using a recreational drug to “stay relaxed” before appointments. Upon further questioning, the patient admits to using a substance with no recognized medical use in the United States that must be obtained illegally. The hygienist consults the dentist, who documents the conversation in the patient record. Which DEA drug schedule does this substance most likely fall under?",
@@ -8054,7 +8059,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-019",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Controlled Substances",
   difficulty: "medium",
   question: "During a dental hygiene visit, a patient recovering from recent oral surgery reports that her pain medication “ran out too fast” and she called the office asking for a refill. The hygienist recalls that the medication was a narcotic classified as a Schedule II controlled substance. Which action is legally required for the dentist to prescribe more of this medication?",
@@ -8081,7 +8086,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-020",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Controlled Substances",
   difficulty: "medium",
   question: "A patient recovering from periodontal surgery contacts the dental office requesting a refill of Tylenol #3, which was prescribed for post-operative discomfort. The medication contains a combination of acetaminophen and codeine. The dental team confirms that the original prescription was written two weeks ago and is still valid. Which of the following statements about this medication is correct under federal controlled substance regulations?",
@@ -8108,7 +8113,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-021",
   type: "recall",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Drug Nomenclature",
   difficulty: "medium",
   question: "A patient reports taking “Advil” for chronic jaw pain related to TMD. When reviewing the medical history, the clinician documents the medication under its standardized name. Which of the following statements about drug naming is correct?",
@@ -8135,7 +8140,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-022",
   type: "recall",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Aspirin Therapeutic Effects",
   difficulty: "medium",
   question: "Aspirin is frequently used in dental settings due to its multiple therapeutic effects. All of the following are considered actions of aspirin except:",
@@ -8162,7 +8167,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-023",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Aspirin Pediatric Risk",
   difficulty: "medium",
   question: "A pediatric dental patient with a history of asthma presents for sealant placement. The parent mentions giving the child aspirin during a recent viral illness. The hygienist alerts the dentist due to concern over possible adverse reactions. Which of the following is a known risk of aspirin use in children, particularly those with viral infections or asthma?",
@@ -8189,7 +8194,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-024",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Salicylate Toxicity",
   difficulty: "moderate",
   question: "A patient undergoing non-surgical periodontal therapy reports taking “a lot of aspirin” for jaw pain over the last several days. She now complains of dizziness, ringing in her ears, rapid breathing, and nausea. Her blood pH is noted to be slightly acidic. Which of the following best describes the likely pharmacologic complication?",
@@ -8216,7 +8221,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-025",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Acetaminophen Therapeutic Effects",
   difficulty: "moderate",
   question: "A patient with a history of stomach ulcers is advised to avoid NSAIDs for postoperative discomfort following scaling and root planing. Instead, the clinician recommends acetaminophen. Which of the following best describes the primary therapeutic actions of acetaminophen?",
@@ -8243,7 +8248,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-026",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Acetaminophen Contraindications",
   difficulty: "moderate",
   question: "A patient scheduled for periodontal debridement reports taking over-the-counter acetaminophen for frequent headaches. Upon reviewing the health history, the hygienist notes the patient has a long-standing history of alcohol use and signs of liver dysfunction. Which type of patient is most at risk for complications with acetaminophen use?",
@@ -8270,7 +8275,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-027",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Opioid Antagonists and Overdose Management",
   difficulty: "moderate",
   question: "During a community oral health outreach event, a patient collapses in the dental screening tent. The patient is unresponsive, with shallow breathing and pinpoint pupils. A volunteer mentions the patient has a history of opioid use. EMS is called, and emergency personnel administer a drug that rapidly reverses the respiratory depression. All of the following are opioid antagonists used in this type of emergency except:",
@@ -8297,7 +8302,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-029",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Hypertension Classification",
   difficulty: "moderate",
   question: "A 63-year-old patient with a history of controlled type 2 diabetes arrives for a routine periodontal maintenance visit. She reports taking all medications as prescribed and denies any current symptoms. Her extraoral findings are unremarkable. Two blood pressure readings taken five minutes apart using a properly sized cuff yield averages of 152/94 mm Hg. Based on current American Heart Association classifications, how should this blood pressure be categorized?",
@@ -8324,7 +8329,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-030",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "ASA Physical Status Classification",
   difficulty: "moderate",
   question: "A 58-year-old patient presents for a limited exam after reporting localized discomfort around tooth #30. He denies chest pain, dizziness, shortness of breath, or medication changes. He drove himself to the appointment and reports feeling “totally fine.” His medical history includes controlled hyperlipidemia. Two properly taken blood pressure readings five minutes apart average 168/102 mm Hg. Based solely on the American Society of Anesthesiologists (ASA) physical status classification, how should this patient be categorized?",
@@ -8351,7 +8356,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-031",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "ASA Physical Status Classification – Diabetes",
   difficulty: "advanced",
   question: "A 67-year-old patient presents for a periodontal re-evaluation appointment. His medical history includes type 2 diabetes diagnosed 15 years ago. He reports taking insulin glargine nightly and metformin twice daily. His most recent A1C from a medical visit two weeks ago was 9.1%. He states he “usually feels okay” but admits that his blood sugar “runs high if I forget meals.” He reports controlled hypertension managed with lisinopril and denies any history of cardiac events. Today's blood pressure, taken twice with a correctly sized cuff, averages 146/88 mm Hg. His gait is slow but steady with no assistive devices. He denies chest pain, shortness of breath, dizziness, or recent hospitalization. Based on the American Society of Anesthesiologists (ASA) physical status classification, what is the MOST appropriate ASA status for this patient?",
@@ -8378,7 +8383,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-032",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "ASA Physical Status Classification – Controlled Diabetes",
   difficulty: "advanced",
   question: "A 72-year-old patient presents for a comprehensive periodontal evaluation. His medical history includes type 2 diabetes diagnosed 10 years ago. He reports taking metformin 1000 mg twice daily and “trying to watch carbs when I can.” His most recent A1C from a medical visit three months ago was 7.8%. He denies insulin use. He also reports a history of stage I chronic kidney disease, seasonal asthma controlled with as-needed albuterol, and mild hypertension managed with amlodipine. His blood pressure today, taken twice five minutes apart with an appropriate cuff, averages 138/84 mm Hg. He denies chest pain, shortness of breath at rest, recent hospitalizations, or any limitations in daily activities. Based solely on current ASA physical status guidelines, which classification is MOST appropriate for this patient?",
@@ -8405,7 +8410,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-033",
   type: "application",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "ASA Physical Status Classification – Multi-System Disease",
   difficulty: "advanced",
   question: "A 76-year-old patient presents for evaluation of generalized gingival tenderness. His medical history includes long-standing type 2 diabetes, chronic obstructive pulmonary disease (COPD), and hypertension. He reports that he “tries to take all his medications,” which include metformin, amlodipine, and an inhaled corticosteroid. He denies insulin use. He reports occasional shortness of breath when walking uphill but none at rest. He states he “gets winded” if he rushes but otherwise performs daily activities independently. His last A1C from four months ago was 8.6%. He recalls being told his kidney numbers were “borderline” last year. He denies hospitalizations in the past year. Today’s vital signs taken twice with an appropriate cuff show an average blood pressure of 162/96 mm Hg. His respiratory rate is 20 breaths/min, and oxygen saturation on room air is 92%. He is alert, oriented, and denies chest pain, dizziness, or current respiratory distress. Based on the ASA physical status classification system, which rating is MOST appropriate?",
@@ -8432,7 +8437,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-034",
   type: "emergency",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Medical Emergencies – Pulse Assessment",
   difficulty: "moderate",
   question: "A 29-year-old patient collapses in the reception area shortly before his scheduled prophylaxis appointment. He is unresponsive to verbal stimuli. A second provider brings an automated external defibrillator (AED) while you assess for breathing. You instruct a nearby assistant to call emergency services. You then prepare to check for a pulse. In this situation, which site is MOST appropriate for determining whether this patient has a detectable pulse?",
@@ -8459,7 +8464,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-036",
   type: "assessment",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Vital Signs ▸ Pulse Rate Interpretation",
   difficulty: "moderate",
   question: "A 22-year-old collegiate swimmer presents for a routine dental exam. He reports no medical conditions and takes no medications. His training schedule includes two swim practices per day, strength conditioning, and endurance intervals. He denies dizziness, fatigue, chest discomfort, or changes in exercise tolerance. During the extraoral assessment, his radial pulse is counted for 60 seconds and averages 48 beats per minute. His breathing is calm and unlabored, and he converses comfortably throughout the appointment. Based on this information, how should this pulse rate be interpreted?",
@@ -8486,7 +8491,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-037",
   type: "medical-risk",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Medical Emergencies ▸ Chest Pain Risk Assessment",
   difficulty: "moderate",
   question: "A 59-year-old patient presents for a scheduled periodontal maintenance appointment. His medical history includes controlled hyperlipidemia managed with rosuvastatin. He reports no history of myocardial infarction, angina, hypertension, or cardiac procedures. During the health history update, he casually mentions experiencing “tightness across the chest” twice in the past month while carrying laundry upstairs. He states the sensation lasted “maybe a minute,” resolved on its own, and he did not seek medical care. He denies shortness of breath at rest, dizziness, nausea, radiation of pain, or current symptoms. His vital signs today are within normal limits, and he expresses that he “feels fine now.” Based on this information, what is the MOST appropriate next step?",
@@ -8513,7 +8518,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-038",
   type: "medical-risk",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Antibiotic Prophylaxis ▸ Cardiac Conditions",
   difficulty: "moderate",
   question: "A 66-year-old patient presents for extensive periodontal debridement. His medical history includes hypertension controlled with losartan, hyperlipidemia managed with atorvastatin, and a history of rheumatic fever as a child. He reports undergoing a cardiac procedure “a few years ago” but is unsure of the exact name. He states, “I think they fixed a valve because it wasn’t working right.” He recalls being told he would “need antibiotics for some appointments,” but he has not consistently followed this advice and has not taken any premedication for today’s visit. He denies prosthetic joints, immunosuppressive conditions, or recent infections. His last medical check-up was 18 months ago. He is currently asymptomatic and denies chest pain, shortness of breath, or palpitations. Based on the available information, what is the BEST course of action regarding antibiotic prophylaxis?",
@@ -8540,7 +8545,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-039",
   type: "pharmacology",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Drug-Induced Conditions ▸ Gingival Hyperplasia",
   difficulty: "moderate",
   question: "A 64-year-old patient presents for evaluation of generalized anterior gingival enlargement that has gradually progressed over the past year. He reports difficulty flossing and occasional bleeding when brushing. His medical history includes hypertension, stable angina, and seasonal allergies. His medication list includes: Amlodipine, Atorvastatin, Loratadine as needed, and Low-dose aspirin. He denies recent medication changes, recreational drug use, or systemic symptoms. Clinical findings confirm firm, fibrotic gingival overgrowth involving both maxillary and mandibular anterior teeth without signs of acute infection. Based on this presentation, all of the following medications are associated with drug-induced gingival hyperplasia EXCEPT:",
@@ -8567,7 +8572,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-040",
   type: "pharmacology",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Drug-Induced Conditions ▸ Gingival Hyperplasia",
   difficulty: "moderate",
   question: "A 71-year-old patient presents for a periodontal evaluation after noticing gradual tissue enlargement around the anterior teeth. He reports difficulty maintaining home care due to tissue bulk. His medical history includes hypertension and supraventricular tachycardia. His current medications include: Cardizem, Amlodipine, Lorazepam at bedtime, Omeprazole, and Vitamin D supplement. He denies changes in medication dosage and reports consistent use for several years. Clinical examination reveals firm, fibrotic gingival overgrowth on both arches, most pronounced on the facial surfaces of the anterior teeth. No signs of acute infection are present. Based on this information, which medication in his list is MOST strongly associated with the gingival findings?",
@@ -8594,7 +8599,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-041",
   type: "emergency",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Medical Emergencies ▸ Orthostatic Hypotension",
   difficulty: "moderate",
   question: "A 54-year-old patient completes a periodontal maintenance appointment without complications. When the chair is returned to an upright position, he reports sudden lightheadedness and a sensation that “the room shifted.” He remains responsive, denies chest pain, and shows no signs of respiratory distress. Which chair position is MOST appropriate to manage this episode?",
@@ -8621,7 +8626,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-042",
   type: "clinical-foundations",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Patient Positioning ▸ Supine",
   difficulty: "moderate",
   question: "A 47-year-old patient is scheduled for a full-mouth periodontal charting appointment. To maintain airway patency and proper operator positioning, the patient is placed in the standard supine position before beginning instrumentation. At approximately what angle is the chair positioned when the patient is in true supine?",
@@ -8648,7 +8653,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-043",
   type: "emergency",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Medical Emergencies ▸ Postural Hypotension Management",
   difficulty: "moderate",
   question: "A 56-year-old patient becomes lightheaded after being brought upright at the end of a periodontal maintenance appointment. He remains conscious, denies chest pain, and shows no signs of respiratory distress. You recognize this as postural hypotension and prepare to reposition the dental chair to stabilize his circulation. To best manage this episode, at approximately what angle should the chair be placed?",
@@ -8675,7 +8680,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-044",
   type: "medical-risk",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Cardiovascular Conditions ▸ Congestive Heart Failure",
   difficulty: "moderate",
   question: "A 73-year-old patient presents for a limited exam due to increased fatigue over the past several weeks. He reports difficulty lying flat at night and says he sleeps in a recliner “because it feels easier to breathe.” He denies acute chest pain but notes he becomes short of breath when walking from the parking lot into the clinic. His ankles appear swollen, and he reports that his shoes have felt “tight” by evening for the past month. Medical history includes hypertension, type 2 diabetes, and a 20-year history of smoking (quit 10 years ago). Current medications include lisinopril, furosemide, and metoprolol. His vital signs today are stable, and he denies dizziness or lightheadedness during the appointment. Based on this presentation, which condition is MOST consistent with the patient’s symptoms?",
@@ -8702,7 +8707,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-045",
   type: "pharmacology",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Antibiotic Prophylaxis ▸ AHA Guidelines",
   difficulty: "moderate",
   question: "A 69-year-old patient presents for scaling and root planing of the mandibular posterior teeth. His medical history includes controlled hypertension, hyperlipidemia, and a past history of endocarditis. He reports having undergone “heart surgery” four years ago but cannot recall the specific procedure. He denies joint replacements and reports no immunosuppressive conditions. Based on current American Heart Association (AHA) recommendations, all of the following conditions require antibiotic prophylaxis EXCEPT:",
@@ -8729,7 +8734,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-046",
   type: "pharmacology",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Antibiotic Prophylaxis ▸ Correct Dosing",
   difficulty: "moderate",
   question: "A 62-year-old patient presents for periodontal debridement. His medical history includes a prosthetic aortic valve placed 5 years ago, hypertension, and mild chronic kidney disease (Stage II). The patient reports no medication allergies and states that his physician “mentioned needing antibiotics for certain procedures,” but he cannot remember the medication or dose. He arrives with a prescription bottle of amoxicillin 250 mg, labeled “take one capsule if needed before dental appointments,” with no additional instructions. He reports taking this single 250 mg capsule prior to today’s visit. Vital signs are stable, and the patient denies pain or acute symptoms. You confirm he has not taken any other antibiotics in the past month and does not take anticoagulants. Based on current AHA guidelines, what is the MOST appropriate action regarding today’s appointment?",
@@ -8756,7 +8761,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-047",
   type: "clinical-foundations",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Autonomic Control ▸ Cardiac Innervation",
   difficulty: "moderate",
   question: "A 61-year-old patient presents for a routine dental exam. His medical history includes controlled hypertension and mild anxiety. During the medical history update, he mentions occasional episodes of a “slow, calming heartbeat” during deep breathing exercises recommended by his physician. He denies chest pain, dizziness, or shortness of breath. Which cranial nerve provides parasympathetic innervation to the sinoatrial (SA) node and influences this physiological response?",
@@ -8783,7 +8788,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-048",
   type: "clinical-foundations",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Cardiac Conduction ▸ SA and AV Node Physiology",
   difficulty: "moderate",
   question: "A 68-year-old patient presents for a recall exam. His medical history includes controlled hypertension and a remote history of atrial fibrillation that resolved with medication years ago. He reports experiencing occasional episodes of “slow, heavy heartbeats” in the morning and “racing” sensations during mild exertion, though he has not mentioned these symptoms to his physician. He denies chest pain, dizziness, syncope, or shortness of breath. During the extraoral exam, his radial pulse is regular but alternates between a noticeably slow pattern and brief periods of rapid rate. You review his medical form and note no pacemaker or implanted devices. Which statement BEST explains the cardiac conduction physiology associated with this patient’s alternating slow and rapid heart rhythms?",
@@ -8810,7 +8815,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-049",
   type: "emergency",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Medical Emergencies ▸ Pulseless Ventricular Tachycardia",
   difficulty: "moderate",
   question: "A 58-year-old patient is checking out at the front desk after completing nonsurgical periodontal therapy. While speaking with staff, he suddenly stops mid-sentence, becomes pale, and collapses to the floor. He does not respond to verbal stimulation. You assess breathing and note shallow, irregular respirations. A second provider retrieves the emergency kit and AED while you check for a carotid pulse. After 10 seconds, you are unable to feel a definite pulse. The AED pads are placed, and the device begins rhythm analysis. The screen indicates a rapid, wide-complex rhythm consistent with ventricular tachycardia. According to current emergency guidelines, what is the MOST appropriate immediate action?",
@@ -8837,7 +8842,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-050",
   type: "emergency",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Medical Emergencies ▸ Myocardial Infarction Recognition",
   difficulty: "moderate",
   question: "A 71-year-old male presents for a limited exam due to persistent fatigue and mild chest pressure over the past two days. He reports that the discomfort began after mowing his yard and felt like a “heavy squeezing” across the middle of his chest. He assumed it was indigestion and rested, but the pressure has continued intermittently. He denies radiation of pain to the jaw or arm but notes slight shortness of breath when lying flat. He states he is “not feeling right today” and has been unusually tired. His medical history includes hypertension, type 2 diabetes, and hyperlipidemia. Medications include lisinopril, metformin, and atorvastatin. Vital signs: BP 158/92 mm Hg, pulse 104 bpm and irregular, respirations 20 per minute. Extraoral exam reveals slight pallor and cool skin. The patient is alert but appears fatigued. Based on this presentation, what condition is MOST strongly suspected?",
@@ -8864,7 +8869,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-051",
   type: "emergency",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Medical Emergencies ▸ Myocardial Ischemia Recognition",
   difficulty: "moderate",
   question: "A 66-year-old male presents for periodontal maintenance therapy. During the appointment, he becomes unusually quiet and slightly pale, with rapid breathing. He wipes sweat from his forehead and reports sudden chest pressure, shortness of breath, and feeling 'not right.' His medical history includes hypertension, hyperlipidemia, and a 40-year smoking history. Medications include lisinopril and atorvastatin. Vital signs: BP 154/88 mm Hg, pulse 112 bpm, respirations 24 per minute, skin cool and moist. Based on this presentation, what condition is MOST strongly suspected?",
@@ -8891,7 +8896,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-052",
   type: "emergency",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Medical Emergencies ▸ Stable Angina Management",
   difficulty: "moderate",
   question: "A 72-year-old male presents for a periodontal maintenance appointment. While reviewing his medical history, he reports occasional episodes of chest tightness during exertion that resolve with rest. Midway through treatment, he becomes visibly tense and reports mid-sternal chest pressure. He denies sharp pain or radiation of discomfort. Medical history includes hypertension, hyperlipidemia, and stable angina. He confirms possession of his emergency medications. Vital signs: BP 150/84 mm Hg, pulse 98 bpm. What is the most appropriate immediate management?",
@@ -8918,7 +8923,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-053",
   type: "medical-risk",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Cardiovascular Surgery ▸ CABG Dental Considerations",
   difficulty: "moderate",
   question: "A 68-year-old male presents for a periodontal maintenance appointment four months after undergoing triple coronary artery bypass graft (CABG) surgery. His medical history includes hypertension, hyperlipidemia, and stable type 2 diabetes. Medications include metoprolol, atorvastatin, metformin, and low-dose aspirin. He reports feeling much better since surgery, with no current chest discomfort, dyspnea, or fatigue. He has resumed light activity but has not yet returned for his scheduled six-month cardiology follow-up. Vital signs: BP 142/82 mm Hg, pulse 78 bpm, respirations 16 per minute. He requests scaling and root planing for teeth #2–4 due to persistent bleeding and inflammation. What is the MOST appropriate course of action regarding elective periodontal treatment?",
@@ -8945,7 +8950,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-054",
   type: "pharmacology",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Antibiotic Prophylaxis ▸ Prosthetic Heart Valves",
   difficulty: "moderate",
   question: "A 73-year-old female presents for periodontal maintenance. Her history includes hypertension, atrial fibrillation, and a bioprosthetic aortic valve replacement completed 14 months ago. She reports consistent cardiology follow-ups and states her cardiologist told her everything has healed. She denies chest pain, dyspnea, or recent hospitalization. Medications include metoprolol, low-dose aspirin, and atorvastatin. Vital signs: BP 138/82 mm Hg, pulse 72 bpm, respirations 14 per minute. She is scheduled for full-mouth periodontal maintenance with subgingival instrumentation. What is the MOST appropriate protocol regarding antibiotic premedication?",
@@ -8972,7 +8977,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-055",
   type: "clinical-foundations",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Neurologic Emergencies ▸ Cerebrovascular Accident",
   difficulty: "moderate",
   question: "A 69-year-old male presents for periodontal maintenance. His medical history includes hypertension and controlled type 2 diabetes. He expresses concern about his brother’s recent stroke and asks whether periodontal disease can directly cause a stroke. He denies neurological symptoms such as facial drooping, vision changes, or sudden weakness. Vital signs: BP 156/92 mm Hg, pulse 84 bpm, respirations 16 per minute. Periodontal examination reveals generalized 5–6 mm pockets with bleeding on probing and moderate plaque accumulation. Which of the following is the direct cause of a cerebrovascular accident (CVA)?",
@@ -8999,7 +9004,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-056",
   type: "medical-risk",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Neurologic Conditions ▸ Seizure Trigger Management",
   difficulty: "moderate",
   question: "A 43-year-old patient with a history of epilepsy presents for periodontal therapy. He reports experiencing a generalized tonic–clonic seizure two months ago after missing several doses of his anticonvulsant medication. His current medications include levetiracetam and sertraline. He reports feeling “stable lately” but admits to occasionally forgetting morning doses when rushing to work. During the appointment, he becomes increasingly anxious when the ultrasonic scaler is turned on, stating the “buzzing throws me off.” His vital signs are within normal limits, and no prodromal signs are present. Which action is MOST appropriate to minimize seizure risk during today’s appointment?",
@@ -9026,7 +9031,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-057",
   type: "pharmacology",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Psychiatric Medications ▸ Lithium Considerations",
   difficulty: "moderate",
   question: "A 57-year-old patient presents for nonsurgical periodontal therapy. His medical history includes bipolar disorder managed with lithium, hypothyroidism, and hypertension controlled with hydrochlorothiazide. He reports stable mood and denies recent medication changes. During the assessment, the hygienist plans to administer local anesthesia containing epinephrine. The patient shows no signs of acute distress, and vital signs are stable. Which consideration is MOST important for safe management of this patient?",
@@ -9053,7 +9058,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-058",
   type: "medical-risk",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Infectious Disease ▸ HIV Immunosuppression Management",
   difficulty: "moderate",
   question: "A 38-year-old patient with a known history of HIV presents for evaluation of painful red patches on the palate and tongue. He reports missing doses of his antiretroviral therapy during the past three weeks due to insurance issues. He complains of fatigue, weight loss, and occasional night sweats. His most recent CD4 count and viral load are unknown. Intraoral examination reveals erythematous, depapillated areas with surrounding white pseudomembrane that can be wiped away. Which management approach is MOST appropriate?",
@@ -9080,7 +9085,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "pharm-059",
   type: "emergency",
-  subject: "Pharmacology & Patient Safety",
+  subject: "Pharmacology",
   topic: "Medical Emergencies ▸ Hyperventilation Management",
   difficulty: "moderate",
   question: "A 46-year-old patient with a history of severe panic disorder arrives for periodontal debridement. She reports that dental appointments often cause shaking, dizziness, and fear of “passing out.” Her medical history includes mild asthma, panic disorder treated with alprazolam as needed, and no cardiovascular disease. During the health history review, she begins breathing rapidly, reporting tingling in her fingers and a feeling of “lightness.” Her vital signs show mild tachycardia but are otherwise stable. Which action is MOST appropriate?",
@@ -9107,7 +9112,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-001",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Spirochetes ▸ Diagnostic Microscopy",
   difficulty: "moderate",
   question: "A 32-year-old patient presents with painless ulcers on the oral mucosa that appeared two weeks ago and have not resolved. The lesions are firm, round, and non-tender. The patient denies recent trauma or chemical exposure. Standard Gram staining and light microscopy fail to reveal any organisms. The clinician decides to use a special microscopic technique that allows visualization of thin, helical bacteria exhibiting corkscrew-like motion. Which diagnostic method is most appropriate for identifying the causative organism?",
@@ -9134,7 +9139,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-002",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Anaerobes ▸ Necrotizing Periodontal Infections",
   difficulty: "moderate",
   question: "A 26-year-old patient reports spontaneous gingival bleeding and severe oral malodor. The gingiva appears ulcerated and cratered at the interdental papillae, with a gray pseudomembrane present. The patient recently experienced significant stress and irregular sleep patterns. Microscopic examination reveals numerous gram-negative obligate anaerobic rods. Which microorganism is most likely predominant in this infection?",
@@ -9161,7 +9166,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-003",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Anaerobes ▸ Collagen Destruction",
   difficulty: "moderate",
   question: "A 41-year-old patient presents with chronic periodontitis and 6–8 mm probing depths. Subgingival plaque reveals gram-negative black-pigmented anaerobes producing collagenase that degrades connective tissue. Which microorganism is primarily responsible?",
@@ -9188,7 +9193,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-004",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Dental Caries ▸ Initiator Organisms",
   difficulty: "moderate",
   question: "A 19-year-old presents with enamel demineralization and new cavitation. Frequent sugary beverage intake is reported. Which bacterial species initiates this carious process?",
@@ -9215,7 +9220,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-005",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Gram-Positive Rods ▸ Neurotoxic Exotoxins",
   difficulty: "moderate",
   question: "A 45-year-old construction worker develops jaw stiffness and muscle spasms after a deep puncture wound. Which bacterial genus is most likely responsible?",
@@ -9242,7 +9247,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-006",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Gram-Negative Cocci ▸ Urogenital Infection",
   difficulty: "moderate",
   question: "A 23-year-old patient presents with painful urination and purulent urethral discharge. Microscopy reveals polymorphonuclear leukocytes containing gram-negative diplococci. Which microorganism is most likely responsible?",
@@ -9269,7 +9274,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-007",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Spirochetes ▸ Vector-Borne Disease",
   difficulty: "moderate",
   question: "A patient develops an expanding circular rash with central clearing after a tick bite. Which microorganism is most likely responsible?",
@@ -9296,7 +9301,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-008",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Spirochetes ▸ Necrotizing Ulcerative Gingivitis",
   difficulty: "moderate",
   question: "A patient presents with cratered papillae, halitosis, and a gray pseudomembrane. Microscopy reveals motile helical bacteria among fusiform rods. Which microorganism is most strongly associated?",
@@ -9323,7 +9328,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-009",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Gram-Positive Cocci ▸ Odontogenic Infection",
   difficulty: "moderate",
   question: "Culture from an odontogenic facial infection reveals gram-positive cocci in chains that are catalase-negative and alpha-hemolytic. Which group is most likely responsible?",
@@ -9350,7 +9355,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-010",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Dental Caries ▸ Adhesion Mechanism",
   difficulty: "moderate",
   question: "Certain cariogenic bacteria convert dietary carbohydrates into sticky extracellular polysaccharides that allow adhesion to enamel. Which carbohydrate and product combination describes this process?",
@@ -9377,7 +9382,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-011",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Gram-Positive Cocci ▸ Post-Streptococcal Disease",
   difficulty: "moderate",
   question: "A 14-year-old presents with fever, sore throat, sandpaper-like rash, strawberry tongue, and beta-hemolytic gram-positive cocci in chains that are bacitracin sensitive. Which organism is most likely responsible?",
@@ -9404,7 +9409,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-012",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Post-Streptococcal Sequelae ▸ Rheumatic Heart Disease",
   difficulty: "moderate",
   question: "Which condition requires antibiotic prophylaxis prior to invasive dental procedures?",
@@ -9431,7 +9436,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-013",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Viridans Streptococci ▸ Subacute Endocarditis",
   difficulty: "moderate",
   question: "A patient develops subacute infective endocarditis after dental treatment. Blood cultures show alpha-hemolytic gram-positive cocci in chains. Which organism is most likely responsible?",
@@ -9458,7 +9463,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-014",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Viridans Streptococci ▸ Early Colonization and Endocarditis",
   difficulty: "moderate",
   question: "Alpha-hemolytic gram-positive cocci from oral plaque are associated with early colonization and endocarditis risk. Which organism fits this description?",
@@ -9485,7 +9490,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-015",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Oral Microbiome ▸ Early Infant Colonization",
   difficulty: "moderate",
   question: "Which bacterial species is among the first to colonize the oral cavity before tooth eruption?",
@@ -9512,7 +9517,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-016",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Encapsulated Bacteria ▸ Lobar Pneumonia",
   difficulty: "moderate",
   question: "An elderly patient develops lobar pneumonia after influenza. Gram stain shows lancet-shaped gram-positive diplococci with a capsule. Which organism is most likely responsible?",
@@ -9539,7 +9544,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-017",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Gram-Positive Cocci ▸ Abscess Formation",
   difficulty: "moderate",
   question: "A painful fluctuant lesion produces purulent drainage. Culture reveals gram-positive cocci in irregular clusters that form golden-yellow colonies. Which organism is most likely responsible?",
@@ -9566,7 +9571,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-018",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Dental Caries ▸ Lesion Progression",
   difficulty: "moderate",
   question: "Advanced dentinal caries reveal gram-positive aciduric rods thriving in low pH and dominating deep lesions. Which organism is most associated with progression of caries?",
@@ -9593,7 +9598,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-019",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Filamentous Bacteria ▸ Actinomycosis",
   difficulty: "moderate",
   question: "Chronic mandibular swelling with draining sinus tracts reveals gram-positive branching filamentous rods and sulfur granules. Which organism is most likely responsible?",
@@ -9620,7 +9625,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-020",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Hormone-Associated Gingivitis ▸ Pregnancy",
   difficulty: "moderate",
   question: "Pregnancy-associated gingivitis with gram-negative anaerobic rods and no attachment loss is most associated with which organism?",
@@ -9647,7 +9652,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-021",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Hormone-Responsive Bacteria ▸ Motile Curved Rods",
   difficulty: "moderate",
   question: "A pregnant patient presents with gingival inflammation and motile curved gram-negative rods responsive to steroid hormones. Which organism is most likely involved?",
@@ -9674,7 +9679,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-022",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Bacterial Growth Phases ▸ Antibiotic Susceptibility",
   difficulty: "moderate",
   question: "During which bacterial growth phase are antibiotics most effective due to maximal cell division and metabolic activity?",
@@ -9701,7 +9706,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-023",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Oral Fungal Infections ▸ Candidiasis",
   difficulty: "moderate",
   question: "White plaques that wipe away leaving erythematous mucosa following antibiotic therapy are most likely caused by which organism?",
@@ -9728,7 +9733,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-024",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Viral Structure ▸ Size and Microscopy",
   difficulty: "moderate",
   question: "Which of the following best approximates the size of a single virion?",
@@ -9755,7 +9760,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-025",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "RNA Viruses ▸ All Except",
   difficulty: "moderate",
   question: "All of the following are RNA viruses EXCEPT:",
@@ -9790,7 +9795,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-026",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Paramyxoviruses ▸ Measles",
   difficulty: "moderate",
   question: "A patient presents with Koplik’s spots followed by a spreading maculopapular rash. Which virus is most consistent?",
@@ -9817,7 +9822,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-027",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "DNA Viruses ▸ Human Papillomavirus",
   difficulty: "moderate",
   question: "Painless cauliflower-like oral lesions with koilocytosis are most likely caused by which virus?",
@@ -9844,7 +9849,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-028",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Herpesviridae ▸ HSV-1",
   difficulty: "moderate",
   question: "Recurrent vesicular lesions on the lip preceded by tingling are most consistent with which virus?",
@@ -9871,7 +9876,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-029",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Herpesviridae ▸ Cytomegalovirus",
   difficulty: "moderate",
   question: "Chronic oral ulcers in an HIV patient with owl’s eye inclusions are most consistent with which infection?",
@@ -9898,7 +9903,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-030",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Herpesviridae ▸ Epstein-Barr Virus",
   difficulty: "moderate",
   question: "A non-removable white corrugated lesion on the lateral tongue in an HIV patient is most consistent with which infection?",
@@ -9925,7 +9930,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-031",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Herpesviridae ▸ HHV-8 (Kaposi’s Sarcoma)",
   difficulty: "moderate",
   question: "Multiple painless reddish-purple oral macules and nodules in an HIV patient are most consistent with which virus?",
@@ -9952,7 +9957,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-032",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Picornaviridae ▸ Coxsackievirus",
   difficulty: "moderate",
   question: "Vesicles on the soft palate with lesions on hands and feet in a child are most consistent with which virus?",
@@ -9979,7 +9984,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-033",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Hepatitis ▸ Occupational Risk",
   difficulty: "moderate",
   question: "Which hepatitis strain poses the least occupational risk to dental professionals?",
@@ -10006,7 +10011,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-034",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Hepatitis B ▸ Antigens",
   difficulty: "hard",
   question: "Which antigen is found on the surface of the complete infectious Hepatitis B virion?",
@@ -10033,7 +10038,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-035",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Hepatitis B ▸ Post-Exposure",
   difficulty: "moderate",
   question: "What is the immediate post-exposure management for an unvaccinated clinician exposed to Hepatitis B?",
@@ -10060,7 +10065,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-036",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Inflammation ▸ Cardinal Signs",
   difficulty: "moderate",
   question: "Which list represents the five cardinal signs of inflammation?",
@@ -10087,7 +10092,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-037",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Acute Inflammation ▸ PMNs",
   difficulty: "moderate",
   question: "Which cell type is the primary first responder in acute periodontal inflammation?",
@@ -10114,7 +10119,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-038",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Acute Inflammation ▸ Neutrophils",
   difficulty: "moderate",
   question: "Which leukocyte has a multilobed nucleus and is the first responder in tissue injury?",
@@ -10141,7 +10146,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-039",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Adaptive Immunity ▸ T-Lymphocyte Subsets",
   difficulty: "hard",
   question: "A decreased CD4+ count with weakened antibody response despite normal B-cell numbers indicates dysfunction of which T-cell subsets and their primary coordinating role?",
@@ -10168,7 +10173,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-040",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Adaptive Immunity ▸ T-Cell Development",
   difficulty: "moderate",
   question: "Where are T-lymphocytes produced and where do they mature?",
@@ -10195,7 +10200,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-041",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Adaptive Immunity ▸ B-Cell Maturation",
   difficulty: "moderate",
   question: "Where do B-lymphocytes mature before entering circulation?",
@@ -10222,7 +10227,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-042",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Immunoglobulins ▸ IgG",
   difficulty: "hard",
   question: "Which immunoglobulin crosses the placenta and activates complement during cytotoxic reactions?",
@@ -10249,7 +10254,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-043",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Hypersensitivity ▸ Type I",
   difficulty: "hard",
   question: "Immediate urticaria, hypotension, and bronchospasm following anesthetic administration is which hypersensitivity type?",
@@ -10276,7 +10281,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-044",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Hypersensitivity ▸ Type II",
   difficulty: "hard",
   question: "Which antibodies are responsible for complement-mediated destruction in transfusion reactions?",
@@ -10303,7 +10308,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-045",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Hypersensitivity ▸ Type IV",
   difficulty: "moderate",
   question: "Localized vesicular contact dermatitis appearing 48 hours after latex exposure represents which immune mechanism?",
@@ -10330,7 +10335,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "micro-046",
   type: "microbiology",
-  subject: "Oral Disease Mastery",
+  subject: "Microbiology & Immunology",
   topic: "Autoimmune Disorders ▸ Connective Tissue Disease",
   difficulty: "hard",
   question: "Generalized widening of the periodontal ligament space with microstomia and progressive skin tightening is most consistent with which systemic condition?",
@@ -10357,7 +10362,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-001",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Cranial Nerves & Tongue Function",
   difficulty: "hard",
   question: "A 56 year old patient presents for a comprehensive oral examination. During the extraoral and intraoral evaluation, the clinician asks the patient to perform a series of functional movements. When instructed to protrude the tongue straight outward, the patient is unable to do so and the tongue deviates noticeably to one side. No deficits are noted in facial expression, mastication, or sensation of the oral mucosa. Which nerve and muscle are primarily responsible for the action required to protrude the tongue?",
@@ -10383,7 +10388,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-002",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Neck Anatomy & Spatial Relationships",
   difficulty: "medium",
   question: "A patient is scheduled for a routine dental appointment and reports a recent history of shortness of breath when lying supine. During the medical history review, the clinician considers the anatomic structures of the neck that could be affected by positioning and airway patency. The trachea is anatomically located nearest to which structure?",
@@ -10409,7 +10414,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-003",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Autonomic Control & Cranial Nerves",
   difficulty: "hard",
   question: "A patient with a complex medical history reports episodes of lightheadedness and brief syncope. Medical records note exaggerated parasympathetic influence on cardiac rhythm without structural heart abnormalities. The clinician considers the neural control of intrinsic cardiac pacemaker activity. Which nerve primarily influences the sinoatrial node of the heart?",
@@ -10435,7 +10440,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-004",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Autonomic Control & Cardiac Conduction",
   difficulty: "hard",
   question: "A patient experiences episodic bradycardia following carotid sinus stimulation. Cardiology consultation notes increased parasympathetic influence affecting atrioventricular conduction rather than initial pacemaker firing. No structural cardiac abnormalities are present. Which nerve most directly influences conduction through the atrioventricular node?",
@@ -10461,7 +10466,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-005",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Pulmonary Circulation Anatomy",
   difficulty: "medium",
   question: "A patient with altered pulmonary circulation undergoes imaging that identifies abnormal venous return to the left atrium. Accurate identification of normal pulmonary venous anatomy is required to interpret the findings. Which of the following structures is not classified as a pulmonary vein?",
@@ -10487,7 +10492,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-006",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Cardiac Valve Anatomy",
   difficulty: "medium",
   question: "A patient reports a history of valvular heart disease and requires antibiotic premedication for invasive dental hygiene procedures. During the medical consultation, cardiac auscultation findings are reviewed to determine which valve abnormalities are most closely associated with altered blood flow between specific cardiac chambers. Which statement correctly describes the bicuspid and tricuspid valves in relation to cardiac chamber separation?",
@@ -10513,7 +10518,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-007",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Maxillary Nerve Blocks",
   difficulty: "medium",
   question: "A patient requires profound anesthesia for a maxillary anterior restorative procedure involving palatal soft tissue. Buccal anesthesia has been achieved, but palatal tissues remain sensitive despite adequate anesthesia of the anterior superior alveolar distribution. If palatal anesthesia is required in addition to anterior superior alveolar nerve anesthesia, which nerve must also be blocked?",
@@ -10539,7 +10544,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-008",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Embryology & Pharyngeal Arches",
   difficulty: "medium",
   question: "A patient presents with congenital craniofacial abnormalities affecting mandibular development and muscles of mastication. Review of embryologic origin is necessary to understand the structures involved and their innervation. The mandibular arch develops from which embryologic structure?",
@@ -10565,7 +10570,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-009",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Mandibular Nerve Branches",
   difficulty: "medium",
   question: "A patient requires profound pulpal anesthesia for a mandibular anterior procedure. Soft tissue anesthesia of the lower lip is present, but the clinician must ensure pulpal anesthesia of the incisors and canine without relying on posterior mandibular nerve blocks. Which nerve is anesthetized to achieve pulpal anesthesia of the mandibular anterior teeth?",
@@ -10591,7 +10596,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-010",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Muscles of Facial Expression",
   difficulty: "medium",
   question: "A patient presents with difficulty retaining water in the oral cavity during rinsing and is unable to maintain lip seal during oral hygiene instruction. Facial sensation is intact, but functional assessment reveals impaired lip competence without involvement of mastication muscles. Which muscle is primarily responsible for closing the lips?",
@@ -10617,7 +10622,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-011",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Lymphatic Drainage",
   difficulty: "medium",
   question: "A patient presents with localized swelling and tenderness beneath the chin following an untreated infection associated with the mandibular anterior teeth. No enlargement is noted along the lateral borders of the mandible or cervical chain. Which lymph nodes primarily drain the middle mandibular anterior teeth?",
@@ -10643,7 +10648,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-012",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Cardiovascular Circulation",
   difficulty: "medium",
   question: "A patient with a history of cardiovascular disease reports shortness of breath during routine oral hygiene care. Understanding normal blood flow patterns is necessary when evaluating oxygen delivery and systemic circulation during treatment planning. Which pairing correctly identifies a structure that carries oxygenated blood and a structure that carries deoxygenated blood?",
@@ -10669,7 +10674,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-013",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Cranial Nerve XII",
   difficulty: "medium",
   question: "A patient presents with deviation of the tongue toward the right when asked to protrude it. Speech articulation is impaired, but sensation of the anterior and posterior tongue remains intact. No deficits are noted in facial expression or swallowing. Which structure provides the primary motor function to the tongue?",
@@ -10695,7 +10700,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-014",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Lingual Nerve Sensory Function",
   difficulty: "medium",
   question: "A patient reports loss of general sensation to the anterior portion of the tongue following a mandibular surgical procedure. Taste perception is diminished but not completely absent. Motor movement of the tongue is normal, and no deviation is observed. Which nerve provides general sensory innervation to the anterior portion of the tongue?",
@@ -10721,7 +10726,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-015",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Chorda Tympani & Taste",
   difficulty: "hard",
   question: "A patient reports loss of taste on the anterior portion of the tongue following middle ear pathology. General sensation to the tongue remains intact, and tongue movement is normal. No swallowing deficits are present. Which nerve is responsible for taste sensation to the anterior two thirds of the tongue?",
@@ -10747,7 +10752,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-016",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Posterior Tongue Innervation",
   difficulty: "hard",
   question: "A patient presents with diminished taste and loss of general sensation affecting the posterior portion of the tongue. Tongue movement is intact, and anterior tongue sensation and taste are unaffected. Gag reflex is reduced on the affected side. Which nerve provides both sensory and taste innervation to the posterior one third of the tongue?",
@@ -10773,7 +10778,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-017",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Intrinsic vs Extrinsic Tongue Muscles",
   difficulty: "hard",
   question: "A patient demonstrates difficulty with precise tongue shaping during speech, inability to elevate the posterior tongue against the palate, and weakness when attempting to protrude the tongue straight forward. Sensory function of the tongue is intact. Which combination correctly matches tongue muscle function with the appropriate muscle group?",
@@ -10799,7 +10804,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-018",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Extrinsic Tongue Muscles",
   difficulty: "hard",
   question: "A patient demonstrates difficulty lowering the tongue to allow instrumentation of the mandibular posterior region and shows impaired posterior repositioning of the tongue during swallowing. Tongue sensation and protrusion remain normal. Which combination correctly identifies the muscle that depresses the tongue and the muscle that retracts the tongue?",
@@ -10825,7 +10830,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-019",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Muscles of Mastication",
   difficulty: "medium",
   question: "A patient presents with unilateral weakness during mastication. Jaw closure is impaired on one side, but facial expression, tongue movement, and sensation of the oral mucosa remain intact. There is no loss of taste or salivary flow. Which nerve provides motor innervation to the masseter muscle?",
@@ -10851,7 +10856,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-020",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Trigeminal Foramina",
   difficulty: "hard",
   question: "A patient presents with isolated loss of sensation to the maxillary teeth, palate, and midfacial skin. Mandibular and ophthalmic sensory function are intact. Imaging confirms a lesion affecting a single division of the trigeminal nerve as it exits the cranial cavity. Through which opening does the maxillary division of the trigeminal nerve exit the skull?",
@@ -10877,7 +10882,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-021",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Mandibular Landmarks",
   difficulty: "medium",
   question: "A patient demonstrates limited mandibular opening with pain during elevation of the mandible. Imaging focuses on the bony landmarks associated with muscle attachment involved in jaw closure. Where is the coronoid process located?",
@@ -10903,7 +10908,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-022",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Cranial Sutures",
   difficulty: "medium",
   question: "A patient presents with a history of cranial trauma affecting the lateral aspect of the skull. Imaging reveals disruption along a major cranial suture located superior to the external acoustic meatus. Understanding normal cranial bone boundaries is necessary to interpret the findings. What structures are separated by the squamous suture?",
@@ -10929,7 +10934,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-023",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Cranial Sutures Advanced",
   difficulty: "hard",
   question: "Radiographic imaging of the lateral cranial base reveals pathology affecting a suture associated with the temporal region and the cranial floor. Accurate identification of the bones forming this suture is required to localize the defect. The squamous suture separates which two bones?",
@@ -10955,7 +10960,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-024",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Muscles of Mastication & Parafunction",
   difficulty: "medium",
   question: "A patient presents with generalized occlusal wear, flattened cusp tips, and shiny wear facets on posterior teeth. The patient reports nocturnal clenching but denies jaw joint pain. On palpation, one muscle demonstrates increased bulk and tenderness bilaterally compared to other muscles of mastication. Which muscle is most commonly overused in patients with occlusal attrition related to parafunctional activity?",
@@ -10981,7 +10986,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-025",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Hypoglossal Nerve Function",
   difficulty: "medium",
   question: "A patient presents with impaired tongue mobility affecting speech articulation and bolus manipulation during swallowing. Tongue sensation and taste are intact, and palatal elevation is normal. No deficits are noted in facial expression. What does the hypoglossal nerve innervate?",
@@ -11007,7 +11012,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-026",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Hypoglossal Nerve Lesion",
   difficulty: "hard",
   question: "A patient presents with slurred speech and difficulty manipulating food during mastication. When asked to protrude the tongue, it deviates noticeably toward the affected side. Tongue sensation and taste are intact, and no facial muscle weakness is observed. Damage to which structure most directly explains deviation of the tongue to one side on protrusion?",
@@ -11033,7 +11038,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-027",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Buccinator Function",
   difficulty: "medium",
   question: "A patient reports frequent food accumulation in the buccal vestibule during mastication. The patient must repeatedly reposition food with the tongue to continue chewing. Facial sensation is intact, and jaw opening and closing strength are normal. Which muscle is primarily responsible for keeping food positioned on the chewing surfaces of the teeth during mastication?",
@@ -11059,7 +11064,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-028",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Embryology of Nasal Structures",
   difficulty: "hard",
   question: "A patient presents with a congenital deviation of the nasal septum identified on imaging. There is no history of trauma or surgical intervention. Other midfacial structures appear normally developed. Which embryologic structure gives rise to the nasal septum?",
@@ -11085,7 +11090,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-029",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "TMJ Innervation",
   difficulty: "hard",
   question: "A patient presents with unilateral temporomandibular joint pain exacerbated by opening and lateral movement. There is no pain on palpation of the muscles of mastication. Sensation to the cheek, lips, and tongue is intact. Imaging shows no bony degeneration, suggesting a neural origin of the joint discomfort. Which nerve provides sensory innervation to the temporomandibular joint, and from which nerve is it a branch?",
@@ -11111,7 +11116,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-030",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Lymphatic Drainage of Floor of Mouth",
   difficulty: "hard",
   question: "A patient presents with a firm, tender swelling in the floor of the mouth near the midline. Over several days, the swelling progresses inferiorly with palpable enlargement beneath the mandible and later along the cervical chain. No involvement of the parotid region is noted. Which lymphatic drainage sequence most accurately explains the progression of swelling from the floor of the mouth?",
@@ -11137,7 +11142,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-031",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Lymphatic Drainage of Lower Lip",
   difficulty: "medium",
   question: "A patient presents with localized swelling and tenderness of the lower lip following trauma. No swelling is noted in the posterior oral cavity or parotid region. Palpation reveals enlargement of lymph nodes beneath the chin. Which lymph nodes primarily drain the lower lip?",
@@ -11163,7 +11168,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-032",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Trigeminal Foramina V3",
   difficulty: "hard",
   question: "A patient presents with loss of mandibular tooth sensation, weakness of mastication, and intact maxillary and ophthalmic sensory function. Imaging localizes a lesion affecting the mandibular division of the trigeminal nerve as it exits the cranial cavity. Through which opening does the mandibular division of the trigeminal nerve exit the skull?",
@@ -11189,7 +11194,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-033",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Cranial Sutures Coronal",
   difficulty: "medium",
   question: "A patient presents with a history of cranial trauma affecting the anterior portion of the skull. Imaging shows separation along a major cranial suture that forms the boundary between the frontal bone and the bones forming the cranial vault. Which cranial suture separates the frontal bone from the parietal bones?",
@@ -11215,7 +11220,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-034",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Embryology Teratogens",
   difficulty: "medium",
   question: "A pregnant patient reports unintentional exposure to a medication during the first trimester. Subsequent imaging reveals abnormal development of craniofacial structures. The timing of exposure corresponds with early embryologic organ formation. Which term best describes an agent that can cause developmental abnormalities in an embryo or fetus?",
@@ -11241,7 +11246,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-035",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Genial Tubercles",
   difficulty: "hard",
   question: "A patient presents with altered tongue control and difficulty stabilizing the floor of the mouth during swallowing. Imaging reveals a paired midline bony prominence on the lingual surface of the mandible that serves as a key muscular attachment site. The genial tubercles are associated with attachment of which muscles?",
@@ -11267,7 +11272,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-036",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Mental Foramen Contents",
   difficulty: "medium",
   question: "A patient reports persistent numbness of the lower lip and chin following a mandibular surgical procedure. Pulpal sensation of the mandibular anterior teeth remains intact. Imaging confirms no damage to posterior mandibular structures. Which structure passes through the mental foramen?",
@@ -11293,7 +11298,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-037",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Mental Foramen Location",
   difficulty: "medium",
   question: "A patient requires local anesthesia for a mandibular premolar procedure. Accurate landmark identification is necessary to avoid postoperative paresthesia of the lower lip and chin. Where is the mental foramen most commonly located?",
@@ -11319,7 +11324,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-038",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "External Carotid Artery",
   difficulty: "medium",
   question: "A patient presents with compromised blood flow to the facial tissues following trauma to a major cervical vessel. Neurologic examination is normal, and cerebral perfusion is unaffected. The deficit is isolated to structures of the face, scalp, and oral cavity. Which vessel is primarily responsible for supplying blood to the face and oral cavity?",
@@ -11345,7 +11350,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-039",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Lingual Artery",
   difficulty: "medium",
   question: "A patient presents with ischemic changes affecting the tongue and floor of the mouth following ligation of a specific branch of the external carotid artery. Facial skin perfusion remains intact, and there are no neurologic deficits. Which artery is primarily responsible for supplying blood to the tongue?",
@@ -11371,7 +11376,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-040",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Maxillary Artery",
   difficulty: "hard",
   question: "A patient experiences significant bleeding following a maxillary posterior surgical procedure. The bleeding source is traced to a deep branch of the external carotid artery supplying structures within the maxilla and nasal cavity. Which branch of the external carotid artery supplies deep facial structures including the maxilla, nasal cavity, and palate?",
@@ -11397,7 +11402,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-042",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Facial Artery Landmark",
   difficulty: "hard",
   question: "A patient presents with profuse bleeding following a laceration at the inferior border of the mandible anterior to the masseter muscle. Compression at a specific anatomic landmark successfully reduces the bleeding. Which vessel is most likely involved at this location?",
@@ -11423,7 +11428,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-043",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Posterior Brain Circulation",
   difficulty: "medium",
   question: "A patient presents with reduced blood supply to the brainstem and posterior cerebral structures. Facial circulation and oral tissues remain unaffected. Imaging localizes the compromise to a vessel system distinct from the carotid arteries. Which artery primarily contributes to the posterior circulation of the brain?",
@@ -11449,7 +11454,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-044",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Greater Palatine Artery",
   difficulty: "hard",
   question: "A patient develops prolonged bleeding from the hard palate following a periodontal procedure in the posterior maxilla. The source is traced to a vessel supplying the palatal mucosa and bone. Which artery is most directly responsible for supplying the hard palate?",
@@ -11475,7 +11480,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-045",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Occipital Artery",
   difficulty: "hard",
   question: "A patient presents with normal perfusion of the oral cavity despite ligation of one branch of the external carotid artery during neck surgery. No ischemic changes are noted in the lips, tongue, palate, or gingiva. Which branch of the external carotid artery does not supply the oral cavity?",
@@ -11501,7 +11506,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-046",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Internal Carotid Artery Supply",
   difficulty: "medium",
   question: "A patient sustains vascular compromise affecting vision and higher cortical function. Blood supply to the face, oral cavity, and scalp remains intact. The affected vessel ascends into the cranial cavity without contributing to extracranial tissues. Which structure is primarily supplied by the internal carotid artery?",
@@ -11527,7 +11532,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-047",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "External Carotid Terminal Branches",
   difficulty: "hard",
   question: "A patient undergoes surgical management involving ligation of the external carotid artery. Postoperative assessment confirms loss of blood supply to multiple facial and maxillary structures supplied by its terminal branches. Which vessels are the two terminal branches of the external carotid artery?",
@@ -11553,7 +11558,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-048",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Inferior Labial Artery",
   difficulty: "hard",
   question: "A patient presents with localized ischemia of the lower lip following trauma. Sensation of the chin is intact, and mandibular teeth respond normally to vitality testing. Which artery most directly supplies the lower lip?",
@@ -11579,7 +11584,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-049",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Posterior Superior Alveolar Artery",
   difficulty: "hard",
   question: "A patient experiences prolonged bleeding following extraction of a maxillary molar. The bleeding source tracks posteriorly within the maxilla rather than the facial soft tissues. Which artery most directly supplies the maxillary posterior teeth?",
@@ -11605,7 +11610,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-050",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Inferior Alveolar Artery",
   difficulty: "hard",
   question: "A patient develops hematoma formation following a mandibular block injection. Imaging shows vascular injury within the mandibular canal accompanying a major sensory nerve. Which artery travels with the inferior alveolar nerve?",
@@ -11631,7 +11636,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-051",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Parotid Parasympathetic Innervation",
   difficulty: "hard",
   question: "A patient presents with marked xerostomia isolated to the parotid region following a neurologic injury. Salivary flow from the submandibular and sublingual glands is unaffected. Facial sensation and taste to the anterior tongue remain intact. Parasympathetic secretomotor innervation to the parotid gland is carried by which nerve?",
@@ -11657,7 +11662,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-054",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Parotid Parasympathetic Origin",
   difficulty: "hard",
   question: "A patient presents with loss of salivary flow from the parotid gland following a lesion affecting preganglionic parasympathetic fibers. Sensory innervation to the face and auricular region is intact, but secretory function to the parotid gland is absent. Preganglionic parasympathetic fibers destined for the parotid gland originate from which nerve?",
@@ -11683,7 +11688,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-055",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Submandibular Ganglion",
   difficulty: "hard",
   question: "A patient presents with absent salivary secretion from the submandibular and sublingual glands following injury to a parasympathetic ganglion. Tongue sensation to touch is intact, but taste to the anterior tongue is reduced. In which ganglion do parasympathetic fibers synapse before supplying the submandibular and sublingual glands?",
@@ -11709,7 +11714,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-056",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Lingual Nerve Postganglionic Fibers",
   difficulty: "hard",
   question: "A patient presents with absent salivary flow from the submandibular gland following injury to a nerve that physically carries parasympathetic fibers after synapse. Taste to the anterior tongue is also reduced. Which nerve carries postganglionic parasympathetic fibers to the submandibular gland?",
@@ -11735,7 +11740,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-057",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Otic Ganglion",
   difficulty: "hard",
   question: "A patient develops complete loss of salivary secretion from the parotid gland following damage to a parasympathetic ganglion located near the mandibular nerve. Which ganglion is associated with parasympathetic innervation of the parotid gland?",
@@ -11761,7 +11766,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-058",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Chorda Tympani Sparing",
   difficulty: "hard",
   question: "A patient sustains injury to the chorda tympani nerve. Salivary output is reduced in specific glands, while others remain unaffected. Which salivary gland would not be affected by injury to the chorda tympani?",
@@ -11787,7 +11792,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-059",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Lateral Pterygoid Function",
   difficulty: "medium",
   question: "A patient presents with difficulty initiating mandibular opening during speech and eating. Passive opening is possible, but active depression of the mandible against resistance is impaired. There is no pain in the temporomandibular joint, and muscles of facial expression function normally. Which muscle is primarily responsible for initiating depression of the mandible?",
@@ -11813,7 +11818,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-060",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Masseter Function",
   difficulty: "medium",
   question: "A patient presents with normal mandibular opening but reports fatigue and soreness during prolonged chewing of firm foods. Palpation reveals significant bulk and tenderness in one muscle along the lateral aspect of the mandibular ramus. Which muscle is the primary elevator of the mandible during forceful mastication?",
@@ -11839,7 +11844,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-061",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Temporalis Retraction",
   difficulty: "medium",
   question: "A patient demonstrates normal mandibular opening and closing but shows difficulty returning the mandible to its resting position after protrusion. Chewing strength is intact, and there is no joint pain. Which muscle is primarily responsible for retraction of the mandible?",
@@ -11865,7 +11870,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-062",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Contralateral Excursion",
   difficulty: "hard",
   question: "A patient exhibits difficulty moving the mandible to the right during mastication. Elevation and depression are normal, and there is no tenderness of the temporomandibular joint. Chewing efficiency is reduced only during lateral movements. Contraction of which muscle produces contralateral excursion of the mandible?",
@@ -11891,7 +11896,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-063",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Muscles of Mastication Classification",
   difficulty: "medium",
   question: "A patient demonstrates normal mandibular elevation and retraction but has difficulty maintaining food on the occlusal surfaces during chewing. Jaw strength is normal, and lateral movements are intact. Which muscle is not considered a muscle of mastication?",
@@ -11917,7 +11922,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-064",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Mylohyoid Function",
   difficulty: "hard",
   question: "A patient demonstrates normal mandibular elevation but has difficulty fully opening the mouth when resistance is applied. There is no pain in the temporomandibular joint. Suprahyoid muscle function is impaired. Which muscle assists mandibular depression by elevating the hyoid bone?",
@@ -11943,7 +11948,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-065",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Facial Venous Communication",
   difficulty: "hard",
   question: "A patient presents with a facial infection involving the upper lip and lateral nose. Imaging shows venous spread toward deeper cranial structures rather than superficial cervical drainage. No lymph node enlargement is noted at this stage. Which venous structure allows facial venous blood to communicate directly with intracranial venous sinuses?",
@@ -11969,7 +11974,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-066",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Pterygoid Venous Plexus",
   difficulty: "hard",
   question: "A patient develops postoperative bleeding deep in the maxillary region following posterior superior alveolar anesthesia. The bleeding is not visible externally and resolves slowly with pressure. Imaging identifies involvement of a deep venous network associated with muscles of mastication. Which venous structure primarily drains the deep facial region and muscles of mastication?",
@@ -11995,7 +12000,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-067",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Retromandibular Vein Formation",
   difficulty: "medium",
   question: "A patient presents with swelling near the parotid region following facial trauma. Imaging reveals disruption of a vein formed within the parotid gland that later contributes to jugular venous drainage. Which vein is formed by the union of the superficial temporal vein and the maxillary vein?",
@@ -12021,7 +12026,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-068",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Lingual Vein Drainage",
   difficulty: "medium",
   question: "A patient presents with localized edema and tenderness of the tongue following a traumatic injury. Facial swelling is absent, and venous congestion appears confined to the lingual region. Which vein primarily drains the tongue?",
@@ -12047,7 +12052,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-069",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Facial Vein Final Drainage",
   difficulty: "medium",
   question: "A patient presents with facial swelling that progresses inferiorly along the neck. Imaging demonstrates venous drainage from the face entering a large cervical vein before returning to the heart. The facial vein ultimately drains into which structure?",
@@ -12073,7 +12078,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-070",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Embryology – Cleft Lip and Primary Palate",
   difficulty: "hard",
   question: "A newborn presents with a midline defect of the upper lip extending into the primary palate. The maxillary incisors are involved, and the defect is confined to structures anterior to the incisive foramen. No abnormalities are noted in the posterior palate. Failure of fusion of which embryologic structures most directly results in this presentation?",
@@ -12099,7 +12104,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-071",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Embryology – Secondary Palate",
   difficulty: "hard",
   question: "A newborn presents with an isolated cleft involving the hard palate posterior to the incisive foramen. The upper lip and primary palate are intact. No defects are noted in the anterior maxilla. Failure of fusion of which embryologic structures most directly results in this defect?",
@@ -12125,7 +12130,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-072",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Embryology – Lateral Cleft Lip",
   difficulty: "hard",
   question: "A newborn presents with a facial defect involving the upper lip lateral to the philtrum. The defect does not extend into the primary palate, and the midline structures appear intact. Failure of fusion between which embryologic structures most directly results in this presentation?",
@@ -12151,7 +12156,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-073",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Embryology – Complete Primary Palate Cleft",
   difficulty: "hard",
   question: "A newborn presents with a complete cleft extending through the lip, alveolar ridge, and primary palate on one side. The defect stops at the incisive foramen. The secondary palate is intact. This pattern of defect most directly results from failure of fusion involving which embryologic structure?",
@@ -12177,7 +12182,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-074",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Embryology – Nasal Development",
   difficulty: "hard",
   question: "A newborn presents with a midline defect involving the nasal septum and deformity of the nasal bridge. The upper lip and palate are intact. No clefting of the oral cavity is present. Failure of development of which embryologic structure most directly explains this finding?",
@@ -12203,7 +12208,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-075",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "TMJ – Ligament Support",
   difficulty: "moderate",
   question: "A patient presents with a history of mandibular trauma resulting in instability of the jaw during closing movements. Imaging shows intact muscles of mastication and a normal articular disc, but excessive posterior movement of the mandibular condyle is noted. Which structure primarily prevents posterior displacement of the mandible?",
@@ -12229,7 +12234,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-076",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "TMJ – Articular Disc Function",
   difficulty: "moderate",
   question: "A patient reports clicking and discomfort during mandibular opening and closing. Imaging shows normal bony anatomy, but altered movement between the mandibular condyle and the temporal bone during translation. What is the primary function of the articular disc of the temporomandibular joint?",
@@ -12255,7 +12260,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-077",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "TMJ – Accessory Ligaments",
   difficulty: "moderate",
   question: "A patient experiences discomfort when opening the mouth widely, but mandibular elevation and lateral movements remain normal. Imaging shows intact joint surfaces with tension noted in accessory supporting structures rather than the joint capsule itself. Which ligament primarily limits excessive opening of the mandible?",
@@ -12281,7 +12286,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-078",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "TMJ – Disc Attachment",
   difficulty: "moderate",
   question: "A patient presents with anterior displacement of the temporomandibular joint disc during opening. Imaging shows normal ligament integrity, but abnormal muscular traction on the disc is suspected. Mandibular opening initiates normally but becomes irregular during translation. Which muscle attaches to the articular disc of the temporomandibular joint?",
@@ -12307,7 +12312,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-079",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Palatal Innervation – Anterior",
   difficulty: "moderate",
   question: "A patient reports altered sensation to the anterior hard palate following a maxillary surgical procedure. The palatal gingiva posterior to the canines remains fully sensitive. Maxillary teeth respond normally to vitality testing. Which structure transmits the nerve responsible for sensation to the anterior hard palate?",
@@ -12333,7 +12338,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-080",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Palatal Innervation – Posterior",
   difficulty: "moderate",
   question: "A patient experiences numbness of the posterior hard palate and palatal gingiva following a maxillary block injection. Sensation to the anterior palate remains intact, and maxillary teeth respond normally. Which structure transmits the nerve responsible for sensory innervation to the posterior hard palate?",
@@ -12359,7 +12364,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-081",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Midface Sensory Innervation",
   difficulty: "moderate",
   question: "A patient reports numbness of the upper lip, lateral nose, and lower eyelid following facial trauma. Sensation to the palate and maxillary teeth remains intact. Which structure transmits the nerve responsible for sensory innervation to this region?",
@@ -12385,7 +12390,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "H&N-082",
   type: "head-and-neck",
-  subject: "Clinical Execution & Materials",
+  subject: "Head & Neck Anatomy",
   topic: "Maxillary Posterior Innervation",
   difficulty: "moderate",
   question: "A patient develops numbness of the maxillary molar teeth and buccal gingiva following a posterior maxillary injection. Sensation to the upper lip, palate, and anterior teeth remains intact. Which structure transmits the nerves most directly responsible for sensory innervation of the maxillary posterior teeth?",
@@ -12411,7 +12416,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-001",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Community vs Private Practice",
   difficulty: "moderate",
 
@@ -12441,7 +12446,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-002",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Program-Level Responsibilities",
   difficulty: "moderate",
 
@@ -12471,7 +12476,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-003",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Program Planning Phase",
   difficulty: "extremely-difficult",
 
@@ -12501,7 +12506,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-004",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Program Decision-Making Phase",
   difficulty: "moderate",
 
@@ -12531,7 +12536,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-005",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Program Review Phase",
   difficulty: "extremely-difficult",
 
@@ -12561,7 +12566,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-006",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "ADPIE – Community Planning Phase",
   difficulty: "extremely-difficult",
 
@@ -12591,7 +12596,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-007",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Community vs Private Practice Distinction",
   difficulty: "extremely-difficult",
 
@@ -12621,7 +12626,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-008",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Community Program Evaluation",
   difficulty: "difficult",
 
@@ -12651,7 +12656,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-009",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Foundational Aim of Community Oral Health",
   difficulty: "extremely-difficult",
 
@@ -12681,7 +12686,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-010",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Community Water Fluoridation Mechanism",
   difficulty: "extremely-difficult",
 
@@ -12711,7 +12716,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-011",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "School-Based Fluoride Programs",
   difficulty: "extremely-difficult",
 
@@ -12741,7 +12746,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-012",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "ADPIED – Community Framework",
   difficulty: "difficult",
 
@@ -12771,7 +12776,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-014",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Epidemiology – Prospective vs Retrospective",
   difficulty: "moderate",
 
@@ -12801,7 +12806,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-015",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research – Hypothesis Testing",
   difficulty: "moderate",
 
@@ -12831,7 +12836,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-016",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Governmental Levels – Public Health Roles",
   difficulty: "moderate",
 
@@ -12861,7 +12866,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-017",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Federal Health Agencies – CDC",
   difficulty: "easy",
 
@@ -12891,7 +12896,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-018",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Epidemiology – Disease Distribution Patterns",
   difficulty: "moderate",
 
@@ -12921,7 +12926,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-019",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Levels of Prevention",
   difficulty: "moderate",
 
@@ -12951,7 +12956,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-020",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Population Measures – Natality, Morbidity, Mortality",
   difficulty: "moderate",
 
@@ -12981,7 +12986,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-021",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Epidemiology – Risk Classification",
   difficulty: "extremely-difficult",
 
@@ -13011,7 +13016,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-022",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Levels of Prevention – Primary",
   difficulty: "easy",
 
@@ -13041,7 +13046,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-023",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Levels of Prevention – Health Promotion",
   difficulty: "easy",
 
@@ -13071,7 +13076,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-024",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Levels of Prevention – Early Education",
   difficulty: "easy",
 
@@ -13101,7 +13106,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-025",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Levels of Prevention – Secondary",
   difficulty: "easy",
 
@@ -13131,7 +13136,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-026",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Levels of Prevention – Secondary Detection",
   difficulty: "easy",
 
@@ -13161,7 +13166,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-027",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Levels of Prevention – Early Intervention",
   difficulty: "easy",
 
@@ -13191,7 +13196,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-028",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Levels of Prevention – Rehabilitation",
   difficulty: "easy",
 
@@ -13221,7 +13226,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-029",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Levels of Prevention – Advanced Disease Management",
   difficulty: "easy",
 
@@ -13251,7 +13256,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-030",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Levels of Prevention – Surgical Rehabilitation",
   difficulty: "easy",
 
@@ -13281,7 +13286,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-031",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Epidemiology – Sampling Methods",
   difficulty: "difficult",
 
@@ -13311,7 +13316,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-032",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Epidemiology – Sampling Methods",
   difficulty: "difficult",
 
@@ -13341,7 +13346,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-033",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Epidemiology – Study Design",
   difficulty: "extremely-difficult",
 
@@ -13371,7 +13376,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-034",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Epidemiology – Study Design",
   difficulty: "extremely-difficult",
 
@@ -13401,7 +13406,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-035",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Design – Experimental Studies",
   difficulty: "extremely-difficult",
 
@@ -13431,7 +13436,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-036",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Design – Blinding and Masking",
   difficulty: "difficult",
 
@@ -13461,7 +13466,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-037",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Design – Bias",
   difficulty: "extremely-difficult",
 
@@ -13491,7 +13496,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-038",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Design – Variables",
   difficulty: "difficult",
 
@@ -13521,7 +13526,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-039",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Design – Independent vs Dependent Variables",
   difficulty: "difficult",
 
@@ -13551,7 +13556,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-040",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Design – Quasi-Experimental",
   difficulty: "difficult",
 
@@ -13581,7 +13586,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-041",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Ethics – Institutional Review Board",
   difficulty: "moderate",
 
@@ -13611,7 +13616,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-042",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Analysis – Descriptive vs Inferential",
   difficulty: "moderate",
 
@@ -13641,7 +13646,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-043",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Analysis – Measures of Central Tendency",
   difficulty: "moderate",
 
@@ -13671,7 +13676,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-044",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Analysis – Frequency Distributions",
   difficulty: "moderate",
 
@@ -13701,7 +13706,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-045",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Analysis – Central Tendency and Outliers",
   difficulty: "difficult",
 
@@ -13731,7 +13736,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-046",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Analysis – Measures of Dispersion",
   difficulty: "moderate",
 
@@ -13761,7 +13766,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-047",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Analysis – Standard Deviation",
   difficulty: "moderate",
 
@@ -13791,7 +13796,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-048",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Analysis – Distribution Curves",
   difficulty: "moderate",
 
@@ -13821,7 +13826,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-049",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Analysis – Skewed Distributions",
   difficulty: "moderate",
 
@@ -13851,7 +13856,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-050",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Methods – Validity vs Reliability",
   difficulty: "moderate",
 
@@ -13881,7 +13886,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-051",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Methods – Reliability",
   difficulty: "moderate",
 
@@ -13911,7 +13916,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-052",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Analysis – Correlation",
   difficulty: "difficult",
 
@@ -13941,7 +13946,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-053",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Research Analysis – Hypothesis Testing",
   difficulty: "moderate",
 
@@ -13971,7 +13976,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-054",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Dental Indices – Scientific Properties",
   difficulty: "moderate",
 
@@ -14001,7 +14006,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-055",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Dental Indices – Scientific Properties",
   difficulty: "easy",
 
@@ -14031,7 +14036,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-056",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Dental Indices – Ramfjord Teeth",
   difficulty: "moderate",
 
@@ -14061,7 +14066,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-057",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Dental Indices – Ramfjord Teeth Identification",
   difficulty: "moderate",
 
@@ -14091,7 +14096,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-058",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Dental Indices – OHI-S Plaque Component",
   difficulty: "moderate",
 
@@ -14121,7 +14126,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-059",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Dental Indices – Gingival Index",
   difficulty: "moderate",
 
@@ -14151,7 +14156,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-060",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Dental Indices – Plaque Index (Silness & Löe)",
   difficulty: "moderate",
 
@@ -14181,7 +14186,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-061",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Dental Indices – DMFT",
   difficulty: "moderate",
 
@@ -14211,7 +14216,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-062",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Periodontal Screening – PSR Codes",
   difficulty: "difficult",
 
@@ -14241,7 +14246,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-063",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Dental Indices – Dean’s Fluorosis Index",
   difficulty: "difficult",
 
@@ -14271,7 +14276,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-064",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Nutrition Assessment – Healthy Eating Index",
   difficulty: "moderate",
 
@@ -14301,7 +14306,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-065",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Nutrition Standards – Dietary Reference Intakes",
   difficulty: "moderate",
 
@@ -14331,7 +14336,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-066",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Community Assessment – Basic Screening Survey",
   difficulty: "moderate",
 
@@ -14361,7 +14366,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-067",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Access to Care – Socioeconomic Barriers",
   difficulty: "moderate",
 
@@ -14391,7 +14396,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-068",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Community Assessment – ADA Examination Types",
   difficulty: "difficult",
 
@@ -14421,7 +14426,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-069",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Community Assessment – Type 4 / Basic Screening Survey",
   difficulty: "difficult",
 
@@ -14451,7 +14456,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-070",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Public Programs – Medicaid vs Medicare",
   difficulty: "moderate",
 
@@ -14481,7 +14486,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-071",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Program Planning – Goals vs Objectives",
   difficulty: "moderate",
 
@@ -14511,7 +14516,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-072",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Behavioral Change – Learning Ladder",
   difficulty: "moderate",
 
@@ -14541,7 +14546,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-073",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Behavioral Change – Motivation",
   difficulty: "moderate",
 
@@ -14571,7 +14576,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-074",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Behavioral Science – Maslow’s Hierarchy",
   difficulty: "moderate",
 
@@ -14601,7 +14606,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-075",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Behavioral Science – Transtheoretical Model",
   difficulty: "moderate",
 
@@ -14631,7 +14636,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-076",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Behavioral Science – Social-Ecological Model",
   difficulty: "moderate",
 
@@ -14661,7 +14666,7 @@ memoryHook: "Lingual follows the leader — even vertically."
 {
   id: "COMM-077",
   type: "community",
-  subject: "Prevention Science & Public Health",
+  subject: "Community Health & Prevention",
   topic: "Evidence-Based Practice",
   difficulty: "moderate",
 
