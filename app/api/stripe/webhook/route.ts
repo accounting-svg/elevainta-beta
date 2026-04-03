@@ -3,7 +3,7 @@ import Stripe from 'stripe'
 import { createClient } from '@supabase/supabase-js'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
- apiVersion: '2026-03-25.dahlia',
+  apiVersion: '2026-03-25.dahlia',
 })
 
 const supabaseAdmin = createClient(
@@ -32,12 +32,40 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: `Webhook signature verification failed: ${message}` }, { status: 400 })
   }
 
-  const subscription = event.data.object as Stripe.Subscription
-  const customerId = subscription.customer as string
-
   switch (event.type) {
+
+    // Fires when Payment Link checkout is completed — links Stripe customer to Supabase profile
+    case 'checkout.session.completed': {
+      const session = event.data.object as Stripe.Checkout.Session
+      const customerId = session.customer as string
+      const customerEmail = session.customer_details?.email
+
+      if (!customerEmail) {
+        console.error('No email found in checkout session')
+        break
+      }
+
+      // Link stripe_customer_id to the profile by email, and activate subscription
+      const { error } = await supabaseAdmin
+        .from('profiles')
+        .update({
+          stripe_customer_id: customerId,
+          subscription_status: 'active',
+        })
+        .eq('email', customerEmail)
+
+      if (error) {
+        console.error('Supabase update error on checkout:', error)
+        return NextResponse.json({ error: 'Failed to link customer' }, { status: 500 })
+      }
+      break
+    }
+
     case 'customer.subscription.created':
     case 'customer.subscription.updated': {
+      const subscription = event.data.object as Stripe.Subscription
+      const customerId = subscription.customer as string
+
       const { error } = await supabaseAdmin
         .from('profiles')
         .update({ subscription_status: 'active' })
@@ -51,6 +79,9 @@ export async function POST(req: NextRequest) {
     }
 
     case 'customer.subscription.deleted': {
+      const subscription = event.data.object as Stripe.Subscription
+      const customerId = subscription.customer as string
+
       const { error } = await supabaseAdmin
         .from('profiles')
         .update({ subscription_status: 'free' })
@@ -64,7 +95,6 @@ export async function POST(req: NextRequest) {
     }
 
     default:
-      // Unhandled event type — ignore
       break
   }
 
