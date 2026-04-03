@@ -18,6 +18,7 @@ export default function BoardPassPage() {
   const [customCounts, setCustomCounts] = useState<Record<string, number>>({});
   const [categoryStats, setCategoryStats] = useState<Record<string, { correct: number, attempted: number }>>({});
   const [lifetimeStats, setLifetimeStats] = useState<{ accuracy: number | null, weakCategories: string[] } | null>(null);
+  const [lifetimeAnswered, setLifetimeAnswered] = useState(0);
   const [subscriptionStatus, setSubscriptionStatus] = useState<string | null>(null);
 
   const supabase = createBrowserClient(
@@ -98,6 +99,7 @@ export default function BoardPassPage() {
         const correct = events.filter(e => e.event === 'answer_correct').length;
         accuracy = Math.round((correct / events.length) * 100);
       }
+      setLifetimeAnswered(events?.length ?? 0);
 
       const { data: flashcards } = await supabase
         .from('opportunity_flashcards')
@@ -214,7 +216,7 @@ export default function BoardPassPage() {
         if (error) console.error('Vault save error:', error);
       }
     }
-    if (attempted + 1 >= 50 && subscriptionStatus !== 'active') {
+    if (lifetimeAnswered + attempted + 1 >= 50 && subscriptionStatus !== 'active') {
       setView('paywall');
     } else {
       setView('rationale');
