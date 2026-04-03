@@ -584,7 +584,7 @@ window.speechSynthesis.speak(listenSpeech);
   style={{
   width: '100%',
   marginTop: 10,
-  display: isFlipped ? 'block' : 'none'
+  display: 'none'
 }}
 >
     
