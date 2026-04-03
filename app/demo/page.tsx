@@ -172,7 +172,7 @@ window.speechSynthesis.speak(listenSpeech);
   }
 
   const nextQuestion = () => {
-    if (attempted >= 5) {
+    if (attempted >= 7) {
       setView('complete')
       return
     }
@@ -267,7 +267,7 @@ window.speechSynthesis.speak(listenSpeech);
         border: '1px solid #C5A46D'
       }}
     >
-      Review Opportunity Vault
+      Review Flashcards
     </button>
  </div>
  </div>   
@@ -665,22 +665,43 @@ window.speechSynthesis.speak(listenSpeech);
           border: '1px solid #C5A46D'
         }}
       >
-        Review Opportunity Vault
+        Review Flashcards
       </button>
     )}
 
-   {/* CONVERSION BUTTON */}
-    <button
-      onClick={() => window.location.href = 'https://your-real-app-link.com'}
-      className="gold-button"
+   {/* CONVERSION BUTTONS */}
+    <a
+      href="/signup"
       style={{
+        display: 'block',
         width: '100%',
-        marginBottom: 10,
-        fontWeight: '800'
+        padding: '14px 0',
+        backgroundColor: '#C5A46D',
+        color: '#000',
+        fontWeight: 800,
+        fontSize: '1.05rem',
+        letterSpacing: '0.5px',
+        borderRadius: 8,
+        textDecoration: 'none',
+        marginBottom: 12,
       }}
     >
-      Continue Board Pass Training
-    </button>
+      Start Free Account
+    </a>
+    <a
+      href="/upgrade"
+      style={{
+        display: 'block',
+        color: '#C5A46D',
+        fontSize: '0.95rem',
+        fontWeight: 600,
+        textDecoration: 'underline',
+        marginBottom: 10,
+        cursor: 'pointer',
+      }}
+    >
+      See Full Pricing
+    </a>
 
     <button
       onClick={returnHome}

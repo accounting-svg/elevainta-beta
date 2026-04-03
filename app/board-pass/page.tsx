@@ -10,7 +10,7 @@ export default function BoardPassPage() {
   const [subject, setSubject] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
-  const [view, setView] = useState<'question' | 'rationale' | 'strategy' | 'complete' | 'vault_flashcard' | 'create_experience'>('question');
+  const [view, setView] = useState<'question' | 'rationale' | 'strategy' | 'complete' | 'vault_flashcard' | 'create_experience' | 'paywall'>('question');
   const [score, setScore] = useState(0);
   const [attempted, setAttempted] = useState(0);
   const [sessionMissed, setSessionMissed] = useState<any[]>([]);
@@ -18,6 +18,7 @@ export default function BoardPassPage() {
   const [customCounts, setCustomCounts] = useState<Record<string, number>>({});
   const [categoryStats, setCategoryStats] = useState<Record<string, { correct: number, attempted: number }>>({});
   const [lifetimeStats, setLifetimeStats] = useState<{ accuracy: number | null, weakCategories: string[] } | null>(null);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<string | null>(null);
 
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL as string,
@@ -50,10 +51,20 @@ export default function BoardPassPage() {
       return true;
     });
     setQuestions(deduped.sort(() => Math.random() - 0.5));
-    setSubject("Opportunity Vault");
+    setSubject("Flashcards");
     setCurrentIndex(0);
     setIsFlipped(false);
     setView('vault_flashcard');
+  };
+
+  const handleManageSubscription = async () => {
+    const res = await fetch('/api/stripe/portal', { method: 'POST' });
+    const data = await res.json();
+    if (data.url) {
+      window.location.href = data.url;
+    } else {
+      alert('Could not open billing portal. Please try again.');
+    }
   };
 
   const categories = [
@@ -68,6 +79,13 @@ export default function BoardPassPage() {
     const fetchLifetimeStats = async () => {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return;
+
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('subscription_status')
+        .eq('id', user.id)
+        .single();
+      if (profile) setSubscriptionStatus(profile.subscription_status);
 
       const { data: events } = await supabase
         .from('usage_events')
@@ -196,7 +214,11 @@ export default function BoardPassPage() {
         if (error) console.error('Vault save error:', error);
       }
     }
-    setView('rationale');
+    if (attempted + 1 >= 50 && subscriptionStatus !== 'active') {
+      setView('paywall');
+    } else {
+      setView('rationale');
+    }
   };
 
   const handleMasteryHit = async (cardId: string) => {
@@ -291,6 +313,25 @@ export default function BoardPassPage() {
             Review flashcards and reinforce weak areas
           </p>
         </div>
+
+        {/* MANAGE SUBSCRIPTION */}
+        {subscriptionStatus === 'active' && (
+          <button
+            onClick={handleManageSubscription}
+            style={{
+              marginTop: 16,
+              background: 'none',
+              border: 'none',
+              color: '#C5A46D',
+              fontSize: '0.85rem',
+              cursor: 'pointer',
+              textDecoration: 'underline',
+              letterSpacing: '0.5px',
+            }}
+          >
+            Manage Subscription
+          </button>
+        )}
 
         {/* LIFETIME STATS */}
         {lifetimeStats && (lifetimeStats.accuracy !== null || lifetimeStats.weakCategories.length > 0) && (
@@ -444,6 +485,42 @@ export default function BoardPassPage() {
             style={{ width: '100%', marginTop: 35 }}
           >
             Next Question
+          </button>
+        </div>
+      )}
+
+      {view === 'paywall' && (
+        <div className="blueprint-card" style={{ textAlign: 'center', paddingTop: 40 }}>
+          <img src="/coach-eleve-logo.png" alt="Coach Elevé" style={{ width: 110, marginBottom: 16, opacity: 0.95 }} />
+          <h2 style={{ color: '#C5A46D', fontSize: '1.8rem', letterSpacing: '1px', marginBottom: 12 }}>
+            You've completed 50 free questions!
+          </h2>
+          <p style={{ color: '#555', fontSize: '1rem', maxWidth: 400, margin: '0 auto 32px', lineHeight: 1.6 }}>
+            You're building real momentum. Unlock the full question bank, all 11 domains, and detailed rationales to finish your prep strong.
+          </p>
+          <a
+            href="/upgrade"
+            style={{
+              display: 'block',
+              width: '100%',
+              padding: '14px 0',
+              backgroundColor: '#C5A46D',
+              color: '#000',
+              fontWeight: 700,
+              fontSize: '1.05rem',
+              letterSpacing: '0.5px',
+              borderRadius: 8,
+              textDecoration: 'none',
+              marginBottom: 16,
+            }}
+          >
+            Unlock Full Access — $49/month
+          </a>
+          <button
+            onClick={() => setSubject(null)}
+            style={{ background: 'none', border: 'none', color: '#888', fontSize: '0.9rem', cursor: 'pointer' }}
+          >
+            Return Home
           </button>
         </div>
       )}

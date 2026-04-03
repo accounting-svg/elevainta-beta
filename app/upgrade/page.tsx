@@ -5,7 +5,7 @@ export default function UpgradePage() {
     { label: '500+ exam-style questions' },
     { label: 'All 11 board domains covered' },
     { label: 'Detailed rationales for every answer' },
-    { label: 'Opportunity Vault — curated board opportunity database' },
+    { label: 'Flashcards — reinforce weak areas with every missed question' },
     { label: 'Unlimited practice sessions' },
     { label: 'Performance tracking by topic' },
   ]
