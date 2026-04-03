@@ -20,11 +20,23 @@ export default function BoardPassPage() {
   const [lifetimeStats, setLifetimeStats] = useState<{ accuracy: number | null, weakCategories: string[] } | null>(null);
   const [lifetimeAnswered, setLifetimeAnswered] = useState(0);
   const [subscriptionStatus, setSubscriptionStatus] = useState<string | null>(null);
+  const [showA2HS, setShowA2HS] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
 
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL as string,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string
   );
+
+  useEffect(() => {
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+    if (isStandalone) return;
+    if (localStorage.getItem('a2hs_dismissed')) return;
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (!isMobile) return;
+    setIsIOS(/iPhone|iPad|iPod/i.test(navigator.userAgent));
+    setShowA2HS(true);
+  }, []);
 
   const trackEvent = async (event: string) => {
     const { data: { user } } = await supabase.auth.getUser();
@@ -257,6 +269,33 @@ export default function BoardPassPage() {
   const accuracyColor = (pct: number) => pct >= 80 ? '#22c55e' : pct >= 60 ? '#eab308' : '#ef4444';
   const accuracyLabel = (pct: number) => pct >= 80 ? 'STRONG' : pct >= 60 ? 'NEEDS WORK' : 'WEAK';
 
+  const A2HSBanner = showA2HS ? (
+    <div style={{
+      position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 1000,
+      backgroundColor: '#171717', borderTop: '1px solid #C5A46D',
+      padding: '12px 16px', display: 'flex', alignItems: 'center', gap: 12,
+    }}>
+      <img src="/coach-eleve-logo.png" alt="Coach Elevé" style={{ width: 36, height: 36, borderRadius: '50%', border: '1px solid #C5A46D', objectFit: 'cover', flexShrink: 0 }} />
+      <div style={{ flex: 1 }}>
+        <p style={{ color: '#C5A46D', fontWeight: 700, fontSize: '0.82rem', letterSpacing: '0.4px', marginBottom: 2 }}>
+          Add Coach Elevé to your home screen
+        </p>
+        <p style={{ color: '#aaa', fontSize: '0.75rem', lineHeight: 1.4 }}>
+          {isIOS
+            ? 'Tap the Share button then "Add to Home Screen"'
+            : 'Tap the menu then "Add to Home Screen"'}
+        </p>
+      </div>
+      <button
+        onClick={() => { localStorage.setItem('a2hs_dismissed', '1'); setShowA2HS(false); }}
+        style={{ background: 'none', border: 'none', color: '#888', fontSize: '1.2rem', cursor: 'pointer', padding: '4px 8px', flexShrink: 0, lineHeight: 1 }}
+        aria-label="Dismiss"
+      >
+        ✕
+      </button>
+    </div>
+  ) : null;
+
   // --- HOME / CONCIERGE ---
   if (!subject) {
     return (
@@ -365,6 +404,7 @@ export default function BoardPassPage() {
             )}
           </div>
         )}
+        {A2HSBanner}
       </main>
     );
   }
@@ -705,6 +745,7 @@ export default function BoardPassPage() {
           </button>
         </div>
       )}
+      {A2HSBanner}
     </main>
   );
 }
