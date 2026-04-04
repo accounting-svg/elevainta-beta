@@ -228,8 +228,28 @@ export default function BoardPassPage() {
         if (error) console.error('Vault save error:', error);
       }
     }
-    if (lifetimeAnswered + attempted + 1 >= 50 && subscriptionStatus !== 'active') {
-      setView('paywall');
+    if (lifetimeAnswered + attempted + 1 >= 50) {
+      // Always re-fetch subscription status fresh from DB at the paywall threshold.
+      // The cached subscriptionStatus state can be stale if the Stripe webhook fired
+      // after the user loaded the home screen (common right after payment).
+      const { data: { user: currentUser } } = await supabase.auth.getUser();
+      let freshStatus = subscriptionStatus;
+      if (currentUser) {
+        const { data: freshProfile } = await supabase
+          .from('profiles')
+          .select('subscription_status')
+          .eq('id', currentUser.id)
+          .single();
+        if (freshProfile) {
+          freshStatus = freshProfile.subscription_status;
+          setSubscriptionStatus(freshStatus);
+        }
+      }
+      if (freshStatus !== 'active') {
+        setView('paywall');
+      } else {
+        setView('rationale');
+      }
     } else {
       setView('rationale');
     }
