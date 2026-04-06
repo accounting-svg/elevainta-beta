@@ -194,7 +194,7 @@ window.speechSynthesis.speak(listenSpeech);
 
   const handleUpgradeClick = async () => {
     const { data: { user } } = await supabase.auth.getUser()
-    window.location.href = user ? '/upgrade' : '/signup'
+    window.location.href = user ? '/upgrade' : '/signup?redirect=/upgrade'
   }
 
   const returnHome = () => {

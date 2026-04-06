@@ -2,10 +2,12 @@
 
 import { useState } from 'react'
 import { createBrowserClient } from '@supabase/ssr'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 export default function SignupPage() {
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const redirectTo = searchParams.get('redirect') || '/board-pass'
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
@@ -49,7 +51,7 @@ export default function SignupPage() {
       // Auth succeeded — redirect anyway; webhook will upsert profile on payment
     }
 
-    router.push('/board-pass')
+    router.push(redirectTo)
     router.refresh()
   }
 
