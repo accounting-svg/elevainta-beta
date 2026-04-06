@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { createBrowserClient } from '@supabase/ssr'
 import { demoQuestions } from './demoQuestions'
 
 export default function DemoPage() {
@@ -184,6 +185,16 @@ window.speechSynthesis.speak(listenSpeech);
     } else {
       setView('complete')
     }
+  }
+
+  const supabase = createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  )
+
+  const handleUpgradeClick = async () => {
+    const { data: { user } } = await supabase.auth.getUser()
+    window.location.href = user ? '/upgrade' : '/signup'
   }
 
   const returnHome = () => {
@@ -688,20 +699,24 @@ window.speechSynthesis.speak(listenSpeech);
     >
       Start Free Account
     </a>
-    <a
-      href="/upgrade"
+    <button
+      onClick={handleUpgradeClick}
       style={{
         display: 'block',
+        background: 'none',
+        border: 'none',
         color: '#C5A46D',
         fontSize: '0.95rem',
         fontWeight: 600,
         textDecoration: 'underline',
         marginBottom: 10,
         cursor: 'pointer',
+        padding: 0,
+        width: '100%',
       }}
     >
       See Full Pricing
-    </a>
+    </button>
 
     <button
       onClick={returnHome}
