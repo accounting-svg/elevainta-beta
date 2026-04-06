@@ -1,6 +1,34 @@
-'use client'
+import { cookies } from 'next/headers'
+import { createServerClient } from '@supabase/ssr'
+import { redirect } from 'next/navigation'
 
-export default function UpgradePage() {
+const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/aFabIUfj292T0VnaxEeAg00'
+
+export default async function UpgradePage() {
+  const cookieStore = await cookies()
+
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll()
+        },
+      },
+    }
+  )
+
+  const { data: { user } } = await supabase.auth.getUser()
+
+  if (!user) {
+    redirect('/login')
+  }
+
+  // Pass the Supabase user ID via client_reference_id so the webhook can
+  // reliably link the Stripe customer to the correct Supabase account.
+  const stripeUrl = `${STRIPE_PAYMENT_LINK}?client_reference_id=${user.id}&prefilled_email=${encodeURIComponent(user.email ?? '')}`
+
   const features = [
     { label: '500+ exam-style questions' },
     { label: 'All 11 board domains covered' },
@@ -104,7 +132,7 @@ export default function UpgradePage() {
 
         {/* CTA Button */}
         <a
-          href="https://buy.stripe.com/aFabIUfj292T0VnaxEeAg00"
+          href={stripeUrl}
           style={{
             display: 'block',
             width: '100%',
