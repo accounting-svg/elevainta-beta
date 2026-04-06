@@ -1,10 +1,13 @@
 'use client'
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { boardPassQuestions, SUBJECTS } from '../data/boardPassQuestions'
 import StrategyFeedback from '../components/StrategyFeedback'
 import { createBrowserClient } from '@supabase/ssr'
 
 export default function BoardPassPage() {
+  const router = useRouter()
+  const [authChecked, setAuthChecked] = useState(false)
   const [answeredIds, setAnsweredIds] = useState<Set<string>>(new Set())
   const [questions, setQuestions] = useState<any[]>([]);
   const [subject, setSubject] = useState<string | null>(null);
@@ -27,6 +30,20 @@ export default function BoardPassPage() {
     process.env.NEXT_PUBLIC_SUPABASE_URL as string,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string
   );
+
+  // Auth gate — runs once on mount before any content is shown.
+  // This is belt-and-suspenders alongside the proxy: the proxy protects at
+  // the routing layer, this protects at the component layer so unauthenticated
+  // users never see questions even if the proxy is bypassed.
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (!user) {
+        router.replace('/signup')
+      } else {
+        setAuthChecked(true)
+      }
+    })
+  }, [])
 
   useEffect(() => {
     const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
@@ -315,6 +332,10 @@ export default function BoardPassPage() {
       </button>
     </div>
   ) : null;
+
+  // Block all rendering until the auth check completes.
+  // Prevents unauthenticated users from seeing questions during the async check.
+  if (!authChecked) return null
 
   // --- HOME / CONCIERGE ---
   if (!subject) {
