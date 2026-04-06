@@ -45,19 +45,40 @@ export async function POST(req: NextRequest) {
         break
       }
 
-      // Link stripe_customer_id to the profile by email, and activate subscription
+      // Look up profile by email directly — avoids listUsers() pagination bug
+      // (listUsers() defaults to 50 rows; users beyond page 1 were silently missed)
+      const { data: profileRow, error: profileLookupError } = await supabaseAdmin
+        .from('profiles')
+        .select('id')
+        .ilike('email', customerEmail)
+        .maybeSingle()
+
+      if (profileLookupError) {
+        console.error('Profile lookup error:', profileLookupError)
+        return NextResponse.json({ error: 'Failed to look up user' }, { status: 500 })
+      }
+
+      if (!profileRow) {
+        console.error('No profile found for email:', customerEmail)
+        // Return 200 so Stripe does not keep retrying — user may not have signed up yet
+        return NextResponse.json({ received: true, warning: 'No matching user' }, { status: 200 })
+      }
+
+      // Upsert so it works whether or not stripe_customer_id was set before
       const { error } = await supabaseAdmin
         .from('profiles')
         .update({
           stripe_customer_id: customerId,
           subscription_status: 'active',
         })
-        .eq('email', customerEmail)
+        .eq('id', profileRow.id)
 
       if (error) {
         console.error('Supabase update error on checkout:', error)
         return NextResponse.json({ error: 'Failed to link customer' }, { status: 500 })
       }
+
+      console.log(`Activated subscription for user ${profileRow.id} (${customerEmail})`)
       break
     }
 

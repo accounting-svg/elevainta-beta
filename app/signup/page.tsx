@@ -35,13 +35,18 @@ export default function SignupPage() {
       return
     }
 
-    const { error: profileError } = await supabase
-      .from('profiles')
-      .insert({ id: user.id, email: user.email, subscription_status: 'free' })
+    // Use server-side route with service role key — browser client insert fails
+    // silently when email confirmation is enabled (no active session = RLS blocks it)
+    const profileRes = await fetch('/api/create-profile', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: user.id, email: user.email }),
+    })
 
-    if (profileError) {
-      console.error('Profile insert failed:', profileError.message)
-      // Auth succeeded — redirect anyway; profile can be created later
+    if (!profileRes.ok) {
+      const { error: profileError } = await profileRes.json()
+      console.error('Profile creation failed:', profileError)
+      // Auth succeeded — redirect anyway; webhook will upsert profile on payment
     }
 
     router.push('/board-pass')
