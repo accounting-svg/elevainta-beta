@@ -120,35 +120,28 @@ export async function POST(req: NextRequest) {
     }
 
     case 'customer.subscription.created':
-    case 'customer.subscription.updated': {
-      const subscription = event.data.object as Stripe.Subscription
-      const customerId = subscription.customer as string
-
-      const { error } = await supabaseAdmin
-        .from('profiles')
-        .update({ subscription_status: 'active' })
-        .eq('stripe_customer_id', customerId)
-
-      if (error) {
-        console.error('Supabase update error:', error)
-        return NextResponse.json({ error: 'Failed to update subscription status' }, { status: 500 })
-      }
-      break
-    }
-
+    case 'customer.subscription.updated':
     case 'customer.subscription.deleted': {
       const subscription = event.data.object as Stripe.Subscription
       const customerId = subscription.customer as string
 
+      // Derive access from the actual Stripe status — never assume active.
+      // 'deleted' events arrive with status 'canceled'; updated events cover
+      // past_due, unpaid, paused, etc. All non-active states revoke access.
+      const isActive = subscription.status === 'active' || subscription.status === 'trialing'
+      const newStatus = isActive ? 'active' : 'free'
+
       const { error } = await supabaseAdmin
         .from('profiles')
-        .update({ subscription_status: 'free' })
+        .update({ subscription_status: newStatus })
         .eq('stripe_customer_id', customerId)
 
       if (error) {
         console.error('Supabase update error:', error)
         return NextResponse.json({ error: 'Failed to update subscription status' }, { status: 500 })
       }
+
+      console.log(`Subscription ${subscription.status} for customer ${customerId} → set to ${newStatus}`)
       break
     }
 
