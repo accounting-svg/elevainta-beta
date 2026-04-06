@@ -256,8 +256,8 @@ export default function BoardPassPage() {
           board_trap: q.boardTrap,
           mastery_level: 0,
           subject: q.subject
-        });
-        if (error) console.error('Vault save error:', error);
+        }, { onConflict: 'user_id,topic' });
+        if (error) console.error('Vault save error:', error.message, '| code:', error.code, '| details:', error.details, '| hint:', error.hint);
       }
     }
 
