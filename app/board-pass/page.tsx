@@ -42,14 +42,16 @@ export default function BoardPassPage() {
         router.replace('/signup')
         return
       }
-      // Load the lifetime counter from profiles so it survives across sessions.
-      // This is the source of truth for the 50-question paywall.
+      // Load the lifetime counter and subscription status from profiles so they
+      // survive across sessions. Fetching both here ensures subscriptionStatus is
+      // never null when the UI renders, preventing a race with fetchLifetimeStats.
       const { data: profile } = await supabase
         .from('profiles')
-        .select('questions_answered')
+        .select('questions_answered, subscription_status')
         .eq('id', user.id)
         .single()
       setTotalAnswered(profile?.questions_answered ?? 0)
+      if (profile?.subscription_status) setSubscriptionStatus(profile.subscription_status)
       setAuthChecked(true)
     })
   }, [])

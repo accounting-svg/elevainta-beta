@@ -42,6 +42,12 @@ export async function POST(req: NextRequest) {
       // This is the primary lookup key; email-based lookup is the fallback.
       const supabaseUserId = session.client_reference_id ?? null
 
+      console.log('WEBHOOK DEBUG:', {
+        client_reference_id: session.client_reference_id,
+        customer_details_email: session.customer_details?.email,
+        customer: session.customer,
+      })
+
       if (!customerEmail && !supabaseUserId) {
         console.error('No email or user ID found in checkout session')
         break
