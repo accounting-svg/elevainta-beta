@@ -3,6 +3,8 @@ import Stripe from 'stripe'
 import { createClient } from '@supabase/supabase-js'
 
 export async function POST(req: NextRequest) {
+  console.log('WEBHOOK RECEIVED')
+
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
     apiVersion: '2026-03-25.dahlia',
   })
@@ -33,95 +35,72 @@ export async function POST(req: NextRequest) {
 
   switch (event.type) {
 
-    // Fires when Payment Link checkout is completed — links Stripe customer to Supabase profile
     case 'checkout.session.completed': {
       const session = event.data.object as Stripe.Checkout.Session
       const customerId = session.customer as string
-      const customerEmail = session.customer_details?.email
-      // client_reference_id is the Supabase user ID passed by the /upgrade page.
-      // This is the primary lookup key; email-based lookup is the fallback.
+      const customerEmail = session.customer_details?.email ?? session.customer_email
       const supabaseUserId = session.client_reference_id ?? null
 
       console.log('WEBHOOK DEBUG:', {
         client_reference_id: session.client_reference_id,
         customer_details_email: session.customer_details?.email,
+        customer_email: session.customer_email,
         customer: session.customer,
       })
 
-      if (!customerEmail && !supabaseUserId) {
-        console.error('No email or user ID found in checkout session')
-        break
+      const payload = {
+        stripe_customer_id: customerId,
+        subscription_status: 'active',
       }
 
-      let profileId: string | null = null
+      let activated = false
 
-      // Primary: look up by Supabase user ID (reliable, set by the /upgrade page)
+      // Attempt 1: update by Supabase user ID (client_reference_id from Payment Link)
       if (supabaseUserId) {
-        const { data: profileRow, error: profileLookupError } = await supabaseAdmin
+        const { error, count } = await supabaseAdmin
           .from('profiles')
-          .select('id')
+          .update(payload)
           .eq('id', supabaseUserId)
-          .maybeSingle()
+          .select('id', { count: 'exact', head: true })
 
-        if (profileLookupError) {
-          console.error('Profile lookup by user ID error:', profileLookupError)
-          return NextResponse.json({ error: 'Failed to look up user' }, { status: 500 })
-        }
-
-        if (profileRow) {
-          profileId = profileRow.id
+        if (error) {
+          console.error('Update by user ID error:', error)
+        } else if (count && count > 0) {
+          console.log(`SUCCESS via client_reference_id: activated user ${supabaseUserId}`)
+          activated = true
         } else {
-          // Auth user exists (they were logged in to reach /upgrade) but profile is missing —
-          // create it now so the subscription can be activated.
-          console.warn(`Profile missing for auth user ${supabaseUserId} — creating it now`)
-          const { error: createError } = await supabaseAdmin
-            .from('profiles')
-            .insert({ id: supabaseUserId, email: customerEmail ?? '', subscription_status: 'free' })
-
-          if (createError) {
-            console.error('Failed to create missing profile:', createError)
-            return NextResponse.json({ error: 'Failed to create profile' }, { status: 500 })
-          }
-          profileId = supabaseUserId
+          console.warn(`Update by client_reference_id matched 0 rows for user ${supabaseUserId}`)
         }
-      } else {
-        // Fallback: look up by email — avoids listUsers() pagination bug
-        // (listUsers() defaults to 50 rows; users beyond page 1 were silently missed)
-        const { data: profileRow, error: profileLookupError } = await supabaseAdmin
+      }
+
+      // Attempt 2: update by email if attempt 1 failed or supabaseUserId was null
+      if (!activated && customerEmail) {
+        const { error, count } = await supabaseAdmin
           .from('profiles')
-          .select('id')
-          .ilike('email', customerEmail!)
-          .maybeSingle()
+          .update(payload)
+          .ilike('email', customerEmail)
+          .select('id', { count: 'exact', head: true })
 
-        if (profileLookupError) {
-          console.error('Profile lookup by email error:', profileLookupError)
-          return NextResponse.json({ error: 'Failed to look up user' }, { status: 500 })
+        if (error) {
+          console.error('Update by email error:', error)
+        } else if (count && count > 0) {
+          console.log(`SUCCESS via email: activated user with email ${customerEmail}`)
+          activated = true
+        } else {
+          console.warn(`Update by email matched 0 rows for email ${customerEmail}`)
         }
-
-        if (!profileRow) {
-          console.error('No profile found for email:', customerEmail)
-          // Return 200 so Stripe does not keep retrying — user paid without signing up first
-          return NextResponse.json({ received: true, warning: 'No matching user' }, { status: 200 })
-        }
-
-        profileId = profileRow.id
       }
 
-      // Upsert so it works whether or not stripe_customer_id was set before
-      const { error } = await supabaseAdmin
-        .from('profiles')
-        .update({
-          stripe_customer_id: customerId,
-          subscription_status: 'active',
+      if (!activated) {
+        console.error('FAILED to activate subscription — no matching profile found', {
+          supabaseUserId,
+          customerEmail,
+          customerId,
         })
-        .eq('id', profileId)
-
-      if (error) {
-        console.error('Supabase update error on checkout:', error)
-        return NextResponse.json({ error: 'Failed to link customer' }, { status: 500 })
+        // Return 200 so Stripe does not keep retrying an unresolvable case
+        return NextResponse.json({ received: true, warning: 'No matching profile' }, { status: 200 })
       }
 
-      console.log(`Activated subscription for user ${profileId} (${customerEmail})`)
       break
     }
 
@@ -130,10 +109,6 @@ export async function POST(req: NextRequest) {
     case 'customer.subscription.deleted': {
       const subscription = event.data.object as Stripe.Subscription
       const customerId = subscription.customer as string
-
-      // Derive access from the actual Stripe status — never assume active.
-      // 'deleted' events arrive with status 'canceled'; updated events cover
-      // past_due, unpaid, paused, etc. All non-active states revoke access.
       const isActive = subscription.status === 'active' || subscription.status === 'trialing'
       const newStatus = isActive ? 'active' : 'free'
 
