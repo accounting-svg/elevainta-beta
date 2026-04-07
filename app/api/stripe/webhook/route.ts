@@ -57,15 +57,15 @@ export async function POST(req: NextRequest) {
 
       // Attempt 1: update by Supabase user ID (client_reference_id from Payment Link)
       if (supabaseUserId) {
-        const { error, count } = await supabaseAdmin
+        const { data, error } = await supabaseAdmin
           .from('profiles')
           .update(payload)
           .eq('id', supabaseUserId)
-          .select('id', { count: 'exact', head: true })
+          .select('id')
 
         if (error) {
           console.error('Update by user ID error:', error)
-        } else if (count && count > 0) {
+        } else if (data && data.length > 0) {
           console.log(`SUCCESS via client_reference_id: activated user ${supabaseUserId}`)
           activated = true
         } else {
@@ -75,15 +75,15 @@ export async function POST(req: NextRequest) {
 
       // Attempt 2: update by email if attempt 1 failed or supabaseUserId was null
       if (!activated && customerEmail) {
-        const { error, count } = await supabaseAdmin
+        const { data, error } = await supabaseAdmin
           .from('profiles')
           .update(payload)
           .ilike('email', customerEmail)
-          .select('id', { count: 'exact', head: true })
+          .select('id')
 
         if (error) {
           console.error('Update by email error:', error)
-        } else if (count && count > 0) {
+        } else if (data && data.length > 0) {
           console.log(`SUCCESS via email: activated user with email ${customerEmail}`)
           activated = true
         } else {
