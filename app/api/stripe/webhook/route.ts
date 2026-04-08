@@ -112,17 +112,51 @@ export async function POST(req: NextRequest) {
       const isActive = subscription.status === 'active' || subscription.status === 'trialing'
       const newStatus = isActive ? 'active' : 'free'
 
-      const { error } = await supabaseAdmin
+      // Attempt 1: update by stripe_customer_id
+      const { data: byCustomerId, error: error1 } = await supabaseAdmin
         .from('profiles')
         .update({ subscription_status: newStatus })
         .eq('stripe_customer_id', customerId)
+        .select('id')
 
-      if (error) {
-        console.error('Supabase update error:', error)
+      if (error1) {
+        console.error('Supabase update by stripe_customer_id error:', error1)
         return NextResponse.json({ error: 'Failed to update subscription status' }, { status: 500 })
       }
 
-      console.log(`Subscription ${subscription.status} for customer ${customerId} → set to ${newStatus}`)
+      if (byCustomerId && byCustomerId.length > 0) {
+        console.log(`Subscription ${subscription.status} for customer ${customerId} → set to ${newStatus} (via stripe_customer_id)`)
+        break
+      }
+
+      // Attempt 2: fall back to email lookup via Stripe
+      console.warn(`stripe_customer_id matched 0 rows for ${customerId}, falling back to email`)
+
+      const customer = await stripe.customers.retrieve(customerId)
+      const customerEmail = !customer.deleted ? customer.email : null
+
+      if (!customerEmail) {
+        console.error(`Could not retrieve email for Stripe customer ${customerId}`)
+        break
+      }
+
+      const { data: byEmail, error: error2 } = await supabaseAdmin
+        .from('profiles')
+        .update({ subscription_status: newStatus })
+        .eq('email', customerEmail)
+        .select('id')
+
+      if (error2) {
+        console.error('Supabase update by email error:', error2)
+        return NextResponse.json({ error: 'Failed to update subscription status' }, { status: 500 })
+      }
+
+      if (byEmail && byEmail.length > 0) {
+        console.log(`Subscription ${subscription.status} for customer ${customerId} → set to ${newStatus} (via email ${customerEmail})`)
+      } else {
+        console.error(`Failed to update subscription — no profile matched customer ${customerId} or email ${customerEmail}`)
+      }
+
       break
     }
 
