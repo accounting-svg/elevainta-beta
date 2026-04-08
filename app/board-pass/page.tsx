@@ -8,7 +8,6 @@ import { createBrowserClient } from '@supabase/ssr'
 export default function BoardPassPage() {
   const router = useRouter()
   const [authChecked, setAuthChecked] = useState(false)
-  const [totalAnswered, setTotalAnswered] = useState(0)
   const [answeredIds, setAnsweredIds] = useState<Set<string>>(new Set())
   const [questions, setQuestions] = useState<any[]>([]);
   const [subject, setSubject] = useState<string | null>(null);
@@ -37,22 +36,12 @@ export default function BoardPassPage() {
   // the routing layer, this protects at the component layer so unauthenticated
   // users never see questions even if the proxy is bypassed.
   useEffect(() => {
-    supabase.auth.getUser().then(async ({ data: { user } }) => {
+    supabase.auth.getUser().then(({ data: { user } }) => {
       if (!user) {
         router.replace('/signup')
-        return
+      } else {
+        setAuthChecked(true)
       }
-      // Load the lifetime counter and subscription status from profiles so they
-      // survive across sessions. Fetching both here ensures subscriptionStatus is
-      // never null when the UI renders, preventing a race with fetchLifetimeStats.
-      const { data: profile } = await supabase
-        .from('profiles')
-        .select('questions_answered, subscription_status')
-        .eq('id', user.id)
-        .single()
-      setTotalAnswered(profile?.questions_answered ?? 0)
-      if (profile?.subscription_status) setSubscriptionStatus(profile.subscription_status)
-      setAuthChecked(true)
     })
   }, [])
 
@@ -224,11 +213,6 @@ export default function BoardPassPage() {
     setAttempted(prev => prev + 1);
     const isCorrect = key === q.correctAnswer;
 
-    // Increment the lifetime counter synchronously so the paywall check below
-    // is always accurate regardless of React's async state batching.
-    const newTotal = totalAnswered + 1
-    setTotalAnswered(newTotal)
-
     // Track per-category stats
     setCategoryStats(prev => {
       const cat = q.subject || 'Unknown';
@@ -239,14 +223,13 @@ export default function BoardPassPage() {
       };
     });
 
-    const { data: { user } } = await supabase.auth.getUser();
-
     if (isCorrect) {
       setScore(prev => prev + 1);
       trackEvent('answer_correct');
     } else {
       setSessionMissed(prev => [...prev, q]);
       trackEvent('answer_incorrect');
+      const { data: { user } } = await supabase.auth.getUser();
       if (user) {
         const { error } = await supabase.from('opportunity_flashcards').upsert({
           user_id: user.id,
@@ -258,29 +241,21 @@ export default function BoardPassPage() {
           board_trap: q.boardTrap,
           mastery_level: 0,
           subject: q.subject
-        }, { onConflict: 'user_id,topic' });
-        if (error) console.error('Vault save error:', error.message, '| code:', error.code, '| details:', error.details, '| hint:', error.hint);
+        });
+        if (error) console.error('Vault save error:', error);
       }
     }
-
-    // Persist the lifetime counter to profiles so it survives sessions.
-    if (user) {
-      supabase
-        .from('profiles')
-        .update({ questions_answered: newTotal })
-        .eq('id', user.id)
-        .then(({ error }) => { if (error) console.error('Counter sync error:', error) })
-    }
-
-    if (newTotal >= 50) {
-      // Re-fetch subscription status fresh from DB — the cached value can be
-      // stale if the Stripe webhook fired after the page loaded.
+    if (lifetimeAnswered + attempted + 1 >= 50) {
+      // Always re-fetch subscription status fresh from DB at the paywall threshold.
+      // The cached subscriptionStatus state can be stale if the Stripe webhook fired
+      // after the user loaded the home screen (common right after payment).
+      const { data: { user: currentUser } } = await supabase.auth.getUser();
       let freshStatus = subscriptionStatus;
-      if (user) {
+      if (currentUser) {
         const { data: freshProfile } = await supabase
           .from('profiles')
           .select('subscription_status')
-          .eq('id', user.id)
+          .eq('id', currentUser.id)
           .single();
         if (freshProfile) {
           freshStatus = freshProfile.subscription_status;
