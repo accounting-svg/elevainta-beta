@@ -245,10 +245,15 @@ export default function BoardPassPage() {
         if (error) console.error('Vault save error:', error);
       }
     }
+    // If already known to be active, skip the count check entirely.
+    if (subscriptionStatus === 'active') {
+      setView('rationale');
+      return;
+    }
+
     if (lifetimeAnswered + attempted + 1 >= 50) {
-      // Always re-fetch subscription status fresh from DB at the paywall threshold.
-      // The cached subscriptionStatus state can be stale if the Stripe webhook fired
-      // after the user loaded the home screen (common right after payment).
+      // Re-fetch subscription status fresh from DB — the cached value can be stale
+      // if the Stripe webhook fired after the page loaded.
       const { data: { user: currentUser } } = await supabase.auth.getUser();
       let freshStatus = subscriptionStatus;
       if (currentUser) {
@@ -262,10 +267,10 @@ export default function BoardPassPage() {
           setSubscriptionStatus(freshStatus);
         }
       }
-      if (freshStatus !== 'active') {
-        setView('paywall');
-      } else {
+      if (freshStatus === 'active') {
         setView('rationale');
+      } else {
+        setView('paywall');
       }
     } else {
       setView('rationale');
