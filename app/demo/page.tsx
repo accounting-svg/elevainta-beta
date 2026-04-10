@@ -1,9 +1,26 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { createBrowserClient } from '@supabase/ssr'
 import { demoQuestions } from './demoQuestions'
 
 export default function DemoPage() {
+  const router = useRouter()
+  const supabase = createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  )
+
+  const handleDemoComplete = async () => {
+    const { data: { user } } = await supabase.auth.getUser()
+    if (user) {
+      router.push('/board-pass')
+    } else {
+      router.push('/signup')
+    }
+  }
+
   const [questions] = useState(demoQuestions)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
@@ -670,8 +687,8 @@ window.speechSynthesis.speak(listenSpeech);
     )}
 
    {/* CONVERSION BUTTON */}
-    <a
-      href="/signup"
+    <button
+      onClick={handleDemoComplete}
       style={{
         display: 'block',
         width: '100%',
@@ -682,12 +699,13 @@ window.speechSynthesis.speak(listenSpeech);
         fontSize: '1.05rem',
         letterSpacing: '0.5px',
         borderRadius: 8,
-        textDecoration: 'none',
+        border: 'none',
+        cursor: 'pointer',
         marginBottom: 12,
       }}
     >
       Start Free Account
-    </a>
+    </button>
 
     <button
       onClick={returnHome}
