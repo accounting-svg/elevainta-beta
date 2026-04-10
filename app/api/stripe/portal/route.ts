@@ -5,6 +5,8 @@ export async function POST(req: NextRequest) {
   try {
     const { customerId } = await req.json()
     console.log('portal: incoming customerId', customerId)
+    console.log('PORTAL DEBUG:', { customerId })
+    console.log('STRIPE CUSTOMER ID:', customerId)
 
     if (!customerId) {
       console.error('portal: missing customerId')
@@ -22,8 +24,8 @@ export async function POST(req: NextRequest) {
 
     console.log('portal: session created, url', portalSession.url)
     return NextResponse.json({ url: portalSession.url })
-  } catch (err) {
+  } catch (err: any) {
     console.error('portal: error creating session', err)
-    return NextResponse.json({ error: 'Failed to create portal session' }, { status: 500 })
+    return NextResponse.json({ error: err.message }, { status: 500 })
   }
 }
