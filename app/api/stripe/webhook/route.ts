@@ -165,6 +165,33 @@ export async function POST(req: NextRequest) {
       break
     }
 
+    case 'invoice.payment_succeeded': {
+      const invoice = event.data.object as Stripe.Invoice
+      const customerId = invoice.customer as string
+      const customerEmail = (invoice as any).customer_email as string | null
+
+      if (!customerEmail) {
+        console.error('invoice.payment_succeeded: no customer_email on invoice', { customerId })
+        break
+      }
+
+      const { data, error } = await supabaseAdmin
+        .from('profiles')
+        .update({ subscription_status: 'active', stripe_customer_id: customerId })
+        .eq('email', customerEmail)
+        .select('id')
+
+      if (error) {
+        console.error('invoice.payment_succeeded: Supabase update error', error)
+      } else if (data && data.length > 0) {
+        console.log(`invoice.payment_succeeded: activated user with email ${customerEmail}`)
+      } else {
+        console.error(`invoice.payment_succeeded: no profile matched email ${customerEmail}`)
+      }
+
+      break
+    }
+
     default:
       break
   }
