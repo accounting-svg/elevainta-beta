@@ -89,12 +89,22 @@ export default function BoardPassPage() {
   };
 
   const handleManageSubscription = async () => {
-    const res = await fetch('/api/stripe/portal', { method: 'POST' });
-    const data = await res.json();
-    if (data.url) {
-      window.location.href = data.url;
-    } else {
-      alert('Could not open billing portal. Please try again.');
+    console.log('handleManageSubscription: function running');
+    try {
+      console.log('handleManageSubscription: making fetch request');
+      const res = await fetch('/api/stripe/portal', { method: 'POST' });
+      console.log('handleManageSubscription: response received, status', res.status);
+      const data = await res.json();
+      console.log('handleManageSubscription: response data', data);
+      if (data.url) {
+        console.log('handleManageSubscription: redirecting to', data.url);
+        window.location.href = data.url;
+      } else {
+        console.error('handleManageSubscription: no URL in response', data);
+        alert('Could not open billing portal. Please try again.');
+      }
+    } catch (err) {
+      console.error('handleManageSubscription: fetch failed', err);
     }
   };
 
@@ -414,7 +424,7 @@ export default function BoardPassPage() {
         {/* MANAGE SUBSCRIPTION */}
         {subscriptionStatus === 'active' && (
           <button
-            onClick={handleManageSubscription}
+            onClick={() => { console.log('CLICK WORKING'); handleManageSubscription(); }}
             style={{
               marginTop: 16,
               background: 'none',
