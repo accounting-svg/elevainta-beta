@@ -168,6 +168,7 @@ export async function POST(req: NextRequest) {
     case 'invoice.payment_succeeded': {
       const invoice = event.data.object as Stripe.Invoice
       const customerId = invoice.customer as string
+      const subscriptionId = (invoice as any).subscription as string | null
       const customerEmail = (invoice as any).customer_email as string | null
 
       if (!customerEmail) {
@@ -177,7 +178,7 @@ export async function POST(req: NextRequest) {
 
       const { data, error } = await supabaseAdmin
         .from('profiles')
-        .update({ subscription_status: 'active', stripe_customer_id: customerId })
+        .update({ subscription_status: 'active', stripe_customer_id: customerId, subscription_id: subscriptionId })
         .eq('email', customerEmail)
         .select('id')
 
