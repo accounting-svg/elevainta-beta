@@ -91,8 +91,21 @@ export default function BoardPassPage() {
   const handleManageSubscription = async () => {
     console.log('handleManageSubscription: function running');
     try {
+      const { data: { user } } = await supabase.auth.getUser();
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('stripe_customer_id')
+        .eq('id', user!.id)
+        .single();
+      const customerId = profile?.stripe_customer_id;
+      console.log('handleManageSubscription: customerId', customerId);
+
       console.log('handleManageSubscription: making fetch request');
-      const res = await fetch('/api/stripe/portal', { method: 'POST' });
+      const res = await fetch('/api/stripe/portal', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ customerId }),
+      });
       console.log('handleManageSubscription: response received, status', res.status);
       const data = await res.json();
       console.log('handleManageSubscription: response data', data);
