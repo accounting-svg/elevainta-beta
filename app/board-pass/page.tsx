@@ -23,6 +23,7 @@ export default function BoardPassPage() {
   const [lifetimeStats, setLifetimeStats] = useState<{ accuracy: number | null, weakCategories: string[] } | null>(null);
   const [lifetimeAnswered, setLifetimeAnswered] = useState(0);
   const [subscriptionStatus, setSubscriptionStatus] = useState<string | null>(null);
+  const [subscriptionEndDate, setSubscriptionEndDate] = useState<string | null>(null);
   const [showA2HS, setShowA2HS] = useState(false);
   const [isIOS, setIsIOS] = useState(false);
 
@@ -112,10 +113,13 @@ export default function BoardPassPage() {
 
       const { data: profile } = await supabase
         .from('profiles')
-        .select('subscription_status')
+        .select('subscription_status, subscription_end_date')
         .eq('id', user.id)
         .single();
-      if (profile) setSubscriptionStatus(profile.subscription_status);
+      if (profile) {
+        setSubscriptionStatus(profile.subscription_status);
+        setSubscriptionEndDate(profile.subscription_end_date ?? null);
+      }
 
       const { data: events } = await supabase
         .from('usage_events')
@@ -245,8 +249,11 @@ export default function BoardPassPage() {
         if (error) console.error('Vault save error:', error);
       }
     }
-    // If already known to be active, skip the count check entirely.
-    if (subscriptionStatus === 'active') {
+    const isEffectivelyActive = (status: string | null, endDate: string | null) =>
+      status === 'active' || (endDate != null && new Date(endDate) > new Date());
+
+    // If already known to be active (or within paid period), skip the count check.
+    if (isEffectivelyActive(subscriptionStatus, subscriptionEndDate)) {
       setView('rationale');
       return;
     }
@@ -256,18 +263,21 @@ export default function BoardPassPage() {
       // if the Stripe webhook fired after the page loaded.
       const { data: { user: currentUser } } = await supabase.auth.getUser();
       let freshStatus = subscriptionStatus;
+      let freshEndDate = subscriptionEndDate;
       if (currentUser) {
         const { data: freshProfile } = await supabase
           .from('profiles')
-          .select('subscription_status')
+          .select('subscription_status, subscription_end_date')
           .eq('id', currentUser.id)
           .single();
         if (freshProfile) {
           freshStatus = freshProfile.subscription_status;
+          freshEndDate = freshProfile.subscription_end_date ?? null;
           setSubscriptionStatus(freshStatus);
+          setSubscriptionEndDate(freshEndDate);
         }
       }
-      if (freshStatus === 'active') {
+      if (isEffectivelyActive(freshStatus, freshEndDate)) {
         setView('rationale');
       } else {
         setView('paywall');

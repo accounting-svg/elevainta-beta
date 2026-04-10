@@ -111,11 +111,17 @@ export async function POST(req: NextRequest) {
       const customerId = subscription.customer as string
       const isActive = subscription.status === 'active' || subscription.status === 'trialing'
       const newStatus = isActive ? 'active' : 'free'
+      const subscriptionEndDate = new Date((subscription as any).current_period_end * 1000).toISOString()
+
+      const updatePayload = {
+        subscription_status: newStatus,
+        subscription_end_date: subscriptionEndDate,
+      }
 
       // Attempt 1: update by stripe_customer_id
       const { data: byCustomerId, error: error1 } = await supabaseAdmin
         .from('profiles')
-        .update({ subscription_status: newStatus })
+        .update(updatePayload)
         .eq('stripe_customer_id', customerId)
         .select('id')
 
@@ -142,7 +148,7 @@ export async function POST(req: NextRequest) {
 
       const { data: byEmail, error: error2 } = await supabaseAdmin
         .from('profiles')
-        .update({ subscription_status: newStatus })
+        .update(updatePayload)
         .eq('email', customerEmail)
         .select('id')
 

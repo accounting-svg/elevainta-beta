@@ -1,4 +1,49 @@
+'use client'
+import { useState, useEffect } from 'react'
+import { createBrowserClient } from '@supabase/ssr'
+
 export default function SuccessPage() {
+  const [isActive, setIsActive] = useState(false)
+  const [checking, setChecking] = useState(true)
+
+  const supabase = createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  )
+
+  useEffect(() => {
+    let attempts = 0
+    const maxAttempts = 5
+
+    const poll = async () => {
+      attempts++
+      const { data: { user } } = await supabase.auth.getUser()
+      if (!user) {
+        setChecking(false)
+        return
+      }
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('subscription_status')
+        .eq('id', user.id)
+        .single()
+
+      if (profile?.subscription_status === 'active') {
+        setIsActive(true)
+        setChecking(false)
+        return
+      }
+
+      if (attempts < maxAttempts) {
+        setTimeout(poll, 2000)
+      } else {
+        setChecking(false)
+      }
+    }
+
+    poll()
+  }, [])
+
   const unlocked = [
     '500+ exam-style questions',
     'All 11 board domains covered',
@@ -105,27 +150,38 @@ export default function SuccessPage() {
           ))}
         </ul>
 
-        {/* CTA */}
-        <a
-          href="/board-pass"
-          style={{
-            display: 'block',
-            width: '100%',
-            padding: '14px',
-            backgroundColor: '#C5A46D',
-            color: '#fff',
-            border: 'none',
-            borderRadius: 3,
+        {/* CTA — shown only once subscription confirmed active (or after 5 polling attempts) */}
+        {checking ? (
+          <p style={{
             fontSize: '0.9rem',
-            fontWeight: 'bold',
-            letterSpacing: '1.5px',
-            textAlign: 'center',
-            textDecoration: 'none',
-            boxSizing: 'border-box',
-          }}
-        >
-          START PRACTICING NOW
-        </a>
+            color: '#888',
+            padding: '14px 0',
+            letterSpacing: '0.5px',
+          }}>
+            Activating your account…
+          </p>
+        ) : (
+          <a
+            href="/board-pass"
+            style={{
+              display: 'block',
+              width: '100%',
+              padding: '14px',
+              backgroundColor: '#C5A46D',
+              color: '#fff',
+              border: 'none',
+              borderRadius: 3,
+              fontSize: '0.9rem',
+              fontWeight: 'bold',
+              letterSpacing: '1.5px',
+              textAlign: 'center',
+              textDecoration: 'none',
+              boxSizing: 'border-box',
+            }}
+          >
+            START PRACTICING NOW
+          </a>
+        )}
 
         <p style={{
           fontSize: '0.8rem',
