@@ -189,8 +189,13 @@ window.speechSynthesis.speak(listenSpeech);
   }
 
   const nextQuestion = () => {
-    if (attempted >= 7) {
+    const guardedComplete = () => supabase.auth.getUser().then(({ data: { user } }) => {
+      if (!user) { router.push('/signup'); return }
       setView('complete')
+    })
+
+    if (attempted >= 7) {
+      guardedComplete()
       return
     }
 
@@ -199,7 +204,7 @@ window.speechSynthesis.speak(listenSpeech);
       setSelected(null)
       setView('question')
     } else {
-      setView('complete')
+      guardedComplete()
     }
   }
 
