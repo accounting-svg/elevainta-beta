@@ -111,12 +111,11 @@ export async function POST(req: NextRequest) {
       const customerId = subscription.customer as string
       const isActive = subscription.status === 'active' || subscription.status === 'trialing'
       const newStatus = isActive ? 'active' : 'free'
-      const subscriptionEndDate = new Date((subscription as any).current_period_end * 1000).toISOString()
+      const rawEnd = (subscription as any).current_period_end
+      const subscriptionEndDate = rawEnd ? new Date(rawEnd * 1000).toISOString() : null
 
-      const updatePayload = {
-        subscription_status: newStatus,
-        subscription_end_date: subscriptionEndDate,
-      }
+      const updatePayload: Record<string, string> = { subscription_status: newStatus }
+      if (subscriptionEndDate) updatePayload.subscription_end_date = subscriptionEndDate
 
       // Attempt 1: update by stripe_customer_id
       const { data: byCustomerId, error: error1 } = await supabaseAdmin
