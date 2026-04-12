@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { createClient } from '@supabase/supabase-js'
+import { tagKitSubscriber, removeKitTag } from '../../../lib/kit'
 
 export async function POST(req: NextRequest) {
   console.log('WEBHOOK RECEIVED')
@@ -101,6 +102,11 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ received: true, warning: 'No matching profile' }, { status: 200 })
       }
 
+      if (customerEmail) {
+        await tagKitSubscriber(customerEmail, 'paid_subscriber')
+        await removeKitTag(customerEmail, 'free_user')
+      }
+
       break
     }
 
@@ -186,6 +192,8 @@ export async function POST(req: NextRequest) {
         console.error('invoice.payment_succeeded: Supabase update error', error)
       } else if (data && data.length > 0) {
         console.log(`invoice.payment_succeeded: activated user with email ${customerEmail}`)
+        await tagKitSubscriber(customerEmail, 'paid_subscriber')
+        await removeKitTag(customerEmail, 'free_user')
       } else {
         console.error(`invoice.payment_succeeded: no profile matched email ${customerEmail}`)
       }

@@ -88,6 +88,16 @@ export default function BoardPassPage() {
     setView('vault_flashcard');
   };
 
+  const tagKitSubscriber = async (email: string, tag: string) => {
+    try {
+      await fetch('/api/kit/tag', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, tag }),
+      })
+    } catch { /* silent */ }
+  }
+
   const handleManageSubscription = async () => {
     console.log('handleManageSubscription: function running');
     try {
@@ -303,6 +313,7 @@ export default function BoardPassPage() {
       if (isEffectivelyActive(freshStatus, freshEndDate)) {
         setView('rationale');
       } else {
+        if (currentUser?.email) tagKitSubscriber(currentUser.email, 'free_user')
         setView('paywall');
       }
     } else {
