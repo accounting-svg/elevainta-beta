@@ -23,11 +23,11 @@ export async function POST(req: NextRequest) {
     const subRes = await fetch(`${KIT_BASE}/subscribers`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'X-Kit-Api-Key': `${apiKey}` },
-      body: JSON.stringify({ email_address: email }),
+      body: JSON.stringify({ email_address: email, first_name: '' }),
     })
     const subData = await subRes.json()
     console.log('kit/tag: step 1 subscriber upsert status', subRes.status)
-    console.log('kit/tag: step 1 subscriber response', JSON.stringify(subData))
+    console.log('kit/tag: step 1 subscriber response', JSON.stringify(subData, null, 2))
 
     const subscriberId = subData?.subscriber?.id
     if (!subscriberId) {
