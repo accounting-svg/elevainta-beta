@@ -1,9 +1,9 @@
-const BASE = 'https://api.convertkit.com/v4'
+const BASE = 'https://api.kit.com/v4'
 
 async function getSubscriberId(email: string, apiKey: string): Promise<string | null> {
   const res = await fetch(`${BASE}/subscribers`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Authorization': `Api-Key ${apiKey}` },
+    headers: { 'Content-Type': 'application/json', 'X-Kit-Api-Key': `${apiKey}` },
     body: JSON.stringify({ email_address: email }),
   })
   if (!res.ok) return null
@@ -13,7 +13,7 @@ async function getSubscriberId(email: string, apiKey: string): Promise<string | 
 
 async function findSubscriberId(email: string, apiKey: string): Promise<string | null> {
   const res = await fetch(`${BASE}/subscribers?email_address=${encodeURIComponent(email)}`, {
-    headers: { 'Authorization': `Api-Key ${apiKey}` },
+    headers: { 'X-Kit-Api-Key': `${apiKey}` },
   })
   if (!res.ok) return null
   const data = await res.json()
@@ -22,7 +22,7 @@ async function findSubscriberId(email: string, apiKey: string): Promise<string |
 
 async function getTagId(name: string, apiKey: string): Promise<string | null> {
   const res = await fetch(`${BASE}/tags`, {
-    headers: { 'Authorization': `Api-Key ${apiKey}` },
+    headers: { 'X-Kit-Api-Key': `${apiKey}` },
   })
   if (!res.ok) return null
   const data = await res.json()
@@ -44,7 +44,7 @@ export async function tagKitSubscriber(email: string, tag: string): Promise<void
 
     await fetch(`${BASE}/tags/${tagId}/subscribers`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Api-Key ${apiKey}` },
+      headers: { 'Content-Type': 'application/json', 'X-Kit-Api-Key': `${apiKey}` },
       body: JSON.stringify({ subscriber_id: subscriberId }),
     })
 
@@ -68,7 +68,7 @@ export async function removeKitTag(email: string, tag: string): Promise<void> {
 
     await fetch(`${BASE}/tags/${tagId}/subscribers/${subscriberId}`, {
       method: 'DELETE',
-      headers: { 'Authorization': `Api-Key ${apiKey}` },
+      headers: { 'X-Kit-Api-Key': `${apiKey}` },
     })
 
     console.log(`kit: removed tag "${tag}" from ${email}`)

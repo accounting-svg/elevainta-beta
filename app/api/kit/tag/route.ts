@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-const KIT_BASE = 'https://api.convertkit.com/v4'
+const KIT_BASE = 'https://api.kit.com/v4'
 
 export async function POST(req: NextRequest) {
   try {
@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     // Step 1: Upsert subscriber by email
     const subRes = await fetch(`${KIT_BASE}/subscribers`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Api-Key ${apiKey}` },
+      headers: { 'Content-Type': 'application/json', 'X-Kit-Api-Key': `${apiKey}` },
       body: JSON.stringify({ email_address: email }),
     })
     const subData = await subRes.json()
@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
 
     // Step 2: Find tag ID by name
     const tagsRes = await fetch(`${KIT_BASE}/tags`, {
-      headers: { 'Authorization': `Api-Key ${apiKey}` },
+      headers: { 'X-Kit-Api-Key': `${apiKey}` },
     })
     const tagsData = await tagsRes.json()
     console.log('kit/tag: step 2 tags list status', tagsRes.status)
@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
     // Step 3: Apply tag to subscriber
     const applyRes = await fetch(`${KIT_BASE}/tags/${matchedTag.id}/subscribers`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Api-Key ${apiKey}` },
+      headers: { 'Content-Type': 'application/json', 'X-Kit-Api-Key': `${apiKey}` },
       body: JSON.stringify({ subscriber_id: subscriberId }),
     })
     const applyData = await applyRes.json()
