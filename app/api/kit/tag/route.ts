@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({ email_address: email, first_name: '' }),
     })
     const subData = await subRes.json()
+    console.log('kit/tag: step 1 FULL response:', JSON.stringify(subData, null, 2))
     console.log('kit/tag: step 1 subscriber upsert status', subRes.status)
     console.log('kit/tag: step 1 subscriber response', JSON.stringify(subData, null, 2))
 
