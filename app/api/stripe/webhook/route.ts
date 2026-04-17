@@ -52,6 +52,8 @@ export async function POST(req: NextRequest) {
       const payload = {
         stripe_customer_id: customerId,
         subscription_status: 'active',
+        questions_answered: 0,
+        subscription_end_date: null,
       }
 
       let activated = false

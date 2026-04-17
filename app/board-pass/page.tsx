@@ -23,6 +23,7 @@ export default function BoardPassPage() {
   const [lifetimeStats, setLifetimeStats] = useState<{ accuracy: number | null, weakCategories: string[] } | null>(null);
   const [lifetimeAnswered, setLifetimeAnswered] = useState(0);
   const [subscriptionStatus, setSubscriptionStatus] = useState<string | null>(null);
+  const [stripeCustomerId, setStripeCustomerId] = useState<string | null>(null);
   const [subscriptionEndDate, setSubscriptionEndDate] = useState<string | null>(null);
   const [showA2HS, setShowA2HS] = useState(false);
   const [isIOS, setIsIOS] = useState(false);
@@ -146,12 +147,13 @@ export default function BoardPassPage() {
 
       const { data: profile } = await supabase
         .from('profiles')
-        .select('subscription_status, subscription_end_date')
+        .select('subscription_status, subscription_end_date, stripe_customer_id')
         .eq('id', user.id)
         .single();
       if (profile) {
         setSubscriptionStatus(profile.subscription_status);
         setSubscriptionEndDate(profile.subscription_end_date ?? null);
+        setStripeCustomerId(profile.stripe_customer_id ?? null);
       }
 
       const { data: events } = await supabase
@@ -446,7 +448,7 @@ export default function BoardPassPage() {
         </div>
 
         {/* MANAGE SUBSCRIPTION */}
-        {subscriptionStatus === 'active' && (
+        {subscriptionStatus === 'active' && stripeCustomerId && (
           <button
             onClick={() => { console.log('CLICK WORKING'); handleManageSubscription(); }}
             style={{
