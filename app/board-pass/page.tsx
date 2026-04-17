@@ -302,7 +302,7 @@ export default function BoardPassPage() {
       if (currentUser) {
         const { data: freshProfile } = await supabase
           .from('profiles')
-          .select('subscription_status, subscription_end_date')
+          .select('subscription_status, subscription_end_date, stripe_customer_id')
           .eq('id', currentUser.id)
           .single();
         if (freshProfile) {
@@ -310,6 +310,7 @@ export default function BoardPassPage() {
           freshEndDate = freshProfile.subscription_end_date ?? null;
           setSubscriptionStatus(freshStatus);
           setSubscriptionEndDate(freshEndDate);
+          setStripeCustomerId(freshProfile.stripe_customer_id ?? null);
         }
       }
       if (isEffectivelyActive(freshStatus, freshEndDate)) {
