@@ -2252,6 +2252,351 @@ export const boardPassQuestions: BoardPassQuestion[] = [
   memoryHook: "Seventeen and eighteen reach the back scene."
 },
 {
+  id: "inst-024",
+  type: "recall",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Piezoelectric vs Magnetostrictive",
+  difficulty: "medium",
+  question: "Which statement correctly differentiates piezoelectric from magnetostrictive ultrasonic scalers?",
+  choices: [
+    { key: "A", text: "Piezoelectric units use a ferromagnetic stack to generate vibration, while magnetostrictive units use ceramic crystals" },
+    { key: "B", text: "Piezoelectric units generate linear tip movement, while magnetostrictive units produce elliptical tip movement" },
+    { key: "C", text: "Piezoelectric units produce elliptical tip movement, while magnetostrictive units generate linear movement" },
+    { key: "D", text: "Both units produce identical tip movement patterns and differ only in power source" }
+  ],
+  correctAnswer: "B",
+  rationale: "Piezoelectric scalers use ceramic crystals that expand and contract to produce linear back-and-forth tip movement. Magnetostrictive scalers use a ferromagnetic metal stack that vibrates in an elliptical pattern, allowing all sides of the tip to be active.",
+  incorrectRationales: {
+    A: "This reverses the mechanism — piezoelectric uses crystals, magnetostrictive uses ferromagnetic stacks.",
+    C: "This reverses the tip movement patterns.",
+    D: "Tip movement patterns differ significantly and have clinical implications for adaptation."
+  },
+  boardTrap: "Piezoelectric = linear. Magnetostrictive = elliptical. Movement pattern determines which tip surfaces are active.",
+  memoryHook: "Piezo = points in one direction. Magneto = moves in a circle."
+},
+{
+  id: "inst-025",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Active Tip Surfaces",
+  difficulty: "medium",
+  question: "A clinician is using a magnetostrictive ultrasonic scaler. Which tip surfaces are considered active during instrumentation?",
+  choices: [
+    { key: "A", text: "Face only" },
+    { key: "B", text: "Lateral sides only" },
+    { key: "C", text: "All sides of the tip due to elliptical movement" },
+    { key: "D", text: "Back of the tip only" }
+  ],
+  correctAnswer: "C",
+  rationale: "Because magnetostrictive units produce elliptical tip movement, all surfaces of the tip — face, back, and lateral sides — are active during instrumentation. This is a key advantage allowing effective adaptation regardless of tip orientation.",
+  incorrectRationales: {
+    A: "Limiting use to the face alone does not take advantage of elliptical movement.",
+    B: "Lateral sides alone describe use of a piezoelectric tip where linear movement limits active surfaces.",
+    D: "The back surface alone does not represent complete utilization of magnetostrictive tip activity."
+  },
+  boardTrap: "Magnetostrictive = all sides active. Piezoelectric = lateral sides most effective.",
+  memoryHook: "Magnetostrictive moves all around — all surfaces work."
+},
+{
+  id: "inst-026",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Piezoelectric Active Surfaces",
+  difficulty: "medium",
+  question: "When using a piezoelectric ultrasonic scaler, which tip surfaces are most effective for calculus removal?",
+  choices: [
+    { key: "A", text: "All surfaces equally due to elliptical movement" },
+    { key: "B", text: "Lateral sides of the tip due to linear back-and-forth movement" },
+    { key: "C", text: "The face only due to perpendicular vibration" },
+    { key: "D", text: "The back of the tip only" }
+  ],
+  correctAnswer: "B",
+  rationale: "Piezoelectric scalers produce linear back-and-forth tip movement. The lateral sides of the tip are most effective for calculus removal because the tip moves along its long axis, making lateral adaptation most productive.",
+  incorrectRationales: {
+    A: "Elliptical movement describes magnetostrictive units, not piezoelectric.",
+    C: "The face is not the primary working surface for piezoelectric tips due to linear movement direction.",
+    D: "The back of the tip is not the most effective surface in linear movement."
+  },
+  boardTrap: "Piezoelectric linear movement = lateral sides most effective. Do not confuse with magnetostrictive.",
+  memoryHook: "Piezo goes back and forth — sides do the work."
+},
+{
+  id: "inst-027",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Lavage Benefits",
+  difficulty: "medium",
+  question: "Which benefit of ultrasonic instrumentation is produced specifically by the continuous water coolant flow rather than the mechanical vibration of the tip?",
+  choices: [
+    { key: "A", text: "Calculus fracture and removal" },
+    { key: "B", text: "Cavitation and lavage of the sulcus" },
+    { key: "C", text: "Root surface planing and smoothing" },
+    { key: "D", text: "Disruption of calculus crystalline structure" }
+  ],
+  correctAnswer: "B",
+  rationale: "The continuous water coolant creates cavitation — the implosion of microscopic bubbles — and lavage, which flushes bacteria, endotoxins, and debris from the sulcus and pocket. These effects are produced by the water flow rather than direct tip contact.",
+  incorrectRationales: {
+    A: "Calculus fracture results from mechanical vibration of the tip, not water flow.",
+    C: "Root surface smoothing occurs through mechanical action of the tip.",
+    D: "Disruption of calculus crystalline structure is a mechanical tip vibration effect."
+  },
+  boardTrap: "Cavitation and lavage are water effects. Calculus removal is mechanical tip vibration.",
+  memoryHook: "Water washes. Tip breaks."
+},
+{
+  id: "inst-028",
+  type: "critical-thinking",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Power Settings",
+  difficulty: "hard",
+  question: "A patient presents with light supragingival plaque and early gingivitis requiring biofilm disruption in shallow sulci. Which power setting is most appropriate for this patient?",
+  choices: [
+    { key: "A", text: "High power to ensure thorough disruption" },
+    { key: "B", text: "Medium power for posterior sextants only" },
+    { key: "C", text: "Low power to minimize tissue trauma and root surface damage in shallow areas" },
+    { key: "D", text: "Medium to high power because supragingival deposits require more force" }
+  ],
+  correctAnswer: "C",
+  rationale: "Low power settings are appropriate for biofilm disruption in shallow sulci, maintenance patients, and areas with light deposits. Higher power increases tip amplitude and heat generation unnecessarily and can damage root surfaces and soft tissues in areas where minimal mechanical force is needed.",
+  incorrectRationales: {
+    A: "High power is reserved for tenacious heavy calculus and increases risk of root surface damage and patient discomfort.",
+    B: "Selecting power by sextant location rather than deposit severity is not the appropriate decision framework.",
+    D: "Supragingival deposits are best addressed with the power level matched to deposit severity, not anatomy."
+  },
+  boardTrap: "Match power to deposit type and depth — not location. Low for biofilm, high for heavy calculus.",
+  memoryHook: "Light deposits = low power. Heavy calculus = high power."
+},
+{
+  id: "inst-029",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Tip Adaptation",
+  difficulty: "medium",
+  question: "When adapting an ultrasonic tip subgingivally, which angulation between the tip and the tooth surface is recommended to minimize root surface damage?",
+  choices: [
+    { key: "A", text: "0 to 15 degrees" },
+    { key: "B", text: "30 to 45 degrees" },
+    { key: "C", text: "60 to 80 degrees" },
+    { key: "D", text: "90 degrees perpendicular to the surface" }
+  ],
+  correctAnswer: "A",
+  rationale: "Ultrasonic tips should be adapted at 0 to 15 degrees to the tooth surface. This nearly parallel angulation maximizes the acoustic energy transfer and cavitation effect while minimizing root surface damage from excessive lateral pressure.",
+  incorrectRationales: {
+    B: "This angulation is appropriate for hand instrument assessment strokes, not ultrasonic adaptation.",
+    C: "This angulation applies to hand instrument removal strokes and is too steep for ultrasonic tips.",
+    D: "Perpendicular placement concentrates tip pressure and significantly increases root surface damage risk."
+  },
+  boardTrap: "Ultrasonic tip = nearly parallel to the surface. Hand curette = 60 to 80 degrees for removal.",
+  memoryHook: "Ultrasonic lies flat. Curette stands up."
+},
+{
+  id: "inst-030",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Contraindications",
+  difficulty: "hard",
+  question: "All of the following are contraindications or precautions for ultrasonic instrumentation EXCEPT:",
+  choices: [
+    { key: "A", text: "Patients with certain older model cardiac pacemakers" },
+    { key: "B", text: "Patients with communicable airborne diseases" },
+    { key: "C", text: "Patients with titanium implant abutments" },
+    { key: "D", text: "Patients with generalized moderate chronic periodontitis" }
+  ],
+  correctAnswer: "D",
+  rationale: "Generalized moderate chronic periodontitis is an indication for ultrasonic instrumentation, not a contraindication. Ultrasonic scalers are highly effective for subgingival debridement in periodontitis patients. Older pacemakers, airborne communicable diseases, and use near titanium implant surfaces with standard tips are legitimate precautions.",
+  incorrectRationales: {
+    A: "Older unshielded pacemakers may be affected by electromagnetic interference from magnetostrictive units.",
+    B: "Ultrasonic scalers generate significant aerosol which increases pathogen transmission risk with airborne diseases.",
+    C: "Standard ultrasonic tips can scratch titanium implant surfaces — implant-specific tips should be used."
+  },
+  boardTrap: "Periodontitis is an indication not a contraindication. Know what ultrasonic helps versus harms.",
+  memoryHook: "Periodontitis wants ultrasonic. Pacemakers may not."
+},
+{
+  id: "inst-031",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Implant Considerations",
+  difficulty: "hard",
+  question: "A patient presents for maintenance therapy following implant placement. Standard stainless steel ultrasonic tips are available. Which modification is required for safe instrumentation around the implant?",
+  choices: [
+    { key: "A", text: "Increase power setting to compensate for implant surface hardness" },
+    { key: "B", text: "Use plastic, carbon fiber, or implant-specific tips to avoid scratching the titanium surface" },
+    { key: "C", text: "Avoid all ultrasonic instrumentation and use only hand scalers with metal blades" },
+    { key: "D", text: "Apply standard tips at low power with heavy lateral pressure" }
+  ],
+  correctAnswer: "B",
+  rationale: "Titanium implant surfaces are soft and easily scratched by standard metal ultrasonic tips. Plastic, carbon fiber, or specifically designed implant-safe tips must be used to prevent surface damage that could increase bacterial adhesion and peri-implant disease risk.",
+  incorrectRationales: {
+    A: "Increasing power with standard tips would cause even greater surface damage.",
+    C: "Ultrasonic instrumentation can be used around implants with appropriate tip selection — complete avoidance is not required.",
+    D: "Standard tips with lateral pressure regardless of power setting will damage the titanium surface."
+  },
+  boardTrap: "Never use standard metal tips on implants. Implant-specific tips are required.",
+  memoryHook: "Titanium is soft — use plastic tips to protect it."
+},
+{
+  id: "inst-032",
+  type: "recall",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Sonic vs Ultrasonic",
+  difficulty: "medium",
+  question: "Which statement correctly differentiates sonic scalers from ultrasonic scalers?",
+  choices: [
+    { key: "A", text: "Sonic scalers operate at higher frequencies than ultrasonic scalers" },
+    { key: "B", text: "Sonic scalers require an electrical power source while ultrasonic scalers use compressed air" },
+    { key: "C", text: "Sonic scalers operate at lower frequencies using compressed air from the dental unit handpiece connection" },
+    { key: "D", text: "Sonic and ultrasonic scalers operate at the same frequency range and differ only in tip design" }
+  ],
+  correctAnswer: "C",
+  rationale: "Sonic scalers operate at lower frequencies (2,000 to 9,000 Hz) compared to ultrasonic scalers (25,000 to 50,000 Hz). Sonic scalers use compressed air from the dental unit air line and do not require a separate electrical generator unit.",
+  incorrectRationales: {
+    A: "Sonic scalers operate at lower — not higher — frequencies than ultrasonic scalers.",
+    B: "This reverses the power source — sonic uses compressed air, ultrasonic uses electrical power.",
+    D: "Sonic and ultrasonic differ significantly in frequency range, tip movement, and power source."
+  },
+  boardTrap: "Sonic = lower frequency, compressed air. Ultrasonic = higher frequency, electrical.",
+  memoryHook: "Sonic is simple air. Ultrasonic is electrically driven."
+},
+{
+  id: "inst-033",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Frequency Range",
+  difficulty: "medium",
+  question: "Ultrasonic scalers operate within which frequency range?",
+  choices: [
+    { key: "A", text: "1,000 to 5,000 Hz" },
+    { key: "B", text: "2,000 to 9,000 Hz" },
+    { key: "C", text: "25,000 to 50,000 Hz" },
+    { key: "D", text: "100,000 to 200,000 Hz" }
+  ],
+  correctAnswer: "C",
+  rationale: "Ultrasonic scalers operate between 25,000 and 50,000 Hz. This high-frequency vibration generates acoustic energy and cavitation that contribute to their effectiveness in biofilm disruption and calculus removal.",
+  incorrectRationales: {
+    A: "This range is below both sonic and ultrasonic frequencies.",
+    B: "This is the frequency range of sonic scalers, not ultrasonic.",
+    D: "This range exceeds the operating frequency of dental ultrasonic units."
+  },
+  boardTrap: "Sonic = 2,000 to 9,000 Hz. Ultrasonic = 25,000 to 50,000 Hz.",
+  memoryHook: "Ultrasonic = ultra high frequency. 25K to 50K."
+},
+{
+  id: "inst-034",
+  type: "critical-thinking",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Aerosol and Infection Control",
+  difficulty: "hard",
+  question: "A patient discloses active pulmonary tuberculosis during the health history review. The clinician plans to use an ultrasonic scaler for biofilm removal. Which is the most appropriate course of action?",
+  choices: [
+    { key: "A", text: "Proceed with ultrasonic instrumentation using standard PPE" },
+    { key: "B", text: "Defer elective treatment and reschedule after medical clearance due to significant aerosol generation" },
+    { key: "C", text: "Switch to sonic scaling only as it produces less aerosol than ultrasonic" },
+    { key: "D", text: "Use high-volume evacuation and proceed with ultrasonic instrumentation" }
+  ],
+  correctAnswer: "B",
+  rationale: "Active pulmonary tuberculosis is an airborne infectious disease. Ultrasonic and sonic scalers generate significant aerosol that can transmit airborne pathogens to the clinician and other patients. Elective treatment must be deferred until the patient has been medically cleared and is no longer infectious.",
+  incorrectRationales: {
+    A: "Standard PPE does not provide adequate protection against confirmed active airborne tuberculosis.",
+    C: "Sonic scalers also generate aerosol and do not eliminate the transmission risk.",
+    D: "High-volume evacuation reduces but does not eliminate aerosol risk with a confirmed active airborne disease."
+  },
+  boardTrap: "Active airborne disease = defer elective treatment. Aerosol precautions alone are insufficient.",
+  memoryHook: "Active TB + aerosol = reschedule."
+},
+{
+  id: "inst-035",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Tip Selection",
+  difficulty: "hard",
+  question: "A patient presents with 6 to 8 mm posterior pockets with moderate subgingival calculus. Which ultrasonic tip design is most appropriate for this clinical situation?",
+  choices: [
+    { key: "A", text: "Standard broad tip at high power for maximum calculus removal" },
+    { key: "B", text: "Thin slim-line or periodontal tip designed for subgingival access in deeper pockets" },
+    { key: "C", text: "Standard broad tip at low power to avoid tissue trauma" },
+    { key: "D", text: "Beaver-tail tip for maximum coverage of posterior surfaces" }
+  ],
+  correctAnswer: "B",
+  rationale: "Thin slim-line or periodontal ultrasonic tips are specifically designed for subgingival access in pockets 4 mm and deeper. Their reduced diameter allows access to the base of the pocket without traumatizing the gingival tissue and permits effective adaptation in furcations and narrow pockets.",
+  incorrectRationales: {
+    A: "Standard broad tips are designed for supragingival and heavy deposit removal and cannot access the base of deep pockets without significant tissue trauma.",
+    C: "Reducing power does not compensate for the inability of a broad tip to access deep subgingival areas.",
+    D: "Beaver-tail tips are broad supragingival instruments designed for large deposit removal, not subgingival access."
+  },
+  boardTrap: "Pocket depth determines tip selection. Deep pockets require slim-line tips regardless of power.",
+  memoryHook: "Deep pockets need slim tips."
+},
+{
+  id: "inst-036",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Water Coolant",
+  difficulty: "medium",
+  question: "What is the primary purpose of the water coolant used during ultrasonic instrumentation?",
+  choices: [
+    { key: "A", text: "To lubricate the tip and reduce friction against the tooth surface" },
+    { key: "B", text: "To cool the tip and prevent thermal damage to the pulp and surrounding tissues" },
+    { key: "C", text: "To dissolve calculus deposits chemically before mechanical removal" },
+    { key: "D", text: "To improve visibility by rinsing blood from the field" }
+  ],
+  correctAnswer: "B",
+  rationale: "The primary purpose of water coolant during ultrasonic instrumentation is to dissipate heat generated by tip vibration and prevent thermal damage to the pulp, periodontal tissues, and tooth structure. Secondary benefits include cavitation, lavage, and aerosol production that aids in debris removal.",
+  incorrectRationales: {
+    A: "Lubrication is not the purpose of ultrasonic coolant — the tip does not require lubrication.",
+    C: "Water does not chemically dissolve calculus — removal is mechanical.",
+    D: "While coolant does rinse the field, this is not its primary function."
+  },
+  boardTrap: "Coolant prevents heat damage first. Lavage and cavitation are secondary benefits.",
+  memoryHook: "Water keeps the tip cool — heat kills pulp."
+},
+{
+  id: "inst-037",
+  type: "critical-thinking",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Pacemaker Precaution",
+  difficulty: "hard",
+  question: "A patient reports having a cardiac pacemaker implanted 18 years ago. The clinician plans to use a magnetostrictive ultrasonic scaler. Which is the most appropriate action?",
+  choices: [
+    { key: "A", text: "Proceed using magnetostrictive ultrasonic instrumentation as pacemaker interference is no longer a concern with modern devices" },
+    { key: "B", text: "Consult with the patient's cardiologist and determine pacemaker model before proceeding — use piezoelectric if magnetostrictive poses risk" },
+    { key: "C", text: "Avoid all ultrasonic instrumentation and use only hand instruments regardless of pacemaker model" },
+    { key: "D", text: "Proceed using sonic scaling only as it does not carry electromagnetic interference risk" }
+  ],
+  correctAnswer: "B",
+  rationale: "Older pacemaker models can be susceptible to electromagnetic interference from magnetostrictive ultrasonic scalers. Modern pacemakers are typically shielded and less vulnerable. Because this pacemaker was implanted 18 years ago, medical consultation and pacemaker model verification are required before using magnetostrictive equipment. Piezoelectric scalers do not produce the same electromagnetic risk and may be a safe alternative.",
+  incorrectRationales: {
+    A: "Assuming all older pacemakers are safe is inappropriate — model verification through the cardiologist is required.",
+    C: "Complete avoidance of all ultrasonic instruments is unnecessarily restrictive if piezoelectric is available and safe.",
+    D: "Sonic scalers are an option but the correct action is verification first, not automatic substitution."
+  },
+  boardTrap: "Older pacemakers need verification. Piezoelectric is safer than magnetostrictive when electromagnetic risk is a concern.",
+  memoryHook: "Old pacemaker + magnetostrictive = verify first."
+},
+{
+  id: "inst-038",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Ultrasonic Instrumentation – Stroke Technique",
+  difficulty: "medium",
+  question: "Which stroke technique is recommended when using an ultrasonic scaler subgingivally to maximize effectiveness while minimizing root surface damage?",
+  choices: [
+    { key: "A", text: "Heavy lateral pressure with short vertical strokes similar to hand curette technique" },
+    { key: "B", text: "Light pressure with constant overlapping multidirectional strokes keeping the tip in motion" },
+    { key: "C", text: "Firm lateral pressure with long horizontal strokes to cover maximum surface area" },
+    { key: "D", text: "Intermittent heavy pressure strokes alternating with light exploratory passes" }
+  ],
+  correctAnswer: "B",
+  rationale: "Ultrasonic instrumentation requires light pressure with constant overlapping multidirectional strokes. Heavy lateral pressure dampens tip vibration, reduces acoustic energy, and increases root surface damage. Keeping the tip in continuous motion prevents heat buildup at any single point.",
+  incorrectRationales: {
+    A: "Heavy lateral pressure is the primary cause of root surface damage with ultrasonic scalers and dampens tip effectiveness.",
+    C: "Firm lateral pressure reduces tip vibration and long strokes reduce the overlapping coverage needed for thorough debridement.",
+    D: "Intermittent heavy pressure combines the risks of dampened vibration and uneven tissue treatment."
+  },
+  boardTrap: "Heavy pressure dampens ultrasonic vibration and scratches roots. Light pressure is always correct.",
+  memoryHook: "Light touch, keep moving — let the vibration do the work."
+},
+{
   id: "mat-001",
   type: "mastery",
   subject: "Dental Materials",
