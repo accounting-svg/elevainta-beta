@@ -12414,6 +12414,696 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Posterior maxillary teeth use PSA canal."
 },
 {
+  id: "da-001",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Development – Bud Stage",
+  difficulty: "medium",
+  question: "During which stage of tooth development does the dental lamina first proliferate into the ectomesenchyme to form a tooth germ?",
+  choices: [
+    { key: "A", text: "Bell stage" },
+    { key: "B", text: "Cap stage" },
+    { key: "C", text: "Bud stage" },
+    { key: "D", text: "Apposition stage" }
+  ],
+  correctAnswer: "C",
+  rationale: "The bud stage is the earliest stage of tooth development. The dental lamina proliferates into the underlying ectomesenchyme forming a bud-shaped epithelial thickening that represents the beginning of the tooth germ.",
+  incorrectRationales: {
+    A: "The bell stage involves differentiation of the enamel organ into distinct cell layers.",
+    B: "The cap stage follows the bud stage and involves folding of the epithelium over the dental papilla.",
+    D: "Apposition is not a classic stage of odontogenesis — it refers to matrix deposition during tooth formation."
+  },
+  boardTrap: "Bud is first. Cap follows. Bell is where differentiation and histodifferentiation occur.",
+  memoryHook: "Bud before bloom."
+},
+{
+  id: "da-002",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Development – Cap Stage",
+  difficulty: "medium",
+  question: "During the cap stage of tooth development, the enamel organ folds to partially surround a condensed mass of ectomesenchyme. What is this condensed ectomesenchymal structure called?",
+  choices: [
+    { key: "A", text: "Dental sac" },
+    { key: "B", text: "Dental papilla" },
+    { key: "C", text: "Stellate reticulum" },
+    { key: "D", text: "Dental lamina" }
+  ],
+  correctAnswer: "B",
+  rationale: "During the cap stage, the enamel organ folds around a condensed mass of ectomesenchyme called the dental papilla, which will later give rise to the dentin and pulp of the tooth.",
+  incorrectRationales: {
+    A: "The dental sac surrounds the dental papilla and enamel organ and gives rise to the periodontium.",
+    C: "The stellate reticulum is a layer within the enamel organ itself, not the ectomesenchymal condensation.",
+    D: "The dental lamina is the epithelial band from which the tooth germ originates."
+  },
+  boardTrap: "Dental papilla becomes dentin and pulp. Dental sac becomes periodontium.",
+  memoryHook: "Papilla = pulp and dentin precursor."
+},
+{
+  id: "da-003",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Development – Bell Stage Layers",
+  difficulty: "hard",
+  question: "Which of the following correctly lists the four layers of the enamel organ from outermost to innermost?",
+  choices: [
+    { key: "A", text: "Outer enamel epithelium, stellate reticulum, stratum intermedium, inner enamel epithelium" },
+    { key: "B", text: "Inner enamel epithelium, stratum intermedium, stellate reticulum, outer enamel epithelium" },
+    { key: "C", text: "Stellate reticulum, outer enamel epithelium, inner enamel epithelium, stratum intermedium" },
+    { key: "D", text: "Stratum intermedium, stellate reticulum, inner enamel epithelium, outer enamel epithelium" }
+  ],
+  correctAnswer: "A",
+  rationale: "From outermost to innermost, the four layers of the enamel organ are: outer enamel epithelium, stellate reticulum, stratum intermedium, and inner enamel epithelium. The inner enamel epithelium differentiates into ameloblasts that produce enamel.",
+  incorrectRationales: {
+    B: "This lists the layers in reverse order.",
+    C: "This does not reflect the correct anatomic sequence.",
+    D: "This incorrectly positions the stratum intermedium."
+  },
+  boardTrap: "IEE becomes ameloblasts. OEE is outermost. Stellate reticulum cushions. Stratum intermedium supports.",
+  memoryHook: "Outside In: OEE, SR, SI, IEE."
+},
+{
+  id: "da-004",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Development – Ameloblasts",
+  difficulty: "medium",
+  question: "Which cell type is directly responsible for the production of enamel matrix?",
+  choices: [
+    { key: "A", text: "Odontoblasts" },
+    { key: "B", text: "Cementoblasts" },
+    { key: "C", text: "Ameloblasts" },
+    { key: "D", text: "Fibroblasts" }
+  ],
+  correctAnswer: "C",
+  rationale: "Ameloblasts, derived from the inner enamel epithelium, are responsible for enamel matrix secretion and enamel formation. They are the only cells capable of producing enamel and are lost after tooth eruption.",
+  incorrectRationales: {
+    A: "Odontoblasts produce dentin and are derived from the dental papilla.",
+    B: "Cementoblasts produce cementum and are derived from the dental sac.",
+    D: "Fibroblasts produce connective tissue components including collagen in the PDL."
+  },
+  boardTrap: "Enamel cannot be regenerated after eruption because ameloblasts are lost.",
+  memoryHook: "Ameloblasts = enamel architects."
+},
+{
+  id: "da-005",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Development – Odontoblasts",
+  difficulty: "medium",
+  question: "Odontoblasts responsible for dentin production are derived from which embryologic structure?",
+  choices: [
+    { key: "A", text: "Outer enamel epithelium" },
+    { key: "B", text: "Dental sac" },
+    { key: "C", text: "Dental lamina" },
+    { key: "D", text: "Dental papilla" }
+  ],
+  correctAnswer: "D",
+  rationale: "Odontoblasts differentiate from the ectomesenchymal cells of the dental papilla. They produce predentin which mineralizes into dentin and retain their cell bodies in the pulp throughout the life of the tooth.",
+  incorrectRationales: {
+    A: "The outer enamel epithelium is part of the enamel organ and does not produce dentin.",
+    B: "The dental sac gives rise to cementum, PDL, and alveolar bone.",
+    C: "The dental lamina initiates tooth development but does not give rise to odontoblasts."
+  },
+  boardTrap: "Papilla becomes pulp and dentin. Sac becomes periodontium.",
+  memoryHook: "Dental papilla = dentin and pulp precursor."
+},
+{
+  id: "da-006",
+  type: "critical-thinking",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Development – Hertwig's Root Sheath",
+  difficulty: "hard",
+  question: "A patient presents with abnormally short roots on multiple teeth identified radiographically. The clinician suspects disruption of root development. Which structure is primarily responsible for initiating root formation and determining root shape?",
+  choices: [
+    { key: "A", text: "Dental sac" },
+    { key: "B", text: "Stellate reticulum" },
+    { key: "C", text: "Hertwig's epithelial root sheath" },
+    { key: "D", text: "Reduced enamel epithelium" }
+  ],
+  correctAnswer: "C",
+  rationale: "Hertwig's epithelial root sheath is formed by the fusion of the inner and outer enamel epithelium at the cervical loop. It directs the shape, length, and number of roots by inducing odontoblast differentiation in the dental papilla to produce root dentin.",
+  incorrectRationales: {
+    A: "The dental sac surrounds the developing tooth and produces cementum, PDL, and alveolar bone after root sheath fragmentation.",
+    B: "The stellate reticulum is a layer of the enamel organ involved in crown development, not root formation.",
+    D: "Reduced enamel epithelium covers the crown after enamel formation and fuses with oral epithelium to form the junctional epithelium during eruption."
+  },
+  boardTrap: "Hertwig's sheath shapes the root. When it fragments, cementum forms.",
+  memoryHook: "Hertwig's shapes the root highway."
+},
+{
+  id: "da-007",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Development – Dental Sac Derivatives",
+  difficulty: "medium",
+  question: "The dental sac gives rise to all of the following structures EXCEPT:",
+  choices: [
+    { key: "A", text: "Cementum" },
+    { key: "B", text: "Periodontal ligament" },
+    { key: "C", text: "Alveolar bone proper" },
+    { key: "D", text: "Dentin" }
+  ],
+  correctAnswer: "D",
+  rationale: "The dental sac gives rise to cementum, the periodontal ligament, and alveolar bone proper. Dentin is produced by odontoblasts derived from the dental papilla, not the dental sac.",
+  incorrectRationales: {
+    A: "Cementoblasts from the dental sac produce cementum.",
+    B: "Fibroblasts from the dental sac form the PDL.",
+    C: "Osteoblasts from the dental sac form the alveolar bone proper."
+  },
+  boardTrap: "Sac = support structures. Papilla = dentin and pulp.",
+  memoryHook: "Dental sac surrounds and supports."
+},
+{
+  id: "da-008",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Development – Neonatal Line",
+  difficulty: "medium",
+  question: "A histologic section of a primary molar shows a distinct incremental line separating prenatal from postnatal enamel. What is this line called?",
+  choices: [
+    { key: "A", text: "Owen's contour line" },
+    { key: "B", text: "Ebner's line" },
+    { key: "C", text: "Neonatal line" },
+    { key: "D", text: "Striae of Retzius" }
+  ],
+  correctAnswer: "C",
+  rationale: "The neonatal line is a pronounced incremental line in enamel and dentin that marks the boundary between prenatal and postnatal tissue formation. It results from the physiologic stress of birth and is found in all primary teeth and first permanent molars.",
+  incorrectRationales: {
+    A: "Owen's contour lines are incremental lines in dentin caused by metabolic disturbances.",
+    B: "Lines of Ebner are incremental lines in dentin representing daily dentin deposition.",
+    D: "Striae of Retzius are incremental growth lines in enamel but are not specific to the birth event."
+  },
+  boardTrap: "Neonatal line = birth boundary in primary teeth and first permanent molars only.",
+  memoryHook: "Neonatal line = birth certificate in enamel."
+},
+{
+  id: "da-009",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Eruption – Primary Dentition Order",
+  difficulty: "medium",
+  question: "Which primary tooth is typically the first to erupt?",
+  choices: [
+    { key: "A", text: "Maxillary central incisor" },
+    { key: "B", text: "Mandibular lateral incisor" },
+    { key: "C", text: "Mandibular central incisor" },
+    { key: "D", text: "Maxillary lateral incisor" }
+  ],
+  correctAnswer: "C",
+  rationale: "The mandibular central incisor is typically the first primary tooth to erupt, usually around 6 to 10 months of age. Primary eruption generally proceeds from anterior to posterior and from mandibular to maxillary.",
+  incorrectRationales: {
+    A: "Maxillary central incisors typically erupt after the mandibular centrals.",
+    B: "Mandibular lateral incisors erupt after the mandibular centrals.",
+    D: "Maxillary lateral incisors erupt later in the primary sequence."
+  },
+  boardTrap: "Primary eruption starts mandibular, not maxillary.",
+  memoryHook: "Mandibular centrals move first."
+},
+{
+  id: "da-010",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Eruption – Primary Dentition Ages",
+  difficulty: "medium",
+  question: "A parent asks at what age primary dentition is typically complete. At approximately what age are all 20 primary teeth usually erupted?",
+  choices: [
+    { key: "A", text: "12 to 14 months" },
+    { key: "B", text: "18 to 24 months" },
+    { key: "C", text: "24 to 33 months" },
+    { key: "D", text: "36 to 48 months" }
+  ],
+  correctAnswer: "C",
+  rationale: "Primary dentition is typically complete by 24 to 33 months of age, with the second primary molars being the last to erupt. The full complement of 20 primary teeth is usually present by the child's third birthday.",
+  incorrectRationales: {
+    A: "Only the first few incisors have erupted by 12 to 14 months.",
+    B: "By 18 to 24 months most incisors and first molars are present but second molars have not yet erupted.",
+    D: "Primary dentition is complete well before 36 to 48 months in most children."
+  },
+  boardTrap: "Second primary molars are last — eruption completes around age 2.5 to 3.",
+  memoryHook: "All 20 by age 3."
+},
+{
+  id: "da-011",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Eruption – Primary Second Molar",
+  difficulty: "medium",
+  question: "Which primary tooth is typically the last to erupt?",
+  choices: [
+    { key: "A", text: "Maxillary canine" },
+    { key: "B", text: "Mandibular second molar" },
+    { key: "C", text: "Maxillary second molar" },
+    { key: "D", text: "Mandibular first molar" }
+  ],
+  correctAnswer: "C",
+  rationale: "The maxillary second primary molar is typically the last primary tooth to erupt, usually around 25 to 33 months. The mandibular second primary molar erupts slightly earlier.",
+  incorrectRationales: {
+    A: "Primary canines erupt around 16 to 22 months, before the second molars.",
+    B: "The mandibular second primary molar erupts before the maxillary second primary molar.",
+    D: "First primary molars erupt much earlier, around 14 to 18 months."
+  },
+  boardTrap: "Maxillary second primary molar is last — not mandibular.",
+  memoryHook: "Upper second primary molar = last to arrive."
+},
+{
+  id: "da-012",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Eruption – First Permanent Tooth",
+  difficulty: "medium",
+  question: "Which permanent tooth typically erupts first?",
+  choices: [
+    { key: "A", text: "Maxillary central incisor" },
+    { key: "B", text: "Mandibular central incisor" },
+    { key: "C", text: "Mandibular first molar" },
+    { key: "D", text: "Maxillary first molar" }
+  ],
+  correctAnswer: "C",
+  rationale: "The mandibular first permanent molar and the mandibular central incisor both typically erupt around age 6. The mandibular first molar is often cited as the first permanent tooth to erupt and is sometimes called the six-year molar.",
+  incorrectRationales: {
+    A: "Maxillary central incisors typically erupt after the mandibular centrals and first molars.",
+    B: "Mandibular central incisors erupt around age 6 concurrently with the mandibular first molar but are not consistently cited as the first.",
+    D: "Maxillary first molars erupt slightly after the mandibular first molars."
+  },
+  boardTrap: "Mandibular first molar and mandibular central incisor both erupt around age 6 — molar is typically first.",
+  memoryHook: "Six-year molar = first permanent arrival."
+},
+{
+  id: "da-013",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Eruption – Permanent Dentition Sequence",
+  difficulty: "hard",
+  question: "Which of the following correctly represents the typical eruption sequence of the mandibular permanent dentition?",
+  choices: [
+    { key: "A", text: "Central incisor, lateral incisor, canine, first premolar, second premolar, first molar, second molar, third molar" },
+    { key: "B", text: "First molar, central incisor, lateral incisor, canine, first premolar, second premolar, second molar, third molar" },
+    { key: "C", text: "Central incisor, first molar, lateral incisor, canine, first premolar, second premolar, second molar, third molar" },
+    { key: "D", text: "First molar, central incisor, lateral incisor, first premolar, canine, second premolar, second molar, third molar" }
+  ],
+  correctAnswer: "B",
+  rationale: "The typical mandibular permanent eruption sequence begins with the first molar and central incisor around age 6, followed by the lateral incisor, canine, first premolar, second premolar, second molar, and finally the third molar.",
+  incorrectRationales: {
+    A: "This sequence omits the first molar erupting concurrently with the central incisor at age 6.",
+    C: "While close, the first molar and central incisor erupt simultaneously rather than sequentially.",
+    D: "The canine typically erupts before the second premolar in the mandible."
+  },
+  boardTrap: "Mandibular canine erupts before second premolar. Maxillary sequence differs.",
+  memoryHook: "Mandibular: 6-1-2-3-4-5-7. First molar first."
+},
+{
+  id: "da-014",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Eruption – Maxillary Sequence vs Mandibular",
+  difficulty: "hard",
+  question: "The maxillary permanent eruption sequence differs from the mandibular sequence in one key area. Which tooth erupts in a different relative position in the maxillary arch compared to the mandibular arch?",
+  choices: [
+    { key: "A", text: "Lateral incisor" },
+    { key: "B", text: "First premolar" },
+    { key: "C", text: "Canine" },
+    { key: "D", text: "Second molar" }
+  ],
+  correctAnswer: "C",
+  rationale: "In the mandibular arch, the canine erupts before the premolars. In the maxillary arch, the canine typically erupts after both premolars. This difference frequently results in the maxillary canine being displaced or impacted when arch space is insufficient.",
+  incorrectRationales: {
+    A: "The lateral incisor erupts early in both arches without significant sequence variation.",
+    B: "The first premolar occupies a similar relative position in both arches.",
+    D: "The second molar erupts late in both arches without a significant sequence difference."
+  },
+  boardTrap: "Maxillary canine erupts after premolars — mandibular canine erupts before premolars.",
+  memoryHook: "Upper canine is late. Lower canine is early."
+},
+{
+  id: "da-015",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Eruption – Mixed Dentition",
+  difficulty: "medium",
+  question: "A 7-year-old patient has erupted mandibular permanent central and lateral incisors while retaining several primary teeth. Which term describes this transitional period of dentition?",
+  choices: [
+    { key: "A", text: "Primary dentition phase" },
+    { key: "B", text: "Permanent dentition phase" },
+    { key: "C", text: "Mixed dentition phase" },
+    { key: "D", text: "Succedaneous dentition phase" }
+  ],
+  correctAnswer: "C",
+  rationale: "The mixed dentition phase occurs between approximately age 6 and 12, during which both primary and permanent teeth are present simultaneously in the oral cavity.",
+  incorrectRationales: {
+    A: "The primary dentition phase occurs before any permanent teeth erupt.",
+    B: "The permanent dentition phase begins after all primary teeth have been shed.",
+    D: "Succedaneous refers to permanent teeth that replace primary predecessors, not a distinct dentition phase."
+  },
+  boardTrap: "Mixed dentition = both types present. Age 6 to 12 is the classic range.",
+  memoryHook: "Mixed = mix of primary and permanent."
+},
+{
+  id: "da-016",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Eruption – Last Primary Tooth Shed",
+  difficulty: "medium",
+  question: "Which primary tooth is typically the last to be exfoliated?",
+  choices: [
+    { key: "A", text: "Maxillary canine" },
+    { key: "B", text: "Mandibular second molar" },
+    { key: "C", text: "Maxillary second molar" },
+    { key: "D", text: "Mandibular canine" }
+  ],
+  correctAnswer: "C",
+  rationale: "The maxillary second primary molar is typically the last primary tooth to be shed, usually around age 10 to 12, replaced by the maxillary second premolar.",
+  incorrectRationales: {
+    A: "Maxillary primary canines are shed around age 10 to 12 but before the second molars.",
+    B: "Mandibular second primary molars are shed slightly before maxillary second molars.",
+    D: "Mandibular primary canines are typically shed earlier than second molars."
+  },
+  boardTrap: "Last to erupt in primary = last to shed. Maxillary second molar.",
+  memoryHook: "Last in, last out — maxillary second primary molar."
+},
+{
+  id: "da-017",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Morphology – Cusp of Carabelli",
+  difficulty: "medium",
+  question: "The cusp of Carabelli is most commonly associated with which tooth?",
+  choices: [
+    { key: "A", text: "Mandibular first molar" },
+    { key: "B", text: "Maxillary second premolar" },
+    { key: "C", text: "Maxillary first molar" },
+    { key: "D", text: "Mandibular second molar" }
+  ],
+  correctAnswer: "C",
+  rationale: "The cusp of Carabelli is an accessory cusp located on the mesiolingual surface of the maxillary first molar. It is considered a normal variation and has no functional significance.",
+  incorrectRationales: {
+    A: "The mandibular first molar does not typically display a cusp of Carabelli.",
+    B: "Premolars are not associated with this accessory cusp.",
+    D: "The mandibular second molar is not the classic location for this cusp."
+  },
+  boardTrap: "Carabelli is always maxillary first molar — mesiolingual surface.",
+  memoryHook: "Carabelli crowns the maxillary first molar."
+},
+{
+  id: "da-018",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Morphology – Cusp Number",
+  difficulty: "medium",
+  question: "Which permanent tooth typically has five cusps?",
+  choices: [
+    { key: "A", text: "Maxillary first premolar" },
+    { key: "B", text: "Mandibular second molar" },
+    { key: "C", text: "Mandibular first molar" },
+    { key: "D", text: "Maxillary first molar" }
+  ],
+  correctAnswer: "C",
+  rationale: "The mandibular first molar typically has five cusps: mesiobuccal, distobuccal, mesiolingual, distolingual, and distal. This five-cusp pattern with the Y-shaped groove pattern is a distinguishing feature of this tooth.",
+  incorrectRationales: {
+    A: "Maxillary first premolars typically have two cusps.",
+    B: "Mandibular second molars typically have four cusps in a plus-shaped groove pattern.",
+    D: "Maxillary first molars typically have four major cusps plus the cusp of Carabelli as an accessory."
+  },
+  boardTrap: "Five cusps with Y-groove = mandibular first molar. Four cusps with plus-groove = mandibular second molar.",
+  memoryHook: "Lower first molar = five and Y."
+},
+{
+  id: "da-019",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Morphology – Roots",
+  difficulty: "medium",
+  question: "Which permanent tooth most commonly has three roots?",
+  choices: [
+    { key: "A", text: "Mandibular first molar" },
+    { key: "B", text: "Maxillary second premolar" },
+    { key: "C", text: "Mandibular second molar" },
+    { key: "D", text: "Maxillary first molar" }
+  ],
+  correctAnswer: "D",
+  rationale: "The maxillary first molar typically has three roots: mesiobuccal, distobuccal, and palatal. This three-rooted configuration is the standard anatomy for maxillary molars.",
+  incorrectRationales: {
+    A: "Mandibular first molars typically have two roots — mesial and distal.",
+    B: "Maxillary second premolars most commonly have one root, occasionally two.",
+    C: "Mandibular second molars typically have two roots."
+  },
+  boardTrap: "Maxillary molars have three roots. Mandibular molars have two.",
+  memoryHook: "Maxillary molars = triple rooted."
+},
+{
+  id: "da-020",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Morphology – Longest Root",
+  difficulty: "medium",
+  question: "Which permanent tooth has the longest root relative to crown length?",
+  choices: [
+    { key: "A", text: "Maxillary central incisor" },
+    { key: "B", text: "Mandibular first molar" },
+    { key: "C", text: "Maxillary canine" },
+    { key: "D", text: "Maxillary first premolar" }
+  ],
+  correctAnswer: "C",
+  rationale: "The maxillary canine has the longest root of all permanent teeth and is also the most stable tooth in the dental arch due to its deep root and prominent alveolar support.",
+  incorrectRationales: {
+    A: "Maxillary central incisors have proportionally shorter roots than canines.",
+    B: "Mandibular first molars have substantial roots but not the longest single root.",
+    D: "Maxillary first premolars may have bifurcated roots but shorter overall length."
+  },
+  boardTrap: "Longest root = maxillary canine. Most teeth = maxillary third molar (varies).",
+  memoryHook: "Canine clings deepest."
+},
+{
+  id: "da-021",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Morphology – Pulp Horns",
+  difficulty: "medium",
+  question: "Which permanent tooth has the most prominent mesial pulp horn that extends closest to the occlusal surface?",
+  choices: [
+    { key: "A", text: "Maxillary first premolar" },
+    { key: "B", text: "Mandibular second molar" },
+    { key: "C", text: "Maxillary canine" },
+    { key: "D", text: "Mandibular first molar" }
+  ],
+  correctAnswer: "D",
+  rationale: "The mandibular first molar has a prominent mesiobuccal pulp horn that extends close to the occlusal surface. This is clinically significant during cavity preparation and restoration placement to avoid pulp exposure.",
+  incorrectRationales: {
+    A: "Maxillary premolars have pulp horns but they are not the most prominent in relation to occlusal depth.",
+    B: "Mandibular second molar pulp horns are less prominent than first molar horns.",
+    C: "Canines have a single pulp canal without the prominent multi-horned pulp chamber."
+  },
+  boardTrap: "High pulp horns = risk of exposure during cavity preparation.",
+  memoryHook: "Lower first molar pulp horn pokes highest."
+},
+{
+  id: "da-022",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Development – Successional Lamina",
+  difficulty: "hard",
+  question: "The successional dental lamina gives rise to which group of permanent teeth?",
+  choices: [
+    { key: "A", text: "All permanent teeth" },
+    { key: "B", text: "Permanent molars only" },
+    { key: "C", text: "Permanent teeth that replace primary predecessors" },
+    { key: "D", text: "Permanent premolars and incisors only" }
+  ],
+  correctAnswer: "C",
+  rationale: "The successional dental lamina is an extension of the primary tooth lamina that gives rise to the permanent successors — incisors, canines, and premolars — which replace primary predecessors. Permanent molars arise from the posterior extension of the original dental lamina without primary predecessors.",
+  incorrectRationales: {
+    A: "Not all permanent teeth arise from the successional lamina — molars do not.",
+    B: "Molars arise from the posterior extension of the original dental lamina, not the successional lamina.",
+    D: "While premolars and incisors are included, canines are also successional teeth."
+  },
+  boardTrap: "Molars have no primary predecessors and do not use the successional lamina.",
+  memoryHook: "Successional = successor teeth that replace primaries."
+},
+{
+  id: "da-023",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Morphology – Taurodontism",
+  difficulty: "hard",
+  question: "A patient's radiograph reveals a molar with an enlarged pulp chamber that extends apically with short roots and apical furcation. Which developmental anomaly is most likely present?",
+  choices: [
+    { key: "A", text: "Dilaceration" },
+    { key: "B", text: "Fusion" },
+    { key: "C", text: "Taurodontism" },
+    { key: "D", text: "Gemination" }
+  ],
+  correctAnswer: "C",
+  rationale: "Taurodontism is characterized by an enlarged pulp chamber with apical displacement of the furcation, resulting in short roots. It is associated with certain syndromes including Klinefelter syndrome and may complicate endodontic treatment.",
+  incorrectRationales: {
+    A: "Dilaceration involves a sharp angulation of the root rather than pulp chamber enlargement.",
+    B: "Fusion involves joining of two teeth with reduced tooth count.",
+    D: "Gemination involves incomplete division of a single tooth bud with normal tooth count."
+  },
+  boardTrap: "Large pulp chamber + short roots + apical furcation = taurodontism.",
+  memoryHook: "Taurodont = bull-tooth. Large body, short legs."
+},
+{
+  id: "da-024",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Morphology – Hutchinson's Incisors",
+  difficulty: "medium",
+  question: "Screwdriver-shaped permanent central incisors with notched incisal edges are associated with which systemic condition?",
+  choices: [
+    { key: "A", text: "Amelogenesis imperfecta" },
+    { key: "B", text: "Congenital syphilis" },
+    { key: "C", text: "Dentinogenesis imperfecta" },
+    { key: "D", text: "Fluorosis" }
+  ],
+  correctAnswer: "B",
+  rationale: "Hutchinson's incisors, characterized by screwdriver or barrel-shaped crowns with notched incisal edges, are a classic sign of congenital syphilis along with mulberry molars and interstitial keratitis — collectively called Hutchinson's triad.",
+  incorrectRationales: {
+    A: "Amelogenesis imperfecta affects enamel formation but does not produce the distinctive notched shape of Hutchinson's incisors.",
+    C: "Dentinogenesis imperfecta affects dentin and produces opalescent discoloration rather than crown shape anomalies.",
+    D: "Fluorosis causes white spots and mottling but not the specific notched incisor morphology."
+  },
+  boardTrap: "Hutchinson's triad = notched incisors + mulberry molars + interstitial keratitis. All from congenital syphilis.",
+  memoryHook: "Hutchinson's = history of syphilis in the crown."
+},
+{
+  id: "da-025",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Morphology – Mulberry Molars",
+  difficulty: "medium",
+  question: "Mulberry molars with multiple poorly formed cusps and pitted enamel on the first permanent molar are associated with which condition?",
+  choices: [
+    { key: "A", text: "Rickets" },
+    { key: "B", text: "Congenital syphilis" },
+    { key: "C", text: "Turner's tooth" },
+    { key: "D", text: "Regional odontodysplasia" }
+  ],
+  correctAnswer: "B",
+  rationale: "Mulberry molars are a feature of congenital syphilis along with Hutchinson's incisors and interstitial keratitis. They present as first permanent molars with irregular pitted enamel and multiple poorly defined cusps resembling a mulberry.",
+  incorrectRationales: {
+    A: "Rickets affects enamel and dentin formation but does not produce the mulberry molar pattern.",
+    C: "Turner's tooth is enamel hypoplasia of a single tooth caused by infection or trauma to the primary predecessor.",
+    D: "Regional odontodysplasia affects multiple teeth in one quadrant with ghost tooth appearance on radiographs."
+  },
+  boardTrap: "Mulberry molars + Hutchinson's incisors = congenital syphilis triad.",
+  memoryHook: "Mulberry molar = marker of maternal syphilis."
+},
+{
+  id: "da-026",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Morphology – Turner's Tooth",
+  difficulty: "medium",
+  question: "A child presents with hypoplastic enamel on a single maxillary premolar. The primary predecessor had a history of periapical infection. What is the most likely diagnosis?",
+  choices: [
+    { key: "A", text: "Amelogenesis imperfecta" },
+    { key: "B", text: "Fluorosis" },
+    { key: "C", text: "Turner's tooth" },
+    { key: "D", text: "Dentinogenesis imperfecta" }
+  ],
+  correctAnswer: "C",
+  rationale: "Turner's tooth is enamel hypoplasia of a permanent tooth caused by disruption of ameloblasts during development, typically from infection or trauma involving the primary predecessor. It affects a single tooth.",
+  incorrectRationales: {
+    A: "Amelogenesis imperfecta affects all teeth due to a genetic defect in enamel formation.",
+    B: "Fluorosis affects multiple teeth simultaneously during enamel development from excess fluoride.",
+    D: "Dentinogenesis imperfecta affects all teeth with opalescent discoloration."
+  },
+  boardTrap: "Single tooth hypoplasia with infected primary predecessor = Turner's tooth, not systemic condition.",
+  memoryHook: "Turner's = one tooth traumatized by the tooth above it."
+},
+{
+  id: "da-027",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Development – Appositional Stage",
+  difficulty: "medium",
+  question: "During which stage of tooth development do ameloblasts and odontoblasts deposit enamel and dentin matrix in incremental layers?",
+  choices: [
+    { key: "A", text: "Initiation" },
+    { key: "B", text: "Proliferation" },
+    { key: "C", text: "Appositional stage" },
+    { key: "D", text: "Morphodifferentiation" }
+  ],
+  correctAnswer: "C",
+  rationale: "The appositional stage is when ameloblasts and odontoblasts actively deposit enamel and dentin matrix in incremental layers. Disruption during this stage results in hypoplastic defects visible as pits, grooves, or missing enamel.",
+  incorrectRationales: {
+    A: "Initiation marks the earliest signal for tooth development from the dental lamina.",
+    B: "Proliferation involves rapid cell division and growth of the tooth germ.",
+    D: "Morphodifferentiation determines crown shape and cusp pattern."
+  },
+  boardTrap: "Hypoplasia occurs during appositional stage disruption — not initiation or proliferation.",
+  memoryHook: "Appositional = adding layers."
+},
+{
+  id: "da-028",
+  type: "application",
+  subject: "Head & Neck Anatomy",
+  topic: "Eruption – Permanent Molar Chronology",
+  difficulty: "medium",
+  question: "A 12-year-old patient's panoramic radiograph shows eruption of the second permanent molars. What is the approximate expected age for second permanent molar eruption?",
+  choices: [
+    { key: "A", text: "6 to 7 years" },
+    { key: "B", text: "8 to 9 years" },
+    { key: "C", text: "11 to 13 years" },
+    { key: "D", text: "17 to 21 years" }
+  ],
+  correctAnswer: "C",
+  rationale: "Second permanent molars typically erupt between 11 and 13 years of age and are sometimes called twelve-year molars. Their eruption marks the approach of the end of the mixed dentition phase.",
+  incorrectRationales: {
+    A: "Age 6 to 7 corresponds to first permanent molar eruption.",
+    B: "Age 8 to 9 corresponds to premolar and canine eruption in the mandible.",
+    D: "Age 17 to 21 corresponds to third molar eruption."
+  },
+  boardTrap: "Six-year molar = first permanent molar. Twelve-year molar = second permanent molar.",
+  memoryHook: "Second molar = twelve-year molar."
+},
+{
+  id: "da-029",
+  type: "recall",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Morphology – Shovel-Shaped Incisors",
+  difficulty: "medium",
+  question: "Shovel-shaped incisors with pronounced lingual marginal ridges are most commonly associated with which population?",
+  choices: [
+    { key: "A", text: "Sub-Saharan African populations" },
+    { key: "B", text: "Northern European populations" },
+    { key: "C", text: "Asian and Native American populations" },
+    { key: "D", text: "Mediterranean populations" }
+  ],
+  correctAnswer: "C",
+  rationale: "Shovel-shaped incisors with prominent lingual marginal ridges are a genetic trait found predominantly in Asian and Native American populations. This trait is clinically significant during restorative procedures and morphologic assessment.",
+  incorrectRationales: {
+    A: "Sub-Saharan African populations do not exhibit this trait at high frequency.",
+    B: "Northern European populations have a low prevalence of shovel-shaped incisors.",
+    D: "Mediterranean populations do not show this as a characteristic trait."
+  },
+  boardTrap: "Shovel-shaped = Asian and Native American genetic marker.",
+  memoryHook: "Shovel shapes show in Asian and Indigenous ancestry."
+},
+{
+  id: "da-030",
+  type: "critical-thinking",
+  subject: "Head & Neck Anatomy",
+  topic: "Tooth Development – Clinical Application",
+  difficulty: "hard",
+  question: "A 4-year-old child presents with hypoplastic enamel affecting multiple primary teeth. The mother reports a difficult premature delivery at 32 weeks gestation with neonatal intensive care. Which developmental event most likely explains the enamel defects on the primary teeth?",
+  choices: [
+    { key: "A", text: "Excessive fluoride intake during the third trimester" },
+    { key: "B", text: "Systemic disturbance during the appositional stage of primary tooth development" },
+    { key: "C", text: "Failure of the dental sac to produce cementum" },
+    { key: "D", text: "Premature loss of Hertwig's epithelial root sheath" }
+  ],
+  correctAnswer: "B",
+  rationale: "Primary tooth enamel forms primarily during the prenatal period and early neonatal months. Premature birth and neonatal intensive care represent significant systemic disturbances that can disrupt ameloblast function during the appositional stage, resulting in hypoplastic defects on multiple primary teeth. A neonatal line may also be present.",
+  incorrectRationales: {
+    A: "Fluorosis affects multiple teeth in a symmetric banding pattern and requires prolonged fluoride ingestion, not a single perinatal event.",
+    C: "Dental sac failure affects root support structures, not enamel formation.",
+    D: "Hertwig's sheath loss affects root length and shape, not coronal enamel."
+  },
+  boardTrap: "Perinatal disturbance + multiple primary teeth + appositional disruption = hypoplasia, not fluorosis.",
+  memoryHook: "Premature birth disturbs enamel layers forming at that moment."
+},
+{
   id: "COMM-001",
   type: "community",
   subject: "Community Health & Prevention",
