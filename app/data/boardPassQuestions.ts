@@ -3799,6 +3799,98 @@ export const boardPassQuestions: BoardPassQuestion[] = [
   memoryHook: "NaF = No acid fear."
 },
 {
+  id: "mat-052",
+  type: "application",
+  subject: "Dental Materials",
+  topic: "Eugenol Sensitivity and Cement Selection",
+  difficulty: "medium",
+  question: "A clinician is selecting a luting cement for a patient with known eugenol sensitivity. Which cement is contraindicated?",
+  choices: [
+    { key: "A", text: "Zinc phosphate cement" },
+    { key: "B", text: "Resin-modified glass ionomer cement" },
+    { key: "C", text: "Zinc oxide eugenol cement" },
+    { key: "D", text: "Polycarboxylate cement" }
+  ],
+  correctAnswer: "C",
+  rationale: "Zinc oxide eugenol cement contains eugenol and is contraindicated in eugenol-sensitive patients. All other options listed are eugenol-free.",
+  incorrectRationales: {
+    A: "Zinc phosphate cement is eugenol-free and is a safe alternative in eugenol-sensitive patients.",
+    B: "Resin-modified glass ionomer is eugenol-free and offers additional advantages of adhesive bonding and fluoride release.",
+    D: "Polycarboxylate cement is eugenol-free and biocompatible, making it an acceptable alternative."
+  },
+  boardTrap: "ZOE is the only eugenol-containing cement in this list. All others are safe alternatives.",
+  memoryHook: "ZOE contains eugenol. Eugenol sensitivity means no ZOE."
+},
+{
+  id: "mat-053",
+  type: "recall",
+  subject: "Dental Materials",
+  topic: "Impression Material Setting Reaction",
+  difficulty: "medium",
+  question: "Which impression material sets through addition polymerization with no byproduct and allows multiple accurate stone pours?",
+  choices: [
+    { key: "A", text: "Polysulfide rubber" },
+    { key: "B", text: "Condensation silicone" },
+    { key: "C", text: "Polyether" },
+    { key: "D", text: "Vinyl polysiloxane" }
+  ],
+  correctAnswer: "D",
+  rationale: "Vinyl polysiloxane sets by addition polymerization with no byproduct, allowing multiple accurate pours.",
+  incorrectRationales: {
+    A: "Polysulfide releases water as a byproduct and has lower dimensional stability than VPS.",
+    B: "Condensation silicone releases alcohol as a byproduct, limiting it to a single pour.",
+    C: "Polyether sets by ring-opening polymerization and absorbs water in humid environments."
+  },
+  boardTrap: "Condensation releases alcohol equals single pour. Addition equals no byproduct equals multiple pours.",
+  memoryHook: "Addition equals no byproduct equals accurate multiple pours. VPS equals Very Precise Silicone."
+},
+{
+  id: "mat-054",
+  type: "critical-thinking",
+  subject: "Dental Materials",
+  topic: "Composite Polymerization Shrinkage",
+  difficulty: "hard",
+  question: "During curing of a posterior composite, the material undergoes volumetric shrinkage toward the light source. Which clinical consequence is most directly associated with this shrinkage?",
+  choices: [
+    { key: "A", text: "Increased surface hardness of the restoration" },
+    { key: "B", text: "Marginal gap formation and microleakage" },
+    { key: "C", text: "Improved adaptation to cavity walls" },
+    { key: "D", text: "Increased resistance to occlusal wear" }
+  ],
+  correctAnswer: "B",
+  rationale: "Polymerization shrinkage creates marginal gaps leading to microleakage, secondary caries, and postoperative sensitivity.",
+  incorrectRationales: {
+    A: "Surface hardness is determined by degree of conversion and filler content, not shrinkage direction.",
+    C: "Shrinkage toward the light creates gaps away from opposite walls, not improved adaptation.",
+    D: "Wear resistance depends on filler particle size and loading, not polymerization shrinkage."
+  },
+  boardTrap: "Shrinkage toward the light creates gaps at opposite margins. Improved adaptation is the opposite of what occurs.",
+  memoryHook: "Shrinkage toward light equals gaps at margins equals microleakage risk."
+},
+{
+  id: "mat-055",
+  type: "recall",
+  subject: "Dental Materials",
+  topic: "Glass Ionomer Properties",
+  difficulty: "medium",
+  question: "Which property distinguishes glass ionomer cement from composite resin in high-caries-risk patients?",
+  choices: [
+    { key: "A", text: "Superior wear resistance" },
+    { key: "B", text: "Greater fracture toughness" },
+    { key: "C", text: "Sustained fluoride release" },
+    { key: "D", text: "Better esthetic translucency" }
+  ],
+  correctAnswer: "C",
+  rationale: "Glass ionomer releases fluoride continuously, providing anticariogenic benefit. Composite does not release fluoride.",
+  incorrectRationales: {
+    A: "Composite resin has superior wear resistance compared to glass ionomer.",
+    B: "Composite resin has greater fracture toughness than glass ionomer.",
+    D: "Composite resin provides better esthetic translucency than glass ionomer."
+  },
+  boardTrap: "Both materials are tooth-colored but composite is superior in esthetics, strength, and wear. Fluoride release is the one advantage glass ionomer holds.",
+  memoryHook: "Glass ionomer equals fluoride release equals caries protection."
+},
+{
   id: "mat-051",
   type: "mastery",
   subject: "Dental Materials",
@@ -7133,6 +7225,121 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "PSP waits, sensor creates. PSP = scan to see; Sensor = see instantly."
 },
 {
+  id: "rad-051",
+  type: "application",
+  subject: "Radiology",
+  topic: "ALARA Principle",
+  difficulty: "medium",
+  question: "A dental hygienist is selecting exposure settings for a full-mouth series. Which principle guides using the lowest possible radiation dose that still produces a diagnostic image?",
+  choices: [
+    { key: "A", text: "ALARA" },
+    { key: "B", text: "Inverse square law" },
+    { key: "C", text: "Filtration principle" },
+    { key: "D", text: "Collimation standard" }
+  ],
+  correctAnswer: "A",
+  rationale: "ALARA means As Low As Reasonably Achievable and is the guiding principle for minimizing patient radiation exposure while maintaining diagnostic image quality.",
+  incorrectRationales: {
+    B: "The inverse square law describes how beam intensity changes with distance but is not the guiding safety principle.",
+    C: "Filtration removes low-energy photons to reduce patient dose but is a tool used to achieve ALARA, not the principle itself.",
+    D: "Collimation restricts beam size to reduce exposure but is also a tool rather than the overarching principle."
+  },
+  boardTrap: "Filtration and collimation are tools used to achieve ALARA, not the principle itself.",
+  memoryHook: "ALARA = always the least radiation achievable."
+},
+{
+  id: "rad-052",
+  type: "recall",
+  subject: "Radiology",
+  topic: "Radiation Units",
+  difficulty: "medium",
+  question: "Which unit measures the biological effect of radiation on human tissue?",
+  choices: [
+    { key: "A", text: "Roentgen" },
+    { key: "B", text: "Rad" },
+    { key: "C", text: "Rem" },
+    { key: "D", text: "Gray" }
+  ],
+  correctAnswer: "C",
+  rationale: "Rem and its SI equivalent the sievert measure biological effect by accounting for both absorbed dose and radiation type.",
+  incorrectRationales: {
+    A: "Roentgen measures radiation exposure in air and does not account for biological effect.",
+    B: "Rad measures absorbed dose but does not account for the type of radiation or its biological impact.",
+    D: "Gray is the SI unit for absorbed dose, equivalent to the rad, but does not measure biological effect."
+  },
+  boardTrap: "Four units, four different things. Only rem and sievert account for biological effect.",
+  memoryHook: "Rem = biological effect. Roentgen = exposure. Rad = absorbed dose."
+},
+{
+  id: "rad-053",
+  type: "recall",
+  subject: "Radiology",
+  topic: "Digital Radiography Advantages",
+  difficulty: "medium",
+  question: "Which advantage of digital radiography most directly reduces patient radiation exposure?",
+  choices: [
+    { key: "A", text: "Improved image sharpness" },
+    { key: "B", text: "Ability to adjust brightness and contrast after exposure" },
+    { key: "C", text: "Reduced exposure time required to produce a diagnostic image" },
+    { key: "D", text: "Elimination of chemical processing solutions" }
+  ],
+  correctAnswer: "C",
+  rationale: "Digital sensors require less radiation than film to produce a diagnostic image, directly reducing patient dose.",
+  incorrectRationales: {
+    A: "Image sharpness relates to resolution quality and does not affect radiation dose.",
+    B: "Post-processing improves diagnostic utility but occurs after exposure and does not reduce dose.",
+    D: "Eliminating chemical processing improves workflow and reduces environmental impact but does not reduce radiation exposure."
+  },
+  boardTrap: "Post-processing is a well-known digital advantage but does not reduce radiation exposure.",
+  memoryHook: "Digital sensors need less radiation. Less exposure equals less dose."
+},
+{
+  id: "rad-054",
+  type: "critical-thinking",
+  subject: "Radiology",
+  topic: "Panoramic Positioning Error",
+  difficulty: "hard",
+  question: "A panoramic radiograph shows the anterior teeth appearing narrow and blurred while the posterior teeth appear normal. Which positioning error most likely occurred?",
+  choices: [
+    { key: "A", text: "Patient positioned too far forward in the focal trough" },
+    { key: "B", text: "Patient positioned too far backward in the focal trough" },
+    { key: "C", text: "Chin tipped too far downward" },
+    { key: "D", text: "Patient failed to bite on the bite block" }
+  ],
+  correctAnswer: "B",
+  rationale: "When positioned too far back, the anterior teeth fall outside the focal trough and appear narrow and blurred while posterior regions remain unaffected.",
+  incorrectRationales: {
+    A: "Too far forward causes anterior teeth to appear wide and blurred, not narrow.",
+    C: "Chin tipped downward causes a smile line distortion affecting the occlusal plane, not isolated anterior narrowing.",
+    D: "Failure to bite the bite block affects incisor positioning but does not produce the isolated narrow anterior blur pattern."
+  },
+  boardTrap: "Too far forward equals wide anteriors. Too far back equals narrow anteriors.",
+  memoryHook: "Too far back equals narrow anteriors. Too far forward equals wide anteriors."
+},
+{
+  id: "rad-055",
+  type: "recall",
+  subject: "Radiology",
+  topic: "Thyroid Collar",
+  difficulty: "medium",
+  question: "Which statement best explains why a thyroid collar is recommended during dental radiographic procedures?",
+  choices: [
+    { key: "A", text: "The thyroid is in the primary beam path during periapical exposures" },
+    { key: "B", text: "The thyroid is radiosensitive and may receive scatter radiation during dental exposures" },
+    { key: "C", text: "The thyroid produces hormones that are disrupted by direct radiation" },
+    { key: "D", text: "The collar protects the thyroid from secondary radiation produced by the anode" }
+  ],
+  correctAnswer: "B",
+  rationale: "The thyroid is radiosensitive and may receive scatter radiation during dental exposures. It is not in the primary beam path.",
+  incorrectRationales: {
+    A: "The thyroid is not in the primary beam path during standard periapical or bitewing exposures.",
+    C: "Hormone disruption is a consequence of radiation damage, not the reason the collar is used.",
+    D: "Secondary radiation from the anode is contained within the tubehead. Scatter from the patient is the relevant concern."
+  },
+  boardTrap: "The thyroid is not in the primary beam. Scatter radiation is the concern.",
+  memoryHook: "Thyroid collar catches scatter. Not the primary beam."
+},
+{
   id: "eth-001",
   type: "application",
   subject: "Ethics & Professional Practice",
@@ -9455,6 +9662,121 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Breathe in calm, not the bag."
 },
 {
+  id: "pharm-060",
+  type: "critical-thinking",
+  subject: "Pharmacology",
+  topic: "Local Anesthetic Dose Calculation",
+  difficulty: "hard",
+  question: "How many milligrams of lidocaine are contained in one standard 1.8 mL dental cartridge of 2 percent lidocaine solution?",
+  choices: [
+    { key: "A", text: "18 mg" },
+    { key: "B", text: "36 mg" },
+    { key: "C", text: "54 mg" },
+    { key: "D", text: "72 mg" }
+  ],
+  correctAnswer: "B",
+  rationale: "A 2 percent solution equals 20 mg per mL. One 1.8 mL cartridge contains 36 mg of lidocaine.",
+  incorrectRationales: {
+    A: "18 mg would result from incorrectly calculating 10 mg per mL rather than 20 mg per mL.",
+    C: "54 mg would require three cartridges at the correct concentration.",
+    D: "72 mg would result from doubling the correct cartridge dose."
+  },
+  boardTrap: "Two percent means 20 mg per mL, not 2 mg per mL. Percent concentration equals grams per 100 mL.",
+  memoryHook: "Percent times 10 equals mg per mL. Two percent equals 20 mg per mL times 1.8 equals 36 mg."
+},
+{
+  id: "pharm-061",
+  type: "critical-thinking",
+  subject: "Pharmacology",
+  topic: "Vasoconstrictors and Hypertension",
+  difficulty: "hard",
+  question: "A patient with a resting blood pressure of 178/102 presents for scaling and root planing. Which statement best reflects current guidelines for vasoconstrictor use?",
+  choices: [
+    { key: "A", text: "Epinephrine is absolutely contraindicated in all hypertensive patients" },
+    { key: "B", text: "Uncontrolled hypertension requires medical consultation before proceeding with elective treatment" },
+    { key: "C", text: "Epinephrine should be replaced with levonordefrin in all hypertensive patients" },
+    { key: "D", text: "Vasoconstrictors have no effect on blood pressure and may be used freely" }
+  ],
+  correctAnswer: "B",
+  rationale: "Uncontrolled hypertension at this level indicates ASA III status and requires medical consultation before elective treatment proceeds.",
+  incorrectRationales: {
+    A: "Epinephrine is not absolutely contraindicated in hypertensive patients. The degree of control determines the approach.",
+    C: "Levonordefrin is not a universal replacement for epinephrine in hypertensive patients and carries its own cardiovascular considerations.",
+    D: "Vasoconstrictors do affect cardiovascular function and must be used with awareness of the patient's medical status."
+  },
+  boardTrap: "Epinephrine is not automatically contraindicated in hypertensive patients. The degree of control determines the decision.",
+  memoryHook: "Uncontrolled equals consult first. Controlled equals low concentration epinephrine acceptable."
+},
+{
+  id: "pharm-062",
+  type: "recall",
+  subject: "Pharmacology",
+  topic: "Amide vs Ester Local Anesthetics",
+  difficulty: "medium",
+  question: "A patient reports a documented allergy to procaine. Which local anesthetic can be safely administered without risk of cross-reactivity?",
+  choices: [
+    { key: "A", text: "Tetracaine" },
+    { key: "B", text: "Benzocaine" },
+    { key: "C", text: "Lidocaine" },
+    { key: "D", text: "Chloroprocaine" }
+  ],
+  correctAnswer: "C",
+  rationale: "Ester anesthetics share PABA metabolism and cross-react. Lidocaine is an amide and does not cross-react with esters.",
+  incorrectRationales: {
+    A: "Tetracaine is an ester anesthetic that shares PABA metabolism and carries cross-reactivity risk.",
+    B: "Benzocaine is an ester anesthetic and cross-reacts with procaine through shared PABA metabolism.",
+    D: "Chloroprocaine is an ester anesthetic and would carry the same cross-reactivity risk as procaine."
+  },
+  boardTrap: "Allergy to one ester means risk with all esters. Amides do not cross-react with esters.",
+  memoryHook: "Esters share PABA allergy. Amides are safe when esters are not."
+},
+{
+  id: "pharm-063",
+  type: "recall",
+  subject: "Pharmacology",
+  topic: "Epinephrine Mechanism in Local Anesthesia",
+  difficulty: "medium",
+  question: "Epinephrine is added to local anesthetic solutions primarily for which reason?",
+  choices: [
+    { key: "A", text: "To increase the pH of the solution and reduce injection pain" },
+    { key: "B", text: "To prolong anesthesia by causing vasoconstriction and slowing systemic absorption" },
+    { key: "C", text: "To increase the solubility of the anesthetic in tissue fluids" },
+    { key: "D", text: "To reduce the risk of allergic reaction to the anesthetic" }
+  ],
+  correctAnswer: "B",
+  rationale: "Epinephrine causes vasoconstriction, slowing absorption and prolonging the duration of anesthesia.",
+  incorrectRationales: {
+    A: "Buffered anesthetics reduce injection discomfort through pH adjustment, but epinephrine does not affect pH.",
+    C: "Epinephrine does not improve anesthetic solubility in tissue.",
+    D: "Epinephrine has no effect on allergic risk and is itself a potential allergen in sensitive patients."
+  },
+  boardTrap: "Epinephrine does not affect pH. Its role is vasoconstriction to keep the anesthetic local longer.",
+  memoryHook: "Epinephrine constricts vessels keeping anesthetic local and lasting longer."
+},
+{
+  id: "pharm-064",
+  type: "critical-thinking",
+  subject: "Pharmacology",
+  topic: "Beta Blocker and Epinephrine Interaction",
+  difficulty: "hard",
+  question: "A patient taking propranolol presents for periodontal therapy requiring local anesthesia with epinephrine. Which potential interaction should the clinician anticipate?",
+  choices: [
+    { key: "A", text: "Propranolol increases metabolism of epinephrine causing reduced anesthetic duration" },
+    { key: "B", text: "Propranolol blocks beta receptors leaving alpha vasoconstriction unopposed potentially causing a hypertensive episode" },
+    { key: "C", text: "Propranolol and epinephrine together cause excessive vasodilation and hypotension" },
+    { key: "D", text: "Propranolol prevents epinephrine from crossing the blood-brain barrier" }
+  ],
+  correctAnswer: "B",
+  rationale: "Nonselective beta blockers block vasodilation leaving alpha vasoconstriction unopposed, which can cause a significant increase in blood pressure.",
+  incorrectRationales: {
+    A: "Propranolol does not increase epinephrine metabolism. It blocks receptor response.",
+    C: "The interaction causes hypertension, not vasodilation or hypotension.",
+    D: "Propranolol acts on peripheral adrenergic receptors and does not affect blood-brain barrier permeability to epinephrine."
+  },
+  boardTrap: "Blocking beta-2 removes vasodilation making alpha constriction dominant. The result is hypertension not reduced effect.",
+  memoryHook: "Beta blocker plus epinephrine equals alpha wins. Unopposed alpha equals blood pressure spike."
+},
+{
   id: "micro-001",
   type: "microbiology",
   subject: "Microbiology & Immunology",
@@ -10704,6 +11026,261 @@ memoryHook: "Lingual follows the leader — even vertically."
 
   memoryHook: "Scleroderma stiffens skin and stretches the PDL."
 },
+{
+  id: "micro-047",
+  type: "recall",
+  subject: "Microbiology & Immunology",
+  topic: "Blood Agar Hemolysis Patterns",
+  difficulty: "easy",
+  question: "A blood agar plate shows a greenish discoloration surrounding bacterial colonies. What type of hemolysis is present?",
+  choices: [
+    { key: "A", text: "Alpha hemolysis" },
+    { key: "B", text: "Beta hemolysis" },
+    { key: "C", text: "Gamma hemolysis" },
+    { key: "D", text: "Delta hemolysis" }
+  ],
+  correctAnswer: "A",
+  rationale: "Alpha hemolysis is characterized by partial breakdown of red blood cells, producing a greenish discoloration on blood agar due to oxidation of hemoglobin to methemoglobin.",
+  incorrectRationales: {
+    B: "Beta hemolysis results in complete lysis of red blood cells, producing a clear, transparent zone around colonies.",
+    C: "Gamma hemolysis indicates no hemolysis and no change in the agar surrounding the colonies.",
+    D: "Delta hemolysis is not a standard classification used in blood agar interpretation."
+  },
+  boardTrap: "Green identifies the hemolysis pattern only, not the organism. Pattern first, organism second.",
+  memoryHook: "Green = partial breakdown = alpha hemolysis."
+},
+{
+  id: "micro-048",
+  type: "application",
+  subject: "Microbiology & Immunology",
+  topic: "Alpha Hemolysis Organisms",
+  difficulty: "medium",
+  question: "A culture from a patient's oral cavity shows alpha hemolysis on blood agar and is catalase-negative. Which organism is most likely present?",
+  choices: [
+    { key: "A", text: "Streptococcus pyogenes" },
+    { key: "B", text: "Staphylococcus aureus" },
+    { key: "C", text: "Viridans streptococci" },
+    { key: "D", text: "Clostridium perfringens" }
+  ],
+  correctAnswer: "C",
+  rationale: "Viridans streptococci are alpha-hemolytic and catalase-negative, distinguishing them from catalase-positive Staphylococci. They are primary inhabitants of the oral cavity and are associated with dental caries initiation and subacute infective endocarditis following bacteremia.",
+  incorrectRationales: {
+    A: "Streptococcus pyogenes is also catalase-negative but is beta-hemolytic, not alpha-hemolytic, and is not typical oral flora.",
+    B: "Staphylococcus aureus is catalase-positive and typically beta-hemolytic, often producing a golden-yellow pigment on solid media rather than green discoloration.",
+    D: "Clostridium perfringens is an anaerobic gram-positive rod that produces beta hemolysis and is not associated with normal oral flora."
+  },
+  boardTrap: "All Streptococci are catalase-negative. If the question specifies catalase-positive, redirect immediately to Staphylococci.",
+  memoryHook: "Viridans = oral + green + catalase-negative."
+},
+{
+  id: "micro-049",
+  type: "application",
+  subject: "Microbiology & Immunology",
+  topic: "Hemolysis in Clinical Context",
+  difficulty: "medium",
+  question: "A patient presents with symptoms of pneumonia. Sputum culture reveals gram-positive diplococci with alpha hemolysis on blood agar. Which organism is the most likely cause?",
+  choices: [
+    { key: "A", text: "Streptococcus pneumoniae" },
+    { key: "B", text: "Streptococcus pyogenes" },
+    { key: "C", text: "Enterococcus faecalis" },
+    { key: "D", text: "Neisseria gonorrhoeae" }
+  ],
+  correctAnswer: "A",
+  rationale: "Streptococcus pneumoniae is a gram-positive encapsulated diplococcus that exhibits alpha hemolysis on blood agar and is the most common cause of community-acquired bacterial pneumonia.",
+  incorrectRationales: {
+    B: "Streptococcus pyogenes is beta-hemolytic, arranged in chains rather than diplococci, and is associated with pharyngitis and skin infections.",
+    C: "Enterococcus faecalis typically shows gamma hemolysis and is associated with urinary tract and gastrointestinal infections.",
+    D: "Neisseria gonorrhoeae is a gram-negative diplococcus and does not produce alpha hemolysis on blood agar."
+  },
+  boardTrap: "Diplococci plus alpha hemolysis together point to S. pneumoniae. Students miss the morphology and pattern combination.",
+  memoryHook: "Pneumo = pairs plus green."
+},
+{
+  id: "micro-050",
+  type: "critical-thinking",
+  subject: "Microbiology & Immunology",
+  topic: "Hemolysis Pattern Interpretation",
+  difficulty: "medium",
+  question: "A student observes a green discoloration on a blood agar plate and immediately identifies the organism as Staphylococcus aureus. Why is this conclusion incorrect?",
+  choices: [
+    { key: "A", text: "Staphylococcus aureus does not grow on blood agar" },
+    { key: "B", text: "Green discoloration indicates alpha hemolysis, a pattern produced by several species; S. aureus is typically beta-hemolytic" },
+    { key: "C", text: "Staphylococcus aureus produces gamma hemolysis" },
+    { key: "D", text: "Green discoloration indicates the presence of a catalase-negative rod" }
+  ],
+  correctAnswer: "B",
+  rationale: "Green discoloration indicates alpha hemolysis due to partial red blood cell breakdown and methemoglobin formation. Staphylococcus aureus is typically beta-hemolytic, producing a clear zone of complete lysis, and often displays a golden-yellow pigment on solid media. Final identification requires Gram stain and biochemical testing including catalase and coagulase.",
+  incorrectRationales: {
+    A: "Staphylococcus aureus does grow on blood agar and typically produces beta hemolysis through beta-hemolysin production.",
+    C: "Staphylococcus aureus is beta-hemolytic, not gamma-hemolytic. Gamma hemolysis indicates no red cell destruction.",
+    D: "Green discoloration results from hemoglobin oxidation during partial lysis and does not indicate a catalase-negative rod. Catalase status requires biochemical testing, not visual agar interpretation."
+  },
+  boardTrap: "Aureus means gold, not green. Golden-yellow pigment plus beta hemolysis identifies S. aureus. Green plus partial lysis identifies alpha-hemolytic organisms such as viridans streptococci.",
+  memoryHook: "Aureus = gold = beta hemolysis. Green = alpha = viridans."
+},
+{
+  id: "micro-051",
+  type: "critical-thinking",
+  subject: "Microbiology & Immunology",
+  topic: "Optochin Differentiation of Alpha-Hemolytic Streptococci",
+  difficulty: "hard",
+  question: "Two separate colonies show alpha hemolysis on blood agar. An optochin disk is placed on both. Colony A shows a large zone of inhibition while Colony B grows up to the disk edge. Which organism is Colony A?",
+  choices: [
+    { key: "A", text: "Streptococcus pyogenes" },
+    { key: "B", text: "Streptococcus pneumoniae" },
+    { key: "C", text: "Viridans streptococci" },
+    { key: "D", text: "Enterococcus faecalis" }
+  ],
+  correctAnswer: "B",
+  rationale: "Streptococcus pneumoniae is sensitive to optochin, meaning its growth is inhibited and a clear zone forms around the disk. Viridans streptococci are optochin-resistant and grow up to the disk edge. Both organisms are alpha-hemolytic, making optochin sensitivity the key differentiating test between them.",
+  incorrectRationales: {
+    A: "Streptococcus pyogenes is beta-hemolytic, not alpha-hemolytic, and would not appear in this clinical scenario.",
+    C: "Viridans streptococci are optochin-resistant and represent Colony B, which continues growing up to the disk edge.",
+    D: "Enterococcus faecalis typically shows gamma hemolysis and does not participate in optochin differentiation of alpha-hemolytic organisms."
+  },
+  boardTrap: "Students frequently reverse optochin sensitivity. S. pneumoniae is sensitive and inhibited. Viridans streptococci are resistant and unaffected. Both are alpha-hemolytic, which is why optochin is necessary to distinguish them.",
+  memoryHook: "P-disk kills Pneumoniae. Viridans survives. Sensitive = inhibited = pneumoniae."
+},
+{
+  id: "micro-052",
+  type: "application",
+  subject: "Microbiology & Immunology",
+  topic: "Bile Solubility Test",
+  difficulty: "medium",
+  question: "Two alpha-hemolytic colonies are isolated from a respiratory culture. A bile solubility test is performed. Colony A dissolves in the presence of bile salts while Colony B remains intact. Which organism is Colony A?",
+  choices: [
+    { key: "A", text: "Viridans streptococci" },
+    { key: "B", text: "Streptococcus pneumoniae" },
+    { key: "C", text: "Enterococcus faecalis" },
+    { key: "D", text: "Streptococcus pyogenes" }
+  ],
+  correctAnswer: "B",
+  rationale: "Streptococcus pneumoniae is bile soluble and dissolves in the presence of bile salts, while viridans streptococci remain intact. Bile solubility is a confirmatory test that distinguishes these two alpha-hemolytic organisms.",
+  incorrectRationales: {
+    A: "Viridans streptococci are bile resistant and represent Colony B, which remains intact after bile salt exposure.",
+    C: "Enterococcus faecalis typically shows gamma hemolysis and is not part of the alpha-hemolytic differential tested here.",
+    D: "Streptococcus pyogenes is beta-hemolytic and would not appear in a bile solubility comparison of alpha-hemolytic organisms."
+  },
+  boardTrap: "Both S. pneumoniae and viridans streptococci are alpha-hemolytic and catalase-negative. Bile solubility and optochin sensitivity are the two tests that separate them.",
+  memoryHook: "Pneumoniae dissolves in bile. Viridans survives bile."
+},
+{
+  id: "micro-053",
+  type: "application",
+  subject: "Microbiology & Immunology",
+  topic: "Bacitracin Sensitivity",
+  difficulty: "medium",
+  question: "A throat culture reveals beta-hemolytic, catalase-negative gram-positive cocci in chains. A bacitracin disk is placed on the plate and a zone of inhibition forms around it. Which organism is most likely present?",
+  choices: [
+    { key: "A", text: "Streptococcus agalactiae (Group B)" },
+    { key: "B", text: "Enterococcus faecalis" },
+    { key: "C", text: "Streptococcus pneumoniae" },
+    { key: "D", text: "Streptococcus pyogenes (Group A)" }
+  ],
+  correctAnswer: "D",
+  rationale: "Streptococcus pyogenes (Group A) is bacitracin sensitive and its growth is inhibited by the disk. Group B streptococci are bacitracin resistant, making this test the key differentiator between them.",
+  incorrectRationales: {
+    A: "Streptococcus agalactiae (Group B) is beta-hemolytic but bacitracin resistant and would grow up to the disk edge.",
+    B: "Enterococcus faecalis typically shows gamma hemolysis and is not differentiated by the bacitracin disk test.",
+    C: "Streptococcus pneumoniae is alpha-hemolytic, not beta-hemolytic, and is differentiated by optochin sensitivity and bile solubility."
+  },
+  boardTrap: "Group A is Affected by bacitracin. Group B is not. Both are beta-hemolytic and catalase-negative, so bacitracin is the deciding test.",
+  memoryHook: "A-disk for Group A. Group B keeps growing."
+},
+{
+  id: "micro-054",
+  type: "application",
+  subject: "Microbiology & Immunology",
+  topic: "Coagulase Test",
+  difficulty: "medium",
+  question: "A wound culture reveals gram-positive cocci in clusters that are catalase-positive. A coagulase test returns positive. Which organism is most likely responsible?",
+  choices: [
+    { key: "A", text: "Staphylococcus epidermidis" },
+    { key: "B", text: "Staphylococcus aureus" },
+    { key: "C", text: "Streptococcus pyogenes" },
+    { key: "D", text: "Staphylococcus saprophyticus" }
+  ],
+  correctAnswer: "B",
+  rationale: "Staphylococcus aureus is coagulase-positive, differentiating it from other staphylococci such as S. epidermidis and S. saprophyticus, which are coagulase-negative.",
+  incorrectRationales: {
+    A: "Staphylococcus epidermidis is catalase-positive but coagulase-negative and is associated with device-related infections rather than wound infections.",
+    C: "Streptococcus pyogenes is catalase-negative and arranged in chains, not clusters. It would not test positive on a coagulase test.",
+    D: "Staphylococcus saprophyticus is catalase-positive but coagulase-negative and is associated with urinary tract infections."
+  },
+  boardTrap: "All staphylococci are catalase-positive. Catalase alone cannot identify S. aureus. Coagulase is the additional step required.",
+  memoryHook: "Coagulase positive equals S. aureus. Catalase positive alone just means Staphylococcus."
+},
+{
+  id: "micro-055",
+  type: "critical-thinking",
+  subject: "Microbiology & Immunology",
+  topic: "MRSA Antibiotic Resistance",
+  difficulty: "hard",
+  question: "A patient with a recurring skin infection is found to have a Staphylococcus aureus strain resistant to methicillin and all beta-lactam antibiotics. Which mechanism is responsible for this resistance?",
+  choices: [
+    { key: "A", text: "Production of beta-lactamase that destroys the antibiotic" },
+    { key: "B", text: "Altered penicillin-binding protein (PBP2a) encoded by the mecA gene" },
+    { key: "C", text: "Efflux pump that removes the antibiotic from the cell" },
+    { key: "D", text: "Reduced outer membrane permeability to beta-lactam antibiotics" }
+  ],
+  correctAnswer: "B",
+  rationale: "MRSA resistance is due to an altered penicillin-binding protein (PBP2a) encoded by the mecA gene, which prevents beta-lactam antibiotics from binding effectively. This is structural resistance, not enzymatic destruction of the antibiotic.",
+  incorrectRationales: {
+    A: "Beta-lactamase production destroys the antibiotic chemically but does not confer resistance across the entire beta-lactam class the way PBP2a alteration does.",
+    C: "Efflux pumps contribute to resistance in some organisms but are not the primary mechanism in MRSA.",
+    D: "Reduced outer membrane permeability is a gram-negative resistance strategy and does not apply to Staphylococcus aureus."
+  },
+  boardTrap: "Beta-lactamase is the most familiar resistance mechanism so students choose it automatically. MRSA resistance is a structural target change, not enzymatic antibiotic destruction.",
+  memoryHook: "MRSA = mecA = modified target. The antibiotic cannot grip what has changed shape."
+},
+{
+  id: "micro-056",
+  type: "recall",
+  subject: "Microbiology & Immunology",
+  topic: "Gram Stain Procedure Error",
+  difficulty: "medium",
+  question: "During a Gram stain procedure, a student forgets to apply the decolorizer step. Which result will occur?",
+  choices: [
+    { key: "A", text: "All bacteria will appear pink regardless of cell wall composition" },
+    { key: "B", text: "All bacteria will appear purple regardless of cell wall composition" },
+    { key: "C", text: "Gram-positive bacteria will appear pink and gram-negative bacteria will appear purple" },
+    { key: "D", text: "No color will be visible on the slide" }
+  ],
+  correctAnswer: "B",
+  rationale: "Without the decolorizer, gram-negative bacteria are not stripped of crystal violet, so all organisms retain the purple stain regardless of cell wall type.",
+  incorrectRationales: {
+    A: "Pink results from safranin counterstain, which only becomes visible after decolorization removes crystal violet from gram-negative organisms.",
+    C: "This reverses the actual outcome. Skipping decolorization causes all organisms to appear purple, not differentiated by color.",
+    D: "Crystal violet applied in the first step ensures all bacteria are stained. Skipping decolorization produces a false result, not an absent one."
+  },
+  boardTrap: "Skipping decolorizer does not cause no color. It causes all organisms to falsely appear gram-positive by retaining purple crystal violet.",
+  memoryHook: "No decolorizer means no differentiation. Everything stays purple."
+},
+{
+  id: "micro-057",
+  type: "critical-thinking",
+  subject: "Microbiology & Immunology",
+  topic: "Acid-Fast Staining and Tuberculosis",
+  difficulty: "hard",
+  question: "A patient presents with chronic cough, night sweats, and weight loss. A sputum smear is prepared and organisms retain a red stain after acid-alcohol decolorization. Which characteristic of Mycobacterium tuberculosis explains this staining property?",
+  choices: [
+    { key: "A", text: "Thick peptidoglycan layer that traps the crystal violet stain" },
+    { key: "B", text: "High mycolic acid content in the cell wall that resists decolorization" },
+    { key: "C", text: "Protective capsule that prevents dye penetration" },
+    { key: "D", text: "Gram-negative outer membrane that binds the carbol fuchsin dye" }
+  ],
+  correctAnswer: "B",
+  rationale: "Mycobacterium tuberculosis has a waxy cell wall rich in mycolic acid that resists acid-alcohol decolorization, allowing the organism to retain the red carbol fuchsin stain. This defines acid-fast organisms.",
+  incorrectRationales: {
+    A: "Thick peptidoglycan describes gram-positive organisms. Mycobacteria are neither gram-positive nor gram-negative in a clinically meaningful way. Their defining feature is mycolic acid.",
+    C: "A protective capsule affects virulence and phagocytosis resistance but does not explain dye retention during acid-fast staining.",
+    D: "Mycobacteria do not have a gram-negative outer membrane. Acid-fast staining uses carbol fuchsin, not crystal violet, as the primary dye."
+  },
+  boardTrap: "Thick peptidoglycan sounds correct because it suggests a strong wall. The actual mechanism is mycolic acid, which is a waxy lipid barrier unique to acid-fast organisms.",
+  memoryHook: "Waxy wall equals acid-fast equals red stays. Mycolic acid locks the red in."
+},
+
+
 {
   id: "H&N-001",
   type: "head-and-neck",
