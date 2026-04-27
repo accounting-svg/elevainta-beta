@@ -1,4 +1,4 @@
-export const SUBJECTS = [
+﻿export const SUBJECTS = [
   'Periodontics',
   'Oral Pathology',
   'Radiology',
@@ -1695,6 +1695,245 @@ export const boardPassQuestions: BoardPassQuestion[] = [
   boardTrap: "Silk is non-absorbable.",
   memoryHook: "Silk stays."
 },
+{
+    id: "perio-068",
+    type: "application",
+    subject: "Periodontics",
+    topic: "2017 AAP Classification – Staging",
+    difficulty: "medium",
+    question: "A patient presents with 5mm clinical attachment loss, radiographic bone loss extending to the middle third of the root, and no tooth loss attributable to periodontitis. According to the 2017 AAP classification, which stage best describes this patient?",
+    choices: [
+      { key: "A", text: "Stage I" },
+      { key: "B", text: "Stage II" },
+      { key: "C", text: "Stage III" },
+      { key: "D", text: "Stage IV" }
+    ],
+    correctAnswer: "C",
+    rationale: "Stage III includes 5mm or greater CAL with bone loss to the middle or apical third of the root.",
+    incorrectRationales: {
+      A: "Stage I involves 1 to 2mm CAL with bone loss limited to the coronal third.",
+      B: "Stage II involves 3 to 4mm CAL with bone loss limited to the coronal third.",
+      D: "Stage IV meets Stage III criteria plus masticatory dysfunction such as bite collapse, flaring, or drifting."
+    },
+    boardTrap: "Stage III and IV share the same attachment loss and bone loss thresholds. The differentiator is masticatory dysfunction, not attachment levels.",
+    memoryHook: "Stage III = 5mm CAL. Stage IV = Stage III plus function loss."
+  },
+
+  {
+    id: "perio-069",
+    type: "application",
+    subject: "Periodontics",
+    topic: "2017 AAP Classification – Grading",
+    difficulty: "hard",
+    question: "A 45-year-old nonsmoking patient with no systemic disease presents with moderate periodontitis. Radiographic bone loss is 15% of root length. The patient reports no significant changes in periodontal status over the past several years. Which grade best describes this patient?",
+    choices: [
+      { key: "A", text: "Grade B" },
+      { key: "B", text: "Grade A" },
+      { key: "C", text: "Grade D" },
+      { key: "D", text: "Grade C" }
+    ],
+    correctAnswer: "A",
+    rationale: "Grade B reflects moderate progression. A bone loss to age ratio of 15 divided by 45 equals 0.33, which exceeds the 0.25 threshold for Grade A and falls within Grade B range.",
+    incorrectRationales: {
+      B: "Grade A requires a bone loss to age ratio below 0.25 with no evidence of progression. This patient's ratio of 0.33 exceeds that threshold.",
+      C: "Grade D is not a classification in the 2017 AAP system.",
+      D: "Grade C requires rapid progression, heavy smoking, poorly controlled diabetes, or a bone loss to age ratio greater than 1.0."
+    },
+    boardTrap: "Stable history alone does not override the bone loss to age ratio. The ratio is the primary direct evidence criterion for grading.",
+    memoryHook: "Grade A = slow. Grade B = moderate. Grade C = rapid or risk factors present."
+  },
+
+  {
+    id: "perio-070",
+    type: "application",
+    subject: "Periodontics",
+    topic: "2017 AAP Classification – Grading Modifiers",
+    difficulty: "hard",
+    question: "A patient with Stage III periodontitis has a 25 pack-year smoking history and poorly controlled type 2 diabetes with an HbA1c of 9.2%. Which factor most directly elevates this patient to Grade C?",
+    choices: [
+      { key: "A", text: "Furcation involvement Class II or greater" },
+      { key: "B", text: "Clinical attachment loss of 5mm or greater" },
+      { key: "C", text: "Bone loss greater than 2.0mm in 5 years" },
+      { key: "D", text: "Systemic risk factors including heavy smoking and poorly controlled diabetes" }
+    ],
+    correctAnswer: "D",
+    rationale: "Smoking and uncontrolled diabetes independently elevate grading to Grade C regardless of bone loss rate.",
+    incorrectRationales: {
+      A: "Furcation involvement contributes to staging complexity, not grading.",
+      B: "CAL of 5mm or greater defines staging, not grading.",
+      C: "Rapid bone loss is one pathway to Grade C but is a primary criterion, not the modifier the question asks about."
+    },
+    boardTrap: "Staging equals severity and complexity. Grading equals rate and risk. Boards consistently test whether candidates confuse the two.",
+    memoryHook: "Smoking plus uncontrolled diabetes = automatic Grade C."
+  },
+
+  {
+    id: "perio-071",
+    type: "application",
+    subject: "Periodontics",
+    topic: "Furcation Classification",
+    difficulty: "medium",
+    question: "During probing, a clinician detects furcation involvement on the mandibular left first molar. The explorer enters the furcation but does not pass through to the opposite side. Radiographically, the furcation area shows early radiolucency. Which furcation classification is most consistent with this finding?",
+    choices: [
+      { key: "A", text: "Class I" },
+      { key: "B", text: "Class II" },
+      { key: "C", text: "Class III" },
+      { key: "D", text: "Class IV" }
+    ],
+    correctAnswer: "B",
+    rationale: "Class II furcation involvement indicates the probe enters the furcation but does not pass through to the other side, with partial bone loss in the furcation area.",
+    incorrectRationales: {
+      A: "Class I is incipient involvement where the probe detects a slight depression at the furcation entrance but does not enter.",
+      C: "Class III is a through-and-through defect where the probe passes completely from one side to the other.",
+      D: "Class IV is a through-and-through defect that is clinically visible due to gingival recession."
+    },
+    boardTrap: "Class II and III are the most commonly confused. Class II enters but does not exit. Class III passes completely through.",
+    memoryHook: "Class II = enters but does not exit. Class III = through and through."
+  },
+
+  {
+    id: "perio-072",
+    type: "application",
+    subject: "Periodontics",
+    topic: "Furcation Classification",
+    difficulty: "hard",
+    question: "A clinician probes a maxillary first molar and the Nabers probe passes completely through the furcation from buccal to palatal. The furcation entrance is not visible clinically due to intact gingival height. Which classification is most accurate?",
+    choices: [
+      { key: "A", text: "Class II palatal" },
+      { key: "B", text: "Class IV" },
+      { key: "C", text: "Class III" },
+      { key: "D", text: "Class II buccal" }
+    ],
+    correctAnswer: "C",
+    rationale: "Class III furcation is a through-and-through defect where the probe passes completely from one aspect to the other but the furcation entrance is not clinically visible.",
+    incorrectRationales: {
+      A: "Class II palatal indicates partial involvement on the palatal root only, not a through-and-through defect.",
+      B: "Class IV is also a through-and-through defect but is visually detectable due to gingival recession exposing the furcation entrance.",
+      D: "Class II buccal indicates the probe enters but does not exit on the buccal aspect."
+    },
+    boardTrap: "Class III and IV are both through-and-through. The distinction is visibility. Class III is probe-detected only. Class IV is visible to the eye.",
+    memoryHook: "Class III = probe through, cannot see it. Class IV = probe through, can see it."
+  },
+
+  {
+    id: "perio-073",
+    type: "application",
+    subject: "Periodontics",
+    topic: "Biofilm – Primary Etiologic Factor",
+    difficulty: "medium",
+    question: "A patient with generalized moderate periodontitis asks why they developed the disease despite brushing daily. The clinician explains the primary local etiologic factor. Which factor should be emphasized?",
+    choices: [
+      { key: "A", text: "Bacterial biofilm at the gingival margin" },
+      { key: "B", text: "Occlusal trauma from bruxism" },
+      { key: "C", text: "Calculus accumulation on root surfaces" },
+      { key: "D", text: "Inadequate fluoride exposure" }
+    ],
+    correctAnswer: "A",
+    rationale: "Biofilm is the primary etiologic factor. Calculus is a retention factor, not an independent cause of disease.",
+    incorrectRationales: {
+      B: "Occlusal trauma is a co-destructive factor that may accelerate bone loss but does not initiate periodontal disease.",
+      C: "Calculus provides a rough surface for biofilm adherence but is not itself the primary cause.",
+      D: "Fluoride is relevant to caries prevention, not periodontal disease etiology."
+    },
+    boardTrap: "Calculus and biofilm are not interchangeable. Biofilm is the primary cause. Calculus is secondary.",
+    memoryHook: "Biofilm first. Calculus second. Disease starts with the film, not the rock."
+  },
+
+  {
+    id: "perio-074",
+    type: "application",
+    subject: "Periodontics",
+    topic: "Peri-implant Disease – Mucositis vs Peri-implantitis",
+    difficulty: "medium",
+    question: "A patient with a mandibular implant presents with bleeding on probing, erythema, and edema around the implant. Radiographic evaluation shows no bone loss beyond the initial remodeling level. Which diagnosis is most consistent with these findings?",
+    choices: [
+      { key: "A", text: "Failing implant requiring explantation" },
+      { key: "B", text: "Normal healing response" },
+      { key: "C", text: "Peri-implantitis" },
+      { key: "D", text: "Peri-implant mucositis" }
+    ],
+    correctAnswer: "D",
+    rationale: "Soft tissue inflammation without bone loss beyond initial remodeling indicates peri-implant mucositis. It is reversible with treatment.",
+    incorrectRationales: {
+      A: "Explantation is not indicated without progressive bone loss and implant mobility.",
+      B: "Normal healing does not include bleeding on probing and soft tissue inflammation.",
+      C: "Peri-implantitis requires both soft tissue inflammation and progressive radiographic bone loss beyond initial remodeling."
+    },
+    boardTrap: "Mucositis and peri-implantitis mirror gingivitis and periodontitis. The differentiator is bone loss. No bone loss = mucositis. Bone loss present = peri-implantitis.",
+    memoryHook: "Mucositis = soft tissue only. Peri-implantitis = bone loss present."
+  },
+
+  {
+    id: "perio-075",
+    type: "critical-thinking",
+    subject: "Periodontics",
+    topic: "Peri-implant Disease – Peri-implantitis",
+    difficulty: "hard",
+    question: "A patient returns for a 12-month implant recall. Probing reveals 6mm depths with bleeding and suppuration on the buccal aspect. Radiographic comparison to the 6-month post-placement film shows 3mm of crestal bone loss. Which condition is present and what is the most critical distinguishing feature?",
+    choices: [
+      { key: "A", text: "Occlusal overload distinguished by bone loss limited to the crestal region" },
+      { key: "B", text: "Peri-implantitis distinguished by progressive bone loss beyond initial remodeling" },
+      { key: "C", text: "Peri-implant mucositis distinguished by soft tissue inflammation alone" },
+      { key: "D", text: "Normal implant remodeling distinguished by expected bone loss in the first year" }
+    ],
+    correctAnswer: "B",
+    rationale: "Progressive bone loss beyond expected remodeling accompanied by soft tissue inflammation indicates peri-implantitis.",
+    incorrectRationales: {
+      A: "Occlusal overload produces bone loss without the inflammatory soft tissue signs present here.",
+      C: "Mucositis does not involve radiographic bone loss. The presence of 3mm bone loss rules out mucositis.",
+      D: "Initial remodeling is typically 1 to 1.5mm in the first year. 3mm of loss at 12 months is pathologic."
+    },
+    boardTrap: "Initial implant remodeling of 1 to 1.5mm is expected. Any bone loss beyond that threshold with inflammation is peri-implantitis, not normal healing.",
+    memoryHook: "More than 1.5mm bone loss with inflammation = peri-implantitis, not remodeling."
+  },
+
+  {
+    id: "perio-076",
+    type: "application",
+    subject: "Periodontics",
+    topic: "Periodontal Probe Readings – CAL vs Pocket Depth",
+    difficulty: "medium",
+    question: "A patient has a probing depth of 4mm at the facial of tooth 24. The gingival margin is 2mm apical to the CEJ. What is the clinical attachment level at this site?",
+    choices: [
+      { key: "A", text: "4mm" },
+      { key: "B", text: "8mm" },
+      { key: "C", text: "6mm" },
+      { key: "D", text: "2mm" }
+    ],
+    correctAnswer: "C",
+    rationale: "CAL equals probing depth plus recession when the gingival margin is apical to the CEJ. 4mm plus 2mm equals 6mm CAL.",
+    incorrectRationales: {
+      A: "4mm represents only the probing depth and does not account for recession.",
+      B: "8mm results from incorrect calculation.",
+      D: "2mm represents only the recession component, not total attachment loss."
+    },
+    boardTrap: "When the gingival margin is apical to the CEJ, add recession to probing depth. When the margin is coronal to the CEJ, subtract. Direction of the margin changes the formula.",
+    memoryHook: "Margin apical to CEJ = add recession to probe depth for CAL."
+  },
+
+  {
+    id: "perio-077",
+    type: "critical-thinking",
+    subject: "Periodontics",
+    topic: "Periodontal Risk – Systemic Modifiers",
+    difficulty: "hard",
+    question: "A 52-year-old patient presents with Stage III Grade B periodontitis. Medical history reveals type 2 diabetes with an HbA1c of 8.8% and current smoking of 10 or more cigarettes per day. Which reclassification of grade is most appropriate and why?",
+    choices: [
+      { key: "A", text: "Upgrades to Grade C because heavy smoking and poorly controlled diabetes are independent Grade C modifiers" },
+      { key: "B", text: "Remains Grade B because bone loss rate has not been documented as rapid" },
+      { key: "C", text: "Downgrades to Grade A because the patient is receiving treatment" },
+      { key: "D", text: "Upgrades to Grade C only if bone loss exceeds 2mm in the past 5 years" }
+    ],
+    correctAnswer: "A",
+    rationale: "Smoking 10 or more cigarettes per day and HbA1c greater than 7% are each independent Grade C risk modifiers. Either one alone is sufficient to upgrade to Grade C.",
+    incorrectRationales: {
+      B: "Documented rapid bone loss is one pathway to Grade C but is not required when risk factor modifiers are present.",
+      C: "Grade does not downgrade based on treatment status. Treatment changes prognosis, not grade.",
+      D: "Risk factor modifiers alone are sufficient for Grade C. Rapid bone loss documentation is not required."
+    },
+    boardTrap: "Grade C can be assigned by risk factors alone without documented rapid progression. Both pathways to Grade C are board-testable.",
+    memoryHook: "HbA1c over 7% or 10 or more cigarettes per day = Grade C regardless of bone loss rate."
+  },
 {
   id: "inst-001",
   type: "clinical-execution",
@@ -5094,6 +5333,293 @@ export const boardPassQuestions: BoardPassQuestion[] = [
   memoryHook: "If it doesn’t travel, don’t call it geographic."
 },
 {
+    id: "path-052",
+    type: "application",
+    subject: "Oral Pathology",
+    topic: "Systemic Disease – Graves Disease",
+    difficulty: "hard",
+    question: "A patient presents with bilateral protrusion of the eyeballs, weight loss, heat intolerance, and nervousness. Which systemic condition is most consistent with this presentation?",
+    choices: [
+      { key: "A", text: "Addison disease" },
+      { key: "B", text: "Cushing syndrome" },
+      { key: "C", text: "Graves disease" },
+      { key: "D", text: "Myxedema" }
+    ],
+    correctAnswer: "C",
+    rationale: "Graves disease is autoimmune hyperthyroidism producing exophthalmos, weight loss, and heat intolerance.",
+    incorrectRationales: {
+      A: "Addison disease is adrenal insufficiency presenting with hyperpigmentation and fatigue, not exophthalmos.",
+      B: "Cushing syndrome produces moon face and truncal obesity from cortisol excess, not exophthalmos.",
+      D: "Myxedema is hypothyroidism presenting with weight gain and cold intolerance, the opposite metabolic picture."
+    },
+    boardTrap: "Exophthalmos is pathognomonic for Graves disease. Boards pair it with systemic hyperthyroid symptoms, not dental findings.",
+    memoryHook: "Graves = eyes bulge out. Hyperthyroid. Heat intolerance. Weight loss."
+  },
+
+  {
+    id: "path-053",
+    type: "application",
+    subject: "Oral Pathology",
+    topic: "Systemic Disease – Cushing Syndrome",
+    difficulty: "medium",
+    question: "A patient presents with a rounded face, truncal obesity, purple striae on the abdomen, and hypertension. The dental hygienist notes delayed wound healing following recent extractions. Which condition best explains this presentation?",
+    choices: [
+      { key: "A", text: "Cushing syndrome" },
+      { key: "B", text: "Hypothyroidism" },
+      { key: "C", text: "Acromegaly" },
+      { key: "D", text: "Addison disease" }
+    ],
+    correctAnswer: "A",
+    rationale: "Excess cortisol causes truncal obesity, striae, hypertension, and delayed healing from immune suppression.",
+    incorrectRationales: {
+      B: "Hypothyroidism presents with weight gain and edema but not truncal obesity, striae, or cortisol excess findings.",
+      C: "Acromegaly results from excess growth hormone producing enlarged jaw and extremities, not Cushing features.",
+      D: "Addison disease is cortisol deficiency presenting with hyperpigmentation and hypotension, the opposite of Cushing syndrome."
+    },
+    boardTrap: "Cushing and Addison both involve the adrenal glands but are opposite conditions. Cushing = excess cortisol. Addison = cortisol deficiency.",
+    memoryHook: "Cushing = moon face + buffalo hump + purple striae. Too much cortisol."
+  },
+
+  {
+    id: "path-054",
+    type: "application",
+    subject: "Oral Pathology",
+    topic: "Systemic Disease – Myxedema",
+    difficulty: "medium",
+    question: "A patient presents with unexplained weight gain, fatigue, cold intolerance, and facial puffiness. A pediatric patient with the same condition is noted to have macroglossia and delayed tooth eruption. Which condition is most consistent with these findings?",
+    choices: [
+      { key: "A", text: "Graves disease" },
+      { key: "B", text: "Cushing syndrome" },
+      { key: "C", text: "Myxedema" },
+      { key: "D", text: "Acromegaly" }
+    ],
+    correctAnswer: "C",
+    rationale: "Hypothyroidism produces weight gain, cold intolerance, and macroglossia in children with delayed tooth eruption.",
+    incorrectRationales: {
+      A: "Graves disease is hyperthyroidism producing weight loss and heat intolerance, the opposite metabolic picture.",
+      B: "Cushing syndrome produces truncal obesity and moon face from cortisol excess, not cold intolerance and macroglossia.",
+      D: "Acromegaly produces mandibular prognathism from excess growth hormone, not hypothyroid findings."
+    },
+    boardTrap: "Myxedema and Graves disease are both thyroid conditions but metabolically opposite. Cold intolerance and weight gain = hypo. Heat intolerance and weight loss = hyper.",
+    memoryHook: "Myxedema = hypothyroid = cold, slow, puffy, big tongue."
+  },
+
+  {
+    id: "path-055",
+    type: "application",
+    subject: "Oral Pathology",
+    topic: "Tongue Pathology – Glossitis",
+    difficulty: "medium",
+    question: "A patient presents with a smooth, beefy red tongue and reports burning pain and difficulty eating. Medical history reveals a strict vegan diet with no supplementation. Which deficiency is most likely responsible?",
+    choices: [
+      { key: "A", text: "Vitamin C deficiency" },
+      { key: "B", text: "Vitamin B12 deficiency" },
+      { key: "C", text: "Iron deficiency" },
+      { key: "D", text: "Vitamin D deficiency" }
+    ],
+    correctAnswer: "B",
+    rationale: "Strict vegan diet increases risk for B12 deficiency, which commonly presents with atrophic glossitis from loss of filiform papillae.",
+    incorrectRationales: {
+      A: "Vitamin C deficiency produces scurvy with gingival hemorrhage, not atrophic glossitis.",
+      C: "Iron deficiency anemia also produces atrophic glossitis, but the strict vegan diet without supplementation is a stronger clinical cue for B12 deficiency.",
+      D: "Vitamin D deficiency affects bone metabolism and is not associated with glossitis."
+    },
+    boardTrap: "Both iron and B12 deficiency produce glossitis. The vegan diet without supplementation is the clinical cue that most specifically points to B12.",
+    memoryHook: "Vegan + smooth red tongue = B12 deficiency glossitis."
+  },
+
+  {
+    id: "path-056",
+    type: "application",
+    subject: "Oral Pathology",
+    topic: "White Lesions – Leukoplakia vs Candidiasis",
+    difficulty: "medium",
+    question: "During an intraoral examination, a clinician finds a white patch on the lateral border of the tongue. When gentle pressure is applied with gauze, the lesion does not wipe off. The patient has a 30-pack-year smoking history. Which finding most directly guides the next clinical step?",
+    choices: [
+      { key: "A", text: "Location on the lateral tongue confirms candidiasis" },
+      { key: "B", text: "Smoking history confirms leukoplakia without further workup" },
+      { key: "C", text: "A persistent non-wipeable white lesion requires biopsy to rule out dysplasia or malignancy" },
+      { key: "D", text: "White lesions that do not wipe off are always benign and require monitoring only" }
+    ],
+    correctAnswer: "C",
+    rationale: "A persistent white lesion that cannot be wiped off and cannot be classified as another condition requires biopsy to rule out dysplasia or malignancy.",
+    incorrectRationales: {
+      A: "Location alone does not confirm candidiasis. Candidiasis wipes off leaving an erythematous base.",
+      B: "Smoking history increases risk but does not eliminate the need for biopsy. Histologic diagnosis is required.",
+      D: "White lesions that do not wipe off may be premalignant. Monitoring without biopsy is not appropriate management."
+    },
+    boardTrap: "Boards test the clinical action, not just the diagnosis. Biopsy is indicated for any persistent non-wipeable white lesion regardless of smoking history.",
+    memoryHook: "Does not wipe off = biopsy indicated. Never assume benign without tissue diagnosis."
+  },
+
+  {
+    id: "path-057",
+    type: "application",
+    subject: "Oral Pathology",
+    topic: "Vesiculobullous Lesions – Erythema Multiforme",
+    difficulty: "hard",
+    question: "A 24-year-old patient presents with sudden onset of painful oral ulcers, lip crusting, and target-shaped skin lesions on the hands and forearms. The patient reports a herpes simplex virus outbreak two weeks prior. Which condition is most consistent with this presentation?",
+    choices: [
+      { key: "A", text: "Erythema multiforme" },
+      { key: "B", text: "Primary herpetic gingivostomatitis" },
+      { key: "C", text: "Pemphigus vulgaris" },
+      { key: "D", text: "Behcet syndrome" }
+    ],
+    correctAnswer: "A",
+    rationale: "Erythema multiforme is a hypersensitivity reaction frequently triggered by HSV, producing target lesions on skin and painful oral ulcers with lip crusting appearing one to three weeks after the trigger.",
+    incorrectRationales: {
+      B: "Primary herpetic gingivostomatitis occurs during initial HSV exposure and produces vesicles on attached gingiva, not target skin lesions.",
+      C: "Pemphigus vulgaris is an autoimmune blistering disease producing chronic desquamative lesions, not acute post-viral target lesions.",
+      D: "Behcet syndrome produces recurrent oral and genital ulcers with ocular involvement, not target skin lesions following HSV infection."
+    },
+    boardTrap: "Target lesions on skin combined with recent HSV infection are the pathognomonic combination. Skin findings and post-viral timing distinguish erythema multiforme from primary herpes.",
+    memoryHook: "Target lesions + recent HSV = erythema multiforme. Skin and mouth together."
+  },
+
+  {
+    id: "path-058",
+    type: "application",
+    subject: "Oral Pathology",
+    topic: "Vitamin A Deficiency – Night Blindness",
+    difficulty: "medium",
+    question: "A patient from a region with limited dietary variety reports difficulty seeing in dim lighting. The clinician notes dry rough skin and a history of frequent respiratory infections. Which condition is most consistent with this presentation?",
+    choices: [
+      { key: "A", text: "Night blindness from vitamin A deficiency" },
+      { key: "B", text: "Cataracts from vitamin D deficiency" },
+      { key: "C", text: "Peripheral neuropathy from vitamin B12 deficiency" },
+      { key: "D", text: "Photophobia from vitamin C deficiency" }
+    ],
+    correctAnswer: "A",
+    rationale: "Vitamin A deficiency impairs rhodopsin production, leading to night blindness as the earliest ocular sign.",
+    incorrectRationales: {
+      B: "Vitamin D deficiency affects calcium metabolism and bone, not rhodopsin production or night vision.",
+      C: "Peripheral neuropathy is associated with B12 deficiency, not difficulty with night vision.",
+      D: "Vitamin C deficiency produces scurvy. Photophobia is not a recognized presentation."
+    },
+    boardTrap: "Night blindness is the early ocular sign. Keratomalacia is the severe end-stage finding. Boards test the progression, not just the endpoint.",
+    memoryHook: "Vitamin A deficiency = night blindness first, keratomalacia last."
+  },
+
+  {
+    id: "path-059",
+    type: "application",
+    subject: "Oral Pathology",
+    topic: "Vitamin A Deficiency – Keratomalacia",
+    difficulty: "hard",
+    question: "A patient with prolonged vitamin A deficiency presents with corneal softening, ulceration, and tissue progressing toward perforation. Which stage of vitamin A deficiency does this represent?",
+    choices: [
+      { key: "A", text: "Night blindness" },
+      { key: "B", text: "Keratomalacia" },
+      { key: "C", text: "Xerophthalmia" },
+      { key: "D", text: "Bitot spots" }
+    ],
+    correctAnswer: "B",
+    rationale: "Keratomalacia is the end-stage of vitamin A deficiency with corneal softening and risk of perforation leading to permanent blindness.",
+    incorrectRationales: {
+      A: "Night blindness is the earliest sign of vitamin A deficiency, not the end-stage corneal finding described.",
+      C: "Xerophthalmia refers to conjunctival and corneal dryness and is an earlier finding than keratomalacia.",
+      D: "Bitot spots are foamy white conjunctival deposits representing an intermediate stage, not corneal perforation."
+    },
+    boardTrap: "Boards test the progression in order. Night blindness, xerophthalmia, Bitot spots, keratomalacia. The stem describes the most severe end-stage.",
+    memoryHook: "Keratomalacia = cornea melts. End stage vitamin A deficiency. Permanent blindness risk."
+  },
+
+  {
+    id: "path-060",
+    type: "critical-thinking",
+    subject: "Oral Pathology",
+    topic: "Periapical Pathology – Granuloma vs Radicular Cyst",
+    difficulty: "hard",
+    question: "A radiograph reveals a 12mm radiolucency with a well-defined corticated border at the apex of a non-vital tooth. While these radiographic features suggest a radicular cyst over a periapical granuloma, which method is required to definitively distinguish between them?",
+    choices: [
+      { key: "A", text: "Pulp vitality testing" },
+      { key: "B", text: "Tracing of a sinus tract" },
+      { key: "C", text: "Histopathologic examination of the tissue" },
+      { key: "D", text: "Response to non-surgical endodontic therapy" }
+    ],
+    correctAnswer: "C",
+    rationale: "Periapical granulomas and radicular cysts appear identical radiographically. Only histologic analysis provides a definitive diagnosis.",
+    incorrectRationales: {
+      A: "Pulp vitality testing confirms non-vitality but does not differentiate granuloma from cyst.",
+      B: "Sinus tract tracing identifies the source tooth but does not distinguish lesion type.",
+      D: "Response to endodontic therapy may resolve either lesion but does not provide a tissue diagnosis."
+    },
+    boardTrap: "Radiographic features suggest but cannot confirm a cyst. Boards test whether candidates know histology is the only definitive method, not radiographic appearance alone.",
+    memoryHook: "Granuloma vs cyst = looks the same on x-ray. Only biopsy tells the difference."
+  },
+
+  {
+    id: "path-061",
+    type: "board",
+    subject: "Oral Pathology",
+    topic: "Oral Cancer – TNM Staging",
+    difficulty: "hard",
+    question: "A patient is diagnosed with squamous cell carcinoma of the floor of the mouth. The tumor measures 3cm with no invasion of adjacent structures. A single ipsilateral lymph node measuring 2cm is involved. No distant metastasis is present. Which component of the TNM classification is most critical to document when determining treatment planning and prognosis?",
+    choices: [
+      { key: "A", text: "T classification only, as tumor size drives treatment decisions" },
+      { key: "B", text: "M classification only, as distant metastasis determines curability" },
+      { key: "C", text: "N classification only, as lymph node involvement determines radiation fields" },
+      { key: "D", text: "All three TNM components independently, as each provides distinct prognostic information" }
+    ],
+    correctAnswer: "D",
+    rationale: "TNM staging requires independent assessment of all three components. Each contributes distinct prognostic and treatment planning information that cannot be inferred from the others.",
+    incorrectRationales: {
+      A: "Tumor size alone does not determine treatment. Nodal and metastatic status significantly alter prognosis.",
+      B: "M classification determines distant spread but does not account for local tumor extent or regional node involvement.",
+      C: "N classification guides radiation planning but tumor size and distant metastasis are equally required for complete staging."
+    },
+    boardTrap: "Boards test whether candidates know all three TNM components must be assessed independently. Focusing on any single component produces incomplete staging.",
+    memoryHook: "T + N + M together. Never one alone."
+  },
+
+  {
+    id: "path-062",
+    type: "critical-thinking",
+    subject: "Oral Pathology",
+    topic: "Reactive Lesions – Pyogenic Granuloma",
+    difficulty: "medium",
+    question: "A pregnant patient in her second trimester presents with a red pedunculated highly vascular lesion on the interdental papilla of the maxillary anterior region that bleeds easily on manipulation. Which diagnosis is most consistent with this presentation?",
+    choices: [
+      { key: "A", text: "Peripheral giant cell granuloma" },
+      { key: "B", text: "Pyogenic granuloma" },
+      { key: "C", text: "Irritation fibroma" },
+      { key: "D", text: "Kaposi sarcoma" }
+    ],
+    correctAnswer: "B",
+    rationale: "Pyogenic granuloma is a reactive vascular lesion common in pregnant patients due to hormonal changes, presenting as a red pedunculated mass that bleeds readily.",
+    incorrectRationales: {
+      A: "Peripheral giant cell granuloma appears as a blue-purple lesion and is not specifically associated with pregnancy hormonal changes.",
+      C: "Irritation fibroma is a firm, pink, smooth-surfaced lesion caused by chronic trauma, not a vascular pedunculated pregnancy-associated mass.",
+      D: "Kaposi sarcoma is associated with HIV infection and presents as multiple blue-purple lesions, not a single pregnancy-associated vascular mass."
+    },
+    boardTrap: "Pregnancy tumor is another name for pyogenic granuloma. Boards test recognition by clinical presentation and pregnancy timing, not by memorizing the alternate name.",
+    memoryHook: "Pregnant + red vascular papilla mass = pyogenic granuloma. Also called pregnancy tumor."
+  },
+
+  {
+    id: "path-063",
+    type: "application",
+    subject: "Oral Pathology",
+    topic: "Oral Cancer – Risk Factors and High-Risk Sites",
+    difficulty: "medium",
+    question: "During a head and neck cancer screening, a clinician identifies the floor of the mouth and lateral border of the tongue as priority examination sites in a 62-year-old male with a 40-pack-year smoking history and daily alcohol use. Which combination of factors places this patient at highest risk for oral squamous cell carcinoma?",
+    choices: [
+      { key: "A", text: "Male gender and age over 60 are demographic risk factors that independently predict oral cancer development" },
+      { key: "B", text: "Tobacco use alone" },
+      { key: "C", text: "Alcohol use alone" },
+      { key: "D", text: "Combined tobacco and alcohol use with high-risk anatomic sites" }
+    ],
+    correctAnswer: "D",
+    rationale: "Tobacco and alcohol act synergistically to increase oral cancer risk far beyond either factor alone. The floor of the mouth and lateral tongue are the highest-risk anatomic sites.",
+    incorrectRationales: {
+      A: "Age and gender are recognized risk factors but do not carry the synergistic multiplier effect of combined tobacco and alcohol use at high-risk sites.",
+      B: "Tobacco alone is a major risk factor but alcohol acts synergistically. The combination is more dangerous than either alone.",
+      C: "Alcohol alone increases risk but does not reach the level of combined use with tobacco at high-risk anatomic sites."
+    },
+    boardTrap: "The synergistic effect of tobacco plus alcohol is consistently tested. Neither alone equals the combined risk. Floor of mouth and lateral tongue are the highest-risk sites.",
+    memoryHook: "Tobacco plus alcohol = synergistic cancer risk. Floor of mouth and lateral tongue = highest risk sites."
+  },
+{
   id: "nut-001",
   type: "mastery",
   subject: "Nutrition",
@@ -7339,6 +7865,635 @@ memoryHook: "Lingual follows the leader — even vertically."
   boardTrap: "The thyroid is not in the primary beam. Scatter radiation is the concern.",
   memoryHook: "Thyroid collar catches scatter. Not the primary beam."
 },
+// ─── BATCH 1 ──────────────────────────────────────────────────────────────
+
+  {
+    id: "rad-056",
+    type: "application",
+    subject: "Radiology",
+    topic: "Bitewing Errors – Horizontal Angulation",
+    difficulty: "medium",
+    question: "A bitewing radiograph shows generalized overlap of posterior interproximal contacts. Which error most likely produced this image?",
+    choices: [
+      { key: "A", text: "Incorrect horizontal angulation" },
+      { key: "B", text: "Incorrect vertical angulation" },
+      { key: "C", text: "Receptor positioned too far apically" },
+      { key: "D", text: "Insufficient exposure time" }
+    ],
+    correctAnswer: "A",
+    rationale: "Overlap results from horizontal angulation that does not pass through contact areas.",
+    incorrectRationales: {
+      B: "Alters image length, not contact separation.",
+      C: "Affects coverage, not overlap pattern.",
+      D: "Changes density, not alignment."
+    },
+    boardTrap: "Contact overlap maps to beam direction, not receptor placement.",
+    memoryHook: "Overlap → horizontal."
+  },
+
+  {
+    id: "rad-057",
+    type: "application",
+    subject: "Radiology",
+    topic: "Panoramic Errors – Chin Position",
+    difficulty: "medium",
+    question: "A panoramic image shows a flattened occlusal plane with elongation of maxillary anterior teeth. Which positioning error is most consistent with this finding?",
+    choices: [
+      { key: "A", text: "Chin tipped too low" },
+      { key: "B", text: "Patient positioned too far forward" },
+      { key: "C", text: "Patient slumped" },
+      { key: "D", text: "Chin tipped too high" }
+    ],
+    correctAnswer: "D",
+    rationale: "Chin tipped too high flattens or reverses the occlusal plane and elongates maxillary anterior teeth.",
+    incorrectRationales: {
+      A: "Produces an exaggerated occlusal curve and foreshortens mandibular anteriors.",
+      B: "Narrows anterior teeth.",
+      C: "Produces midline spinal shadow."
+    },
+    boardTrap: "Curvature errors are driven by chin position, not anteroposterior placement.",
+    memoryHook: "Chin up → flat plane, elongated maxillary anteriors."
+  },
+
+  {
+    id: "rad-058",
+    type: "application",
+    subject: "Radiology",
+    topic: "Panoramic Errors – Tongue Position",
+    difficulty: "medium",
+    question: "A panoramic radiograph demonstrates a uniform radiolucent band superimposed over the maxillary apices. Which factor most likely caused this appearance?",
+    choices: [
+      { key: "A", text: "Lead apron interference" },
+      { key: "B", text: "Tongue not positioned against the palate" },
+      { key: "C", text: "Excessive vertical angulation" },
+      { key: "D", text: "Patient motion during exposure" }
+    ],
+    correctAnswer: "B",
+    rationale: "Airspace from improper tongue position produces a radiolucent band over maxillary apices.",
+    incorrectRationales: {
+      A: "Causes radiopaque artifact.",
+      C: "Alters vertical proportions, not a band.",
+      D: "Produces blur, not a uniform band."
+    },
+    boardTrap: "Uniform bands suggest technique, not localized disease.",
+    memoryHook: "Airspace → radiolucent band."
+  },
+
+  {
+    id: "rad-059",
+    type: "board",
+    subject: "Radiology",
+    topic: "Panoramic Errors – Artifact",
+    difficulty: "hard",
+    question: "A panoramic image contains a dense radiopaque region obscuring anterior structures, while posterior anatomy remains interpretable. Which source best explains this artifact?",
+    choices: [
+      { key: "A", text: "Tongue position" },
+      { key: "B", text: "Patient positioned too far back" },
+      { key: "C", text: "Lead apron positioned too high" },
+      { key: "D", text: "Incorrect exposure time" }
+    ],
+    correctAnswer: "C",
+    rationale: "A high lead apron can intercept the beam, creating a localized radiopaque obstruction.",
+    incorrectRationales: {
+      A: "Produces radiolucent banding.",
+      B: "Alters tooth width and clarity, not opacity.",
+      D: "Affects overall density, not a focal block."
+    },
+    boardTrap: "Localized opacity implies physical obstruction, not exposure.",
+    memoryHook: "Blocked beam → white-out."
+  },
+
+  {
+    id: "rad-060",
+    type: "recognition",
+    subject: "Radiology",
+    topic: "Incisive Foramen",
+    difficulty: "medium",
+    question: "A well-defined radiolucency is present in the midline between the maxillary central incisors. Which structure is most consistent with this finding?",
+    choices: [
+      { key: "A", text: "Incisive foramen" },
+      { key: "B", text: "Lateral fossa" },
+      { key: "C", text: "Mental foramen" },
+      { key: "D", text: "Nasal cavity" }
+    ],
+    correctAnswer: "A",
+    rationale: "The incisive foramen appears as a midline radiolucency between maxillary central incisors.",
+    incorrectRationales: {
+      B: "Located lateral and more diffuse.",
+      C: "Located in the mandibular premolar region.",
+      D: "Larger and superior to incisor apices."
+    },
+    boardTrap: "Midline radiolucencies in this location are typically anatomic.",
+    memoryHook: "Midline between centrals."
+  },
+
+  {
+    id: "rad-061",
+    type: "recognition",
+    subject: "Radiology",
+    topic: "Genial Tubercles",
+    difficulty: "hard",
+    question: "Which radiographic presentation corresponds to genial tubercles?",
+    choices: [
+      { key: "A", text: "Diffuse radiolucency adjacent to lateral incisors" },
+      { key: "B", text: "Linear radiopaque band in posterior mandible" },
+      { key: "C", text: "Radiolucent oval near premolars" },
+      { key: "D", text: "Radiopaque ring with a central radiolucency in the mandibular midline" }
+    ],
+    correctAnswer: "D",
+    rationale: "Genial tubercles form a radiopaque ring surrounding the lingual foramen in the mandibular midline.",
+    incorrectRationales: {
+      A: "Describes lateral fossa.",
+      B: "Not characteristic of this structure.",
+      C: "Consistent with mental foramen."
+    },
+    boardTrap: "The ring-with-center pattern is distinctive.",
+    memoryHook: "Ring + center at midline."
+  },
+
+  {
+    id: "rad-062",
+    type: "application",
+    subject: "Radiology",
+    topic: "Submandibular Fossa",
+    difficulty: "medium",
+    question: "A radiograph shows a radiolucent area inferior to the mandibular molars without associated clinical findings. Which interpretation is most appropriate?",
+    choices: [
+      { key: "A", text: "Periapical pathology" },
+      { key: "B", text: "Submandibular fossa" },
+      { key: "C", text: "Periodontal bone loss" },
+      { key: "D", text: "Odontogenic cyst" }
+    ],
+    correctAnswer: "B",
+    rationale: "The submandibular fossa is a normal radiolucent depression in this region.",
+    incorrectRationales: {
+      A: "Typically centered at root apex with clinical signs.",
+      C: "Follows alveolar crest patterns.",
+      D: "Presents as a defined lesion, not a diffuse depression."
+    },
+    boardTrap: "Location and pattern guide anatomy vs disease.",
+    memoryHook: "Below molars → fossa."
+  },
+
+  {
+    id: "rad-063",
+    type: "board",
+    subject: "Radiology",
+    topic: "Panoramic Errors – Focal Trough",
+    difficulty: "hard",
+    question: "On a panoramic radiograph, the anterior teeth appear narrowed and blurred, while posterior structures are relatively acceptable. Which positioning error most likely occurred?",
+    choices: [
+      { key: "A", text: "Chin tipped too high" },
+      { key: "B", text: "Patient positioned too far forward" },
+      { key: "C", text: "Patient positioned too far back" },
+      { key: "D", text: "Insufficient exposure" }
+    ],
+    correctAnswer: "B",
+    rationale: "Positioning anterior to the focal trough narrows and blurs the anterior teeth.",
+    incorrectRationales: {
+      A: "Affects occlusal plane curvature, not tooth width.",
+      C: "Produces widened anterior teeth.",
+      D: "Alters density, not morphology."
+    },
+    boardTrap: "Anteroposterior errors change width in opposite directions. Forward = narrow. Back = wide.",
+    memoryHook: "Forward → skinny. Back → fat."
+  },
+
+  // ─── BATCH 2 ──────────────────────────────────────────────────────────────
+
+  {
+    id: "rad-064",
+    type: "application",
+    subject: "Radiology",
+    topic: "Periapical Errors – Vertical Angulation",
+    difficulty: "medium",
+    question: "A periapical radiograph of the mandibular molars shows teeth that appear shorter than actual length with blunted root apices. Which error most likely produced this image?",
+    choices: [
+      { key: "A", text: "Excessive vertical angulation" },
+      { key: "B", text: "Insufficient vertical angulation" },
+      { key: "C", text: "Incorrect horizontal angulation" },
+      { key: "D", text: "Cone cutting" }
+    ],
+    correctAnswer: "A",
+    rationale: "Excessive vertical angulation foreshortens the image, producing shortened teeth with blunted apices.",
+    incorrectRationales: {
+      B: "Produces elongation, not foreshortening.",
+      C: "Causes overlap of contacts, not length distortion.",
+      D: "Produces a sharp unexposed border at the image edge."
+    },
+    boardTrap: "Foreshortening maps to too much angulation. Elongation maps to too little.",
+    memoryHook: "Too steep → too short."
+  },
+
+  {
+    id: "rad-065",
+    type: "application",
+    subject: "Radiology",
+    topic: "Periapical Errors – Elongation",
+    difficulty: "medium",
+    question: "A periapical radiograph shows mandibular anterior teeth with roots appearing longer than clinically expected. The crowns appear normal. Which error is most consistent with this finding?",
+    choices: [
+      { key: "A", text: "Excessive vertical angulation" },
+      { key: "B", text: "Receptor bent during placement" },
+      { key: "C", text: "Insufficient vertical angulation" },
+      { key: "D", text: "Incorrect horizontal angulation" }
+    ],
+    correctAnswer: "C",
+    rationale: "Insufficient vertical angulation elongates the image.",
+    incorrectRationales: {
+      A: "Produces foreshortening.",
+      B: "Causes distortion of crown or root shape, not uniform elongation.",
+      D: "Produces overlap, not length change."
+    },
+    boardTrap: "Elongation and foreshortening are both vertical angulation errors, opposite in direction.",
+    memoryHook: "Too flat → too long."
+  },
+
+  {
+    id: "rad-066",
+    type: "application",
+    subject: "Radiology",
+    topic: "Film/Sensor Placement – Cone Cutting",
+    difficulty: "medium",
+    question: "A periapical radiograph shows a clear unexposed region along one border, with the remaining anatomy properly imaged. Which error produced this finding?",
+    choices: [
+      { key: "A", text: "Incorrect vertical angulation" },
+      { key: "B", text: "Patient movement during exposure" },
+      { key: "C", text: "Incorrect horizontal angulation" },
+      { key: "D", text: "Cone cutting" }
+    ],
+    correctAnswer: "D",
+    rationale: "Cone cutting occurs when the PID is not centered over the receptor, leaving a sharp unexposed border.",
+    incorrectRationales: {
+      A: "Distorts image length, does not create unexposed borders.",
+      B: "Produces blur throughout the image, not a sharp cutoff.",
+      C: "Causes overlap, not unexposed regions."
+    },
+    boardTrap: "The sharp geometric border distinguishes cone cutting from all other errors.",
+    memoryHook: "Sharp edge = missed the receptor."
+  },
+
+  {
+    id: "rad-067",
+    type: "board",
+    subject: "Radiology",
+    topic: "Exposure Errors – Density",
+    difficulty: "hard",
+    question: "A periapical radiograph appears overall light with reduced density. Structures are visible but difficult to interpret. Processing was performed correctly. Which factor most likely accounts for this appearance?",
+    choices: [
+      { key: "A", text: "Excessive exposure time" },
+      { key: "B", text: "Receptor placed backward" },
+      { key: "C", text: "Insufficient milliamperage or exposure time" },
+      { key: "D", text: "Developer solution too warm" }
+    ],
+    correctAnswer: "C",
+    rationale: "Insufficient mA or exposure time results in fewer photons reaching the receptor, producing a light image with reduced density.",
+    incorrectRationales: {
+      A: "Produces a dark, overexposed image.",
+      B: "Produces a light image with a herringbone pattern, not uniform reduced density.",
+      D: "A processing error, excluded by the stem."
+    },
+    boardTrap: "Light image without a herringbone pattern rules out backward placement and points to underexposure.",
+    memoryHook: "Light + no pattern = underexposed."
+  },
+
+  {
+    id: "rad-068",
+    type: "recognition",
+    subject: "Radiology",
+    topic: "Normal Anatomic Landmarks – Maxilla",
+    difficulty: "medium",
+    question: "A well-defined radiopaque line is present superior to the maxillary molar roots, separating two distinct radiolucent compartments. Which structure does this represent?",
+    choices: [
+      { key: "A", text: "Nasal septum" },
+      { key: "B", text: "Floor of the maxillary sinus" },
+      { key: "C", text: "Zygomatic process of the maxilla" },
+      { key: "D", text: "Lateral pterygoid plate" }
+    ],
+    correctAnswer: "B",
+    rationale: "The sinus floor appears as a radiopaque line above maxillary molar roots, with the sinus cavity above and periodontal structures below.",
+    incorrectRationales: {
+      A: "Located in the midline, not over the molar region.",
+      C: "Appears as a J- or U-shaped radiopacity over the premolar-molar region, not a linear horizontal line.",
+      D: "Not visible on standard periapical radiographs."
+    },
+    boardTrap: "Location over the molars and the two-compartment appearance are the defining features.",
+    memoryHook: "Radiopaque line above molar roots = sinus floor."
+  },
+
+  {
+    id: "rad-069",
+    type: "recognition",
+    subject: "Radiology",
+    topic: "Normal Anatomic Landmarks – Maxilla",
+    difficulty: "hard",
+    question: "A periapical radiograph of the maxillary premolar region shows a J- or U-shaped radiopacity superimposed over the root apices. No clinical symptoms are present. Which structure is most consistent with this finding?",
+    choices: [
+      { key: "A", text: "Condensing osteitis" },
+      { key: "B", text: "Zygomatic process of the maxilla" },
+      { key: "C", text: "Maxillary tuberosity" },
+      { key: "D", text: "External oblique ridge" }
+    ],
+    correctAnswer: "B",
+    rationale: "The zygomatic process appears as a J- or U-shaped radiopacity superimposed over the maxillary molar region with no pathologic significance.",
+    incorrectRationales: {
+      A: "Associated with chronic periapical inflammation at a specific apex, not a broad J- or U-shape.",
+      C: "Located posterior to the molars.",
+      D: "A mandibular landmark not present in the maxilla."
+    },
+    boardTrap: "Asymptomatic J- or U-shaped radiopacity in this region is anatomic until proven otherwise.",
+    memoryHook: "J- or U-shape over premolar-molar apices = zygoma."
+  },
+
+  {
+    id: "rad-070",
+    type: "application",
+    subject: "Radiology",
+    topic: "Normal Anatomic Landmarks – Mandible",
+    difficulty: "medium",
+    question: "A periapical radiograph of the mandibular premolar region shows a well-defined oval radiolucency apical to the premolar roots. Vitality testing is within normal limits. Which structure is most consistent with this finding?",
+    choices: [
+      { key: "A", text: "Periapical abscess" },
+      { key: "B", text: "Lateral periodontal cyst" },
+      { key: "C", text: "Mental foramen" },
+      { key: "D", text: "Nutrient canal" }
+    ],
+    correctAnswer: "C",
+    rationale: "The mental foramen appears as a radiolucency near premolar apices. Normal vitality confirms anatomic origin.",
+    incorrectRationales: {
+      A: "Would present with a non-vital tooth and clinical symptoms.",
+      B: "Located laterally along the root surface, not at the apex.",
+      D: "Appears as a thin radiolucent line, not an oval."
+    },
+    boardTrap: "Vitality testing is the clinical key to distinguishing mental foramen from periapical pathology.",
+    memoryHook: "Vital tooth + oval lucency at premolar = mental foramen."
+  },
+
+  {
+    id: "rad-071",
+    type: "board",
+    subject: "Radiology",
+    topic: "Pathology vs. Anatomy Mimics",
+    difficulty: "hard",
+    question: "A periapical radiograph reveals a radiolucent lesion at the apex of a mandibular molar. The tooth responds normally to pulp testing and has no associated probing depths or symptoms. Which interpretation is most appropriate?",
+    choices: [
+      { key: "A", text: "Periapical granuloma requiring endodontic evaluation" },
+      { key: "B", text: "Radicular cyst requiring biopsy" },
+      { key: "C", text: "Further evaluation is indicated before pathology can be confirmed" },
+      { key: "D", text: "Early condensing osteitis requiring monitoring" }
+    ],
+    correctAnswer: "C",
+    rationale: "A vital, asymptomatic tooth with a radiolucent apical finding is unlikely to represent endodontic pathology. Further evaluation is indicated before any intervention.",
+    incorrectRationales: {
+      A: "Granuloma requires a non-vital or symptomatic tooth.",
+      B: "Radicular cysts develop from chronic periapical inflammation and require a non-vital tooth.",
+      D: "Condensing osteitis is radiopaque, not radiolucent."
+    },
+    boardTrap: "Boards test whether candidates anchor diagnosis in clinical findings, not radiographic appearance alone. A vital tooth changes everything.",
+    memoryHook: "Vital + asymptomatic = evaluate further, do not treat."
+  },
+
+  // ─── BATCH 3 ──────────────────────────────────────────────────────────────
+
+  {
+    id: "rad-072",
+    type: "recognition",
+    subject: "Radiology",
+    topic: "Radiation Physics – Thermionic Emission",
+    difficulty: "medium",
+    question: "Which process is responsible for the release of electrons from the cathode filament in an x-ray tube?",
+    choices: [
+      { key: "A", text: "Photoelectric absorption" },
+      { key: "B", text: "Thermionic emission" },
+      { key: "C", text: "Compton scattering" },
+      { key: "D", text: "Bremsstrahlung radiation" }
+    ],
+    correctAnswer: "B",
+    rationale: "Heating the filament releases electrons (thermionic emission), which are then accelerated toward the anode.",
+    incorrectRationales: {
+      A: "Describes x-ray interaction with matter, not electron production.",
+      C: "Describes x-ray scatter, not electron release.",
+      D: "Describes x-ray production at the anode, not electron release at the cathode."
+    },
+    boardTrap: "Thermionic emission is the source of electrons. Bremsstrahlung is what happens after they hit the target.",
+    memoryHook: "Heat the filament → release electrons."
+  },
+
+  {
+    id: "rad-073",
+    type: "application",
+    subject: "Radiology",
+    topic: "Radiation Physics – X-ray Quality",
+    difficulty: "hard",
+    question: "A clinician increases the kVp setting before exposure. Which effect on the x-ray beam is most accurate?",
+    choices: [
+      { key: "A", text: "Beam quantity increases, penetrating power is unchanged" },
+      { key: "B", text: "Wavelength increases, beam becomes less penetrating" },
+      { key: "C", text: "Wavelength shortens, beam becomes more penetrating" },
+      { key: "D", text: "Filtration increases, scatter is reduced" }
+    ],
+    correctAnswer: "C",
+    rationale: "Increasing kVp shortens wavelength and increases beam energy, producing a more penetrating beam and increasing photon output.",
+    incorrectRationales: {
+      A: "mA and time are the primary controls of quantity. kVp controls quality first.",
+      B: "Higher kVp shortens wavelength, it does not lengthen it.",
+      D: "Filtration is a fixed equipment property, not controlled by kVp adjustment."
+    },
+    boardTrap: "kVp controls quality primarily. mA controls quantity. Boards test whether candidates confuse these two.",
+    memoryHook: "kVp up → shorter wavelength → more penetrating."
+  },
+
+  {
+    id: "rad-074",
+    type: "recognition",
+    subject: "Radiology",
+    topic: "Normal Anatomic Landmarks – Mandible",
+    difficulty: "medium",
+    question: "A periapical radiograph of the mandibular molar region shows a radiopaque band superior to the roots. No pathology is noted clinically. Which structure is most consistent with this finding?",
+    choices: [
+      { key: "A", text: "Mylohyoid ridge" },
+      { key: "B", text: "External oblique ridge" },
+      { key: "C", text: "Inferior alveolar canal" },
+      { key: "D", text: "Internal oblique ridge" }
+    ],
+    correctAnswer: "B",
+    rationale: "The external oblique ridge appears as a radiopaque band superior to mandibular molar roots.",
+    incorrectRationales: {
+      A: "The mylohyoid ridge is the internal oblique ridge, located more inferiorly and lingually.",
+      C: "Appears as a radiolucent canal with radiopaque borders, not a band superior to the roots.",
+      D: "The internal oblique ridge is the mylohyoid ridge, located inferior to the external oblique ridge."
+    },
+    boardTrap: "External oblique ridge is superior and buccal. Internal oblique ridge (mylohyoid) is inferior and lingual. Boards use both names interchangeably as a trap.",
+    memoryHook: "External = elevated band over molars. Internal = inferior and lingual."
+  },
+
+  {
+    id: "rad-075",
+    type: "recognition",
+    subject: "Radiology",
+    topic: "Normal Anatomic Landmarks – Maxilla",
+    difficulty: "medium",
+    question: "Which radiographic description best corresponds to the lateral fossa?",
+    choices: [
+      { key: "A", text: "Well-defined oval radiolucency at the apex of the maxillary lateral incisor" },
+      { key: "B", text: "Radiopaque band superior to maxillary molar roots" },
+      { key: "C", text: "Well-defined midline radiolucency between the central incisors" },
+      { key: "D", text: "Diffuse radiolucency between the maxillary lateral incisor and canine" }
+    ],
+    correctAnswer: "D",
+    rationale: "The lateral fossa is a normal bony depression between the maxillary lateral incisor and canine, appearing as a diffuse radiolucency.",
+    incorrectRationales: {
+      A: "Describes periapical pathology location, not the lateral fossa.",
+      B: "Describes the floor of the maxillary sinus.",
+      C: "Describes the incisive foramen."
+    },
+    boardTrap: "The lateral fossa is between the lateral incisor and canine, not directly apical to the lateral incisor. Location is everything.",
+    memoryHook: "Lateral fossa = between lateral and canine, diffuse."
+  },
+
+  {
+    id: "rad-076",
+    type: "recognition",
+    subject: "Radiology",
+    topic: "Normal Anatomic Landmarks – Mandible",
+    difficulty: "medium",
+    question: "A periapical radiograph shows a thin radiopaque line following the outline of a tooth root from the alveolar crest to the apex. No widening or disruption is present. Which structure does this represent?",
+    choices: [
+      { key: "A", text: "Hypercementosis" },
+      { key: "B", text: "Condensing osteitis" },
+      { key: "C", text: "Cortical plate" },
+      { key: "D", text: "Lamina dura" }
+    ],
+    correctAnswer: "D",
+    rationale: "The lamina dura is a thin radiopaque line lining the tooth socket.",
+    incorrectRationales: {
+      A: "Appears as bulbous enlargement of the root apex, not a thin line.",
+      B: "Appears as a diffuse radiopacity at the apex associated with chronic inflammation.",
+      C: "The cortical plate forms the outer boundary of the mandible, not the socket lining."
+    },
+    boardTrap: "Disruption or loss of lamina dura is a key indicator of periapical pathology. Intact lamina dura confirms health.",
+    memoryHook: "Thin white line around root = lamina dura = healthy."
+  },
+
+  {
+    id: "rad-077",
+    type: "recognition",
+    subject: "Radiology",
+    topic: "Panoramic Anatomy – External Auditory Meatus",
+    difficulty: "hard",
+    question: "A panoramic radiograph shows a radiolucent oval structure posterior to the condyle. No clinical symptoms are associated. Which structure is most consistent with this finding?",
+    choices: [
+      { key: "A", text: "Mastoid air cells" },
+      { key: "B", text: "Articular fossa" },
+      { key: "C", text: "Coronoid process" },
+      { key: "D", text: "External auditory meatus" }
+    ],
+    correctAnswer: "D",
+    rationale: "The external auditory meatus appears as a radiolucent oval posterior to the condyle on a panoramic image and is a normal anatomic landmark.",
+    incorrectRationales: {
+      A: "Mastoid air cells appear as multiple small radiolucencies, not a single defined oval.",
+      B: "The articular fossa is located superior to the condyle, not posterior.",
+      C: "The coronoid process appears as a radiopaque triangular projection anterior to the condyle."
+    },
+    boardTrap: "Radiolucency posterior to the condyle is anatomic. Students unfamiliar with panoramic anatomy flag this as pathology.",
+    memoryHook: "Oval behind condyle = ear canal."
+  },
+
+  {
+    id: "rad-078",
+    type: "recognition",
+    subject: "Radiology",
+    topic: "Panoramic Anatomy – Coronoid Process",
+    difficulty: "medium",
+    question: "A panoramic radiograph shows a triangular radiopaque structure superimposed over the maxillary tuberosity region on one side. Which structure is most consistent with this finding?",
+    choices: [
+      { key: "A", text: "Styloid process" },
+      { key: "B", text: "Coronoid process" },
+      { key: "C", text: "Zygomatic arch" },
+      { key: "D", text: "Articular eminence" }
+    ],
+    correctAnswer: "B",
+    rationale: "The coronoid process appears as a triangular radiopacity superimposed over the maxillary tuberosity on a panoramic image.",
+    incorrectRationales: {
+      A: "The styloid process appears as a thin elongated radiopacity inferior to the mastoid.",
+      C: "The zygomatic arch appears as a curved radiopaque band superior to the condyle region.",
+      D: "The articular eminence is anterior to the condyle and does not project over the tuberosity."
+    },
+    boardTrap: "Triangular radiopacity over the tuberosity is anatomic, not a lesion. Shape and location are the identifiers.",
+    memoryHook: "Triangle over tuberosity = coronoid process."
+  },
+
+  {
+    id: "rad-079",
+    type: "recognition",
+    subject: "Radiology",
+    topic: "Panoramic Anatomy – Hyoid Bone",
+    difficulty: "medium",
+    question: "A panoramic radiograph shows a horseshoe-shaped radiopaque structure inferior to the mandible, superimposed over the cervical spine region. No symptoms are present. Which structure does this represent?",
+    choices: [
+      { key: "A", text: "Thyroid cartilage" },
+      { key: "B", text: "Epiglottis" },
+      { key: "C", text: "Hyoid bone" },
+      { key: "D", text: "Stylohyoid ligament" }
+    ],
+    correctAnswer: "C",
+    rationale: "The hyoid appears as a horseshoe-shaped radiopacity inferior to the mandible.",
+    incorrectRationales: {
+      A: "The thyroid cartilage is more inferior and typically not visible on standard panoramic images.",
+      B: "The epiglottis is not visible on panoramic radiographs.",
+      D: "The stylohyoid ligament appears as a thin calcified line, not a horseshoe shape."
+    },
+    boardTrap: "The hyoid bone is a normal finding. Students unfamiliar with panoramic anatomy flag it as a calcification or pathology.",
+    memoryHook: "Horseshoe below the mandible = hyoid."
+  },
+
+  {
+    id: "rad-080",
+    type: "application",
+    subject: "Radiology",
+    topic: "Radiographic Interpretation – Calculus",
+    difficulty: "medium",
+    question: "A bitewing radiograph shows irregular, nodular radiopaque deposits on the proximal surfaces of mandibular posterior teeth at and below the CEJ. No restorations are present in these areas. Which finding best describes this appearance?",
+    choices: [
+      { key: "A", text: "Enamel pearl" },
+      { key: "B", text: "Interproximal calculus" },
+      { key: "C", text: "Composite restoration overhang" },
+      { key: "D", text: "Cervical burnout artifact" }
+    ],
+    correctAnswer: "B",
+    rationale: "Interproximal calculus appears as irregular radiopaque deposits at or below the CEJ.",
+    incorrectRationales: {
+      A: "Enamel pearls are smooth, round radiopacities located on root surfaces, typically in furcation areas.",
+      C: "Restoration overhangs have a smoother, more defined margin and are associated with an existing restoration.",
+      D: "Cervical burnout is a radiolucent artifact, not radiopaque."
+    },
+    boardTrap: "Calculus is irregular and nodular. Smooth margins suggest a restoration. Cervical burnout is radiolucent, not radiopaque.",
+    memoryHook: "Irregular radiopacity at CEJ = calculus."
+  },
+
+  {
+    id: "rad-081",
+    type: "application",
+    subject: "Radiology",
+    topic: "Radiographic Interpretation – Amalgam Fragment",
+    difficulty: "hard",
+    question: "A periapical radiograph reveals a highly radiopaque fragment adjacent to the apex of a previously treated mandibular molar. The tooth was extracted two years prior. The patient has no symptoms. Which finding best explains this appearance?",
+    choices: [
+      { key: "A", text: "Torus mandibularis" },
+      { key: "B", text: "Retained root tip" },
+      { key: "C", text: "Condensing osteitis" },
+      { key: "D", text: "Residual amalgam fragment" }
+    ],
+    correctAnswer: "D",
+    rationale: "Residual amalgam appears as a dense, irregular radiopacity without a root outline or periodontal ligament space.",
+    incorrectRationales: {
+      A: "Torus mandibularis is a bony prominence on the lingual mandible, not a discrete apical fragment.",
+      B: "A retained root tip would show a root outline and periodontal ligament space, not an irregular particle.",
+      C: "Condensing osteitis is a diffuse radiopacity within bone, not a discrete fragment."
+    },
+    boardTrap: "High radiopacity with no root outline and no PDL space in a post-extraction site points to amalgam, not anatomy or pathology.",
+    memoryHook: "Bright fragment, no root shape, no PDL, post-extraction = amalgam."
+  },
 {
   id: "eth-001",
   type: "application",
@@ -9776,6 +10931,293 @@ memoryHook: "Lingual follows the leader — even vertically."
   boardTrap: "Blocking beta-2 removes vasodilation making alpha constriction dominant. The result is hypertension not reduced effect.",
   memoryHook: "Beta blocker plus epinephrine equals alpha wins. Unopposed alpha equals blood pressure spike."
 },
+{
+    id: "pharm-065",
+    type: "application",
+    subject: "Pharmacology",
+    topic: "Topical Anesthetics – Oraquix",
+    difficulty: "medium",
+    question: "A patient presents for scaling and root planing with significant sensitivity. The clinician applies a topical anesthetic directly into the periodontal pocket prior to instrumentation. Which agent is specifically formulated for subgingival application?",
+    choices: [
+      { key: "A", text: "Benzocaine 20%" },
+      { key: "B", text: "EMLA cream" },
+      { key: "C", text: "Oraquix (lidocaine and prilocaine periodontal gel)" },
+      { key: "D", text: "Cetacaine spray" }
+    ],
+    correctAnswer: "C",
+    rationale: "Oraquix is a lidocaine and prilocaine periodontal gel specifically formulated for subgingival anesthesia during scaling and root planing without injection.",
+    incorrectRationales: {
+      A: "Benzocaine 20% is a topical anesthetic for mucosal surfaces, not formulated for subgingival pocket delivery.",
+      B: "EMLA cream is used for intact skin anesthesia and is not indicated for intraoral subgingival use.",
+      D: "Cetacaine is a topical spray for mucosal surfaces, not designed for periodontal pocket delivery."
+    },
+    boardTrap: "Oraquix is the only FDA-approved periodontal gel for subgingival anesthesia. Boards test whether candidates know it by indication, not just by name.",
+    memoryHook: "Oraquix = into the pocket. Not a spray, not a gel on mucosa."
+  },
+
+  {
+    id: "pharm-066",
+    type: "application",
+    subject: "Pharmacology",
+    topic: "Vasoconstrictors – Hyperthyroidism",
+    difficulty: "hard",
+    question: "A patient presents for scaling and root planing and reports uncontrolled hyperthyroidism confirmed by their physician. The clinician is selecting a local anesthetic. Which statement regarding epinephrine use is most accurate for this patient?",
+    choices: [
+      { key: "A", text: "0.04mg cardiac dose limit is safe for this patient" },
+      { key: "B", text: "Epinephrine concentration should be reduced to 1:200,000" },
+      { key: "C", text: "Standard epinephrine concentration of 1:100,000 is acceptable" },
+      { key: "D", text: "Epinephrine should be avoided in uncontrolled hyperthyroidism" }
+    ],
+    correctAnswer: "D",
+    rationale: "Uncontrolled hyperthyroidism increases cardiovascular sensitivity to catecholamines. Epinephrine should be avoided until the condition is controlled to prevent hypertensive crisis or cardiac arrhythmia.",
+    incorrectRationales: {
+      A: "The cardiac dose limit of 0.04mg applies to patients with cardiovascular disease or controlled thyroid conditions, not uncontrolled hyperthyroidism.",
+      B: "Reducing concentration does not eliminate the risk in an uncontrolled state. Avoidance is the appropriate action.",
+      C: "Standard concentration is contraindicated in uncontrolled hyperthyroidism due to exaggerated cardiovascular response."
+    },
+    boardTrap: "Controlled vs uncontrolled is the board trap. Controlled hyperthyroid patients may receive epinephrine at the cardiac dose limit. Uncontrolled = avoid entirely.",
+    memoryHook: "Uncontrolled hyperthyroid = no epi. Controlled = cardiac dose only."
+  },
+
+  {
+    id: "pharm-067",
+    type: "application",
+    subject: "Pharmacology",
+    topic: "Drug Interactions – Metronidazole and Alcohol",
+    difficulty: "medium",
+    question: "A patient is prescribed metronidazole following periodontal surgery. During patient education, the clinician warns against alcohol consumption during the course of treatment. Which reaction is the patient being warned about?",
+    choices: [
+      { key: "A", text: "Increased risk of hepatotoxicity from combined metabolism" },
+      { key: "B", text: "Reduced antibiotic efficacy due to alcohol-induced enzyme induction" },
+      { key: "C", text: "Increased seizure threshold from CNS depression" },
+      { key: "D", text: "Disulfiram-like reaction causing nausea, flushing, and tachycardia" }
+    ],
+    correctAnswer: "D",
+    rationale: "Metronidazole inhibits acetaldehyde dehydrogenase, producing a disulfiram-like reaction with alcohol including nausea, flushing, headache, and tachycardia.",
+    incorrectRationales: {
+      A: "Hepatotoxicity is not the primary concern with this combination. The acute disulfiram-like reaction is the clinical warning.",
+      B: "Alcohol does not reduce metronidazole efficacy through enzyme induction in this context.",
+      C: "CNS depression is not the mechanism behind the metronidazole-alcohol interaction."
+    },
+    boardTrap: "Students often know to avoid alcohol with metronidazole but cannot name the reaction. Boards want the mechanism. Disulfiram-like reaction is the answer.",
+    memoryHook: "Metronidazole plus alcohol = disulfiram reaction. Nausea, flushing, fast heart rate."
+  },
+
+  {
+    id: "pharm-068",
+    type: "application",
+    subject: "Pharmacology",
+    topic: "Anxiolytics – Benzodiazepines",
+    difficulty: "medium",
+    question: "A patient with severe dental anxiety is prescribed an oral medication prior to their appointment. The drug produces sedation by enhancing the effect of GABA in the central nervous system. Which drug class is most consistent with this mechanism?",
+    choices: [
+      { key: "A", text: "Opioid analgesics" },
+      { key: "B", text: "Benzodiazepines" },
+      { key: "C", text: "Antihistamines" },
+      { key: "D", text: "Beta blockers" }
+    ],
+    correctAnswer: "B",
+    rationale: "Benzodiazepines enhance GABA-mediated inhibition in the CNS, producing anxiolysis and sedation. They are the most commonly prescribed agents for dental anxiety premedication.",
+    incorrectRationales: {
+      A: "Opioids act on mu, kappa, and delta receptors, not GABA receptors, and are not first-line agents for dental anxiety.",
+      C: "Antihistamines produce sedation through H1 receptor blockade, not GABA enhancement.",
+      D: "Beta blockers reduce peripheral anxiety symptoms such as tachycardia but do not act on GABA receptors."
+    },
+    boardTrap: "GABA enhancement is the key mechanism. Any question asking about CNS anxiolytic mechanism in dentistry points to benzodiazepines.",
+    memoryHook: "Benzodiazepines = GABA = calm. Dental anxiety premedication."
+  },
+
+  {
+    id: "pharm-069",
+    type: "recognition",
+    subject: "Pharmacology",
+    topic: "Diuretics – Hydrochlorothiazide",
+    difficulty: "medium",
+    question: "A patient's medical history lists a thiazide diuretic for hypertension management. The clinician notes orthostatic hypotension as a primary concern during the dental appointment. Which drug is most likely responsible?",
+    choices: [
+      { key: "A", text: "Furosemide" },
+      { key: "B", text: "Spironolactone" },
+      { key: "C", text: "Hydrochlorothiazide" },
+      { key: "D", text: "Mannitol" }
+    ],
+    correctAnswer: "C",
+    rationale: "Hydrochlorothiazide is the most commonly prescribed thiazide diuretic. Orthostatic hypotension is the primary dental concern, as patients may become dizzy when repositioned in the dental chair.",
+    incorrectRationales: {
+      A: "Furosemide is a loop diuretic, not a thiazide, and is used for more acute fluid management.",
+      B: "Spironolactone is a potassium-sparing diuretic, not a thiazide.",
+      D: "Mannitol is an osmotic diuretic used in hospital settings, not for hypertension management."
+    },
+    boardTrap: "Boards identify thiazide diuretics by class and by the dental clinical implication. Orthostatic hypotension when repositioning the patient is the primary concern to know.",
+    memoryHook: "Hydrochlorothiazide = most common thiazide = dizzy on standing. Reposition slowly."
+  },
+
+  {
+    id: "pharm-070",
+    type: "application",
+    subject: "Pharmacology",
+    topic: "Antibiotics – Tetracycline Side Effects",
+    difficulty: "medium",
+    question: "A patient taking long-term tetracycline for acne management asks why their dermatologist recommended sunscreen and sun avoidance. Which side effect of tetracycline is the clinician reinforcing?",
+    choices: [
+      { key: "A", text: "Photosensitivity causing increased risk of sunburn and skin reactions" },
+      { key: "B", text: "Hyperpigmentation from melanin stimulation" },
+      { key: "C", text: "Phototoxic destruction of red blood cells" },
+      { key: "D", text: "Ultraviolet-induced hepatotoxicity" }
+    ],
+    correctAnswer: "A",
+    rationale: "Tetracyclines cause photosensitivity by accumulating in skin cells and reacting with UV light, producing an exaggerated sunburn response.",
+    incorrectRationales: {
+      B: "Tetracyclines do not stimulate melanin production. Hyperpigmentation is not the primary concern.",
+      C: "Phototoxic destruction of red blood cells is not a recognized mechanism of tetracycline photosensitivity.",
+      D: "Hepatotoxicity from UV exposure is not a mechanism associated with tetracyclines."
+    },
+    boardTrap: "Tetracycline photosensitivity is a direct drug-UV interaction in the skin, not a systemic reaction. Boards pair this with tooth discoloration in children as a two-part tetracycline knowledge test.",
+    memoryHook: "Tetracycline + sun = burn. Stay out of UV."
+  },
+
+  {
+    id: "pharm-071",
+    type: "application",
+    subject: "Pharmacology",
+    topic: "Smoking Cessation – Bupropion",
+    difficulty: "medium",
+    question: "A patient is prescribed bupropion as part of a smoking cessation program. During the dental appointment, the clinician notes the patient reports dry mouth. Which property of bupropion most directly explains this finding?",
+    choices: [
+      { key: "A", text: "Beta-adrenergic receptor stimulation reducing salivary flow" },
+      { key: "B", text: "Cholinergic agonist activity at salivary gland receptors" },
+      { key: "C", text: "Histamine blockade reducing mucosal secretions" },
+      { key: "D", text: "Central and sympathetic noradrenergic activity reducing salivary output" }
+    ],
+    correctAnswer: "D",
+    rationale: "Bupropion reduces salivary flow through central and sympathetic mechanisms related to its norepinephrine and dopamine reuptake inhibition, producing xerostomia as a common side effect.",
+    incorrectRationales: {
+      A: "Bupropion does not act as a beta-adrenergic stimulant directly at salivary glands.",
+      B: "Bupropion does not stimulate cholinergic receptors. Cholinergic agonism would increase, not decrease, salivary flow.",
+      C: "Histamine blockade is not the primary mechanism of bupropion-induced xerostomia."
+    },
+    boardTrap: "Boards test bupropion from two angles. Smoking cessation use and xerostomia as the primary dental side effect. Know both.",
+    memoryHook: "Bupropion = quit smoking + dry mouth. Central and sympathetic mechanism."
+  },
+
+  {
+    id: "pharm-072",
+    type: "application",
+    subject: "Pharmacology",
+    topic: "Bisphosphonates – Osteonecrosis of the Jaw",
+    difficulty: "hard",
+    question: "A patient with a history of intravenous bisphosphonate therapy for metastatic bone disease presents for a routine extraction. The clinician identifies this as a high-risk situation. Which oral complication is the primary concern with invasive procedures in this patient?",
+    choices: [
+      { key: "A", text: "Delayed wound healing from impaired platelet aggregation" },
+      { key: "B", text: "Bisphosphonate-related osteonecrosis of the jaw" },
+      { key: "C", text: "Increased infection risk from immunosuppression" },
+      { key: "D", text: "Excessive bleeding from anticoagulant properties" }
+    ],
+    correctAnswer: "B",
+    rationale: "Bisphosphonates inhibit osteoclast activity and reduce bone remodeling. Invasive procedures significantly increase the risk of osteonecrosis of the jaw, particularly with IV administration.",
+    incorrectRationales: {
+      A: "Bisphosphonates do not impair platelet aggregation. Delayed healing is secondary to the osteonecrosis risk.",
+      C: "Bisphosphonates are not immunosuppressants. Increased infection risk is not their primary dental concern.",
+      D: "Bisphosphonates do not have anticoagulant properties and do not cause excessive bleeding."
+    },
+    boardTrap: "IV bisphosphonates carry significantly higher osteonecrosis risk than oral bisphosphonates. Boards test whether candidates know the route of administration matters.",
+    memoryHook: "Bisphosphonates + invasive procedure = osteonecrosis risk. IV route = highest risk."
+  },
+
+  {
+    id: "pharm-073",
+    type: "application",
+    subject: "Pharmacology",
+    topic: "Antibiotic Premedication – Penicillin Allergy",
+    difficulty: "hard",
+    question: "A patient with a confirmed penicillin allergy but no history of anaphylaxis, angioedema, or urticaria requires antibiotic premedication prior to a dental procedure. Current AHA guidelines recommend which alternative regimen?",
+    choices: [
+      { key: "A", text: "Amoxicillin 2g one hour before the procedure" },
+      { key: "B", text: "Metronidazole 500mg one hour before the procedure" },
+      { key: "C", text: "Cephalexin 2g one hour before the procedure" },
+      { key: "D", text: "Clindamycin 600mg one hour before the procedure" }
+    ],
+    correctAnswer: "C",
+    rationale: "For penicillin-allergic patients without anaphylaxis history, cephalexin 2g is the recommended first alternative per current AHA guidelines. Clindamycin was removed in 2021 due to risk of Clostridioides difficile infection.",
+    incorrectRationales: {
+      A: "Amoxicillin is a penicillin-class antibiotic and is contraindicated in patients with penicillin allergy.",
+      B: "Metronidazole is not an AHA-recommended agent for cardiac prophylaxis premedication.",
+      D: "Clindamycin was removed from the 2021 AHA updated guidelines and is no longer a recommended alternative."
+    },
+    boardTrap: "Two traps in one question. Clindamycin is the old answer that boards are now testing as wrong. Cephalexin is only appropriate without anaphylaxis history. Both distinctions are board-testable.",
+    memoryHook: "Penicillin allergy, no anaphylaxis = cephalexin 2g. Clindamycin is gone from guidelines."
+  },
+
+  {
+    id: "pharm-074",
+    type: "application",
+    subject: "Pharmacology",
+    topic: "Medical Emergencies – Malignant Hyperthermia",
+    difficulty: "hard",
+    question: "A patient undergoing general anesthesia develops a rapid rise in body temperature, muscle rigidity, and tachycardia. The anesthesiologist immediately administers a specific drug to halt the reaction. Which drug is the treatment of choice for malignant hyperthermia?",
+    choices: [
+      { key: "A", text: "Dantrolene" },
+      { key: "B", text: "Epinephrine" },
+      { key: "C", text: "Naloxone" },
+      { key: "D", text: "Flumazenil" }
+    ],
+    correctAnswer: "A",
+    rationale: "Dantrolene is the definitive treatment for malignant hyperthermia. It blocks calcium release from the sarcoplasmic reticulum, stopping uncontrolled muscle contraction and the resulting hyperthermia.",
+    incorrectRationales: {
+      B: "Epinephrine is used for anaphylaxis, not malignant hyperthermia, and would worsen tachycardia.",
+      C: "Naloxone reverses opioid overdose and has no role in malignant hyperthermia management.",
+      D: "Flumazenil reverses benzodiazepine sedation and has no role in malignant hyperthermia management."
+    },
+    boardTrap: "Malignant hyperthermia is triggered by specific anesthetic agents, not by overheating. Boards pair the clinical presentation with the specific antidote. Dantrolene only.",
+    memoryHook: "Malignant hyperthermia = dantrolene. Muscle locks up, dantrolene unlocks it."
+  },
+
+  {
+    id: "pharm-075",
+    type: "application",
+    subject: "Pharmacology",
+    topic: "Inhaled Medications – Asthma and Oral Candidiasis",
+    difficulty: "medium",
+    question: "A patient with asthma who uses an inhaled corticosteroid daily presents with a white removable coating on the tongue and buccal mucosa. The patient reports no pain. Which factor most directly contributed to this finding?",
+    choices: [
+      { key: "A", text: "Systemic immunosuppression from corticosteroid absorption" },
+      { key: "B", text: "Xerostomia from bronchodilator use reducing mucosal defense" },
+      { key: "C", text: "Antibiotic use for respiratory infections altering oral flora" },
+      { key: "D", text: "Local corticosteroid deposit in the oral cavity suppressing immunity and promoting Candida overgrowth" }
+    ],
+    correctAnswer: "D",
+    rationale: "Local steroid deposition suppresses oral immunity, promoting Candida growth. Patients should rinse and gargle with water after each inhaler use to reduce this risk.",
+    incorrectRationales: {
+      A: "Inhaled corticosteroids at standard doses produce minimal systemic absorption. Systemic immunosuppression is not the primary mechanism.",
+      B: "Xerostomia from bronchodilators can contribute but is not the primary cause in a patient using an inhaled corticosteroid.",
+      C: "Antibiotic use is a cause of oral candidiasis but is not the factor identified in this stem."
+    },
+    boardTrap: "Boards test the rinse instruction as the prevention strategy, not just the diagnosis. A follow-up question may ask what to tell the patient to prevent recurrence. Rinse with water after every use.",
+    memoryHook: "Inhaled steroid + no rinse = white coating. Rinse after every puff."
+  },
+
+  {
+    id: "pharm-076",
+    type: "application",
+    subject: "Pharmacology",
+    topic: "Autonomic Pharmacology – Acetylcholine",
+    difficulty: "medium",
+    question: "A patient taking an anticholinergic medication presents with xerostomia. The clinician explains that the drug is blocking the neurotransmitter responsible for stimulating salivary flow. Which neurotransmitter is being blocked?",
+    choices: [
+      { key: "A", text: "Norepinephrine" },
+      { key: "B", text: "Acetylcholine" },
+      { key: "C", text: "Dopamine" },
+      { key: "D", text: "Serotonin" }
+    ],
+    correctAnswer: "B",
+    rationale: "Acetylcholine is the parasympathetic neurotransmitter that stimulates salivary gland secretion. Anticholinergic drugs block this action, reducing salivary output and producing xerostomia.",
+    incorrectRationales: {
+      A: "Norepinephrine is the primary sympathetic neurotransmitter. Sympathetic stimulation reduces salivary flow but is not what anticholinergic drugs block.",
+      C: "Dopamine functions primarily in CNS reward and motor pathways, not salivary stimulation.",
+      D: "Serotonin regulates mood and GI motility, not salivary gland secretion."
+    },
+    boardTrap: "Anticholinergic drugs cause xerostomia by blocking acetylcholine at parasympathetic receptors. Sympathomimetic drugs also cause xerostomia but through a different mechanism. Both are board-testable.",
+    memoryHook: "Acetylcholine = parasympathetic = spit flows. Block it = dry mouth."
+  },
 {
   id: "micro-001",
   type: "microbiology",
@@ -13336,7 +14778,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Posterior maxillary teeth use PSA canal."
 },
 {
-  id: "da-001",
+  id: "H&N-083",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Development – Bud Stage",
@@ -13359,7 +14801,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Bud before bloom."
 },
 {
-  id: "da-002",
+  id: "H&N-084",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Development – Cap Stage",
@@ -13382,7 +14824,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Papilla = pulp and dentin precursor."
 },
 {
-  id: "da-003",
+  id: "H&N-085",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Development – Bell Stage Layers",
@@ -13405,7 +14847,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Outside In: OEE, SR, SI, IEE."
 },
 {
-  id: "da-004",
+  id: "H&N-086",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Development – Ameloblasts",
@@ -13428,7 +14870,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Ameloblasts = enamel architects."
 },
 {
-  id: "da-005",
+  id: "H&N-087",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Development – Odontoblasts",
@@ -13451,7 +14893,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Dental papilla = dentin and pulp precursor."
 },
 {
-  id: "da-006",
+  id: "H&N-088",
   type: "critical-thinking",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Development – Hertwig's Root Sheath",
@@ -13474,7 +14916,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Hertwig's shapes the root highway."
 },
 {
-  id: "da-007",
+  id: "H&N-089",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Development – Dental Sac Derivatives",
@@ -13497,7 +14939,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Dental sac surrounds and supports."
 },
 {
-  id: "da-008",
+  id: "H&N-090",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Development – Neonatal Line",
@@ -13520,7 +14962,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Neonatal line = birth certificate in enamel."
 },
 {
-  id: "da-009",
+  id: "H&N-091",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Eruption – Primary Dentition Order",
@@ -13543,7 +14985,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Mandibular centrals move first."
 },
 {
-  id: "da-010",
+  id: "H&N-092",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Eruption – Primary Dentition Ages",
@@ -13566,7 +15008,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "All 20 by age 3."
 },
 {
-  id: "da-011",
+  id: "H&N-093",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Eruption – Primary Second Molar",
@@ -13589,7 +15031,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Upper second primary molar = last to arrive."
 },
 {
-  id: "da-012",
+  id: "H&N-094",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Eruption – First Permanent Tooth",
@@ -13612,7 +15054,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Six-year molar = first permanent arrival."
 },
 {
-  id: "da-013",
+  id: "H&N-095",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Eruption – Permanent Dentition Sequence",
@@ -13635,7 +15077,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Mandibular: 6-1-2-3-4-5-7. First molar first."
 },
 {
-  id: "da-014",
+  id: "H&N-096",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Eruption – Maxillary Sequence vs Mandibular",
@@ -13658,7 +15100,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Upper canine is late. Lower canine is early."
 },
 {
-  id: "da-015",
+  id: "H&N-097",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Eruption – Mixed Dentition",
@@ -13681,7 +15123,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Mixed = mix of primary and permanent."
 },
 {
-  id: "da-016",
+  id: "H&N-098",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Eruption – Last Primary Tooth Shed",
@@ -13704,7 +15146,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Last in, last out — maxillary second primary molar."
 },
 {
-  id: "da-017",
+  id: "H&N-099",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Morphology – Cusp of Carabelli",
@@ -13727,7 +15169,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Carabelli crowns the maxillary first molar."
 },
 {
-  id: "da-018",
+  id: "H&N-100",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Morphology – Cusp Number",
@@ -13750,7 +15192,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Lower first molar = five and Y."
 },
 {
-  id: "da-019",
+  id: "H&N-101",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Morphology – Roots",
@@ -13773,7 +15215,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Maxillary molars = triple rooted."
 },
 {
-  id: "da-020",
+  id: "H&N-102",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Morphology – Longest Root",
@@ -13796,7 +15238,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Canine clings deepest."
 },
 {
-  id: "da-021",
+  id: "H&N-103",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Morphology – Pulp Horns",
@@ -13819,7 +15261,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Lower first molar pulp horn pokes highest."
 },
 {
-  id: "da-022",
+  id: "H&N-104",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Development – Successional Lamina",
@@ -13842,7 +15284,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Successional = successor teeth that replace primaries."
 },
 {
-  id: "da-023",
+  id: "H&N-105",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Morphology – Taurodontism",
@@ -13865,7 +15307,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Taurodont = bull-tooth. Large body, short legs."
 },
 {
-  id: "da-024",
+  id: "H&N-106",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Morphology – Hutchinson's Incisors",
@@ -13888,7 +15330,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Hutchinson's = history of syphilis in the crown."
 },
 {
-  id: "da-025",
+  id: "H&N-107",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Morphology – Mulberry Molars",
@@ -13911,7 +15353,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Mulberry molar = marker of maternal syphilis."
 },
 {
-  id: "da-026",
+  id: "H&N-108",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Morphology – Turner's Tooth",
@@ -13934,7 +15376,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Turner's = one tooth traumatized by the tooth above it."
 },
 {
-  id: "da-027",
+  id: "H&N-109",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Development – Appositional Stage",
@@ -13957,7 +15399,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Appositional = adding layers."
 },
 {
-  id: "da-028",
+  id: "H&N-110",
   type: "application",
   subject: "Head & Neck Anatomy",
   topic: "Eruption – Permanent Molar Chronology",
@@ -13980,7 +15422,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Second molar = twelve-year molar."
 },
 {
-  id: "da-029",
+  id: "H&N-111",
   type: "recall",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Morphology – Shovel-Shaped Incisors",
@@ -14003,7 +15445,7 @@ memoryHook: "Lingual follows the leader — even vertically."
   memoryHook: "Shovel shapes show in Asian and Indigenous ancestry."
 },
 {
-  id: "da-030",
+  id: "H&N-112",
   type: "critical-thinking",
   subject: "Head & Neck Anatomy",
   topic: "Tooth Development – Clinical Application",
@@ -14025,6 +15467,245 @@ memoryHook: "Lingual follows the leader — even vertically."
   boardTrap: "Perinatal disturbance + multiple primary teeth + appositional disruption = hypoplasia, not fluorosis.",
   memoryHook: "Premature birth disturbs enamel layers forming at that moment."
 },
+{
+    id: "H&N-113",
+    type: "application",
+    subject: "Head & Neck Anatomy",
+    topic: "Cranial Bones – Sella Turcica",
+    difficulty: "medium",
+    question: "A patient presents with bilateral visual field loss. Imaging reveals a mass at the base of the skull. Which bone houses the structure most likely responsible for this presentation?",
+    choices: [
+      { key: "A", text: "Temporal bone" },
+      { key: "B", text: "Occipital bone" },
+      { key: "C", text: "Sphenoid bone" },
+      { key: "D", text: "Ethmoid bone" }
+    ],
+    correctAnswer: "C",
+    rationale: "The sella turcica of the sphenoid bone houses the pituitary gland. An expanding pituitary mass compresses the optic chiasm, producing bilateral visual field loss.",
+    incorrectRationales: {
+      A: "The temporal bone houses middle and inner ear structures, not the pituitary.",
+      B: "The occipital bone forms the posterior cranial floor and contains the foramen magnum.",
+      D: "The ethmoid bone contributes to the nasal cavity and orbit but does not contain the pituitary."
+    },
+    boardTrap: "Sphenoid is the crossroads of the cranial base. Unexplained visual field changes with a skull base mass point directly to the sella turcica.",
+    memoryHook: "Sphenoid saddle = sella turcica = pituitary."
+  },
+
+  {
+    id: "H&N-114",
+    type: "application",
+    subject: "Head & Neck Anatomy",
+    topic: "Tongue – Foliate Papillae",
+    difficulty: "medium",
+    question: "During an intraoral exam, a clinician observes vertical folds of tissue on the posterior lateral borders of the tongue bilaterally. The patient reports no pain. Which structure is most consistent with this finding?",
+    choices: [
+      { key: "A", text: "Circumvallate papillae" },
+      { key: "B", text: "Foliate papillae" },
+      { key: "C", text: "Plica fimbriata" },
+      { key: "D", text: "Lingual tonsils" }
+    ],
+    correctAnswer: "B",
+    rationale: "Foliate papillae are vertical folds on the posterior lateral tongue and are a normal finding frequently mistaken for pathology.",
+    incorrectRationales: {
+      A: "Circumvallate papillae form a V-shaped row on the dorsal surface, not the lateral borders.",
+      C: "Plica fimbriata are fringe-like folds on the ventral tongue surface.",
+      D: "Lingual tonsils are lymphoid tissue at the base of the tongue, not folded papillae on the lateral border."
+    },
+    boardTrap: "Bilateral symmetric vertical folds on the lateral tongue are normal anatomy, not pathology.",
+    memoryHook: "Foliate = lateral folds = normal, not pathology."
+  },
+
+  {
+    id: "H&N-115",
+    type: "application",
+    subject: "Head & Neck Anatomy",
+    topic: "Lymphatic Drainage – Maxillary Molars",
+    difficulty: "medium",
+    question: "A patient presents with a swollen, tender node palpated inferior to the mandible on the right side. Intraoral exam reveals a periodontal abscess at the maxillary right first molar. Which lymph node group is most likely involved?",
+    choices: [
+      { key: "A", text: "Submental nodes" },
+      { key: "B", text: "Submandibular nodes" },
+      { key: "C", text: "Parotid nodes" },
+      { key: "D", text: "Posterior cervical nodes" }
+    ],
+    correctAnswer: "B",
+    rationale: "The maxillary molars primarily drain to the submandibular nodes, located inferior to the mandible along the submandibular gland.",
+    incorrectRationales: {
+      A: "Submental nodes drain midline structures including the mandibular incisors, chin, and lower lip.",
+      C: "Parotid nodes drain the parotid gland, external ear, and adjacent facial skin.",
+      D: "Posterior cervical nodes receive secondary drainage, not direct drainage from the dentition."
+    },
+    boardTrap: "The submandibular nodes drain both mandibular and maxillary structures. Arch location does not determine node group.",
+    memoryHook: "Maxillary molars drain to submandibular nodes."
+  },
+
+  {
+    id: "H&N-116",
+    type: "application",
+    subject: "Head & Neck Anatomy",
+    topic: "Floor of the Mouth – Sublingual Structures",
+    difficulty: "medium",
+    question: "A patient is referred for dry mouth evaluation. On examination, the clinician attempts to locate the opening of the submandibular duct. Which landmark identifies this opening?",
+    choices: [
+      { key: "A", text: "Pterygomandibular raphe" },
+      { key: "B", text: "Sublingual caruncle" },
+      { key: "C", text: "Sublingual fold" },
+      { key: "D", text: "Plica fimbriata" }
+    ],
+    correctAnswer: "B",
+    rationale: "The sublingual caruncle is the small papilla at the anterior end of the sublingual fold where Wharton's duct opens into the floor of the mouth.",
+    incorrectRationales: {
+      A: "The pterygomandibular raphe is a posterior landmark used for inferior alveolar nerve blocks, not a duct opening.",
+      C: "The sublingual fold is the ridge overlying the sublingual gland. The duct opens at the caruncle at its anterior tip, not along the fold itself.",
+      D: "The plica fimbriata is a fringe-like fold on the ventral tongue surface, unrelated to salivary duct openings."
+    },
+    boardTrap: "The sublingual fold and caruncle are two different structures. The fold overlies the gland. The caruncle is where Wharton's duct opens.",
+    memoryHook: "Caruncle = where Wharton's duct opens. Fold = ridge over the gland."
+  },
+
+  {
+    id: "H&N-117",
+    type: "application",
+    subject: "Head & Neck Anatomy",
+    topic: "Gingival Anatomy – McCall's Festoons",
+    difficulty: "medium",
+    question: "During periodontal charting, a clinician notes rolled, thickened gingival tissue at the facial margins of the mandibular canines bilaterally. Probing depths are within normal limits and no recession is present. Which finding best describes this tissue change?",
+    choices: [
+      { key: "A", text: "Stillman's cleft" },
+      { key: "B", text: "McCall's festoons" },
+      { key: "C", text: "Localized drug-induced hyperplasia" },
+      { key: "D", text: "Chronic marginal gingivitis" }
+    ],
+    correctAnswer: "B",
+    rationale: "McCall's festoons are rolled gingival enlargements commonly seen on mandibular canines and premolars, occurring without recession and within normal probing depths.",
+    incorrectRationales: {
+      A: "Stillman's clefts are vertical fissures extending apically from the gingival margin, not rolled thickenings.",
+      C: "Drug-induced hyperplasia is generalized and associated with a medication history, not a localized marginal pattern at the canines.",
+      D: "Chronic marginal gingivitis presents with erythema and edema throughout, not a specific rolled thickening at individual teeth."
+    },
+    boardTrap: "McCall's festoons and Stillman's clefts are both associated with trauma or occlusal forces. Festoons are rolled and thickened. Clefts are vertical slits.",
+    memoryHook: "Festoon = life-saver roll at the margin. Cleft = vertical slit."
+  },
+
+  {
+    id: "H&N-118",
+    type: "application",
+    subject: "Head & Neck Anatomy",
+    topic: "Tongue – Ankyloglossia",
+    difficulty: "hard",
+    question: "A patient presents with restricted tongue mobility. The clinician notes localized lingual recession on the mandibular anterior teeth with no other sites affected. Probing depths are within normal limits and oral hygiene is acceptable. Which condition most likely explains this recession pattern?",
+    choices: [
+      { key: "A", text: "Aggressive periodontitis localized to the mandibular anteriors" },
+      { key: "B", text: "Toothbrush abrasion from improper horizontal technique" },
+      { key: "C", text: "Ankyloglossia with frenum tension on the lingual mucosa" },
+      { key: "D", text: "Occlusal trauma from parafunction" }
+    ],
+    correctAnswer: "C",
+    rationale: "Ankyloglossia causes tension from a short lingual frenum, producing localized lingual recession on the mandibular anterior teeth.",
+    incorrectRationales: {
+      A: "Aggressive periodontitis produces attachment loss with deeper probing depths and bone loss, not isolated lingual recession with normal probing.",
+      B: "Toothbrush abrasion affects facial surfaces, not lingual.",
+      D: "Occlusal trauma produces widened PDL space and mobility, not isolated lingual soft tissue recession."
+    },
+    boardTrap: "Recession from ankyloglossia is lingual, not facial. Restricted tongue mobility is the clinical cue that separates this from all other distractors.",
+    memoryHook: "Restricted tongue + lingual recession on mandibular anteriors = ankyloglossia."
+  },
+
+  {
+    id: "H&N-119",
+    type: "application",
+    subject: "Head & Neck Anatomy",
+    topic: "Salivary Glands – Parotid Duct",
+    difficulty: "medium",
+    question: "During a mucosal examination, a clinician palpates the parotid gland and milks the duct to assess salivary flow. At which intraoral landmark should expressed saliva be observed?",
+    choices: [
+      { key: "A", text: "Sublingual caruncle adjacent to the lingual frenum" },
+      { key: "B", text: "Buccal mucosa opposite the maxillary first molar" },
+      { key: "C", text: "Buccal mucosa opposite the maxillary second molar" },
+      { key: "D", text: "Mucobuccal fold in the maxillary premolar region" }
+    ],
+    correctAnswer: "C",
+    rationale: "Stensen's duct opens on the parotid papilla of the buccal mucosa opposite the maxillary second molar.",
+    incorrectRationales: {
+      A: "The sublingual caruncle is the opening of the submandibular duct, not the parotid duct.",
+      B: "The first molar is one tooth mesial to the correct landmark. This is the most common one-tooth error on boards.",
+      D: "The mucobuccal fold in the premolar region is not associated with any major salivary duct opening."
+    },
+    boardTrap: "First molar vs second molar is the board trap here. The answer is the second molar every time.",
+    memoryHook: "Parotid duct = second molar. Not first."
+  },
+
+  {
+    id: "H&N-120",
+    type: "application",
+    subject: "Head & Neck Anatomy",
+    topic: "Lymph Nodes – Submental vs Submandibular",
+    difficulty: "medium",
+    question: "A clinician palpates a tender node in the midline just posterior to the chin. The patient has a mandibular incisor with a periapical abscess. Which node group is most consistent with this finding?",
+    choices: [
+      { key: "A", text: "Submandibular nodes" },
+      { key: "B", text: "Parotid nodes" },
+      { key: "C", text: "Submental nodes" },
+      { key: "D", text: "Anterior cervical nodes" }
+    ],
+    correctAnswer: "C",
+    rationale: "The submental nodes are located in the midline submental triangle and drain the mandibular incisors, tip of the tongue, chin, and midline of the lower lip.",
+    incorrectRationales: {
+      A: "Submandibular nodes are lateral to midline and drain the majority of the dentition including maxillary and mandibular posterior teeth.",
+      B: "Parotid nodes drain the parotid gland, external ear, and adjacent facial skin.",
+      D: "Anterior cervical nodes receive secondary drainage and are not the primary drainage site for the mandibular incisors."
+    },
+    boardTrap: "Midline node location plus midline tooth involvement points to submental, not submandibular.",
+    memoryHook: "Submental = midline chin triangle = mandibular anteriors and tongue tip."
+  },
+
+  {
+    id: "H&N-121",
+    type: "application",
+    subject: "Head & Neck Anatomy",
+    topic: "Muscles of Mastication – Nerve Supply",
+    difficulty: "hard",
+    question: "Following a mandibular block injection, a patient reports persistent weakness with chewing that continues beyond the expected anesthetic duration. If nerve injury is suspected, which nerve is most directly responsible for motor innervation of the muscles of mastication?",
+    choices: [
+      { key: "A", text: "Facial nerve (CN VII)" },
+      { key: "B", text: "Mandibular branch of the trigeminal nerve (CN V3)" },
+      { key: "C", text: "Hypoglossal nerve (CN XII)" },
+      { key: "D", text: "Glossopharyngeal nerve (CN IX)" }
+    ],
+    correctAnswer: "B",
+    rationale: "The muscles of mastication are innervated by CN V3. Injury during a mandibular block could affect both sensory and motor components of this nerve.",
+    incorrectRationales: {
+      A: "The facial nerve innervates muscles of facial expression, not mastication. Injury produces inability to smile or close the eye, not chewing weakness.",
+      C: "The hypoglossal nerve innervates tongue musculature. Injury produces tongue deviation, not chewing weakness.",
+      D: "The glossopharyngeal nerve provides innervation to the pharynx and posterior tongue, not the muscles of mastication."
+    },
+    boardTrap: "Facial nerve vs trigeminal is the most common cranial nerve trap on boards. Facial = expression. V3 = mastication.",
+    memoryHook: "Chewing weakness after block = V3. Drooping face = VII."
+  },
+
+  {
+    id: "H&N-122",
+    type: "critical-thinking",
+    subject: "Head & Neck Anatomy",
+    topic: "Temporomandibular Joint – Disc Displacement",
+    difficulty: "hard",
+    question: "A patient reports a clicking sound on opening with no pain and full range of motion. Six months later they return reporting that the clicking has stopped but they now cannot open beyond 25mm. Which change in the TMJ is most consistent with this progression?",
+    choices: [
+      { key: "A", text: "Disc displacement with reduction progressing to disc displacement without reduction" },
+      { key: "B", text: "Myofascial pain progressing to capsulitis" },
+      { key: "C", text: "Osteoarthritis of the condyle progressing to ankylosis" },
+      { key: "D", text: "Disc perforation progressing to synovitis" }
+    ],
+    correctAnswer: "A",
+    rationale: "Clicking with full opening indicates disc displacement with reduction. When clicking stops and opening becomes limited, the disc has displaced without reducing, blocking condylar translation.",
+    incorrectRationales: {
+      B: "Myofascial pain and capsulitis produce pain-limited opening, not a progression from clicking to mechanical limitation without pain.",
+      C: "Osteoarthritis produces crepitus and gradual limitation, not an acute transition from clicking to restricted opening.",
+      D: "Disc perforation produces crepitus, not a click-to-limitation progression."
+    },
+    boardTrap: "The disappearance of clicking combined with new limited opening is the classic progression from disc displacement with reduction to without reduction. Clicking stopping is not improvement.",
+    memoryHook: "Click stops + mouth won't open = disc locked. Not better, worse."
+  },
 {
   id: "COMM-001",
   type: "community",
@@ -16304,7 +17985,198 @@ memoryHook: "Lingual follows the leader — even vertically."
   boardTrap: "Convenience and familiarity are not substitutes for high-level evidence.",
 
   memoryHook: "Evidence-based practice starts with the strongest evidence available."
-}
+},
+{
+    id: "COMM-078",
+    type: "application",
+    subject: "Community Health & Prevention",
+    topic: "Fluoride Toxicity – Acute",
+    difficulty: "hard",
+    question: "A parent calls the dental office reporting that their 3-year-old child ingested an unknown quantity of fluoride supplements 30 minutes ago. The child is experiencing nausea and abdominal cramping. Which immediate intervention should the clinician recommend to reduce systemic absorption before seeking emergency care?",
+    choices: [
+      { key: "A", text: "Administer milk or a calcium-containing liquid and contact Poison Control" },
+      { key: "B", text: "Induce vomiting immediately" },
+      { key: "C", text: "Administer water to dilute gastric contents" },
+      { key: "D", text: "Administer activated charcoal and monitor for respiratory distress" }
+    ],
+    correctAnswer: "A",
+    rationale: "Calcium in milk binds with fluoride in the stomach to reduce absorption. Immediate Poison Control contact is required for guidance on further management.",
+    incorrectRationales: {
+      B: "Vomiting should not be induced unless specifically instructed by Poison Control. It delays appropriate intervention and risks aspiration.",
+      C: "Water does not bind fluoride and provides no reduction in absorption.",
+      D: "Activated charcoal is not recommended for fluoride ingestion and is not a first-line dental office recommendation."
+    },
+    boardTrap: "Calcium binding is the mechanism behind milk as first aid. Boards test the specific agent and the reason. Milk or calcium-containing liquids, not water, is the correct first response.",
+    memoryHook: "Fluoride ingestion = milk first + Poison Control. Calcium binds fluoride."
+  },
+
+  {
+    id: "COMM-079",
+    type: "application",
+    subject: "Community Health & Prevention",
+    topic: "Fluoride Toxicity – Chronic",
+    difficulty: "medium",
+    question: "A school-age child in a community with naturally occurring fluoride levels of 4.0 ppm presents with white and brown mottling and pitting of the enamel on multiple permanent teeth. The teeth are structurally intact but aesthetically compromised. Which condition is most consistent with this presentation?",
+    choices: [
+      { key: "A", text: "Amelogenesis imperfecta" },
+      { key: "B", text: "Tetracycline staining" },
+      { key: "C", text: "Dental fluorosis" },
+      { key: "D", text: "Early childhood caries" }
+    ],
+    correctAnswer: "C",
+    rationale: "Chronic excess fluoride during enamel formation causes fluorosis, presenting as mottling and pitting of enamel.",
+    incorrectRationales: {
+      A: "Amelogenesis imperfecta is a hereditary enamel defect not associated with fluoride exposure or community water levels.",
+      B: "Tetracycline staining produces gray-brown banding patterns associated with antibiotic use during tooth development, not fluoride exposure.",
+      D: "Early childhood caries presents as cavitated lesions, not white and brown mottling on structurally intact enamel."
+    },
+    boardTrap: "Fluorosis and amelogenesis imperfecta both produce enamel changes but have distinct etiologies. Community water fluoride level above optimal is the clinical cue that confirms fluorosis over hereditary causes.",
+    memoryHook: "High fluoride in water + mottled enamel = dental fluorosis."
+  },
+
+  {
+    id: "COMM-080",
+    type: "application",
+    subject: "Community Health & Prevention",
+    topic: "Informed Consent – Components",
+    difficulty: "medium",
+    question: "Before initiating scaling and root planing, a dental hygienist reviews the potential for post-operative sensitivity, the requirement for multiple appointments, and the clinical outcomes of refusing treatment. The patient expresses understanding and agrees to proceed. Which legal requirement has the clinician fulfilled?",
+    choices: [
+      { key: "A", text: "Beneficence" },
+      { key: "B", text: "Implied consent" },
+      { key: "C", text: "Justice" },
+      { key: "D", text: "Informed consent" }
+    ],
+    correctAnswer: "D",
+    rationale: "Informed consent requires disclosure of risks, benefits, and consequences of refusing treatment, followed by voluntary patient agreement based on complete information.",
+    incorrectRationales: {
+      A: "Beneficence refers to acting in the patient's best interest and is a broader ethical principle, not the specific disclosure process described.",
+      B: "Implied consent occurs when a patient's actions suggest agreement without explicit discussion. Full verbal disclosure describes informed consent, not implied consent.",
+      C: "Justice refers to fair distribution of healthcare resources, not the patient-provider disclosure process."
+    },
+    boardTrap: "Boards test all required elements of informed consent as a unit. Simply obtaining verbal agreement without disclosure does not satisfy informed consent. All elements must be present.",
+    memoryHook: "Informed consent = procedure + risks + benefits + alternatives + voluntary agreement."
+  },
+
+  {
+    id: "COMM-081",
+    type: "application",
+    subject: "Community Health & Prevention",
+    topic: "Informed Consent – Special Populations",
+    difficulty: "hard",
+    question: "A 15-year-old patient presents for a prophylaxis but is found to have localized Stage II periodontitis. The patient requests to begin non-surgical periodontal therapy immediately. No parent or guardian is present. What is the most appropriate legal and ethical course of action?",
+    choices: [
+      { key: "A", text: "Proceed with treatment under the mature minor doctrine for healthcare autonomy" },
+      { key: "B", text: "Delay the elective procedure until a legal guardian provides consent" },
+      { key: "C", text: "Perform the procedure as a standard of care necessity to prevent further attachment loss" },
+      { key: "D", text: "Obtain the minor's signature on the consent form and provide a copy for the parent" }
+    ],
+    correctAnswer: "B",
+    rationale: "Minors cannot legally consent to elective procedures. Periodontal therapy must be delayed until a parent or legal guardian provides formal authorization.",
+    incorrectRationales: {
+      A: "Mature minor doctrine applies in limited jurisdictions and specific circumstances. An elective periodontal procedure does not qualify in most states.",
+      C: "Non-surgical periodontal therapy is not an emergency procedure. Standard of care necessity applies only when delaying treatment would cause immediate serious harm.",
+      D: "A minor's signature does not constitute legally binding informed consent for elective treatment."
+    },
+    boardTrap: "Boards consistently test the difference between emergency and elective procedures for minors. Elective treatment requires guardian consent regardless of the minor's agreement or clinical urgency.",
+    memoryHook: "Minor + elective treatment = guardian consent required. Patient agreement alone is not enough."
+  },
+
+  {
+    id: "COMM-082",
+    type: "application",
+    subject: "Community Health & Prevention",
+    topic: "Water Fluoridation – Optimal Level",
+    difficulty: "medium",
+    question: "In response to increasing prevalence of dental fluorosis, the U.S. Public Health Service updated the recommended concentration of fluoride in community water systems. Which level is the current standard that maximizes caries prevention while minimizing fluorosis risk?",
+    choices: [
+      { key: "A", text: "0.7 ppm" },
+      { key: "B", text: "1.0 ppm" },
+      { key: "C", text: "1.2 ppm" },
+      { key: "D", text: "4.0 ppm" }
+    ],
+    correctAnswer: "A",
+    rationale: "The 2015 USPHS update established 0.7 ppm as the single optimal level, replacing the previous range of 0.7 to 1.2 ppm that varied based on climate and water consumption.",
+    incorrectRationales: {
+      B: "1.0 ppm was the prior upper limit recommendation before the 2015 update. It is no longer the current standard.",
+      C: "1.2 ppm was the upper end of the former climate-based range. It exceeds the current recommendation.",
+      D: "4.0 ppm far exceeds the safe limit and is associated with severe dental and skeletal fluorosis."
+    },
+    boardTrap: "The 2015 update changed the recommendation from a climate-dependent range to a single level of 0.7 ppm. Boards test the current standard, not the historical range.",
+    memoryHook: "Optimal water fluoride = 0.7 ppm. Updated 2015."
+  },
+
+  {
+    id: "COMM-083",
+    type: "application",
+    subject: "Community Health & Prevention",
+    topic: "Fluoride Varnish – Concentration and Indication",
+    difficulty: "medium",
+    question: "A 3-year-old patient with multiple white spot lesions and high sugar intake requires a professionally applied fluoride treatment. Which agent is the recommended selection for this age group according to ADA evidence-based clinical guidelines?",
+    choices: [
+      { key: "A", text: "Acidulated phosphate fluoride gel 1.23%" },
+      { key: "B", text: "Sodium fluoride varnish 5%" },
+      { key: "C", text: "Sodium fluoride gel 2.0%" },
+      { key: "D", text: "Silver diamine fluoride 38%" }
+    ],
+    correctAnswer: "B",
+    rationale: "Sodium fluoride varnish 5% is the only professionally applied topical fluoride recommended for children under 6 years due to reduced ingestion risk and strong evidence for caries prevention.",
+    incorrectRationales: {
+      A: "APF gel 1.23% is contraindicated in patients with porcelain or composite restorations and carries higher ingestion risk in very young children who cannot reliably expectorate.",
+      C: "Sodium fluoride gel 2.0% is not a standard professionally applied agent for pediatric caries prevention in this age group.",
+      D: "Silver diamine fluoride 38% arrests existing caries lesions but is not the primary professionally applied fluoride agent for prevention in young children."
+    },
+    boardTrap: "APF gel is contraindicated for very young children due to ingestion risk and porcelain restoration contraindication. Varnish is the correct agent for pediatric high-risk patients under 6.",
+    memoryHook: "Young child under 6 + high caries risk = 5% sodium fluoride varnish. Not APF gel."
+  },
+
+  {
+    id: "COMM-084",
+    type: "application",
+    subject: "Community Health & Prevention",
+    topic: "Community Indices – DMFT",
+    difficulty: "medium",
+    question: "A community health survey reports a mean DMFT score of 3.2 for a rural school-age population. A dental hygienist is asked to interpret this finding for a public health planning committee. Which interpretation is most accurate?",
+    choices: [
+      { key: "A", text: "Each child in the community has exactly 3.2 decayed, missing, or filled teeth" },
+      { key: "B", text: "The community has low caries experience and no intervention is needed" },
+      { key: "C", text: "On average, each child in this population has 3.2 teeth affected by decay, missing due to caries, or restored" },
+      { key: "D", text: "The DMFT score measures only untreated decay and does not include filled or missing teeth" }
+    ],
+    correctAnswer: "C",
+    rationale: "DMFT represents the average number of decayed, missing, and filled teeth in a population.",
+    incorrectRationales: {
+      A: "DMFT is a population mean, not an individual measure. It does not describe any single child's exact tooth count.",
+      B: "A mean DMFT of 3.2 indicates moderate caries experience and warrants community-level prevention planning.",
+      D: "DMFT includes all three components. Untreated decay is only the D component."
+    },
+    boardTrap: "Boards test correct interpretation of population indices. DMFT is a mean score for the group, not a per-child guarantee. Students confuse the index with individual-level data.",
+    memoryHook: "DMFT = Decayed + Missing + Filled Teeth. Population mean, not individual count."
+  },
+
+  {
+    id: "COMM-085",
+    type: "application",
+    subject: "Community Health & Prevention",
+    topic: "Health Promotion – Motivational Interviewing",
+    difficulty: "medium",
+    question: "A dental hygienist is counseling a patient who is ambivalent about improving their oral hygiene. Rather than lecturing the patient, the clinician asks open-ended questions, reflects the patient's statements, and affirms their strengths. Which communication approach is the clinician using?",
+    choices: [
+      { key: "A", text: "Health belief model counseling" },
+      { key: "B", text: "Motivational interviewing" },
+      { key: "C", text: "Anticipatory guidance" },
+      { key: "D", text: "Brief intervention technique" }
+    ],
+    correctAnswer: "B",
+    rationale: "Motivational interviewing uses open-ended questions, reflective listening, affirmations, and summaries to support behavior change.",
+    incorrectRationales: {
+      A: "The health belief model is a theoretical framework explaining health behavior, not a specific patient communication technique.",
+      C: "Anticipatory guidance provides patient education about expected future health issues, not a technique for addressing ambivalence.",
+      D: "Brief intervention is a structured short counseling approach typically used for substance use screening, not a reflective listening-based method."
+    },
+    boardTrap: "Motivational interviewing is defined by its technique, not its topic. Open-ended questions, reflective listening, and affirmations together identify MI regardless of what health behavior is being addressed.",
+    memoryHook: "Open questions + reflection + affirmation = motivational interviewing."
+  }
 
 ]
 
