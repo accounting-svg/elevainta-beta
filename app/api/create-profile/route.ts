@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import { tagKitSubscriber } from '../../lib/kit'
 
 const supabaseAdmin = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -23,6 +24,8 @@ export async function POST(req: NextRequest) {
     console.error('Profile creation error:', error.message)
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
+
+  await tagKitSubscriber(email, 'free_user')
 
   return NextResponse.json({ ok: true })
 }
