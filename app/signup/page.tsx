@@ -155,6 +155,13 @@ function SignupForm() {
           {loading ? 'CREATING ACCOUNT...' : 'CREATE ACCOUNT'}
         </button>
 
+        <p style={{ textAlign: 'center', fontSize: '0.75rem', color: '#999', marginTop: 12, lineHeight: 1.6 }}>
+          By creating an account, you agree to our{' '}
+          <a href="/terms" style={{ color: '#C9A84C', textDecoration: 'none' }}>Terms of Service</a>,{' '}
+          <a href="/privacy" style={{ color: '#C9A84C', textDecoration: 'none' }}>Privacy Policy</a>, and{' '}
+          <a href="/refund" style={{ color: '#C9A84C', textDecoration: 'none' }}>Refund Policy</a>.
+        </p>
+
         {error && (
           <p style={{ color: '#c0392b', fontSize: '0.85rem', marginTop: 14, textAlign: 'center' }}>
             {error}

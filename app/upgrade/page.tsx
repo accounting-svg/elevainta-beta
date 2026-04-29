@@ -152,6 +152,12 @@ export default async function UpgradePage() {
           SUBSCRIBE FOR $49/MONTH
         </a>
 
+        <p style={{ textAlign: 'center', fontSize: '0.75rem', color: '#999', marginTop: 12, lineHeight: 1.6 }}>
+          By subscribing, you agree to our{' '}
+          <a href="/terms" style={{ color: '#C9A84C', textDecoration: 'none' }}>Terms of Service</a> and{' '}
+          <a href="/refund" style={{ color: '#C9A84C', textDecoration: 'none' }}>Refund Policy</a>.
+        </p>
+
         <p style={{
           textAlign: 'center',
           fontSize: '0.8rem',

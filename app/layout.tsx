@@ -8,6 +8,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#C9A84C" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -47,14 +50,23 @@ export default function RootLayout({
         </div>
 
         {/* Subtle Footer */}
-        <footer style={{ 
-          padding: '20px', 
-          textAlign: 'center', 
-          fontSize: '0.8rem', 
+        <footer style={{
+          padding: '20px',
+          textAlign: 'center',
+          fontSize: '0.8rem',
           color: '#666',
-          opacity: 0.7 
+          opacity: 0.7
         }}>
-          The Board Blueprint • A Coach Elevé Experience
+          <div>The Board Blueprint • A Coach Elevé Experience</div>
+          <div style={{ marginTop: 8, display: 'flex', justifyContent: 'center', gap: 16 }}>
+            <a href="/terms" style={{ color: '#888', textDecoration: 'none' }}>Terms of Service</a>
+            <span>•</span>
+            <a href="/privacy" style={{ color: '#888', textDecoration: 'none' }}>Privacy Policy</a>
+            <span>•</span>
+            <a href="/refund" style={{ color: '#888', textDecoration: 'none' }}>Refund Policy</a>
+            <span>•</span>
+            <a href="/support" style={{ color: '#888', textDecoration: 'none' }}>Support</a>
+          </div>
         </footer>
       </body>
     </html>
