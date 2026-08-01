@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { boardPassQuestions, SUBJECTS } from '../data/boardPassQuestions'
 import StrategyFeedback from '../components/StrategyFeedback'
 import { createBrowserClient } from '@supabase/ssr'
+import { Capacitor } from '@capacitor/core'
 
 export default function BoardPassPage() {
   const router = useRouter()
@@ -48,6 +49,7 @@ export default function BoardPassPage() {
   }, [])
 
   useEffect(() => {
+    if (Capacitor.isNativePlatform()) return;
     const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
     if (isStandalone) return;
     if (localStorage.getItem('a2hs_dismissed')) return;
