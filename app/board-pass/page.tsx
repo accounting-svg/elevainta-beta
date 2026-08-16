@@ -6,6 +6,9 @@ import StrategyFeedback from '../components/StrategyFeedback'
 import { createBrowserClient } from '@supabase/ssr'
 import { Capacitor } from '@capacitor/core'
 
+// TODO: replace with the real subscription product ID once created in Play Console.
+const GOOGLE_PLAY_PRODUCT_ID = 'coach_eleve_monthly'
+
 export default function BoardPassPage() {
   const router = useRouter()
   const [authChecked, setAuthChecked] = useState(false)
@@ -26,6 +29,7 @@ export default function BoardPassPage() {
   const [subscriptionStatus, setSubscriptionStatus] = useState<string | null>(null);
   const [stripeCustomerId, setStripeCustomerId] = useState<string | null>(null);
   const [subscriptionEndDate, setSubscriptionEndDate] = useState<string | null>(null);
+  const [subscriptionProvider, setSubscriptionProvider] = useState<string | null>(null);
   const [showA2HS, setShowA2HS] = useState(false);
   const [isIOS, setIsIOS] = useState(false);
 
@@ -103,6 +107,14 @@ export default function BoardPassPage() {
 
   const handleManageSubscription = async () => {
     console.log('handleManageSubscription: function running');
+
+    if (subscriptionProvider === 'google_play') {
+      const playStoreUrl = `https://play.google.com/store/account/subscriptions?sku=${GOOGLE_PLAY_PRODUCT_ID}&package=com.elevainta.coachelevate`;
+      console.log('handleManageSubscription: redirecting to Play Store', playStoreUrl);
+      window.location.href = playStoreUrl;
+      return;
+    }
+
     try {
       const { data: { user } } = await supabase.auth.getUser();
       const { data: profile } = await supabase
@@ -149,13 +161,14 @@ export default function BoardPassPage() {
 
       const { data: profile } = await supabase
         .from('profiles')
-        .select('subscription_status, subscription_end_date, stripe_customer_id')
+        .select('subscription_status, subscription_end_date, stripe_customer_id, subscription_provider')
         .eq('id', user.id)
         .single();
       if (profile) {
         setSubscriptionStatus(profile.subscription_status);
         setSubscriptionEndDate(profile.subscription_end_date ?? null);
         setStripeCustomerId(profile.stripe_customer_id ?? null);
+        setSubscriptionProvider(profile.subscription_provider ?? null);
       }
 
       const { data: events } = await supabase
@@ -249,6 +262,7 @@ export default function BoardPassPage() {
   };
 
   const handleAnswer = async (key: string) => {
+    if (selected !== null) return; // block a second answer while this one is still being processed
     const q = questions[currentIndex];
     setSelected(key);
     setAttempted(prev => prev + 1);
@@ -304,7 +318,7 @@ export default function BoardPassPage() {
       if (currentUser) {
         const { data: freshProfile } = await supabase
           .from('profiles')
-          .select('subscription_status, subscription_end_date, stripe_customer_id')
+          .select('subscription_status, subscription_end_date, stripe_customer_id, subscription_provider')
           .eq('id', currentUser.id)
           .single();
         if (freshProfile) {
@@ -313,12 +327,14 @@ export default function BoardPassPage() {
           setSubscriptionStatus(freshStatus);
           setSubscriptionEndDate(freshEndDate);
           setStripeCustomerId(freshProfile.stripe_customer_id ?? null);
+          setSubscriptionProvider(freshProfile.subscription_provider ?? null);
         }
       }
       if (isEffectivelyActive(freshStatus, freshEndDate)) {
         setView('rationale');
       } else {
         if (currentUser?.email) tagKitSubscriber(currentUser.email, 'free_user')
+        trackEvent('paywall_shown');
         setView('paywall');
       }
     } else {
@@ -451,7 +467,7 @@ export default function BoardPassPage() {
         </div>
 
         {/* MANAGE SUBSCRIPTION */}
-        {subscriptionStatus === 'active' && stripeCustomerId && (
+        {subscriptionStatus === 'active' && (stripeCustomerId || subscriptionProvider === 'google_play') && (
           <button
             onClick={() => { console.log('CLICK WORKING'); handleManageSubscription(); }}
             style={{
@@ -581,7 +597,7 @@ export default function BoardPassPage() {
         <div className="blueprint-card">
           <h2>{question.question}</h2>
           {question.choices.map((c: any) => (
-            <button key={c.key} onClick={() => handleAnswer(c.key)} className="choice-button-style" style={{ width: '100%', textAlign: 'left', marginBottom: 12 }}>
+            <button key={c.key} onClick={() => handleAnswer(c.key)} disabled={selected !== null} className="choice-button-style" style={{ width: '100%', textAlign: 'left', marginBottom: 12 }}>
               <strong>{c.key}.</strong> {c.text}
             </button>
           ))}
@@ -637,6 +653,7 @@ export default function BoardPassPage() {
           </p>
           <a
             href="/upgrade"
+            onClick={() => trackEvent('upgrade_clicked')}
             style={{
               display: 'block',
               width: '100%',

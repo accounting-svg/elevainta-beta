@@ -2836,6 +2836,2076 @@ export const boardPassQuestions: BoardPassQuestion[] = [
   memoryHook: "Light touch, keep moving — let the vibration do the work."
 },
 {
+  id: "INST-039",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Internal Angle",
+  difficulty: "medium",
+  question: "A dental hygienist sharpens a curet and later notices that the instrument slides over calculus deposits rather than engaging them effectively. Evaluation of the blade reveals an internal angle greater than the recommended range. Which internal angle is most likely present?",
+  choices: [
+    { key: "A", text: "55°" },
+    { key: "B", text: "65°" },
+    { key: "C", text: "75°" },
+    { key: "D", text: "95°" }
+  ],
+  correctAnswer: "D",
+  rationale: "An internal angle greater than 80° produces a dull, rounded cutting edge that reduces cutting efficiency and makes calculus engagement more difficult.",
+  incorrectRationales: {
+    A: "A 55° angle creates an excessively thin edge rather than a dull one.",
+    B: "A 65° angle is slightly smaller than ideal and would not explain a blunt cutting edge.",
+    C: "A 75° angle falls within the ideal sharpening range."
+  },
+  boardTrap: "The board often tests the consequences of sharpening errors rather than asking for angle memorization directly.",
+  memoryHook: "Greater than 80° = dull edge."
+},
+{
+  id: "INST-040",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Face-to-Stone Angle",
+  difficulty: "medium",
+  question: "A clinician sharpens a curet using a face-to-stone angle well below the recommended range. The resulting cutting edge becomes excessively thin and fragile. Which angle was most likely used?",
+  choices: [
+    { key: "A", text: "90°" },
+    { key: "B", text: "100°" },
+    { key: "C", text: "110°" },
+    { key: "D", text: "120°" }
+  ],
+  correctAnswer: "A",
+  rationale: "A face-to-stone angle that is below the recommended 100°–110° range creates an excessively sharp, thin cutting edge that wears quickly and may fracture.",
+  incorrectRationales: {
+    B: "A face-to-stone angle of 100° falls within the recommended sharpening range.",
+    C: "A face-to-stone angle of 110° falls within the recommended sharpening range.",
+    D: "A face-to-stone angle of 120° is larger than recommended and would produce a blunter cutting edge rather than a thin, fragile one."
+  },
+  boardTrap: "Students commonly confuse the 100°–110° face-to-stone angle with the 70°–80° internal angle.",
+  memoryHook: "100°–110° sharpening angle produces the ideal cutting edge."
+},
+{
+  id: "INST-041",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Purpose",
+  difficulty: "easy",
+  question: "A dental hygienist sharpens a curet before patient care. What is the primary purpose of this procedure?",
+  choices: [
+    { key: "A", text: "Increase instrument weight" },
+    { key: "B", text: "Restore a functional cutting edge" },
+    { key: "C", text: "Improve handle texture" },
+    { key: "D", text: "Lengthen the working end" }
+  ],
+  correctAnswer: "B",
+  rationale: "Sharpening restores the cutting edge so the instrument can effectively engage and remove deposits.",
+  incorrectRationales: {
+    A: "Sharpening does not affect instrument weight.",
+    C: "Handle characteristics are unrelated to sharpening.",
+    D: "Sharpening removes metal rather than increasing instrument length."
+  },
+  boardTrap: "The board focuses on clinical function rather than instrument appearance.",
+  memoryHook: "Sharpening restores the edge."
+},
+{
+  id: "INST-042",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Sharp vs Dull",
+  difficulty: "medium",
+  question: "A hygienist reports increasing hand fatigue during scaling procedures. Instrument evaluation reveals several dull curets. Which factor most likely contributes to the fatigue?",
+  choices: [
+    { key: "A", text: "Reduced tactile sensitivity" },
+    { key: "B", text: "Increased lateral pressure requirements" },
+    { key: "C", text: "Excessive handle diameter" },
+    { key: "D", text: "Shortened terminal shank length" }
+  ],
+  correctAnswer: "B",
+  rationale: "Dull instruments require greater force to remove deposits, increasing clinician fatigue.",
+  incorrectRationales: {
+    A: "Tactile sensitivity may decrease but is not the primary cause of fatigue.",
+    C: "Handle diameter is unrelated to dullness.",
+    D: "Terminal shank length does not explain fatigue in this scenario."
+  },
+  boardTrap: "Questions often connect dull instruments with clinician ergonomics.",
+  memoryHook: "Dull edge = more force."
+},
+{
+  id: "INST-043",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Arkansas Stone",
+  difficulty: "easy",
+  question: "A hygienist prefers a natural sharpening stone that produces a fine cutting edge. Which stone is being selected?",
+  choices: [
+    { key: "A", text: "India stone" },
+    { key: "B", text: "Ceramic stone" },
+    { key: "C", text: "Arkansas stone" },
+    { key: "D", text: "Diamond-coated stone" }
+  ],
+  correctAnswer: "C",
+  rationale: "Arkansas stone is a natural stone commonly used for producing a fine cutting edge.",
+  incorrectRationales: {
+    A: "India stones are synthetic.",
+    B: "Ceramic stones are manufactured materials.",
+    D: "Diamond-coated stones are synthetic abrasives."
+  },
+  boardTrap: "Arkansas = natural. India = synthetic.",
+  memoryHook: "Arkansas = authentic natural stone."
+},
+{
+  id: "INST-044",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – India Stone",
+  difficulty: "easy",
+  question: "A clinician selects a synthetic aluminum oxide sharpening stone. Which stone is being used?",
+  choices: [
+    { key: "A", text: "Arkansas stone" },
+    { key: "B", text: "India stone" },
+    { key: "C", text: "Novaculite stone" },
+    { key: "D", text: "Natural oil stone" }
+  ],
+  correctAnswer: "B",
+  rationale: "India stones are synthetic aluminum oxide stones commonly used for sharpening periodontal instruments.",
+  incorrectRationales: {
+    A: "Arkansas stones are natural.",
+    C: "Novaculite is the natural mineral found in Arkansas stones.",
+    D: "Natural oil stones are not synthetic aluminum oxide."
+  },
+  boardTrap: "The board frequently contrasts Arkansas and India stones.",
+  memoryHook: "India = industrially manufactured."
+},
+{
+  id: "INST-045",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Lubrication",
+  difficulty: "easy",
+  question: "During sharpening, a lubricant is applied to the stone. What is the primary purpose of the lubricant?",
+  choices: [
+    { key: "A", text: "Increase handle friction" },
+    { key: "B", text: "Prevent metal particles from clogging the stone" },
+    { key: "C", text: "Increase instrument flexibility" },
+    { key: "D", text: "Lengthen the blade" }
+  ],
+  correctAnswer: "B",
+  rationale: "Lubrication helps remove metal filings and maintain the stone's abrasive effectiveness.",
+  incorrectRationales: {
+    A: "Lubrication is applied to the stone, not the handle.",
+    C: "Flexibility is unaffected.",
+    D: "Sharpening removes metal rather than adding it."
+  },
+  boardTrap: "Think stone maintenance, not instrument modification.",
+  memoryHook: "Lubricant prevents clogging."
+},
+{
+  id: "INST-046",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Anatomy – Cutting Edge",
+  difficulty: "easy",
+  question: "A student is reviewing instrument anatomy before sharpening. The instructor asks which structures form the cutting edge of a curet. Which response is correct?",
+  choices: [
+    { key: "A", text: "Face and lateral surface" },
+    { key: "B", text: "Toe and back" },
+    { key: "C", text: "Face and shank" },
+    { key: "D", text: "Shank and handle" }
+  ],
+  correctAnswer: "A",
+  rationale: "The cutting edge is formed where the face and lateral surface meet.",
+  incorrectRationales: {
+    B: "These structures do not create the cutting edge.",
+    C: "The shank is not part of the cutting edge.",
+    D: "The handle and shank are not involved."
+  },
+  boardTrap: "Know instrument anatomy before attempting sharpening questions.",
+  memoryHook: "Face + lateral surface = cutting edge."
+},
+{
+  id: "INST-047",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Dull Edge Error",
+  difficulty: "medium",
+  question: "Following sharpening, a curet demonstrates poor calculus engagement and a rounded cutting edge. Which sharpening error most likely occurred?",
+  choices: [
+    { key: "A", text: "Excessively large internal angle" },
+    { key: "B", text: "Excessively small internal angle" },
+    { key: "C", text: "Insufficient lubrication" },
+    { key: "D", text: "Improper handle grasp" }
+  ],
+  correctAnswer: "A",
+  rationale: "An internal angle greater than 80° creates a rounded, dull cutting edge.",
+  incorrectRationales: {
+    B: "A smaller angle creates a thin edge rather than a dull one.",
+    C: "Lubrication affects stone efficiency but does not directly create a rounded edge.",
+    D: "Grasp technique does not determine cutting-edge geometry."
+  },
+  boardTrap: "Large angle = blunt edge.",
+  memoryHook: "Too wide = too dull."
+},
+{
+  id: "INST-048",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Weak Edge Error",
+  difficulty: "medium",
+  question: "A newly sharpened curet quickly loses its edge during instrumentation. Which sharpening error is the most likely cause?",
+  choices: [
+    { key: "A", text: "Internal angle greater than 90°" },
+    { key: "B", text: "Internal angle significantly less than 70°" },
+    { key: "C", text: "Use of lubricant" },
+    { key: "D", text: "Maintaining original blade design" }
+  ],
+  correctAnswer: "B",
+  rationale: "An excessively small internal angle produces a thin, fragile cutting edge that wears rapidly.",
+  incorrectRationales: {
+    A: "A large angle produces a dull edge rather than a fragile one.",
+    C: "Lubrication is recommended.",
+    D: "Maintaining original design is desirable."
+  },
+  boardTrap: "Too small = sharp but weak.",
+  memoryHook: "Thin edge wears fast."
+},
+{
+  id: "INST-049",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Clinical Consequences",
+  difficulty: "medium",
+  question: "Which outcome is most likely when a dull curet is used for periodontal instrumentation?",
+  choices: [
+    { key: "A", text: "Improved calculus removal efficiency" },
+    { key: "B", text: "Reduced pressure requirements" },
+    { key: "C", text: "Increased clinician fatigue" },
+    { key: "D", text: "Enhanced tactile sensitivity" }
+  ],
+  correctAnswer: "C",
+  rationale: "Dull instruments require greater force, increasing fatigue and decreasing efficiency.",
+  incorrectRationales: {
+    A: "Efficiency decreases with dull instruments.",
+    B: "More pressure is required.",
+    D: "Tactile sensitivity is reduced."
+  },
+  boardTrap: "Think ergonomics and efficiency.",
+  memoryHook: "Dull instruments work harder, not smarter."
+},
+{
+  id: "INST-050",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Instrument Design",
+  difficulty: "medium",
+  question: "During instrument evaluation, a faculty member notes that repeated sharpening has significantly altered the original blade shape. Why is this a concern?",
+  choices: [
+    { key: "A", text: "The instrument may lose effectiveness and adaptation characteristics" },
+    { key: "B", text: "The handle may become heavier" },
+    { key: "C", text: "The terminal shank will lengthen" },
+    { key: "D", text: "The instrument will become more flexible" }
+  ],
+  correctAnswer: "A",
+  rationale: "Preserving the original blade design is essential for maintaining proper function and adaptation.",
+  incorrectRationales: {
+    B: "Handle weight is not affected.",
+    C: "Sharpening does not lengthen the shank.",
+    D: "Flexibility is not the primary concern."
+  },
+  boardTrap: "Sharpen the edge, preserve the design.",
+  memoryHook: "Restore sharpness, not shape."
+},
+{
+  id: "INST-051",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Correctly Sharpened Instrument",
+  difficulty: "medium",
+  question: "Which characteristic indicates that a curet has been sharpened correctly?",
+  choices: [
+    { key: "A", text: "Rounded cutting edge" },
+    { key: "B", text: "Original blade contours maintained" },
+    { key: "C", text: "Significant reduction in blade width" },
+    { key: "D", text: "Flattened toe" }
+  ],
+  correctAnswer: "B",
+  rationale: "Proper sharpening restores sharpness while preserving the original design of the instrument.",
+  incorrectRationales: {
+    A: "Rounded edges indicate dullness.",
+    C: "Excessive reduction suggests over-sharpening.",
+    D: "Flattening alters instrument design."
+  },
+  boardTrap: "Correct sharpening preserves anatomy.",
+  memoryHook: "Sharp edge, same design."
+},
+{
+  id: "INST-052",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Stationary Stone",
+  difficulty: "medium",
+  question: "A clinician secures a sharpening stone on the countertop and moves the curet against the stone during sharpening. Which technique is being used?",
+  choices: [
+    { key: "A", text: "Moving stone technique" },
+    { key: "B", text: "Mechanical sharpening" },
+    { key: "C", text: "Stationary stone technique" },
+    { key: "D", text: "Rotary sharpening" }
+  ],
+  correctAnswer: "C",
+  rationale: "In the stationary stone technique, the stone remains fixed while the instrument is moved.",
+  incorrectRationales: {
+    A: "The stone moves in the moving stone technique.",
+    B: "Mechanical sharpening uses powered equipment.",
+    D: "Rotary sharpening is not described."
+  },
+  boardTrap: "Focus on what moves—the stone or the instrument.",
+  memoryHook: "Stationary stone = moving instrument."
+},
+{
+  id: "INST-053",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Moving Stone",
+  difficulty: "medium",
+  question: "A hygienist stabilizes a curet and moves the sharpening stone along the lateral surface of the blade. Which technique is being demonstrated?",
+  choices: [
+    { key: "A", text: "Moving stone technique" },
+    { key: "B", text: "Stationary stone technique" },
+    { key: "C", text: "Mechanical sharpening" },
+    { key: "D", text: "Rotary sharpening" }
+  ],
+  correctAnswer: "A",
+  rationale: "In the moving stone technique, the instrument remains stable while the stone is moved against the blade.",
+  incorrectRationales: {
+    B: "The instrument moves in the stationary stone technique.",
+    C: "Mechanical sharpening uses powered devices.",
+    D: "Rotary sharpening is not described."
+  },
+  boardTrap: "Moving stone = stationary instrument.",
+  memoryHook: "Move the stone, stabilize the instrument."
+},
+{
+  id: "INST-054",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Burnished Calculus",
+  difficulty: "medium",
+  question: "A dental hygienist repeatedly attempts to remove a tenacious deposit but notices that the calculus becomes smooth and difficult to detect. Which factor most likely contributed to this outcome?",
+  choices: [
+    { key: "A", text: "Use of a dull instrument" },
+    { key: "B", text: "Excessive water spray" },
+    { key: "C", text: "Use of an Arkansas stone" },
+    { key: "D", text: "Short terminal shank length" }
+  ],
+  correctAnswer: "A",
+  rationale: "Dull instruments may burnish calculus rather than effectively fracture and remove the deposit.",
+  incorrectRationales: {
+    B: "Water spray does not cause burnished calculus.",
+    C: "Stone selection is unrelated to calculus burnishing during instrumentation.",
+    D: "Terminal shank length does not produce burnished deposits."
+  },
+  boardTrap: "The board often describes smooth residual deposits rather than directly stating that an instrument is dull.",
+  memoryHook: "Dull instruments polish calculus instead of removing it."
+},
+{
+  id: "INST-055",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Over-Sharpening",
+  difficulty: "medium",
+  question: "During instrument evaluation, a curet blade appears noticeably narrowed compared with a new instrument of the same design. Which sharpening error most likely occurred?",
+  choices: [
+    { key: "A", text: "Insufficient sharpening" },
+    { key: "B", text: "Over-sharpening" },
+    { key: "C", text: "Failure to lubricate the stone" },
+    { key: "D", text: "Use of a moving stone technique" }
+  ],
+  correctAnswer: "B",
+  rationale: "Over-sharpening removes excessive metal and alters the original blade design.",
+  incorrectRationales: {
+    A: "Insufficient sharpening results in a dull edge rather than excessive blade reduction.",
+    C: "Poor lubrication affects stone performance but does not directly explain blade narrowing.",
+    D: "The moving stone technique does not inherently cause excessive metal removal."
+  },
+  boardTrap: "The board frequently tests preservation of the original instrument design.",
+  memoryHook: "Too much sharpening = too little instrument."
+},
+{
+  id: "INST-056",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Rounded Toe",
+  difficulty: "medium",
+  question: "After repeated sharpening, the toe of a Gracey curet appears flattened rather than smoothly rounded. What is the greatest concern associated with this change?",
+  choices: [
+    { key: "A", text: "Reduced adaptation to root surfaces" },
+    { key: "B", text: "Increased handle diameter" },
+    { key: "C", text: "Improved cutting efficiency" },
+    { key: "D", text: "Greater instrument flexibility" }
+  ],
+  correctAnswer: "A",
+  rationale: "Maintaining the original toe shape is important for proper adaptation and safe subgingival instrumentation.",
+  incorrectRationales: {
+    B: "Handle diameter is unaffected by sharpening.",
+    C: "Flattening the toe does not improve cutting efficiency.",
+    D: "Flexibility is not determined by toe shape."
+  },
+  boardTrap: "The board may test altered instrument anatomy rather than sharpening technique directly.",
+  memoryHook: "Preserve the toe to preserve adaptation."
+},
+{
+  id: "INST-057",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Wire Edge",
+  difficulty: "medium",
+  question: "Following sharpening, a clinician detects a thin projection of metal extending from the cutting edge. What is this finding called?",
+  choices: [
+    { key: "A", text: "Rounded toe" },
+    { key: "B", text: "Wire edge" },
+    { key: "C", text: "Feathered edge" },
+    { key: "D", text: "Terminal shank distortion" }
+  ],
+  correctAnswer: "B",
+  rationale: "A wire edge is a thin metal projection that may form during sharpening and should be removed before instrument use.",
+  incorrectRationales: {
+    A: "A rounded toe refers to alteration of the toe shape.",
+    C: "A feathered edge is not the metal projection described in this scenario.",
+    D: "Terminal shank distortion is unrelated to the cutting edge."
+  },
+  boardTrap: "Students often recognize the defect but forget its terminology.",
+  memoryHook: "Wire edge = thin metal burr after sharpening."
+},
+{
+  id: "INST-058",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Clinical Efficiency",
+  difficulty: "medium",
+  question: "A dental hygienist notices that significantly more strokes are required to remove deposits than during previous appointments. Instrument inspection reveals no visible defects. Which explanation is most likely?",
+  choices: [
+    { key: "A", text: "The instruments have become dull" },
+    { key: "B", text: "The terminal shank has lengthened" },
+    { key: "C", text: "The handle diameter has increased" },
+    { key: "D", text: "The stone lubricant was excessive" }
+  ],
+  correctAnswer: "A",
+  rationale: "Dull cutting edges reduce efficiency and often require additional instrumentation strokes.",
+  incorrectRationales: {
+    B: "Terminal shank length does not change during routine use.",
+    C: "Handle diameter does not explain reduced cutting efficiency.",
+    D: "Stone lubricant does not affect the number of instrumentation strokes needed."
+  },
+  boardTrap: "The board may describe inefficiency and require identification of a dull instrument without explicitly mentioning sharpening.",
+  memoryHook: "More strokes often means less sharpness."
+},
+{
+  id: "INST-059",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Stone Adaptation",
+  difficulty: "medium",
+  question: "While sharpening a curet, a clinician adapts the sharpening stone to only a small portion of the lateral surface. Which outcome is most likely?",
+  choices: [
+    { key: "A", text: "Uneven cutting edge formation" },
+    { key: "B", text: "Increased handle diameter" },
+    { key: "C", text: "Lengthening of the terminal shank" },
+    { key: "D", text: "Improved blade symmetry" }
+  ],
+  correctAnswer: "A",
+  rationale: "Failure to adapt the stone along the entire lateral surface can create an uneven cutting edge and alter instrument design.",
+  incorrectRationales: {
+    B: "Handle diameter is unaffected by sharpening.",
+    C: "Sharpening does not lengthen the terminal shank.",
+    D: "Improper stone adaptation reduces, rather than improves, blade symmetry."
+  },
+  boardTrap: "The board may test sharpening errors through instrument appearance rather than technique description.",
+  memoryHook: "Poor stone adaptation = uneven edge."
+},
+{
+  id: "INST-060",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Sharpness Testing",
+  difficulty: "medium",
+  question: "A clinician wants to evaluate the sharpness of a curet after sharpening. Which method is most appropriate?",
+  choices: [
+    { key: "A", text: "Visual inspection alone" },
+    { key: "B", text: "Plastic test stick evaluation" },
+    { key: "C", text: "Finger adaptation to the cutting edge" },
+    { key: "D", text: "Assessment of handle balance" }
+  ],
+  correctAnswer: "B",
+  rationale: "A plastic test stick allows safe evaluation of cutting-edge sharpness by assessing edge engagement.",
+  incorrectRationales: {
+    A: "Visual inspection alone may not accurately determine sharpness.",
+    C: "Direct finger contact with the cutting edge is unsafe.",
+    D: "Handle balance does not assess sharpness."
+  },
+  boardTrap: "The board often tests safe methods for evaluating instrument sharpness.",
+  memoryHook: "Test stick, not fingertips."
+},
+{
+  id: "INST-061",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Wire Edge Removal",
+  difficulty: "medium",
+  question: "After sharpening, a clinician identifies a wire edge on the instrument. What should be done next?",
+  choices: [
+    { key: "A", text: "Remove the wire edge before instrument use" },
+    { key: "B", text: "Leave it in place to improve sharpness" },
+    { key: "C", text: "Sterilize the instrument immediately" },
+    { key: "D", text: "Increase the internal angle" }
+  ],
+  correctAnswer: "A",
+  rationale: "A wire edge should be removed because it can interfere with cutting efficiency and instrument performance.",
+  incorrectRationales: {
+    B: "A wire edge is a defect, not an enhancement.",
+    C: "Sterilization does not correct the defect.",
+    D: "Changing the internal angle does not specifically address the wire edge."
+  },
+  boardTrap: "Students sometimes mistake a wire edge for evidence of superior sharpness.",
+  memoryHook: "Wire edge = remove before use."
+},
+{
+  id: "INST-062",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Instrument Preservation",
+  difficulty: "medium",
+  question: "A faculty member compares a student's curet with a new instrument and notes substantial loss of blade width. What principle of sharpening was most likely violated?",
+  choices: [
+    { key: "A", text: "Preservation of original instrument design" },
+    { key: "B", text: "Use of lubrication" },
+    { key: "C", text: "Terminal shank alignment" },
+    { key: "D", text: "Instrument sterilization" }
+  ],
+  correctAnswer: "A",
+  rationale: "Proper sharpening restores the edge while preserving the original design and dimensions of the instrument.",
+  incorrectRationales: {
+    B: "Lubrication does not explain blade narrowing.",
+    C: "Terminal shank alignment is not the primary issue described.",
+    D: "Sterilization does not affect blade width."
+  },
+  boardTrap: "The board often links over-sharpening with loss of original design.",
+  memoryHook: "Preserve shape while restoring sharpness."
+},
+{
+  id: "INST-063",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Excessive Pressure",
+  difficulty: "medium",
+  question: "A clinician consistently uses excessive pressure during instrumentation despite recent sharpening. Which explanation is most likely?",
+  choices: [
+    { key: "A", text: "The instruments remain dull" },
+    { key: "B", text: "The handle diameter is too large" },
+    { key: "C", text: "The stone was lubricated" },
+    { key: "D", text: "The terminal shank is too long" }
+  ],
+  correctAnswer: "A",
+  rationale: "Persistent need for excessive pressure often indicates that the cutting edge remains dull or inadequately sharpened.",
+  incorrectRationales: {
+    B: "Handle diameter alone does not explain excessive pressure requirements.",
+    C: "Lubrication is recommended and does not increase pressure requirements.",
+    D: "Terminal shank length does not directly affect cutting efficiency."
+  },
+  boardTrap: "The board frequently connects dull instruments with increased force application.",
+  memoryHook: "More force often means less sharpness."
+},
+{
+  id: "INST-064",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Internal Angle Error",
+  difficulty: "medium",
+  question: "A sharpened curet demonstrates rapid edge wear despite appearing extremely sharp immediately after sharpening. Which error most likely occurred?",
+  choices: [
+    { key: "A", text: "Internal angle significantly less than 70°" },
+    { key: "B", text: "Internal angle greater than 90°" },
+    { key: "C", text: "Insufficient lubrication" },
+    { key: "D", text: "Failure to use a test stick" }
+  ],
+  correctAnswer: "A",
+  rationale: "An excessively small internal angle creates a thin cutting edge that wears quickly.",
+  incorrectRationales: {
+    B: "A large internal angle creates a dull edge rather than a fragile one.",
+    C: "Lubrication affects stone performance, not edge geometry.",
+    D: "Testing does not influence edge durability."
+  },
+  boardTrap: "Sharp does not always mean durable.",
+  memoryHook: "Too small = sharp but weak."
+},
+{
+  id: "INST-065",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Dull Edge Recognition",
+  difficulty: "medium",
+  question: "Which finding most strongly suggests that a curet requires sharpening?",
+  choices: [
+    { key: "A", text: "Reduced calculus engagement" },
+    { key: "B", text: "Rounded handle surface" },
+    { key: "C", text: "Color fading on the handle" },
+    { key: "D", text: "Increased instrument flexibility" }
+  ],
+  correctAnswer: "A",
+  rationale: "Dull instruments often slide over deposits rather than effectively engaging them.",
+  incorrectRationales: {
+    B: "Handle appearance does not determine sharpness.",
+    C: "Color fading does not affect function.",
+    D: "Flexibility is unrelated to cutting-edge sharpness."
+  },
+  boardTrap: "The board focuses on performance clues rather than obvious statements about dullness.",
+  memoryHook: "Sliding over calculus = sharpen."
+},
+{
+  id: "INST-066",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Stone Selection",
+  difficulty: "medium",
+  question: "A clinician wants a natural stone capable of producing a fine cutting edge during routine sharpening. Which stone is most appropriate?",
+  choices: [
+    { key: "A", text: "Arkansas stone" },
+    { key: "B", text: "India stone" },
+    { key: "C", text: "Synthetic ceramic stone" },
+    { key: "D", text: "Diamond-coated stone" }
+  ],
+  correctAnswer: "A",
+  rationale: "Arkansas stone is a natural novaculite stone commonly used to produce a fine cutting edge.",
+  incorrectRationales: {
+    B: "India stones are synthetic.",
+    C: "Ceramic stones are manufactured materials.",
+    D: "Diamond-coated stones are synthetic abrasives."
+  },
+  boardTrap: "Natural stone = Arkansas.",
+  memoryHook: "Arkansas = natural and fine."
+},
+{
+  id: "INST-067",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Adaptation Consequences",
+  difficulty: "medium",
+  question: "Improper sharpening alters the original contours of a Gracey curet. Which clinical consequence is most likely?",
+  choices: [
+    { key: "A", text: "Reduced adaptation to root surfaces" },
+    { key: "B", text: "Increased sterilization effectiveness" },
+    { key: "C", text: "Improved tactile sensitivity" },
+    { key: "D", text: "Increased handle stability" }
+  ],
+  correctAnswer: "A",
+  rationale: "Changes in blade design can compromise adaptation and reduce instrumentation effectiveness.",
+  incorrectRationales: {
+    B: "Sterilization is unrelated to blade contours.",
+    C: "Altered design does not improve tactile sensitivity.",
+    D: "Handle stability is unaffected."
+  },
+  boardTrap: "Instrument design directly affects adaptation.",
+  memoryHook: "Altered shape = altered adaptation."
+},
+{
+  id: "INST-068",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Stone Lubrication",
+  difficulty: "medium",
+  question: "A sharpening stone becomes clogged with metal particles during repeated use. Which preventive measure was most likely overlooked?",
+  choices: [
+    { key: "A", text: "Stone lubrication" },
+    { key: "B", text: "Terminal shank evaluation" },
+    { key: "C", text: "Toe preservation" },
+    { key: "D", text: "Handle inspection" }
+  ],
+  correctAnswer: "A",
+  rationale: "Lubrication helps remove metal filings and prevents clogging of the sharpening stone.",
+  incorrectRationales: {
+    B: "Terminal shank evaluation does not prevent clogging.",
+    C: "Toe preservation is unrelated.",
+    D: "Handle inspection does not affect stone performance."
+  },
+  boardTrap: "Think maintenance of the stone, not the instrument.",
+  memoryHook: "Lubrication keeps the stone cutting."
+},
+{
+  id: "INST-069",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Stationary Stone Technique",
+  difficulty: "medium",
+  question: "Which action is characteristic of the stationary stone sharpening technique?",
+  choices: [
+    { key: "A", text: "The instrument is moved against a fixed stone" },
+    { key: "B", text: "The stone is moved against a fixed instrument" },
+    { key: "C", text: "A powered sharpening wheel is used" },
+    { key: "D", text: "The instrument remains unsupported" }
+  ],
+  correctAnswer: "A",
+  rationale: "In the stationary stone technique, the stone remains fixed while the instrument is moved.",
+  incorrectRationales: {
+    B: "This describes the moving stone technique.",
+    C: "Powered sharpening is not the technique described.",
+    D: "Instruments should be stabilized during sharpening."
+  },
+  boardTrap: "Identify what moves.",
+  memoryHook: "Stationary stone = moving instrument."
+},
+{
+  id: "INST-070",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Moving Stone Technique",
+  difficulty: "medium",
+  question: "A clinician stabilizes a curet and moves the sharpening stone along the blade during sharpening. Which technique is being used?",
+  choices: [
+    { key: "A", text: "Moving stone technique" },
+    { key: "B", text: "Stationary stone technique" },
+    { key: "C", text: "Mechanical sharpening" },
+    { key: "D", text: "Rotary sharpening" }
+  ],
+  correctAnswer: "A",
+  rationale: "The moving stone technique involves moving the stone while the instrument remains stabilized.",
+  incorrectRationales: {
+    B: "The instrument moves during the stationary stone technique.",
+    C: "Mechanical sharpening uses powered devices.",
+    D: "Rotary sharpening is not described."
+  },
+  boardTrap: "Moving stone = stationary instrument.",
+  memoryHook: "Move the stone, stabilize the instrument."
+},
+{
+  id: "INST-071",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Clinical Outcome",
+  difficulty: "medium",
+  question: "A clinician notices that calculus removal efficiency improves immediately after sharpening. Which factor most directly explains this improvement?",
+  choices: [
+    { key: "A", text: "Restoration of a functional cutting edge" },
+    { key: "B", text: "Increased instrument weight" },
+    { key: "C", text: "Greater handle diameter" },
+    { key: "D", text: "Increased terminal shank length" }
+  ],
+  correctAnswer: "A",
+  rationale: "Sharpening restores the cutting edge, improving deposit engagement and removal.",
+  incorrectRationales: {
+    B: "Instrument weight does not improve cutting efficiency.",
+    C: "Handle diameter is unrelated to cutting ability.",
+    D: "Sharpening does not alter shank length."
+  },
+  boardTrap: "The benefit comes from the edge, not the handle.",
+  memoryHook: "Sharp edge = efficient scaling."
+},
+{
+  id: "INST-072",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Over-Sharpening Recognition",
+  difficulty: "medium",
+  question: "Which finding most strongly indicates that a curet has been over-sharpened?",
+  choices: [
+    { key: "A", text: "Noticeable loss of blade width" },
+    { key: "B", text: "Presence of a cutting edge" },
+    { key: "C", text: "Smooth lateral surface" },
+    { key: "D", text: "Rounded handle design" }
+  ],
+  correctAnswer: "A",
+  rationale: "Over-sharpening removes excessive metal and reduces blade dimensions.",
+  incorrectRationales: {
+    B: "A cutting edge is expected.",
+    C: "A smooth lateral surface alone does not indicate over-sharpening.",
+    D: "Handle design is unrelated."
+  },
+  boardTrap: "Over-sharpening changes dimensions, not just sharpness.",
+  memoryHook: "Too narrow = over-sharpened."
+},
+{
+  id: "INST-073",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Clinical Judgment",
+  difficulty: "medium",
+  question: "A dental hygienist is uncertain whether a curet should be sharpened before a periodontal maintenance appointment. Which finding provides the strongest indication that sharpening is needed?",
+  choices: [
+    { key: "A", text: "The instrument fails to engage a test stick effectively" },
+    { key: "B", text: "The handle shows minor wear" },
+    { key: "C", text: "The instrument has been sterilized multiple times" },
+    { key: "D", text: "The terminal shank appears intact" }
+  ],
+  correctAnswer: "A",
+  rationale: "Failure to engage a test stick indicates a dull cutting edge and the need for sharpening.",
+  incorrectRationales: {
+    B: "Handle wear does not determine sharpness.",
+    C: "Sterilization cycles alone do not indicate sharpening needs.",
+    D: "An intact shank does not confirm a sharp cutting edge."
+  },
+  boardTrap: "Function is a better indicator of sharpness than appearance alone.",
+  memoryHook: "Test stick failure = time to sharpen."
+},
+{
+  id: "INST-074",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Beveled Edge Recognition",
+  difficulty: "hard",
+  question: "A faculty member evaluates a curet after sharpening and observes a bevel extending onto the lateral surface. Which outcome is most likely?",
+  choices: [
+    { key: "A", text: "Reduced cutting efficiency" },
+    { key: "B", text: "Improved root adaptation" },
+    { key: "C", text: "Increased blade width" },
+    { key: "D", text: "Greater instrument flexibility" }
+  ],
+  correctAnswer: "A",
+  rationale: "A beveled cutting edge alters the original blade design and reduces cutting effectiveness.",
+  incorrectRationales: {
+    B: "A beveled edge does not improve adaptation.",
+    C: "Bevel formation does not increase blade width.",
+    D: "Flexibility is unrelated to cutting-edge beveling."
+  },
+  boardTrap: "A cutting edge may appear sharp while still being improperly shaped.",
+  memoryHook: "Beveled edge = altered edge."
+},
+{
+  id: "INST-075",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Burnished Calculus",
+  difficulty: "hard",
+  question: "After scaling, residual deposits feel smooth and difficult to detect. Which instrument condition most likely contributed to this finding?",
+  choices: [
+    { key: "A", text: "Dull cutting edge" },
+    { key: "B", text: "Excessive stone lubrication" },
+    { key: "C", text: "Short terminal shank" },
+    { key: "D", text: "Flattened handle surface" }
+  ],
+  correctAnswer: "A",
+  rationale: "Dull instruments may burnish calculus instead of effectively fracturing and removing it.",
+  incorrectRationales: {
+    B: "Lubrication does not burnish calculus.",
+    C: "Terminal shank length is not the primary factor.",
+    D: "Handle surface characteristics do not create burnished deposits."
+  },
+  boardTrap: "Boards often describe burnished calculus without mentioning a dull instrument.",
+  memoryHook: "Dull instruments polish calculus."
+},
+{
+  id: "INST-076",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Excessive Face-to-Stone Angle",
+  difficulty: "hard",
+  question: "A student sharpens a curet using a face-to-stone angle of approximately 130°. Which result is most likely?",
+  choices: [
+    { key: "A", text: "Thin fragile edge" },
+    { key: "B", text: "Dull rounded edge" },
+    { key: "C", text: "Improved edge retention" },
+    { key: "D", text: "Enhanced adaptation" }
+  ],
+  correctAnswer: "B",
+  rationale: "An excessively large sharpening angle produces an excessively large internal angle and a dull cutting edge.",
+  incorrectRationales: {
+    A: "Thin edges result from angles that are too small.",
+    C: "A dull edge does not improve performance.",
+    D: "Adaptation is not improved by excessive sharpening angles."
+  },
+  boardTrap: "Large sharpening angle = dull cutting edge.",
+  memoryHook: "Too wide = too dull."
+},
+{
+  id: "INST-077",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Over-Sharpening",
+  difficulty: "hard",
+  question: "A Gracey curet demonstrates a narrowed blade, flattened toe, and altered contours. What is the most likely explanation?",
+  choices: [
+    { key: "A", text: "Over-sharpening" },
+    { key: "B", text: "Insufficient sharpening" },
+    { key: "C", text: "Wire edge formation" },
+    { key: "D", text: "Stone contamination" }
+  ],
+  correctAnswer: "A",
+  rationale: "Loss of original dimensions and contours is characteristic of over-sharpening.",
+  incorrectRationales: {
+    B: "Insufficient sharpening causes dullness, not loss of instrument anatomy.",
+    C: "A wire edge does not narrow the blade.",
+    D: "Stone contamination does not explain these structural changes."
+  },
+  boardTrap: "Preserve original design while restoring sharpness.",
+  memoryHook: "Altered anatomy = over-sharpened."
+},
+{
+  id: "INST-078",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Test Stick Interpretation",
+  difficulty: "hard",
+  question: "A curet slides across a test stick without biting into the surface. What does this indicate?",
+  choices: [
+    { key: "A", text: "Sharp edge" },
+    { key: "B", text: "Dull edge" },
+    { key: "C", text: "Flattened toe" },
+    { key: "D", text: "Bent shank" }
+  ],
+  correctAnswer: "B",
+  rationale: "A dull edge slides over a test stick rather than engaging it.",
+  incorrectRationales: {
+    A: "A sharp edge should bite into the stick.",
+    C: "Toe shape cannot be determined from this test.",
+    D: "The test evaluates sharpness, not shank alignment."
+  },
+  boardTrap: "Know how to interpret the test, not just perform it.",
+  memoryHook: "Slide = dull. Bite = sharp."
+},
+{
+  id: "INST-079",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Novaculite Stone",
+  difficulty: "hard",
+  question: "A clinician selects a natural novaculite stone to produce a fine cutting edge. Which stone is being used?",
+  choices: [
+    { key: "A", text: "India stone" },
+    { key: "B", text: "Arkansas stone" },
+    { key: "C", text: "Ceramic stone" },
+    { key: "D", text: "Diamond-coated stone" }
+  ],
+  correctAnswer: "B",
+  rationale: "Arkansas stone is composed of natural novaculite and produces a fine cutting edge.",
+  incorrectRationales: {
+    A: "India stones are synthetic aluminum oxide.",
+    C: "Ceramic stones are manufactured materials.",
+    D: "Diamond-coated stones are synthetic abrasives."
+  },
+  boardTrap: "Novaculite is the key clue.",
+  memoryHook: "Novaculite = Arkansas."
+},
+{
+  id: "INST-080",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Wire Edge",
+  difficulty: "hard",
+  question: "A wire edge is detected after sharpening. Why should it be removed before instrument use?",
+  choices: [
+    { key: "A", text: "It compromises cutting performance" },
+    { key: "B", text: "It increases blade width" },
+    { key: "C", text: "It improves adaptation" },
+    { key: "D", text: "It stabilizes the shank" }
+  ],
+  correctAnswer: "A",
+  rationale: "A wire edge is a sharpening defect that interferes with effective cutting.",
+  incorrectRationales: {
+    B: "Blade width is not increased by a wire edge.",
+    C: "Adaptation is not improved.",
+    D: "Shank stability is unrelated."
+  },
+  boardTrap: "A wire edge may appear sharp but is actually a defect.",
+  memoryHook: "Wire edge = remove."
+},
+{
+  id: "INST-081",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Adaptation Failure",
+  difficulty: "hard",
+  question: "A Gracey curet no longer adapts predictably to root surfaces after repeated sharpening. Which change is most likely responsible?",
+  choices: [
+    { key: "A", text: "Loss of original blade design" },
+    { key: "B", text: "Routine sterilization" },
+    { key: "C", text: "Stone lubrication" },
+    { key: "D", text: "Handle wear" }
+  ],
+  correctAnswer: "A",
+  rationale: "Alteration of original blade contours can compromise adaptation.",
+  incorrectRationales: {
+    B: "Sterilization does not alter blade shape.",
+    C: "Lubrication does not affect adaptation.",
+    D: "Handle wear does not explain adaptation changes."
+  },
+  boardTrap: "Adaptation depends on preserving design.",
+  memoryHook: "Change the shape, change the adaptation."
+},
+{
+  id: "INST-082",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Gracey Cutting Edge",
+  difficulty: "hard",
+  question: "A student prepares to sharpen a Gracey curet. Which cutting edge should be sharpened?",
+  choices: [
+    { key: "A", text: "Both cutting edges equally" },
+    { key: "B", text: "The functional cutting edge only" },
+    { key: "C", text: "The nonfunctional cutting edge only" },
+    { key: "D", text: "The cutting edge with the longest blade surface" }
+  ],
+  correctAnswer: "B",
+  rationale: "Gracey curets have one functional cutting edge. Only the functional cutting edge is sharpened.",
+  incorrectRationales: {
+    A: "Sharpening both edges would alter the design of the Gracey curet.",
+    C: "The nonfunctional edge is not sharpened for clinical use.",
+    D: "Blade length does not determine which edge is sharpened."
+  },
+  boardTrap: "Universal curets have two cutting edges; Graceys have one functional cutting edge.",
+  memoryHook: "Gracey = one working edge."
+},
+{
+  id: "INST-083",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Consequence Chain",
+  difficulty: "hard",
+  question: "A curet is sharpened using an angle smaller than recommended. Which sequence is most likely?",
+  choices: [
+    { key: "A", text: "Thin edge followed by rapid wear" },
+    { key: "B", text: "Large internal angle followed by dullness" },
+    { key: "C", text: "Toe flattening followed by improved adaptation" },
+    { key: "D", text: "Stone clogging followed by blade widening" }
+  ],
+  correctAnswer: "A",
+  rationale: "An excessively small angle creates a thin cutting edge that wears rapidly.",
+  incorrectRationales: {
+    B: "Large internal angles result from excessively large sharpening angles.",
+    C: "Adaptation would not improve.",
+    D: "This is not the expected outcome."
+  },
+  boardTrap: "Understand the consequence chain, not just the angle.",
+  memoryHook: "Too small → thin edge → rapid wear."
+},
+{
+  id: "INST-084",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Instrument Selection",
+  difficulty: "hard",
+  question: "A clinician must choose between a dull curet and a properly sharpened curet for subgingival instrumentation. What is the primary advantage of the sharpened instrument?",
+  choices: [
+    { key: "A", text: "Improved calculus removal efficiency" },
+    { key: "B", text: "Greater blade width" },
+    { key: "C", text: "Longer terminal shank" },
+    { key: "D", text: "Larger handle diameter" }
+  ],
+  correctAnswer: "A",
+  rationale: "A sharp cutting edge improves efficiency and requires less force.",
+  incorrectRationales: {
+    B: "Blade width is unrelated to the advantage described.",
+    C: "Shank length is unchanged.",
+    D: "Handle diameter does not determine cutting efficiency."
+  },
+  boardTrap: "Focus on function rather than instrument dimensions.",
+  memoryHook: "Sharp edge = efficient scaling."
+},
+{
+  id: "INST-085",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Internal Angle",
+  difficulty: "hard",
+  question: "Which internal angle is most likely to provide an effective balance of sharpness and durability?",
+  choices: [
+    { key: "A", text: "55°" },
+    { key: "B", text: "65°" },
+    { key: "C", text: "75°" },
+    { key: "D", text: "95°" }
+  ],
+  correctAnswer: "C",
+  rationale: "An internal angle of approximately 70°–80° provides an effective balance of sharpness and durability.",
+  incorrectRationales: {
+    A: "A 55° angle produces an excessively thin edge.",
+    B: "A 65° angle is below the ideal range and may reduce edge durability.",
+    D: "A 95° angle produces a dull cutting edge."
+  },
+  boardTrap: "Apply the ideal 70°–80° range.",
+  memoryHook: "75° sits in the sweet spot."
+},
+{
+  id: "INST-086",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Stone Maintenance",
+  difficulty: "hard",
+  question: "A sharpening stone becomes clogged with metal particles and loses effectiveness. Which preventive measure is most appropriate?",
+  choices: [
+    { key: "A", text: "Routine lubrication during use" },
+    { key: "B", text: "Increasing handle diameter" },
+    { key: "C", text: "Reducing terminal shank length" },
+    { key: "D", text: "Using a larger curet" }
+  ],
+  correctAnswer: "A",
+  rationale: "Lubrication helps prevent clogging and maintains stone effectiveness.",
+  incorrectRationales: {
+    B: "Handle diameter does not affect stone maintenance.",
+    C: "Shank length is unrelated.",
+    D: "Instrument size does not prevent clogging."
+  },
+  boardTrap: "The problem is with the stone, not the instrument.",
+  memoryHook: "Lubrication prevents clogging."
+},
+{
+  id: "INST-087",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Uneven Sharpening",
+  difficulty: "hard",
+  question: "A clinician repeatedly sharpens only one portion of the lateral surface. Which outcome is most likely?",
+  choices: [
+    { key: "A", text: "Uneven cutting edge formation" },
+    { key: "B", text: "Improved blade symmetry" },
+    { key: "C", text: "Increased handle friction" },
+    { key: "D", text: "Terminal shank elongation" }
+  ],
+  correctAnswer: "A",
+  rationale: "Incomplete stone adaptation can create uneven blade contours and cutting edges.",
+  incorrectRationales: {
+    B: "Symmetry is reduced, not improved.",
+    C: "Handle friction is unrelated.",
+    D: "Sharpening does not elongate the shank."
+  },
+  boardTrap: "Sharpen the entire lateral surface consistently.",
+  memoryHook: "Uneven sharpening = uneven edge."
+},
+{
+  id: "INST-088",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Comprehensive Case",
+  difficulty: "hard",
+  question: "A hygienist reports increased hand fatigue, decreased scaling efficiency, burnished deposits, and a curet that fails to engage a test stick. Which intervention is most appropriate?",
+  choices: [
+    { key: "A", text: "Sharpen the instrument" },
+    { key: "B", text: "Increase lateral pressure" },
+    { key: "C", text: "Replace the handle" },
+    { key: "D", text: "Switch to a larger stone" }
+  ],
+  correctAnswer: "A",
+  rationale: "All findings indicate a dull cutting edge that requires sharpening.",
+  incorrectRationales: {
+    B: "Additional force does not correct dullness.",
+    C: "The handle is not the source of the problem.",
+    D: "Stone size does not address the instrument condition."
+  },
+  boardTrap: "Multiple clues point to the same conclusion: a dull instrument.",
+  memoryHook: "Burnishing + fatigue + failed test stick = sharpen."
+},
+{
+  id: "INST-089",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Universal vs Gracey Curets",
+  difficulty: "medium",
+  question: "A student sharpens only one cutting edge of a universal curet before patient care. Which outcome is most likely?",
+  choices: [
+    { key: "A", text: "The instrument will function normally because universal curets have one working edge" },
+    { key: "B", text: "One functional cutting edge will remain inadequately sharpened" },
+    { key: "C", text: "The instrument will become over-sharpened" },
+    { key: "D", text: "The terminal shank will lose rigidity" }
+  ],
+  correctAnswer: "B",
+  rationale: "Universal curets have two functional cutting edges. Both cutting edges should be maintained to ensure optimal instrumentation performance.",
+  incorrectRationales: {
+    A: "This describes a Gracey curet, not a universal curet.",
+    C: "Sharpening only one edge does not necessarily result in over-sharpening.",
+    D: "Sharpening does not affect shank rigidity."
+  },
+  boardTrap: "Students frequently confuse universal curets and Gracey curets during sharpening questions.",
+  memoryHook: "Universal = two working edges."
+},
+{
+  id: "INST-090",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Visual Edge Evaluation",
+  difficulty: "medium",
+  question: "During instrument inspection, a cutting edge reflects light when viewed under adequate illumination. What does this finding most likely indicate?",
+  choices: [
+    { key: "A", text: "A dull or rounded cutting edge" },
+    { key: "B", text: "An ideally sharpened cutting edge" },
+    { key: "C", text: "A correctly formed wire edge" },
+    { key: "D", text: "A properly preserved toe" }
+  ],
+  correctAnswer: "A",
+  rationale: "A sharp cutting edge has little to no light reflection. Light reflection suggests a rounded or dull edge.",
+  incorrectRationales: {
+    B: "Sharp cutting edges generally do not reflect light.",
+    C: "Light reflection alone does not identify a wire edge.",
+    D: "Toe shape cannot be determined from this observation."
+  },
+  boardTrap: "Visual inspection questions often test recognition of dullness rather than sharpening technique.",
+  memoryHook: "Shiny edge = dull edge."
+},
+{
+  id: "INST-091",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Instrument Stabilization",
+  difficulty: "medium",
+  question: "A clinician notices inconsistent cutting-edge formation after sharpening several curets. Which factor should be evaluated first?",
+  choices: [
+    { key: "A", text: "Instrument stabilization during sharpening" },
+    { key: "B", text: "Handle color coding" },
+    { key: "C", text: "Sterilization cycle length" },
+    { key: "D", text: "Patient positioning" }
+  ],
+  correctAnswer: "A",
+  rationale: "Proper stabilization helps maintain consistent blade geometry and sharpening angles.",
+  incorrectRationales: {
+    B: "Color coding does not affect sharpening outcomes.",
+    C: "Sterilization does not create inconsistent cutting edges.",
+    D: "Patient positioning is unrelated to sharpening."
+  },
+  boardTrap: "Many sharpening errors begin with poor stabilization rather than incorrect angles.",
+  memoryHook: "Stable instrument = consistent edge."
+},
+{
+  id: "INST-092",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Stone Lubrication",
+  difficulty: "medium",
+  question: "During sharpening, metal filings accumulate rapidly on the stone surface and reduce sharpening efficiency. Which action is most appropriate?",
+  choices: [
+    { key: "A", text: "Use the recommended lubricant during sharpening" },
+    { key: "B", text: "Increase lateral pressure on the instrument" },
+    { key: "C", text: "Sharpen only the toe of the instrument" },
+    { key: "D", text: "Increase the face-to-stone angle" }
+  ],
+  correctAnswer: "A",
+  rationale: "Lubrication helps prevent metal particles from clogging the abrasive surface of the stone.",
+  incorrectRationales: {
+    B: "Additional pressure does not correct stone clogging.",
+    C: "Sharpening only the toe is inappropriate.",
+    D: "Changing the sharpening angle does not address clogging."
+  },
+  boardTrap: "The problem is with the stone surface, not the cutting edge geometry.",
+  memoryHook: "Lubrication keeps the stone cutting."
+},
+{
+  id: "INST-093",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Instrument Replacement",
+  difficulty: "hard",
+  question: "A curet has been sharpened repeatedly over several years and now exhibits substantial loss of blade width despite proper technique. Which action is most appropriate?",
+  choices: [
+    { key: "A", text: "Replace the instrument" },
+    { key: "B", text: "Increase sharpening frequency" },
+    { key: "C", text: "Apply greater lateral pressure during scaling" },
+    { key: "D", text: "Continue routine use without modification" }
+  ],
+  correctAnswer: "A",
+  rationale: "Excessive loss of blade dimensions can compromise function and adaptation, indicating the need for replacement.",
+  incorrectRationales: {
+    B: "Additional sharpening removes more metal.",
+    C: "Greater pressure does not restore instrument design.",
+    D: "Significant loss of blade dimensions should not be ignored."
+  },
+  boardTrap: "Proper sharpening extends instrument life but does not make instruments permanent.",
+  memoryHook: "Too narrow = time to retire."
+},
+{
+  id: "INST-094",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Wire Edge Removal",
+  difficulty: "hard",
+  question: "Following sharpening, a clinician identifies a wire edge along the cutting surface. What is the most appropriate next step?",
+  choices: [
+    { key: "A", text: "Remove the wire edge before clinical use" },
+    { key: "B", text: "Leave the wire edge in place to improve sharpness" },
+    { key: "C", text: "Increase the internal angle" },
+    { key: "D", text: "Replace the instrument immediately" }
+  ],
+  correctAnswer: "A",
+  rationale: "A wire edge is a sharpening defect that should be removed before use.",
+  incorrectRationales: {
+    B: "A wire edge compromises cutting performance.",
+    C: "Changing the internal angle does not specifically address the defect.",
+    D: "Wire edges can typically be corrected without replacing the instrument."
+  },
+  boardTrap: "A wire edge may appear sharp but is not a desirable cutting surface.",
+  memoryHook: "Wire edge = remove."
+},
+{
+  id: "INST-095",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Preservation of Design",
+  difficulty: "hard",
+  question: "A faculty member evaluates a sharpened Gracey curet and notes that the blade contours closely match those of a new instrument. Which sharpening principle was most successfully achieved?",
+  choices: [
+    { key: "A", text: "Preservation of original instrument design" },
+    { key: "B", text: "Mechanical sharpening efficiency" },
+    { key: "C", text: "Maximum metal removal" },
+    { key: "D", text: "Increased blade flexibility" }
+  ],
+  correctAnswer: "A",
+  rationale: "Proper sharpening restores the cutting edge while maintaining original blade contours.",
+  incorrectRationales: {
+    B: "The question evaluates blade anatomy, not sharpening method.",
+    C: "Maximum metal removal is undesirable.",
+    D: "Blade flexibility is not the goal."
+  },
+  boardTrap: "Sharpness alone is not the goal; preserving design is equally important.",
+  memoryHook: "Restore the edge, preserve the shape."
+},
+{
+  id: "INST-096",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Test Stick Evaluation",
+  difficulty: "hard",
+  question: "A curet engages a plastic test stick and bites into the surface when evaluated after sharpening. What does this finding indicate?",
+  choices: [
+    { key: "A", text: "The cutting edge is adequately sharp" },
+    { key: "B", text: "The cutting edge is dull" },
+    { key: "C", text: "The toe is flattened" },
+    { key: "D", text: "The blade is over-sharpened" }
+  ],
+  correctAnswer: "A",
+  rationale: "Engagement of the test stick indicates a functional cutting edge.",
+  incorrectRationales: {
+    B: "Dull instruments tend to slide across the test surface.",
+    C: "Toe shape cannot be determined from this test alone.",
+    D: "Sharpness testing does not directly diagnose over-sharpening."
+  },
+  boardTrap: "Interpretation of test-stick findings is commonly tested.",
+  memoryHook: "Bite = sharp."
+},
+{
+  id: "INST-097",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Clinical Case",
+  difficulty: "hard",
+  question: "A patient presents for periodontal maintenance. During instrumentation, the hygienist notices increased hand fatigue, poor deposit engagement, and residual burnished calculus. Which instrument condition most likely explains these findings?",
+  choices: [
+    { key: "A", text: "Dull cutting edge" },
+    { key: "B", text: "Excessive stone lubrication" },
+    { key: "C", text: "Flattened handle surface" },
+    { key: "D", text: "Long terminal shank" }
+  ],
+  correctAnswer: "A",
+  rationale: "Dull instruments require greater force, reduce efficiency, and may burnish calculus.",
+  incorrectRationales: {
+    B: "Lubrication does not explain the clinical findings.",
+    C: "Handle surface changes are not the primary cause.",
+    D: "Terminal shank length does not explain the pattern."
+  },
+  boardTrap: "Multiple symptoms often point to instrument dullness.",
+  memoryHook: "Fatigue + burnishing + poor engagement = dull edge."
+},
+{
+  id: "INST-098",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Instrument Sharpening – Comprehensive Decision Making",
+  difficulty: "hard",
+  question: "A clinician sharpens a curet, removes a wire edge, verifies engagement with a test stick, and confirms that blade contours remain unchanged. Which outcome is most likely?",
+  choices: [
+    { key: "A", text: "A functional cutting edge with preserved instrument design" },
+    { key: "B", text: "A dull edge with increased durability" },
+    { key: "C", text: "An over-sharpened blade requiring replacement" },
+    { key: "D", text: "A burnished cutting edge" }
+  ],
+  correctAnswer: "A",
+  rationale: "The scenario describes proper sharpening, defect removal, sharpness verification, and preservation of original design.",
+  incorrectRationales: {
+    B: "The instrument has been confirmed sharp.",
+    C: "No evidence of excessive metal removal is present.",
+    D: "Burnishing refers to calculus, not a properly sharpened cutting edge."
+  },
+  boardTrap: "The board may present multiple correct sharpening steps and ask for the resulting outcome.",
+  memoryHook: "Sharp + tested + preserved = ready for use."
+},
+{
+  id: "INST-099",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Selective Polishing",
+  difficulty: "easy",
+  question: "Which statement best reflects the current standard of care regarding coronal polishing?",
+  choices: [
+    { key: "A", text: "All patients should receive polishing at every appointment" },
+    { key: "B", text: "Polishing should be performed only when clinically indicated" },
+    { key: "C", text: "Polishing is required before fluoride application" },
+    { key: "D", text: "Polishing is necessary whenever plaque is present" }
+  ],
+  correctAnswer: "B",
+  rationale: "Current dental hygiene practice supports selective polishing based on clinical need.",
+  incorrectRationales: {
+    A: "Routine polishing for every patient is no longer recommended.",
+    C: "Fluoride application does not require polishing beforehand.",
+    D: "Plaque can be removed without routine polishing."
+  },
+  boardTrap: "The NBDHE frequently tests the transition from routine polishing to selective polishing.",
+  memoryHook: "Selective, not routine."
+},
+{
+  id: "INST-100",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Purpose",
+  difficulty: "easy",
+  question: "What is the primary purpose of coronal polishing?",
+  choices: [
+    { key: "A", text: "Removal of extrinsic stain and residual biofilm" },
+    { key: "B", text: "Removal of calculus" },
+    { key: "C", text: "Prevention of dental caries" },
+    { key: "D", text: "Removal of intrinsic stain" }
+  ],
+  correctAnswer: "A",
+  rationale: "Coronal polishing is primarily intended to remove extrinsic stain and residual biofilm from tooth surfaces.",
+  incorrectRationales: {
+    B: "Calculus is removed through scaling procedures.",
+    C: "Polishing alone does not prevent caries.",
+    D: "Intrinsic stain cannot be removed by routine polishing."
+  },
+  boardTrap: "Polishing removes stain, not calculus.",
+  memoryHook: "Polish = stain and biofilm."
+},
+{
+  id: "INST-101",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Stain Classification",
+  difficulty: "easy",
+  question: "Which stain is most likely to be removed by coronal polishing?",
+  choices: [
+    { key: "A", text: "Tetracycline staining" },
+    { key: "B", text: "Fluorosis staining" },
+    { key: "C", text: "Tobacco stain" },
+    { key: "D", text: "Developmental enamel discoloration" }
+  ],
+  correctAnswer: "C",
+  rationale: "Tobacco stain is an extrinsic stain and is commonly removed through polishing.",
+  incorrectRationales: {
+    A: "Tetracycline staining is intrinsic.",
+    B: "Fluorosis is intrinsic.",
+    D: "Developmental discoloration is not removed by routine polishing."
+  },
+  boardTrap: "Extrinsic stains are polishable; intrinsic stains are not.",
+  memoryHook: "Surface stain = polishable stain."
+},
+{
+  id: "INST-102",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Contraindications",
+  difficulty: "easy",
+  question: "Which area should generally not be polished routinely because of increased abrasion risk?",
+  choices: [
+    { key: "A", text: "Extrinsic stain" },
+    { key: "B", text: "Intact enamel" },
+    { key: "C", text: "Exposed root surface" },
+    { key: "D", text: "Healthy crown surface" }
+  ],
+  correctAnswer: "C",
+  rationale: "Exposed cementum and dentin are more susceptible to abrasion than enamel.",
+  incorrectRationales: {
+    A: "Extrinsic stain is often an indication for polishing.",
+    B: "Enamel is more resistant to abrasion.",
+    D: "Healthy crowns are not the primary concern."
+  },
+  boardTrap: "Think root abrasion risk.",
+  memoryHook: "Protect exposed roots."
+},
+{
+  id: "INST-103",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Abrasive Selection",
+  difficulty: "easy",
+  question: "Which principle should guide selection of a polishing agent?",
+  choices: [
+    { key: "A", text: "Use the most abrasive agent available" },
+    { key: "B", text: "Use the least abrasive agent that achieves the goal" },
+    { key: "C", text: "Use coarse grit for all stain" },
+    { key: "D", text: "Use the same agent for every patient" }
+  ],
+  correctAnswer: "B",
+  rationale: "The least abrasive effective agent should be selected to minimize tooth surface loss.",
+  incorrectRationales: {
+    A: "Excessive abrasiveness may damage tooth structure.",
+    C: "Coarse grit is not always indicated.",
+    D: "Agent selection should be individualized."
+  },
+  boardTrap: "Least abrasive effective method is a core NBDHE principle.",
+  memoryHook: "Gentle but effective."
+},
+{
+  id: "INST-104",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Clinical Decision",
+  difficulty: "easy",
+  question: "A patient has no visible stain, no esthetic concerns, and excellent oral hygiene. What is the most appropriate polishing decision?",
+  choices: [
+    { key: "A", text: "Perform full-mouth polishing" },
+    { key: "B", text: "Polish because it is part of every prophylaxis" },
+    { key: "C", text: "Do not polish because no indication exists" },
+    { key: "D", text: "Polish only posterior teeth" }
+  ],
+  correctAnswer: "C",
+  rationale: "Selective polishing is based on clinical need rather than routine performance.",
+  incorrectRationales: {
+    A: "Routine polishing is not recommended.",
+    B: "Polishing is not automatically required.",
+    D: "No indication exists."
+  },
+  boardTrap: "No stain = no automatic polish.",
+  memoryHook: "No indication, no polishing."
+},
+{
+  id: "INST-105",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Traditional Technique",
+  difficulty: "easy",
+  question: "Which device is most commonly used in traditional coronal polishing?",
+  choices: [
+    { key: "A", text: "Rubber polishing cup" },
+    { key: "B", text: "Ultrasonic insert" },
+    { key: "C", text: "Explorer" },
+    { key: "D", text: "Periodontal probe" }
+  ],
+  correctAnswer: "A",
+  rationale: "A rubber cup with polishing paste is the traditional polishing method.",
+  incorrectRationales: {
+    B: "Ultrasonic inserts are used for deposit removal.",
+    C: "Explorers are assessment instruments.",
+    D: "Probes are assessment instruments."
+  },
+  boardTrap: "Know the difference between scaling and polishing devices.",
+  memoryHook: "Rubber cup = classic polishing."
+},
+{
+  id: "INST-106",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Enamel Preservation",
+  difficulty: "easy",
+  question: "Why is unnecessary polishing discouraged?",
+  choices: [
+    { key: "A", text: "It removes a small amount of tooth structure" },
+    { key: "B", text: "It causes calculus formation" },
+    { key: "C", text: "It creates intrinsic stain" },
+    { key: "D", text: "It prevents fluoride uptake" }
+  ],
+  correctAnswer: "A",
+  rationale: "Polishing removes a small amount of the outer tooth surface.",
+  incorrectRationales: {
+    B: "Polishing does not cause calculus.",
+    C: "Intrinsic stain is unrelated.",
+    D: "Fluoride uptake is not prevented."
+  },
+  boardTrap: "This is the biologic basis for selective polishing.",
+  memoryHook: "Every polish removes a little."
+},
+{
+  id: "INST-107",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Air Polishing",
+  difficulty: "easy",
+  question: "Which powder is traditionally used in air polishing systems?",
+  choices: [
+    { key: "A", text: "Sodium bicarbonate" },
+    { key: "B", text: "Pumice" },
+    { key: "C", text: "Fluoride varnish" },
+    { key: "D", text: "Calcium hydroxide" }
+  ],
+  correctAnswer: "A",
+  rationale: "Traditional air polishing systems commonly use sodium bicarbonate powder.",
+  incorrectRationales: {
+    B: "Pumice is used in polishing pastes.",
+    C: "Fluoride varnish is not an air-polishing powder.",
+    D: "Calcium hydroxide is not used for air polishing."
+  },
+  boardTrap: "Air polishing questions often start with powder identification.",
+  memoryHook: "Traditional air polishing = sodium bicarbonate."
+},
+{
+  id: "INST-108",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Medical Considerations",
+  difficulty: "easy",
+  question: "Air polishing with sodium bicarbonate powder should be used cautiously in patients with which condition?",
+  choices: [
+    { key: "A", text: "Sodium-restricted diet" },
+    { key: "B", text: "Extrinsic stain" },
+    { key: "C", text: "Healthy enamel" },
+    { key: "D", text: "Mild plaque accumulation" }
+  ],
+  correctAnswer: "A",
+  rationale: "Sodium bicarbonate air polishing may be contraindicated or require caution in patients on sodium-restricted diets.",
+  incorrectRationales: {
+    B: "Extrinsic stain is often an indication for polishing.",
+    C: "Healthy enamel is not a contraindication.",
+    D: "Plaque accumulation is not the primary concern."
+  },
+  boardTrap: "Sodium bicarbonate = think sodium precautions.",
+  memoryHook: "Sodium powder → sodium concerns."
+},
+{
+  id: "INST-109",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Restorative Materials",
+  difficulty: "easy",
+  question: "Why should polishing agents be selected carefully around composite restorations?",
+  choices: [
+    { key: "A", text: "Abrasive agents may roughen the restoration surface" },
+    { key: "B", text: "Composite absorbs polishing paste" },
+    { key: "C", text: "Composite prevents polishing" },
+    { key: "D", text: "Composite increases calculus formation" }
+  ],
+  correctAnswer: "A",
+  rationale: "Highly abrasive polishing agents may scratch or roughen composite restorations.",
+  incorrectRationales: {
+    B: "Composite does not absorb paste in this manner.",
+    C: "Polishing can still be performed appropriately.",
+    D: "Composite does not inherently increase calculus."
+  },
+  boardTrap: "Protect restorative materials from abrasion.",
+  memoryHook: "Composite = avoid unnecessary scratching."
+},
+{
+  id: "INST-110",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Indications",
+  difficulty: "easy",
+  question: "Which finding is the best indication for selective coronal polishing?",
+  choices: [
+    { key: "A", text: "Generalized extrinsic stain" },
+    { key: "B", text: "Intrinsic tetracycline staining" },
+    { key: "C", text: "No visible stain" },
+    { key: "D", text: "Exposed root surfaces without stain" }
+  ],
+  correctAnswer: "A",
+  rationale: "Extrinsic stain is a primary indication for selective polishing.",
+  incorrectRationales: {
+    B: "Intrinsic stain is not removed by routine polishing.",
+    C: "No indication is present.",
+    D: "This increases abrasion risk rather than indicating polishing."
+  },
+  boardTrap: "Identify extrinsic versus intrinsic stain.",
+  memoryHook: "Extrinsic stain = polishing candidate."
+},
+{
+  id: "INST-111",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Biofilm Removal",
+  difficulty: "easy",
+  question: "Which statement regarding plaque biofilm removal is most accurate?",
+  choices: [
+    { key: "A", text: "Polishing is the only effective method" },
+    { key: "B", text: "Biofilm can be removed without routine polishing" },
+    { key: "C", text: "Air polishing is required" },
+    { key: "D", text: "Biofilm cannot be removed from smooth surfaces" }
+  ],
+  correctAnswer: "B",
+  rationale: "Biofilm can be removed through oral hygiene measures and instrumentation without routine polishing.",
+  incorrectRationales: {
+    A: "Multiple methods remove biofilm.",
+    C: "Air polishing is not required.",
+    D: "Smooth-surface biofilm can be removed."
+  },
+  boardTrap: "Do not equate prophylaxis with polishing.",
+  memoryHook: "Biofilm removal ≠ routine polishing."
+},
+{
+  id: "INST-112",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Patient Communication",
+  difficulty: "easy",
+  question: "A patient requests polishing because the teeth feel smoother afterward. No stain or other indication is present. What is the most appropriate response?",
+  choices: [
+    { key: "A", text: "Perform polishing because the patient requested it" },
+    { key: "B", text: "Explain that polishing is performed when clinically indicated" },
+    { key: "C", text: "Use air polishing instead" },
+    { key: "D", text: "Use a coarse polishing paste" }
+  ],
+  correctAnswer: "B",
+  rationale: "Selective polishing is based on clinical indications rather than routine preference.",
+  incorrectRationales: {
+    A: "Patient preference alone is not an indication.",
+    C: "Changing methods does not create an indication.",
+    D: "Abrasiveness is irrelevant when polishing is not indicated."
+  },
+  boardTrap: "Selective polishing is a clinical decision.",
+  memoryHook: "Indication drives treatment."
+},
+{
+  id: "INST-113",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Core Principles",
+  difficulty: "easy",
+  question: "Which statement best summarizes evidence-based polishing practice?",
+  choices: [
+    { key: "A", text: "Polish every patient at every visit" },
+    { key: "B", text: "Use the most abrasive agent available" },
+    { key: "C", text: "Perform polishing selectively using the least abrasive effective method" },
+    { key: "D", text: "Avoid polishing whenever plaque is present" }
+  ],
+  correctAnswer: "C",
+  rationale: "Modern polishing principles emphasize selective polishing and minimal abrasiveness.",
+  incorrectRationales: {
+    A: "Routine polishing is no longer recommended.",
+    B: "The least abrasive effective agent should be selected.",
+    D: "Plaque presence alone does not prohibit polishing."
+  },
+  boardTrap: "Combines the two highest-yield polishing concepts.",
+  memoryHook: "Selective + least abrasive."
+},
+{
+  id: "INST-114",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Selective Polishing Case",
+  difficulty: "medium",
+  question: "A patient presents for a preventive appointment. Clinical examination reveals localized extrinsic stain on the lingual surfaces of the mandibular anterior teeth. What is the most appropriate polishing approach?",
+  choices: [
+    { key: "A", text: "Polish only the stained areas" },
+    { key: "B", text: "Perform full-mouth polishing" },
+    { key: "C", text: "Avoid polishing entirely" },
+    { key: "D", text: "Use coarse polishing paste on all teeth" }
+  ],
+  correctAnswer: "A",
+  rationale: "Selective polishing targets only surfaces with clinical indications such as extrinsic stain.",
+  incorrectRationales: {
+    B: "Routine full-mouth polishing is not recommended when only localized stain is present.",
+    C: "Extrinsic stain is an indication for polishing.",
+    D: "Coarse polishing of unaffected surfaces is unnecessary."
+  },
+  boardTrap: "Selective polishing applies to surfaces, not just patients.",
+  memoryHook: "Localized stain = localized polishing."
+},
+{
+  id: "INST-115",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Exposed Root Surfaces",
+  difficulty: "medium",
+  question: "A patient with generalized gingival recession presents with light extrinsic stain on exposed root surfaces. Which polishing decision is most appropriate?",
+  choices: [
+    { key: "A", text: "Avoid polishing the exposed root surfaces when possible" },
+    { key: "B", text: "Use coarse paste on the root surfaces" },
+    { key: "C", text: "Increase polishing pressure to remove stain quickly" },
+    { key: "D", text: "Perform routine polishing of all exposed roots" }
+  ],
+  correctAnswer: "A",
+  rationale: "Exposed cementum and dentin are highly susceptible to abrasion and should be treated conservatively.",
+  incorrectRationales: {
+    B: "Coarse abrasives increase the risk of root surface damage.",
+    C: "Increased pressure increases abrasion risk.",
+    D: "Routine polishing of exposed roots is not recommended."
+  },
+  boardTrap: "Root surface preservation outweighs stain removal.",
+  memoryHook: "Recession = abrasion caution."
+},
+{
+  id: "INST-116",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Composite Restorations",
+  difficulty: "medium",
+  question: "A patient has multiple anterior composite restorations with mild extrinsic stain. Which factor is most important when selecting a polishing agent?",
+  choices: [
+    { key: "A", text: "Potential surface damage to the restoration" },
+    { key: "B", text: "Color of the restoration" },
+    { key: "C", text: "Patient age" },
+    { key: "D", text: "Number of restorations present" }
+  ],
+  correctAnswer: "A",
+  rationale: "Abrasive agents may roughen composite surfaces and should be selected carefully.",
+  incorrectRationales: {
+    B: "Color does not determine abrasiveness selection.",
+    C: "Age is not the primary consideration.",
+    D: "The concern is restoration preservation, not quantity."
+  },
+  boardTrap: "Think restoration protection whenever composites are present.",
+  memoryHook: "Composite = minimize abrasion."
+},
+{
+  id: "INST-117",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Intrinsic Stain",
+  difficulty: "medium",
+  question: "A patient requests polishing to remove generalized tetracycline staining. What is the most appropriate response?",
+  choices: [
+    { key: "A", text: "Explain that routine polishing will not remove intrinsic stain" },
+    { key: "B", text: "Use a coarse polishing paste" },
+    { key: "C", text: "Perform repeated polishing until the stain disappears" },
+    { key: "D", text: "Use air polishing to remove the discoloration" }
+  ],
+  correctAnswer: "A",
+  rationale: "Tetracycline staining is intrinsic and cannot be removed through routine polishing procedures.",
+  incorrectRationales: {
+    B: "Increasing abrasiveness will not remove intrinsic discoloration.",
+    C: "Repeated polishing risks unnecessary tooth structure removal.",
+    D: "Air polishing removes surface deposits, not intrinsic stain."
+  },
+  boardTrap: "Intrinsic stain is a frequent NBDHE distractor.",
+  memoryHook: "Intrinsic = inside the tooth."
+},
+{
+  id: "INST-118",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Tobacco Stain",
+  difficulty: "medium",
+  question: "A patient who smokes presents with generalized brown stain on the facial surfaces of the anterior teeth. Which stain classification best describes this finding?",
+  choices: [
+    { key: "A", text: "Extrinsic stain" },
+    { key: "B", text: "Intrinsic stain" },
+    { key: "C", text: "Developmental discoloration" },
+    { key: "D", text: "Fluorosis" }
+  ],
+  correctAnswer: "A",
+  rationale: "Tobacco stain is an extrinsic stain that accumulates on tooth surfaces.",
+  incorrectRationales: {
+    B: "Intrinsic stains occur within the tooth structure.",
+    C: "Developmental discolorations are not caused by tobacco use.",
+    D: "Fluorosis results from excessive fluoride exposure during development."
+  },
+  boardTrap: "Tobacco stain is one of the classic examples of extrinsic stain.",
+  memoryHook: "Smoking = surface stain."
+},
+{
+  id: "INST-119",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Least Abrasive Principle",
+  difficulty: "medium",
+  question: "A clinician can remove a patient's stain effectively with either a fine or coarse polishing agent. Which choice is most appropriate?",
+  choices: [
+    { key: "A", text: "Use the fine polishing agent" },
+    { key: "B", text: "Use the coarse polishing agent" },
+    { key: "C", text: "Use both agents routinely" },
+    { key: "D", text: "Avoid polishing because stain is present" }
+  ],
+  correctAnswer: "A",
+  rationale: "The least abrasive agent capable of achieving the desired result should be selected.",
+  incorrectRationales: {
+    B: "A more abrasive agent is unnecessary when a less abrasive option is effective.",
+    C: "Routine use of multiple abrasives is not indicated.",
+    D: "Stain may warrant selective polishing."
+  },
+  boardTrap: "Boards love the least-abrasive principle.",
+  memoryHook: "If fine works, use fine."
+},
+{
+  id: "INST-120",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Orthodontic Patient",
+  difficulty: "medium",
+  question: "A patient with fixed orthodontic appliances presents with heavy plaque accumulation around brackets. Which polishing method may improve access to these areas?",
+  choices: [
+    { key: "A", text: "Air polishing" },
+    { key: "B", text: "Explorer evaluation" },
+    { key: "C", text: "Periodontal probing" },
+    { key: "D", text: "Hand scaling only" }
+  ],
+  correctAnswer: "A",
+  rationale: "Air polishing may improve access to difficult-to-reach areas around orthodontic appliances.",
+  incorrectRationales: {
+    B: "Explorers are assessment instruments.",
+    C: "Probing is an assessment procedure.",
+    D: "Hand scaling alone does not answer the question regarding polishing."
+  },
+  boardTrap: "Orthodontic appliances are a classic air-polishing scenario.",
+  memoryHook: "Brackets = consider air polishing."
+},
+{
+  id: "INST-121",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Patient Request",
+  difficulty: "medium",
+  question: "A patient requests full-mouth polishing despite the absence of stain. What should primarily guide the clinician's decision?",
+  choices: [
+    { key: "A", text: "Clinical indications" },
+    { key: "B", text: "Appointment length" },
+    { key: "C", text: "Patient preference alone" },
+    { key: "D", text: "Type of polishing paste available" }
+  ],
+  correctAnswer: "A",
+  rationale: "Selective polishing is based on clinical need rather than routine performance or patient preference alone.",
+  incorrectRationales: {
+    B: "Time does not determine indication.",
+    C: "Preference alone does not establish clinical need.",
+    D: "Material availability does not determine indication."
+  },
+  boardTrap: "Patient requests do not replace clinical judgment.",
+  memoryHook: "Indication first."
+},
+{
+  id: "INST-122",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Air Polishing Powder",
+  difficulty: "medium",
+  question: "A clinician prepares an air-polishing unit that uses sodium bicarbonate powder. Which patient history requires additional consideration before use?",
+  choices: [
+    { key: "A", text: "Sodium-restricted diet" },
+    { key: "B", text: "Tobacco use" },
+    { key: "C", text: "Extrinsic stain" },
+    { key: "D", text: "Previous fluoride treatment" }
+  ],
+  correctAnswer: "A",
+  rationale: "Sodium bicarbonate air polishing may be contraindicated or require caution in patients on sodium-restricted diets.",
+  incorrectRationales: {
+    B: "Tobacco use is not the primary concern.",
+    C: "Extrinsic stain is often an indication for stain removal.",
+    D: "Previous fluoride treatment is not the issue."
+  },
+  boardTrap: "Sodium bicarbonate = sodium-related medical history.",
+  memoryHook: "Know the powder, know the precaution."
+},
+{
+  id: "INST-123",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Clinical Indications",
+  difficulty: "medium",
+  question: "Which finding provides the strongest indication for selective polishing?",
+  choices: [
+    { key: "A", text: "Localized extrinsic stain" },
+    { key: "B", text: "Healthy enamel without stain" },
+    { key: "C", text: "Intrinsic discoloration" },
+    { key: "D", text: "Exposed root surfaces without stain" }
+  ],
+  correctAnswer: "A",
+  rationale: "Localized extrinsic stain is a classic indication for selective polishing.",
+  incorrectRationales: {
+    B: "No indication is present.",
+    C: "Intrinsic discoloration is not removed through routine polishing.",
+    D: "This finding increases abrasion concerns."
+  },
+  boardTrap: "The board often asks what actually justifies polishing.",
+  memoryHook: "Extrinsic stain = indication."
+},
+{
+  id: "INST-124",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Abrasion Risk",
+  difficulty: "medium",
+  question: "Which patient is at greatest risk for abrasion-related damage from polishing?",
+  choices: [
+    { key: "A", text: "A patient with extensive exposed root surfaces" },
+    { key: "B", text: "A patient with localized tobacco stain" },
+    { key: "C", text: "A patient with healthy enamel" },
+    { key: "D", text: "A patient with mild plaque accumulation" }
+  ],
+  correctAnswer: "A",
+  rationale: "Root surfaces are significantly more susceptible to abrasion than enamel.",
+  incorrectRationales: {
+    B: "Stain alone does not increase abrasion risk.",
+    C: "Healthy enamel is more resistant.",
+    D: "Plaque accumulation is not the determining factor."
+  },
+  boardTrap: "Whenever roots are involved, think abrasion risk.",
+  memoryHook: "Roots = highest polishing risk."
+},
+{
+  id: "INST-125",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Residual Biofilm",
+  difficulty: "medium",
+  question: "Following instrumentation, a clinician notices a small amount of residual biofilm and localized stain. What is the most appropriate next step?",
+  choices: [
+    { key: "A", text: "Selective polishing of the affected surfaces" },
+    { key: "B", text: "Full-mouth polishing" },
+    { key: "C", text: "No treatment because stain is present" },
+    { key: "D", text: "Repeated scaling of all teeth" }
+  ],
+  correctAnswer: "A",
+  rationale: "Selective polishing is appropriate when localized indications such as residual stain or biofilm are present.",
+  incorrectRationales: {
+    B: "Only affected areas require treatment.",
+    C: "Stain and biofilm may justify selective polishing.",
+    D: "The scenario specifically involves polishing indications."
+  },
+  boardTrap: "Treat the affected surfaces, not the entire dentition.",
+  memoryHook: "Localized problem = localized treatment."
+},
+{
+  id: "INST-126",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Esthetic Concern",
+  difficulty: "medium",
+  question: "A patient reports dissatisfaction with the appearance of a removable surface stain. Which factor should be verified before recommending polishing?",
+  choices: [
+    { key: "A", text: "That the discoloration is extrinsic" },
+    { key: "B", text: "That the stain is intrinsic" },
+    { key: "C", text: "That the patient has recession" },
+    { key: "D", text: "That the patient has calculus" }
+  ],
+  correctAnswer: "A",
+  rationale: "Polishing is effective for extrinsic stain but not intrinsic discoloration.",
+  incorrectRationales: {
+    B: "Intrinsic stains are not routinely removed by polishing.",
+    C: "Recession affects technique selection, not stain classification.",
+    D: "Calculus requires scaling."
+  },
+  boardTrap: "Identify the type of stain before selecting treatment.",
+  memoryHook: "Extrinsic first, polish second."
+},
+{
+  id: "INST-127",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Clinical Judgment",
+  difficulty: "medium",
+  question: "Which statement best reflects evidence-based decision making regarding polishing?",
+  choices: [
+    { key: "A", text: "Polishing is performed only when a clinical indication exists" },
+    { key: "B", text: "Every prophylaxis should conclude with polishing" },
+    { key: "C", text: "Polishing should precede all fluoride treatments" },
+    { key: "D", text: "Polishing is required whenever plaque is present" }
+  ],
+  correctAnswer: "A",
+  rationale: "Selective polishing is based on identified clinical indications.",
+  incorrectRationales: {
+    B: "Routine polishing is no longer recommended.",
+    C: "Fluoride application does not require polishing.",
+    D: "Plaque alone does not justify polishing."
+  },
+  boardTrap: "This is the core philosophy behind modern polishing practice.",
+  memoryHook: "Indication determines treatment."
+},
+{
+  id: "INST-128",
+  type: "application",
+  subject: "Instrumentation",
+  topic: "Polishing – Periodontal Maintenance",
+  difficulty: "medium",
+  question: "A periodontal maintenance patient presents with generalized recession and localized extrinsic stain. Which approach is most appropriate?",
+  choices: [
+    { key: "A", text: "Polish only stained enamel surfaces while minimizing abrasion of root surfaces" },
+    { key: "B", text: "Perform aggressive full-mouth polishing" },
+    { key: "C", text: "Use coarse paste on all exposed roots" },
+    { key: "D", text: "Avoid all stain removal procedures" }
+  ],
+  correctAnswer: "A",
+  rationale: "Selective polishing should remove stain while preserving vulnerable root surfaces.",
+  incorrectRationales: {
+    B: "Aggressive polishing increases abrasion risk.",
+    C: "Coarse abrasives may damage exposed roots.",
+    D: "Stain removal may still be appropriate when performed selectively."
+  },
+  boardTrap: "Balance stain removal with root preservation.",
+  memoryHook: "Maintain esthetics, protect roots."
+},
+{
   id: "mat-001",
   type: "mastery",
   subject: "Dental Materials",

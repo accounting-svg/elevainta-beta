@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(/c/Users/accou/AppData/Local/Android/Sdk/platform-tools/adb.exe -s emulator-5554 shell pm list packages)",
+      "Bash(/c/Users/accou/AppData/Local/Android/Sdk/platform-tools/adb.exe -s emulator-5556 install -r /c/Users/accou/Documents/elevainta/elevainta-app/android/app/build/outputs/apk/debug/app-debug.apk)",
+      "Bash(/c/Users/accou/AppData/Local/Android/Sdk/platform-tools/adb.exe -s emulator-5556 shell pm list packages)",
+      "Bash(echo \"---exit: $?---\")"
     ]
   }
 }

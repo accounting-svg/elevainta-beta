@@ -1,12 +1,11 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.elevainta.coachelevate',
-  appName: 'Coach Elevé',
+  appId: 'com.elevainta.rdhrising',
+  appName: 'RDH Rising',
   webDir: 'public',
   server: {
-    url: 'https://elevainta.vercel.app',
-    cleartext: true
+    url: 'https://elevainta.vercel.app'
   }
 };
 

@@ -20,6 +20,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png" />
         <link rel="apple-touch-icon" sizes="167x167" href="/icons/icon-167x167.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180x180.png" />
+        <meta name="google-site-verification" content="oRvC8FkniZPdM8v4eL3TN1PFz7ZnVTQyD99SYGvGol4" />
       </head>
       <body style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         {/* Top Branding Bar */}

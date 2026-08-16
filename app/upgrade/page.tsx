@@ -1,6 +1,7 @@
 import { cookies } from 'next/headers'
 import { createServerClient } from '@supabase/ssr'
 import { redirect } from 'next/navigation'
+import SubscribeButton from './SubscribeButton'
 
 const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/aFabIUfj292T0VnaxEeAg00'
 
@@ -131,26 +132,7 @@ export default async function UpgradePage() {
         </div>
 
         {/* CTA Button */}
-        <a
-          href={stripeUrl}
-          style={{
-            display: 'block',
-            width: '100%',
-            padding: '14px',
-            backgroundColor: '#C5A46D',
-            color: '#fff',
-            border: 'none',
-            borderRadius: 3,
-            fontSize: '0.9rem',
-            fontWeight: 'bold',
-            letterSpacing: '1.5px',
-            textAlign: 'center',
-            textDecoration: 'none',
-            boxSizing: 'border-box',
-          }}
-        >
-          SUBSCRIBE FOR $49/MONTH
-        </a>
+        <SubscribeButton stripeUrl={stripeUrl} userId={user.id} />
 
         <p style={{ textAlign: 'center', fontSize: '0.75rem', color: '#999', marginTop: 12, lineHeight: 1.6 }}>
           By subscribing, you agree to our{' '}

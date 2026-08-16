@@ -13,7 +13,11 @@ export default function SuccessPage() {
 
   useEffect(() => {
     let attempts = 0
-    const maxAttempts = 5
+    // 10x/3s = 30s. Longer than Stripe alone needs (its webhook is near-instant),
+    // but the Google Play path's chain (RTDN → RevenueCat → our webhook) is
+    // slower and less deterministic, especially in license-tester mode. Stripe
+    // users just finish polling sooner — no behavior change for them.
+    const maxAttempts = 10
 
     const poll = async () => {
       attempts++
@@ -35,7 +39,7 @@ export default function SuccessPage() {
       }
 
       if (attempts < maxAttempts) {
-        setTimeout(poll, 2000)
+        setTimeout(poll, 3000)
       } else {
         setChecking(false)
       }
