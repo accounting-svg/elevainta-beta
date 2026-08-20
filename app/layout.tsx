@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import Link from 'next/link'
 import { Capacitor } from '@capacitor/core'
 import { registerBackButtonListener } from './lib/backButton'
 
@@ -41,7 +42,8 @@ export default function RootLayout({
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          boxShadow: '0 2px 4px rgba(0,0,0,0.02)'
+          boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+          position: 'relative'
         }}>
           <div style={{ textAlign: 'center' }}>
             <span style={{
@@ -53,6 +55,21 @@ export default function RootLayout({
               COACH <span style={{ color: '#C5A46D' }}>ELEVÉ</span>
             </span>
           </div>
+          <Link
+            href="/settings"
+            style={{
+              position: 'absolute',
+              right: 20,
+              top: '50%',
+              transform: 'translateY(-50%)',
+              color: '#666',
+              textDecoration: 'none',
+              fontSize: '0.8rem',
+              letterSpacing: '0.5px'
+            }}
+          >
+            Settings
+          </Link>
         </header>
 
         {/* Main Content Area */}
