@@ -20,6 +20,15 @@ function SignupForm() {
 
   const signUp = async () => {
     setError(null)
+
+    // Supabase treats a signUp() call with no email (and no phone) as an
+    // anonymous sign-in attempt, which this project has disabled — so an
+    // empty email must never reach supabase.auth.signUp().
+    if (!email.trim() || !password.trim()) {
+      setError('Please enter your email and password.')
+      return
+    }
+
     setLoading(true)
 
     const { data, error: signUpError } = await supabase.auth.signUp({ email, password })
