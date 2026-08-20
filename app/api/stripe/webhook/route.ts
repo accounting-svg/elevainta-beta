@@ -145,7 +145,13 @@ export async function POST(req: NextRequest) {
       // Attempt 2: fall back to email lookup via Stripe
       console.warn(`stripe_customer_id matched 0 rows for ${customerId}, falling back to email`)
 
-      const customer = await stripe.customers.retrieve(customerId)
+      let customer: Stripe.Customer | Stripe.DeletedCustomer
+      try {
+        customer = await stripe.customers.retrieve(customerId)
+      } catch (err) {
+        console.error(`Failed to retrieve Stripe customer ${customerId}:`, err)
+        return NextResponse.json({ received: true, warning: 'Failed to retrieve customer' }, { status: 200 })
+      }
       const customerEmail = !customer.deleted ? customer.email : null
 
       if (!customerEmail) {
