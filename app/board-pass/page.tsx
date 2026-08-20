@@ -1,10 +1,11 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { boardPassQuestions, SUBJECTS } from '../data/boardPassQuestions'
 import StrategyFeedback from '../components/StrategyFeedback'
 import { createBrowserClient } from '@supabase/ssr'
 import { Capacitor } from '@capacitor/core'
+import { useBackButtonOverride } from '../lib/backButton'
 
 // TODO: replace with the real subscription product ID once created in Play Console.
 const GOOGLE_PLAY_PRODUCT_ID = 'coach_eleve_monthly'
@@ -51,6 +52,17 @@ export default function BoardPassPage() {
       }
     })
   }, [])
+
+  // While a subject is active (mid-quiz or on the results/complete screen),
+  // hardware back should return to subject selection instead of exiting the
+  // app, since none of these in-page views add their own history entry.
+  useBackButtonOverride(useCallback(() => {
+    if (subject !== null) {
+      setSubject(null);
+      return true;
+    }
+    return false;
+  }, [subject]));
 
   useEffect(() => {
     if (Capacitor.isNativePlatform()) return;

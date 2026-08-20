@@ -1,10 +1,20 @@
 'use client'
 
+import { useEffect } from 'react'
+import { Capacitor } from '@capacitor/core'
+import { registerBackButtonListener } from './lib/backButton'
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  useEffect(() => {
+    if (Capacitor.isNativePlatform()) {
+      registerBackButtonListener()
+    }
+  }, [])
+
   return (
     <html lang="en">
       <head>
@@ -24,9 +34,9 @@ export default function RootLayout({
       </head>
       <body style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         {/* Top Branding Bar */}
-        <header style={{ 
-          padding: '15px 20px', 
-          backgroundColor: '#ffffff', 
+        <header style={{
+          padding: '15px 20px',
+          backgroundColor: '#ffffff',
           borderBottom: '1px solid #C5A46D',
           display: 'flex',
           justifyContent: 'center',
@@ -34,11 +44,11 @@ export default function RootLayout({
           boxShadow: '0 2px 4px rgba(0,0,0,0.02)'
         }}>
           <div style={{ textAlign: 'center' }}>
-            <span style={{ 
-              fontSize: '1.2rem', 
-              fontWeight: 'bold', 
-              letterSpacing: '2px', 
-              color: '#171717' 
+            <span style={{
+              fontSize: '1.2rem',
+              fontWeight: 'bold',
+              letterSpacing: '2px',
+              color: '#171717'
             }}>
               COACH <span style={{ color: '#C5A46D' }}>ELEVÉ</span>
             </span>
