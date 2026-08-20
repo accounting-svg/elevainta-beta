@@ -10,6 +10,8 @@ export default function LoginPage() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
+  const [resetMessage, setResetMessage] = useState<string | null>(null)
+  const [resetLoading, setResetLoading] = useState(false)
 
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -30,6 +32,27 @@ export default function LoginPage() {
 
     router.push('/board-pass')
     router.refresh()
+  }
+
+  const handleForgotPassword = async () => {
+    setError(null)
+    setResetMessage(null)
+
+    if (!email.trim()) {
+      setError('Enter your email above, then click Forgot Password.')
+      return
+    }
+
+    setResetLoading(true)
+    const { error: resetError } = await supabase.auth.resetPasswordForEmail(email)
+    setResetLoading(false)
+
+    if (resetError) {
+      setError(resetError.message)
+      return
+    }
+
+    setResetMessage('If an account exists for that email, a password reset link has been sent.')
   }
 
   return (
@@ -103,7 +126,7 @@ export default function LoginPage() {
             display: 'block',
             width: '100%',
             padding: '10px 12px',
-            marginBottom: 24,
+            marginBottom: 8,
             border: '1px solid #ddd',
             borderRadius: 3,
             fontSize: '0.95rem',
@@ -111,6 +134,24 @@ export default function LoginPage() {
             boxSizing: 'border-box',
           }}
         />
+
+        <p style={{ textAlign: 'right', marginTop: 0, marginBottom: 24 }}>
+          <button
+            type="button"
+            onClick={handleForgotPassword}
+            disabled={resetLoading}
+            style={{
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              color: '#C5A46D',
+              fontSize: '0.8rem',
+              cursor: resetLoading ? 'not-allowed' : 'pointer',
+            }}
+          >
+            {resetLoading ? 'Sending...' : 'Forgot Password'}
+          </button>
+        </p>
 
         <button
           onClick={signIn}
@@ -135,6 +176,12 @@ export default function LoginPage() {
         {error && (
           <p style={{ color: '#c0392b', fontSize: '0.85rem', marginTop: 14, textAlign: 'center' }}>
             {error}
+          </p>
+        )}
+
+        {resetMessage && (
+          <p style={{ color: '#2e7d32', fontSize: '0.85rem', marginTop: 14, textAlign: 'center' }}>
+            {resetMessage}
           </p>
         )}
 
