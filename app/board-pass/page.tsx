@@ -480,21 +480,32 @@ export default function BoardPassPage() {
 
         {/* MANAGE SUBSCRIPTION */}
         {subscriptionStatus === 'active' && (stripeCustomerId || subscriptionProvider === 'google_play') && (
-          <button
-            onClick={() => { console.log('CLICK WORKING'); handleManageSubscription(); }}
-            style={{
+          Capacitor.isNativePlatform() && subscriptionProvider !== 'google_play' && subscriptionProvider !== 'apple' ? (
+            <p style={{
               marginTop: 16,
-              background: 'none',
-              border: 'none',
-              color: '#C5A46D',
+              color: '#888',
               fontSize: '0.85rem',
-              cursor: 'pointer',
-              textDecoration: 'underline',
               letterSpacing: '0.5px',
-            }}
-          >
-            Manage Subscription
-          </button>
+            }}>
+              Your subscription is managed through your web account.
+            </p>
+          ) : (
+            <button
+              onClick={() => { console.log('CLICK WORKING'); handleManageSubscription(); }}
+              style={{
+                marginTop: 16,
+                background: 'none',
+                border: 'none',
+                color: '#C5A46D',
+                fontSize: '0.85rem',
+                cursor: 'pointer',
+                textDecoration: 'underline',
+                letterSpacing: '0.5px',
+              }}
+            >
+              Manage Subscription
+            </button>
+          )
         )}
 
         {/* LIFETIME STATS */}
