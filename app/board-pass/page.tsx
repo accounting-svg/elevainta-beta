@@ -121,9 +121,15 @@ export default function BoardPassPage() {
     console.log('handleManageSubscription: function running');
 
     if (subscriptionProvider === 'google_play') {
-      const playStoreUrl = `https://play.google.com/store/account/subscriptions?sku=${GOOGLE_PLAY_PRODUCT_ID}&package=com.elevainta.coachelevate`;
+      const playStoreUrl = `https://play.google.com/store/account/subscriptions?sku=${GOOGLE_PLAY_PRODUCT_ID}&package=com.elevainta.rdhrising`;
       console.log('handleManageSubscription: redirecting to Play Store', playStoreUrl);
       window.location.href = playStoreUrl;
+      return;
+    }
+
+    if (subscriptionProvider === 'apple') {
+      console.log('handleManageSubscription: redirecting to App Store');
+      window.location.href = 'https://apps.apple.com/account/subscriptions';
       return;
     }
 
@@ -479,7 +485,7 @@ export default function BoardPassPage() {
         </div>
 
         {/* MANAGE SUBSCRIPTION */}
-        {subscriptionStatus === 'active' && (stripeCustomerId || subscriptionProvider === 'google_play') && (
+        {subscriptionStatus === 'active' && (stripeCustomerId || subscriptionProvider === 'google_play' || subscriptionProvider === 'apple') && (
           Capacitor.isNativePlatform() && subscriptionProvider !== 'google_play' && subscriptionProvider !== 'apple' ? (
             <p style={{
               marginTop: 16,

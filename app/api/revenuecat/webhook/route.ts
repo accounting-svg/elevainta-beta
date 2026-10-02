@@ -42,10 +42,20 @@ export async function POST(req: NextRequest) {
     case 'RENEWAL':
     case 'UNCANCELLATION': {
       const expirationMs = event.expiration_at_ms as number | undefined
+      const store = event.store as string | undefined
+      const subscriptionProvider =
+        store === 'APP_STORE' || store === 'MAC_APP_STORE' ? 'apple' :
+        store === 'PLAY_STORE' ? 'google_play' :
+        null
+
+      if (!subscriptionProvider) {
+        console.error(`RevenueCat webhook: unrecognized store "${store}" for ${supabaseUserId}, leaving subscription_provider unchanged`)
+      }
+
       const payload: Record<string, string | null> = {
         subscription_status: 'active',
-        subscription_provider: 'google_play',
         subscription_end_date: expirationMs ? new Date(expirationMs).toISOString() : null,
+        ...(subscriptionProvider ? { subscription_provider: subscriptionProvider } : {}),
       }
 
       const { data, error } = await supabaseAdmin
