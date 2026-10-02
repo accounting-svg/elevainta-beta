@@ -2,6 +2,7 @@ import { cookies } from 'next/headers'
 import { createServerClient } from '@supabase/ssr'
 import { redirect } from 'next/navigation'
 import { signOut } from '../actions/signOut'
+import DeleteAccountButton from './DeleteAccountButton'
 
 export default async function SettingsPage() {
   const cookieStore = await cookies()
@@ -23,6 +24,12 @@ export default async function SettingsPage() {
   if (!user) {
     redirect('/login')
   }
+
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('subscription_provider, subscription_status')
+    .eq('id', user.id)
+    .single()
 
   return (
     <main style={{
@@ -80,6 +87,11 @@ export default async function SettingsPage() {
             SIGN OUT
           </button>
         </form>
+
+        <DeleteAccountButton
+          subscriptionProvider={profile?.subscription_provider ?? null}
+          subscriptionStatus={profile?.subscription_status ?? null}
+        />
       </div>
     </main>
   )
