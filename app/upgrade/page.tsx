@@ -2,6 +2,7 @@ import { cookies } from 'next/headers'
 import { createServerClient } from '@supabase/ssr'
 import { redirect } from 'next/navigation'
 import SubscribeButton from './SubscribeButton'
+import TrackPageView from './TrackPageView'
 
 const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/aFabIUfj292T0VnaxEeAg00'
 
@@ -48,6 +49,7 @@ export default async function UpgradePage() {
       backgroundColor: '#fafaf8',
       padding: '40px 20px',
     }}>
+      <TrackPageView />
       <div style={{
         width: '100%',
         maxWidth: 480,

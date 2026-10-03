@@ -6,6 +6,7 @@ import StrategyFeedback from '../components/StrategyFeedback'
 import { createBrowserClient } from '@supabase/ssr'
 import { Capacitor } from '@capacitor/core'
 import { useBackButtonOverride } from '../lib/backButton'
+import { trackEvent } from '../lib/trackEvent'
 
 // TODO: replace with the real subscription product ID once created in Play Console.
 const GOOGLE_PLAY_PRODUCT_ID = 'coach_eleve_monthly'
@@ -74,12 +75,6 @@ export default function BoardPassPage() {
     setIsIOS(/iPhone|iPad|iPod/i.test(navigator.userAgent));
     setShowA2HS(true);
   }, []);
-
-  const trackEvent = async (event: string) => {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) return;
-    await supabase.from('usage_events').insert({ user_id: user.id, event });
-  };
 
   const openVault = async () => {
     trackEvent("vault_review_start");
