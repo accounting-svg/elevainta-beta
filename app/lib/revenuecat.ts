@@ -10,9 +10,17 @@ export async function ensureIdentified(supabaseUserId: string): Promise<void> {
   if (!Capacitor.isNativePlatform()) return
 
   if (!configured) {
-    await Purchases.configure({
-      apiKey: process.env.NEXT_PUBLIC_REVENUECAT_ANDROID_API_KEY as string,
-    })
+    const platform = Capacitor.getPlatform()
+    const apiKey =
+      platform === 'android' ? process.env.NEXT_PUBLIC_REVENUECAT_ANDROID_API_KEY :
+      platform === 'ios' ? process.env.NEXT_PUBLIC_REVENUECAT_IOS_API_KEY :
+      undefined
+
+    if (!apiKey) {
+      throw new Error(`No RevenueCat API key configured for platform "${platform}"`)
+    }
+
+    await Purchases.configure({ apiKey })
     configured = true
   }
 
