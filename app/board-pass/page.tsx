@@ -419,7 +419,7 @@ export default function BoardPassPage() {
       backgroundColor: '#171717', borderTop: '1px solid #C5A46D',
       padding: '12px 16px', display: 'flex', alignItems: 'center', gap: 12,
     }}>
-      <img src="/coach-eleve-logo.png" alt="Coach Elevé" style={{ width: 36, height: 36, borderRadius: '50%', border: '1px solid #C5A46D', objectFit: 'cover', flexShrink: 0 }} />
+      <img src="/rdh-rising-logo.png" alt="RDH Rising" style={{ width: 36, height: 36, borderRadius: '50%', border: '1px solid #C5A46D', objectFit: 'contain', backgroundColor: '#C9A84C', padding: 4, boxSizing: 'border-box', flexShrink: 0 }} />
       <div style={{ flex: 1 }}>
         <p style={{ color: '#C5A46D', fontWeight: 700, fontSize: '0.82rem', letterSpacing: '0.4px', marginBottom: 2 }}>
           Add Coach Elevé to your home screen
@@ -587,10 +587,13 @@ export default function BoardPassPage() {
 
   return (
     <main style={{ padding: 24, maxWidth: 700, margin: '0 auto' }}>
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: '20px' }}>
-        <h2 style={{ fontSize: '0.9rem', color: '#C5A46D' }}>{subject.toUpperCase()}</h2>
-        <button onClick={() => setView('complete')} style={{ ...dangerButton, width: 'auto', flexShrink: 0, padding: '10px 16px', fontSize: '0.95rem' }}>END SESSION</button>
-      </header>
+      {/* Mode label + END SESSION — hidden on the results screen, where the session is already over */}
+      {view !== 'complete' && (
+        <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: '20px' }}>
+          <h2 style={{ fontSize: '0.9rem', color: '#C5A46D' }}>{subject.toUpperCase()}</h2>
+          <button onClick={() => setView('complete')} style={{ ...dangerButton, width: 'auto', flexShrink: 0, minHeight: 36, padding: '6px 12px', fontSize: '0.85rem' }}>END SESSION</button>
+        </header>
+      )}
 
       {view === 'vault_flashcard' && questions.length > 0 && (
         <p style={{ textAlign: 'center', color: '#C5A46D', fontWeight: 600, marginBottom: 20 }}>
@@ -696,7 +699,7 @@ export default function BoardPassPage() {
 
       {view === 'paywall' && (
         <div className="blueprint-card" style={{ textAlign: 'center', paddingTop: 40 }}>
-          <img src="/coach-eleve-logo.png" alt="Coach Elevé" style={{ width: 110, marginBottom: 16, opacity: 0.95 }} />
+          <img src="/rdh-rising-logo.png" alt="RDH Rising" style={{ width: 140, marginBottom: 16 }} />
           <h2 style={{ color: '#C5A46D', fontSize: '1.8rem', letterSpacing: '1px', marginBottom: 12 }}>
             You've completed 50 free questions!
           </h2>
@@ -724,11 +727,13 @@ export default function BoardPassPage() {
 
       {view === 'vault_flashcard' && question && (
         <div style={{ maxWidth: 600, margin: '0 auto' }}>
+          {/* Both faces share one grid cell, so the card is as tall as the
+              taller face and stays in normal flow — a long answer pushes the
+              buttons below down instead of covering them. */}
           <div
             onClick={() => setIsFlipped(!isFlipped)}
             style={{
-              position: 'relative', width: '100%', minHeight: 180, display: 'flex',
-              justifyContent: 'center',
+              position: 'relative', width: '100%', minHeight: 180, display: 'grid',
               transition: 'transform 0.6s', transformStyle: 'preserve-3d',
               transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
               cursor: 'pointer'
@@ -736,6 +741,7 @@ export default function BoardPassPage() {
           >
             {/* FRONT OF CARD */}
             <div style={{
+              gridArea: '1 / 1', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden',
               border: '2px solid #C5A46D', borderRadius: 12, padding: 30, minHeight: 180,
               display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'
             }}>
@@ -749,7 +755,7 @@ export default function BoardPassPage() {
               </button>
             </div>
             {/* BACK OF CARD */}
-            <div className="blueprint-card" style={{ position: 'absolute', backfaceVisibility: 'hidden', width: '100%', minHeight: 180, transform: 'rotateY(180deg)', display: 'flex', flexDirection: 'column', justifyContent: 'center', border: '2px solid #C5A46D', backgroundColor: '#F8F5F0', padding: 24 }}>
+            <div className="blueprint-card" style={{ gridArea: '1 / 1', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', minHeight: 180, transform: 'rotateY(180deg)', display: 'flex', flexDirection: 'column', justifyContent: 'center', border: '2px solid #C5A46D', backgroundColor: '#F8F5F0', padding: 24 }}>
               <div style={{ display: 'flex', gap: '8px', justifyContent: 'center', marginBottom: '15px' }}>
                 {[1, 2, 3].map((dot) => (
                   <div key={dot} style={{ width: '12px', height: '12px', borderRadius: '50%', border: '1px solid #C5A46D', backgroundColor: (question.mastery_level || 0) >= dot ? '#C5A46D' : 'transparent' }} />
@@ -799,7 +805,7 @@ export default function BoardPassPage() {
           <div style={{ display: 'none' }}>
             <div onClick={() => alert('Ask Coach Elevé voice preview coming soon')} style={{ width: '100%', marginTop: 10 }}>
               <div style={{ textAlign: 'center', marginTop: 20 }}>
-                <img src="/coach-eleve-logo.png" alt="Coach Elevé" style={{ width: 110, height: 110, borderRadius: '50%', objectFit: 'cover', border: '2px solid #C5A46D' }} />
+                <img src="/rdh-rising-logo.png" alt="RDH Rising" style={{ width: 140 }} />
               </div>
               <p style={{ marginTop: 10, textAlign: 'center' }}>Ask Coach Elevé</p>
             </div>
@@ -811,7 +817,7 @@ export default function BoardPassPage() {
 
       {view === 'complete' && (
         <div className="blueprint-card" style={{ textAlign: 'center', paddingTop: 40 }}>
-          <img src="/coach-eleve-logo.png" alt="Coach Eleve Logo" style={{ width: 110, marginBottom: 10, opacity: 0.95 }} />
+          <img src="/rdh-rising-logo.png" alt="RDH Rising" style={{ width: 140, marginBottom: 10 }} />
 
           <h2 style={{ color: '#171717', fontSize: '1.8rem', letterSpacing: '1px', marginBottom: 10 }}>
             Session Analysis

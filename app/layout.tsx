@@ -76,7 +76,7 @@ export default function RootLayout({
               letterSpacing: '2px',
               color: '#171717'
             }}>
-              COACH <span style={{ color: '#C5A46D' }}>ELEVÉ</span>
+              RDH <span style={{ color: '#C5A46D' }}>RISING</span>
             </span>
           </div>
           <Link

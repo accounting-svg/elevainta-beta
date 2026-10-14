@@ -612,15 +612,9 @@ window.speechSynthesis.speak(listenSpeech);
     
    <div style={{ textAlign: 'center', marginTop: 20 }}>
   <img
-    src="/coach-eleve-logo.png"
-    alt="Coach Elevé"
-    style={{
-      width: 110,
-      height: 110,
-      borderRadius: '50%',
-      objectFit: 'cover',
-     border: '2px solid #C5A46D'
-    }}
+    src="/rdh-rising-logo.png"
+    alt="RDH Rising"
+    style={{ width: 140 }}
   />
 
   <div style={{ marginTop: 10, fontSize: '1.1rem', fontWeight: 500 }}>
@@ -650,9 +644,9 @@ window.speechSynthesis.speak(listenSpeech);
      {view === 'complete' && (
   <div className="blueprint-card" style={{ textAlign: 'center', paddingTop: 40 }}>
     <img
-      src="/coach-eleve-logo.png"
-      alt="Coach Eleve Logo"
-      style={{ width: 110, marginBottom: 10, opacity: 0.95 }}
+      src="/rdh-rising-logo.png"
+      alt="RDH Rising"
+      style={{ width: 140, marginBottom: 10 }}
     />
 
     <h2

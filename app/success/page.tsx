@@ -109,7 +109,7 @@ export default function SuccessPage() {
           color: '#C5A46D',
           marginBottom: 8,
         }}>
-          COACH ELEVÉ
+          RDH RISING
         </p>
 
         {/* Checkmark — only once the subscription is confirmed active */}

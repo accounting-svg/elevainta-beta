@@ -69,7 +69,7 @@ export default async function UpgradePage() {
           color: '#C5A46D',
           marginBottom: 8,
         }}>
-          COACH ELEVÉ
+          RDH RISING
         </p>
         <h1 style={{
           textAlign: 'center',
