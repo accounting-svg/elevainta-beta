@@ -7,6 +7,7 @@ import { createBrowserClient } from '@supabase/ssr'
 import { Capacitor } from '@capacitor/core'
 import { useBackButtonOverride } from '../lib/backButton'
 import { trackEvent } from '../lib/trackEvent'
+import RestorePurchasesButton from '../upgrade/RestorePurchasesButton'
 
 // TODO: replace with the real subscription product ID once created in Play Console.
 const GOOGLE_PLAY_PRODUCT_ID = 'coach_eleve_monthly'
@@ -355,6 +356,26 @@ export default function BoardPassPage() {
     }
   };
 
+  // After a successful restore the profile is active — refresh the cached
+  // subscription state and pick up where the paywall interrupted.
+  const handleRestored = async () => {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) {
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('subscription_status, subscription_end_date, stripe_customer_id, subscription_provider')
+        .eq('id', user.id)
+        .single();
+      if (profile) {
+        setSubscriptionStatus(profile.subscription_status);
+        setSubscriptionEndDate(profile.subscription_end_date ?? null);
+        setStripeCustomerId(profile.stripe_customer_id ?? null);
+        setSubscriptionProvider(profile.subscription_provider ?? null);
+      }
+    }
+    setView('rationale');
+  };
+
   const handleMasteryHit = async (cardId: string) => {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return;
@@ -694,6 +715,9 @@ export default function BoardPassPage() {
           >
             Unlock Full Access — $49/month
           </a>
+          <div style={{ marginBottom: 16 }}>
+            <RestorePurchasesButton onRestored={handleRestored} />
+          </div>
           <button
             onClick={() => setSubject(null)}
             style={{ background: 'none', border: 'none', color: '#888', fontSize: '0.9rem', cursor: 'pointer' }}

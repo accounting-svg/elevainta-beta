@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Capacitor } from '@capacitor/core'
 import { PURCHASES_ERROR_CODE, type PurchasesError } from '@revenuecat/purchases-capacitor'
-import { purchaseSubscription } from '../lib/revenuecat'
+import { purchaseSubscription, syncSubscription } from '../lib/revenuecat'
 import { trackEvent } from '../lib/trackEvent'
 
 const buttonStyle: React.CSSProperties = {
@@ -52,6 +52,14 @@ export default function SubscribeButton({ stripeUrl, userId }: { stripeUrl: stri
     try {
       await purchaseSubscription(userId)
       trackEvent('purchase_succeeded')
+      // Activate the profile now rather than waiting on the webhook. A failed
+      // sync must not strand a paid user here — the webhook and the success
+      // page's own check are still behind it.
+      try {
+        await syncSubscription()
+      } catch (syncErr) {
+        console.error('RevenueCat sync after purchase failed:', syncErr)
+      }
       router.push('/success')
     } catch (err) {
       // A user-cancelled purchase throws too — just let them try again rather

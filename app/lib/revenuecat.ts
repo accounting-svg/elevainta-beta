@@ -42,3 +42,23 @@ export async function purchaseSubscription(supabaseUserId: string): Promise<bool
   const { customerInfo } = await Purchases.purchasePackage({ aPackage: pkg })
   return Object.keys(customerInfo.entitlements.active).length > 0
 }
+
+// Re-attaches any subscription the device's store account already owns to
+// this user in RevenueCat. Follow with syncSubscription() to unlock access.
+export async function restorePurchases(supabaseUserId: string): Promise<void> {
+  await ensureIdentified(supabaseUserId)
+  await Purchases.restorePurchases()
+}
+
+// Asks the server to check RevenueCat directly and activate the signed-in
+// user's profile if they have an active entitlement, instead of waiting on
+// the webhook. Returns true if the profile is now active. Throws if the
+// check itself failed — callers decide whether that should block anything.
+export async function syncSubscription(): Promise<boolean> {
+  const res = await fetch('/api/revenuecat/sync', { method: 'POST' })
+  if (!res.ok) {
+    throw new Error(`Subscription sync failed (${res.status})`)
+  }
+  const data = await res.json()
+  return data?.active === true
+}

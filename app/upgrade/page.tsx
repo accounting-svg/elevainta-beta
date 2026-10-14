@@ -2,6 +2,7 @@ import { cookies } from 'next/headers'
 import { createServerClient } from '@supabase/ssr'
 import { redirect } from 'next/navigation'
 import SubscribeButton from './SubscribeButton'
+import RestorePurchasesButton from './RestorePurchasesButton'
 import TrackPageView from './TrackPageView'
 
 const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/aFabIUfj292T0VnaxEeAg00'
@@ -135,6 +136,7 @@ export default async function UpgradePage() {
 
         {/* CTA Button */}
         <SubscribeButton stripeUrl={stripeUrl} userId={user.id} />
+        <RestorePurchasesButton />
 
         <p style={{ textAlign: 'center', fontSize: '0.75rem', color: '#999', marginTop: 12, lineHeight: 1.6 }}>
           By subscribing, you agree to our{' '}

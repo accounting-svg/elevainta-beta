@@ -1,10 +1,14 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { createBrowserClient } from '@supabase/ssr'
+import { Capacitor } from '@capacitor/core'
+import { syncSubscription } from '../lib/revenuecat'
 
 export default function SuccessPage() {
   const [isActive, setIsActive] = useState(false)
   const [checking, setChecking] = useState(true)
+  // Bumped by "Check again" to re-run the activation check below.
+  const [checkRun, setCheckRun] = useState(0)
 
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -12,6 +16,7 @@ export default function SuccessPage() {
   )
 
   useEffect(() => {
+    let cancelled = false
     let attempts = 0
     // 10x/3s = 30s. Longer than Stripe alone needs (its webhook is near-instant),
     // but the Google Play path's chain (RTDN → RevenueCat → our webhook) is
@@ -20,6 +25,7 @@ export default function SuccessPage() {
     const maxAttempts = 10
 
     const poll = async () => {
+      if (cancelled) return
       attempts++
       const { data: { user } } = await supabase.auth.getUser()
       if (!user) {
@@ -45,8 +51,27 @@ export default function SuccessPage() {
       }
     }
 
-    poll()
-  }, [])
+    const run = async () => {
+      // Store purchases: ask RevenueCat directly first rather than relying on
+      // the webhook having landed. Failure is fine — polling still follows.
+      if (Capacitor.isNativePlatform()) {
+        try {
+          await syncSubscription()
+        } catch (err) {
+          console.error('RevenueCat sync on success page failed:', err)
+        }
+      }
+      poll()
+    }
+
+    run()
+    return () => { cancelled = true }
+  }, [checkRun])
+
+  const handleCheckAgain = () => {
+    setChecking(true)
+    setCheckRun((n) => n + 1)
+  }
 
   const unlocked = [
     '500+ exam-style questions',
@@ -86,12 +111,12 @@ export default function SuccessPage() {
           COACH ELEVÉ
         </p>
 
-        {/* Checkmark */}
+        {/* Checkmark — only once the subscription is confirmed active */}
         <div style={{
           width: 64,
           height: 64,
           borderRadius: '50%',
-          backgroundColor: '#C5A46D',
+          backgroundColor: isActive ? '#C5A46D' : '#e0d6c2',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -99,7 +124,7 @@ export default function SuccessPage() {
           fontSize: '1.75rem',
           color: '#fff',
         }}>
-          ✓
+          {isActive ? '✓' : '…'}
         </div>
 
         {/* Headline */}
@@ -110,7 +135,7 @@ export default function SuccessPage() {
           color: '#171717',
           marginBottom: 8,
         }}>
-          YOU'RE IN!
+          {isActive ? "YOU'RE IN!" : checking ? 'ALMOST THERE' : 'STILL ACTIVATING'}
         </h1>
 
         {/* Subheading */}
@@ -120,7 +145,11 @@ export default function SuccessPage() {
           marginBottom: 8,
           lineHeight: 1.5,
         }}>
-          Your subscription is active.
+          {isActive
+            ? 'Your subscription is active.'
+            : checking
+              ? 'Activating your subscription…'
+              : 'Your purchase went through, but your account is still activating.'}
         </p>
         <p style={{
           fontSize: '0.875rem',
@@ -128,7 +157,11 @@ export default function SuccessPage() {
           marginBottom: 36,
           lineHeight: 1.5,
         }}>
-          Full access has been unlocked — everything you need to pass your board exam is ready.
+          {isActive
+            ? 'Full access has been unlocked — everything you need to pass your board exam is ready.'
+            : checking
+              ? 'This usually takes just a few seconds.'
+              : 'This can take a minute. Tap "Check again" below — you won\'t be charged twice.'}
         </p>
 
         {/* What they unlocked */}
@@ -154,7 +187,7 @@ export default function SuccessPage() {
           ))}
         </ul>
 
-        {/* CTA — shown only once subscription confirmed active (or after 5 polling attempts) */}
+        {/* CTA — "start practicing" only once the subscription is confirmed active */}
         {checking ? (
           <p style={{
             fontSize: '0.9rem',
@@ -164,6 +197,40 @@ export default function SuccessPage() {
           }}>
             Activating your account…
           </p>
+        ) : !isActive ? (
+          <>
+            <button
+              onClick={handleCheckAgain}
+              style={{
+                display: 'block',
+                width: '100%',
+                padding: '14px',
+                backgroundColor: '#C5A46D',
+                color: '#fff',
+                border: 'none',
+                borderRadius: 3,
+                fontSize: '0.9rem',
+                fontWeight: 'bold',
+                letterSpacing: '1.5px',
+                textAlign: 'center',
+                boxSizing: 'border-box',
+                cursor: 'pointer',
+              }}
+            >
+              CHECK AGAIN
+            </button>
+            <a
+              href="/board-pass"
+              style={{
+                display: 'block',
+                marginTop: 14,
+                fontSize: '0.85rem',
+                color: '#888',
+              }}
+            >
+              Continue to the app
+            </a>
+          </>
         ) : (
           <a
             href="/board-pass"
