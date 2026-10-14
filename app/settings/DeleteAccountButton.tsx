@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { createBrowserClient } from '@supabase/ssr'
 import { useRouter } from 'next/navigation'
+import { secondaryButton, dangerButton, dangerSolidButton } from '../lib/buttonStyles'
 
 export default function DeleteAccountButton({
   subscriptionProvider,
@@ -54,19 +55,7 @@ export default function DeleteAccountButton({
       <button
         type="button"
         onClick={() => setConfirming(true)}
-        style={{
-          width: '100%',
-          padding: '12px',
-          marginTop: 12,
-          backgroundColor: 'transparent',
-          color: '#c0392b',
-          border: '1px solid #c0392b',
-          borderRadius: 3,
-          fontSize: '0.9rem',
-          fontWeight: 'bold',
-          letterSpacing: '1.5px',
-          cursor: 'pointer',
-        }}
+        style={{ ...dangerButton, marginTop: 12 }}
       >
         DELETE ACCOUNT
       </button>
@@ -106,13 +95,8 @@ export default function DeleteAccountButton({
           onClick={() => setConfirming(false)}
           disabled={loading}
           style={{
+            ...secondaryButton,
             flex: 1,
-            padding: '10px',
-            backgroundColor: '#fff',
-            color: '#333',
-            border: '1px solid #ddd',
-            borderRadius: 3,
-            fontSize: '0.85rem',
             cursor: loading ? 'not-allowed' : 'pointer',
           }}
         >
@@ -123,14 +107,9 @@ export default function DeleteAccountButton({
           onClick={handleDelete}
           disabled={loading}
           style={{
+            ...dangerSolidButton,
             flex: 1,
-            padding: '10px',
-            backgroundColor: loading ? '#e0a89f' : '#c0392b',
-            color: '#fff',
-            border: 'none',
-            borderRadius: 3,
-            fontSize: '0.85rem',
-            fontWeight: 'bold',
+            ...(loading ? { backgroundColor: '#e0a89f', borderColor: '#e0a89f' } : {}),
             cursor: loading ? 'not-allowed' : 'pointer',
           }}
         >

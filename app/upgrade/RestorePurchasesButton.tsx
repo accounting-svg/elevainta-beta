@@ -5,6 +5,7 @@ import { createBrowserClient } from '@supabase/ssr'
 import { Capacitor } from '@capacitor/core'
 import { restorePurchases, syncSubscription } from '../lib/revenuecat'
 import { trackEvent } from '../lib/trackEvent'
+import { secondaryButton } from '../lib/buttonStyles'
 
 // Native only — store purchases don't exist on web, so this renders nothing
 // there. `onRestored` runs once access is confirmed; without it the user is
@@ -59,16 +60,7 @@ export default function RestorePurchasesButton({ onRestored }: { onRestored?: ()
       <button
         onClick={handleRestore}
         disabled={restoring}
-        style={{
-          background: 'none',
-          border: 'none',
-          color: '#C5A46D',
-          fontSize: '0.9rem',
-          fontWeight: 'bold',
-          textDecoration: 'underline',
-          cursor: 'pointer',
-          opacity: restoring ? 0.7 : 1,
-        }}
+        style={{ ...secondaryButton, opacity: restoring ? 0.7 : 1 }}
       >
         {restoring ? 'Restoring…' : 'Restore Purchases'}
       </button>

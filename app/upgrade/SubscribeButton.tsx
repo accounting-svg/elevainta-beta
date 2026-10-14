@@ -6,23 +6,9 @@ import { PURCHASES_ERROR_CODE, type PurchasesError } from '@revenuecat/purchases
 import { purchaseSubscription, syncSubscription } from '../lib/revenuecat'
 import { trackEvent } from '../lib/trackEvent'
 import { useStorePrice } from '../lib/useStorePrice'
+import { primaryButton } from '../lib/buttonStyles'
 
-const buttonStyle: React.CSSProperties = {
-  display: 'block',
-  width: '100%',
-  padding: '14px',
-  backgroundColor: '#C5A46D',
-  color: '#fff',
-  border: 'none',
-  borderRadius: 3,
-  fontSize: '0.9rem',
-  fontWeight: 'bold',
-  letterSpacing: '1.5px',
-  textAlign: 'center',
-  textDecoration: 'none',
-  boxSizing: 'border-box',
-  cursor: 'pointer',
-}
+const buttonStyle: React.CSSProperties = primaryButton
 
 export default function SubscribeButton({ stripeUrl, userId }: { stripeUrl: string; userId: string }) {
   const router = useRouter()

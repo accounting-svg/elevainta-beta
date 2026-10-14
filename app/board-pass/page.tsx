@@ -9,6 +9,7 @@ import { useBackButtonOverride } from '../lib/backButton'
 import { trackEvent } from '../lib/trackEvent'
 import RestorePurchasesButton from '../upgrade/RestorePurchasesButton'
 import { useStorePrice } from '../lib/useStorePrice'
+import { primaryButton, secondaryButton, dangerButton } from '../lib/buttonStyles'
 
 // TODO: replace with the real subscription product ID once created in Play Console.
 const GOOGLE_PLAY_PRODUCT_ID = 'coach_eleve_monthly'
@@ -454,10 +455,7 @@ export default function BoardPassPage() {
           <button
             onClick={startAutomatedBlueprint}
             className="gold-button"
-            style={{
-              width: '100%', fontWeight: '700', fontSize: '1.1rem', letterSpacing: '0.5px',
-              backgroundColor: '#C5A46D', padding: '12px 0', color: '#000000'
-            }}
+            style={primaryButton}
           >
             Suggested Blueprint
           </button>
@@ -474,10 +472,7 @@ export default function BoardPassPage() {
               setCustomCounts({});
             }}
             className="secondary-button"
-            style={{
-              width: '100%', border: '2px solid #C5A46D', fontWeight: '700',
-              fontSize: '1.1rem', padding: '12px 0', color: '#171717', backgroundColor: '#ffffff'
-            }}
+            style={secondaryButton}
           >
             Create Your Own Experience
           </button>
@@ -489,11 +484,7 @@ export default function BoardPassPage() {
           <button
             onClick={openVault}
             className="gold-button"
-            style={{
-              width: '100%', backgroundColor: '#171717', color: '#FFFFFF',
-              fontWeight: '700', fontSize: '1.1rem', padding: '12px 0',
-              marginTop: '5px', border: '1px solid #C5A46D'
-            }}
+            style={{ ...secondaryButton, marginTop: '5px' }}
           >
             Review Flashcards
           </button>
@@ -516,16 +507,7 @@ export default function BoardPassPage() {
           ) : (
             <button
               onClick={() => { console.log('CLICK WORKING'); handleManageSubscription(); }}
-              style={{
-                marginTop: 16,
-                background: 'none',
-                border: 'none',
-                color: '#C5A46D',
-                fontSize: '0.85rem',
-                cursor: 'pointer',
-                textDecoration: 'underline',
-                letterSpacing: '0.5px',
-              }}
+              style={{ ...secondaryButton, marginTop: 16 }}
             >
               Manage Subscription
             </button>
@@ -593,10 +575,10 @@ export default function BoardPassPage() {
             </div>
           );
         })}
-        <button onClick={startCustomExperience} className="gold-button" style={{ width: '100%', marginTop: '30px', padding: '15px', fontWeight: '700' }}>
+        <button onClick={startCustomExperience} className="gold-button" style={{ ...primaryButton, marginTop: '30px' }}>
           Start Custom Session
         </button>
-        <button onClick={() => setSubject(null)} style={{ display: 'block', margin: '20px auto', background: 'none', border: 'none', color: 'grey', cursor: 'pointer' }}>
+        <button onClick={() => setSubject(null)} style={{ ...secondaryButton, marginTop: 12, marginBottom: 20 }}>
           Cancel
         </button>
       </main>
@@ -605,9 +587,9 @@ export default function BoardPassPage() {
 
   return (
     <main style={{ padding: 24, maxWidth: 700, margin: '0 auto' }}>
-      <header style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
+      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: '20px' }}>
         <h2 style={{ fontSize: '0.9rem', color: '#C5A46D' }}>{subject.toUpperCase()}</h2>
-        <button onClick={() => setView('complete')} style={{ color: 'red', fontWeight: 'bold', border: 'none', background: 'none', cursor: 'pointer' }}>END SESSION</button>
+        <button onClick={() => setView('complete')} style={{ ...dangerButton, width: 'auto', flexShrink: 0, padding: '10px 16px', fontSize: '0.95rem' }}>END SESSION</button>
       </header>
 
       {view === 'vault_flashcard' && questions.length > 0 && (
@@ -687,7 +669,7 @@ export default function BoardPassPage() {
               </p>
             </div>
           ))}
-          <button onClick={() => setView('strategy')} className="gold-button" style={{ width: '100%', marginTop: 20 }}>View Strategy</button>
+          <button onClick={() => setView('strategy')} className="gold-button" style={{ ...primaryButton, marginTop: 20 }}>View Strategy</button>
         </div>
       )}
 
@@ -705,7 +687,7 @@ export default function BoardPassPage() {
               }
             }}
             className="gold-button"
-            style={{ width: '100%', marginTop: 35 }}
+            style={{ ...primaryButton, marginTop: 35 }}
           >
             Next Question
           </button>
@@ -724,19 +706,7 @@ export default function BoardPassPage() {
           <a
             href="/upgrade"
             onClick={() => trackEvent('upgrade_clicked')}
-            style={{
-              display: 'block',
-              width: '100%',
-              padding: '14px 0',
-              backgroundColor: '#C5A46D',
-              color: '#000',
-              fontWeight: 700,
-              fontSize: '1.05rem',
-              letterSpacing: '0.5px',
-              borderRadius: 8,
-              textDecoration: 'none',
-              marginBottom: 16,
-            }}
+            style={{ ...primaryButton, marginBottom: 16 }}
           >
             {!isNativeApp ? 'Unlock Full Access — $49/month' : storePrice ? `Unlock Full Access — ${storePrice}/month` : 'Unlock Full Access'}
           </a>
@@ -745,7 +715,7 @@ export default function BoardPassPage() {
           </div>
           <button
             onClick={() => setSubject(null)}
-            style={{ background: 'none', border: 'none', color: '#888', fontSize: '0.9rem', cursor: 'pointer' }}
+            style={secondaryButton}
           >
             Return Home
           </button>
@@ -773,12 +743,7 @@ export default function BoardPassPage() {
               <p style={{ fontSize: '1.2rem', fontWeight: 600, textAlign: 'center' }}>{question.topic}</p>
               <button
                 onClick={(e) => { e.stopPropagation(); setIsFlipped(true); }}
-                style={{
-                  marginTop: 14, padding: '12px 0', width: '200px',
-                  backgroundColor: '#C5A46D', color: '#000', fontWeight: 700,
-                  border: 'none', borderRadius: 8, cursor: 'pointer',
-                  boxShadow: '0 2px 6px rgba(0,0,0,0.15)'
-                }}
+                style={{ ...primaryButton, marginTop: 14, maxWidth: 280 }}
               >
                 Reveal Answer
               </button>
@@ -811,7 +776,7 @@ export default function BoardPassPage() {
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', marginTop: 20 }}>
             <button
               onClick={() => handleMasteryHit(question.id)}
-              style={{ padding: '10px 16px', border: '1px solid #C5A46D', borderRadius: 8, backgroundColor: '#fff', cursor: 'pointer', fontWeight: 600 }}
+              style={{ ...secondaryButton, flex: 1 }}
             >
               <span style={{ backgroundColor: '#C5A46D', color: '#000', borderRadius: 4, padding: '4px 8px', marginRight: 6 }}>✓</span>
               Mastered
@@ -825,13 +790,7 @@ export default function BoardPassPage() {
                   setSubject(null);
                 }
               }}
-              style={{
-                padding: '12px 16px', backgroundColor: '#ffffff', border: '1.5px solid #C5A46D',
-                borderRadius: 6, height: 44, width: 150, display: 'flex', alignItems: 'center',
-                justifyContent: 'center', fontWeight: 600, fontSize: '0.95rem',
-                letterSpacing: '0.3px', cursor: 'pointer', boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
-                marginLeft: 6, lineHeight: '1',
-              }}
+              style={{ ...primaryButton, flex: 1 }}
             >
               Next →
             </button>
@@ -846,7 +805,7 @@ export default function BoardPassPage() {
             </div>
           </div>
 
-          <button onClick={() => setSubject(null)} style={{ display: 'block', margin: '30px auto', background: 'none', border: 'none', color: 'black', cursor: 'pointer', fontSize: '0.9rem' }}>Return to Home Page</button>
+          <button onClick={() => setSubject(null)} style={{ ...secondaryButton, marginTop: 30, marginBottom: 30 }}>Return to Home Page</button>
         </div>
       )}
 
@@ -921,11 +880,11 @@ export default function BoardPassPage() {
           <button
             onClick={openVault}
             className="gold-button"
-            style={{ width: '100%', marginTop: '30px', backgroundColor: '#171717', color: '#C5A46D' }}
+            style={{ ...primaryButton, marginTop: '30px' }}
           >
             Review Flashcards
           </button>
-          <button onClick={() => setSubject(null)} className="gold-button" style={{ marginTop: 10, width: '100%' }}>
+          <button onClick={() => setSubject(null)} className="gold-button" style={{ ...secondaryButton, marginTop: 10 }}>
             Return Home
           </button>
         </div>

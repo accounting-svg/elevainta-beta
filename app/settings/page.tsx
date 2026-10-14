@@ -3,6 +3,7 @@ import { createServerClient } from '@supabase/ssr'
 import { redirect } from 'next/navigation'
 import { signOut } from '../actions/signOut'
 import DeleteAccountButton from './DeleteAccountButton'
+import { primaryButton } from '../lib/buttonStyles'
 
 export default async function SettingsPage() {
   const cookieStore = await cookies()
@@ -71,18 +72,7 @@ export default async function SettingsPage() {
           <button
             type="submit"
             className="gold-button"
-            style={{
-              width: '100%',
-              padding: '12px',
-              backgroundColor: '#C5A46D',
-              color: '#fff',
-              border: 'none',
-              borderRadius: 3,
-              fontSize: '0.9rem',
-              fontWeight: 'bold',
-              letterSpacing: '1.5px',
-              cursor: 'pointer',
-            }}
+            style={primaryButton}
           >
             SIGN OUT
           </button>

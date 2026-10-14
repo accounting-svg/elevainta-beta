@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { createBrowserClient } from '@supabase/ssr'
 import { Capacitor } from '@capacitor/core'
 import { syncSubscription } from '../lib/revenuecat'
+import { primaryButton, secondaryButton } from '../lib/buttonStyles'
 
 export default function SuccessPage() {
   const [isActive, setIsActive] = useState(false)
@@ -201,32 +202,13 @@ export default function SuccessPage() {
           <>
             <button
               onClick={handleCheckAgain}
-              style={{
-                display: 'block',
-                width: '100%',
-                padding: '14px',
-                backgroundColor: '#C5A46D',
-                color: '#fff',
-                border: 'none',
-                borderRadius: 3,
-                fontSize: '0.9rem',
-                fontWeight: 'bold',
-                letterSpacing: '1.5px',
-                textAlign: 'center',
-                boxSizing: 'border-box',
-                cursor: 'pointer',
-              }}
+              style={primaryButton}
             >
               CHECK AGAIN
             </button>
             <a
               href="/board-pass"
-              style={{
-                display: 'block',
-                marginTop: 14,
-                fontSize: '0.85rem',
-                color: '#888',
-              }}
+              style={{ ...secondaryButton, marginTop: 12 }}
             >
               Continue to the app
             </a>
@@ -234,21 +216,7 @@ export default function SuccessPage() {
         ) : (
           <a
             href="/board-pass"
-            style={{
-              display: 'block',
-              width: '100%',
-              padding: '14px',
-              backgroundColor: '#C5A46D',
-              color: '#fff',
-              border: 'none',
-              borderRadius: 3,
-              fontSize: '0.9rem',
-              fontWeight: 'bold',
-              letterSpacing: '1.5px',
-              textAlign: 'center',
-              textDecoration: 'none',
-              boxSizing: 'border-box',
-            }}
+            style={primaryButton}
           >
             START PRACTICING NOW
           </a>
