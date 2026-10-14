@@ -3,6 +3,7 @@ import { createServerClient } from '@supabase/ssr'
 import { redirect } from 'next/navigation'
 import SubscribeButton from './SubscribeButton'
 import RestorePurchasesButton from './RestorePurchasesButton'
+import PriceDisplay from './PriceDisplay'
 import TrackPageView from './TrackPageView'
 
 const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/aFabIUfj292T0VnaxEeAg00'
@@ -117,21 +118,7 @@ export default async function UpgradePage() {
           textAlign: 'center',
           marginBottom: 20,
         }}>
-          <span style={{
-            fontSize: '2rem',
-            fontWeight: 'bold',
-            color: '#171717',
-            letterSpacing: '1px',
-          }}>
-            $49
-          </span>
-          <span style={{
-            fontSize: '1rem',
-            color: '#888',
-            marginLeft: 4,
-          }}>
-            / month
-          </span>
+          <PriceDisplay />
         </div>
 
         {/* CTA Button */}

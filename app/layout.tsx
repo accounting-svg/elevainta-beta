@@ -14,6 +14,23 @@ export default function RootLayout({
     if (Capacitor.isNativePlatform()) {
       registerBackButtonListener()
     }
+
+    // iOS app only: the web view runs edge to edge, under the status bar and
+    // home indicator. Opt in to the safe-area insets and expose them through
+    // --ios-safe-* variables. Web and Android never set these, so every
+    // var(--ios-safe-*, 0px) below resolves to 0 there and nothing moves.
+    if (Capacitor.getPlatform() === 'ios') {
+      const viewport = document.querySelector('meta[name="viewport"]')
+      const content = viewport?.getAttribute('content') ?? ''
+      if (viewport && !content.includes('viewport-fit')) {
+        viewport.setAttribute('content', `${content}, viewport-fit=cover`)
+      }
+      const root = document.documentElement.style
+      root.setProperty('--ios-safe-top', 'env(safe-area-inset-top)')
+      root.setProperty('--ios-safe-bottom', 'env(safe-area-inset-bottom)')
+      root.setProperty('--ios-safe-left', 'env(safe-area-inset-left)')
+      root.setProperty('--ios-safe-right', 'env(safe-area-inset-right)')
+    }
   }, [])
 
   return (
@@ -33,10 +50,17 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180x180.png" />
         <meta name="google-site-verification" content="oRvC8FkniZPdM8v4eL3TN1PFz7ZnVTQyD99SYGvGol4" />
       </head>
-      <body style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <body style={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        paddingLeft: 'var(--ios-safe-left, 0px)',
+        paddingRight: 'var(--ios-safe-right, 0px)',
+      }}>
         {/* Top Branding Bar */}
         <header style={{
           padding: '15px 20px',
+          paddingTop: 'calc(15px + var(--ios-safe-top, 0px))',
           backgroundColor: '#ffffff',
           borderBottom: '1px solid #C5A46D',
           display: 'flex',
@@ -60,7 +84,8 @@ export default function RootLayout({
             style={{
               position: 'absolute',
               right: 20,
-              top: '50%',
+              // Centered on the title row, below any status-bar inset
+              top: 'calc(50% + var(--ios-safe-top, 0px) / 2)',
               transform: 'translateY(-50%)',
               color: '#666',
               textDecoration: 'none',
@@ -80,6 +105,7 @@ export default function RootLayout({
         {/* Subtle Footer */}
         <footer style={{
           padding: '20px',
+          paddingBottom: 'calc(20px + var(--ios-safe-bottom, 0px))',
           textAlign: 'center',
           fontSize: '0.8rem',
           color: '#666',

@@ -8,6 +8,7 @@ import { Capacitor } from '@capacitor/core'
 import { useBackButtonOverride } from '../lib/backButton'
 import { trackEvent } from '../lib/trackEvent'
 import RestorePurchasesButton from '../upgrade/RestorePurchasesButton'
+import { useStorePrice } from '../lib/useStorePrice'
 
 // TODO: replace with the real subscription product ID once created in Play Console.
 const GOOGLE_PLAY_PRODUCT_ID = 'coach_eleve_monthly'
@@ -35,6 +36,7 @@ export default function BoardPassPage() {
   const [subscriptionProvider, setSubscriptionProvider] = useState<string | null>(null);
   const [showA2HS, setShowA2HS] = useState(false);
   const [isIOS, setIsIOS] = useState(false);
+  const { isNative: isNativeApp, price: storePrice } = useStorePrice();
 
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL as string,
@@ -640,9 +642,32 @@ export default function BoardPassPage() {
 
       {view === 'question' && question && (
         <div className="blueprint-card">
-          <h2>{question.question}</h2>
+          <h2 style={{ fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.5, color: '#171717', margin: '0 0 20px' }}>{question.question}</h2>
           {question.choices.map((c: any) => (
-            <button key={c.key} onClick={() => handleAnswer(c.key)} disabled={selected !== null} className="choice-button-style" style={{ width: '100%', textAlign: 'left', marginBottom: 12 }}>
+            <button
+              key={c.key}
+              onClick={() => handleAnswer(c.key)}
+              disabled={selected !== null}
+              className="choice-button-style"
+              style={{
+                display: 'block',
+                width: '100%',
+                minHeight: 48,
+                padding: '14px 16px',
+                marginBottom: 12,
+                textAlign: 'left',
+                fontSize: '1.1rem',
+                lineHeight: 1.4,
+                color: '#171717',
+                backgroundColor: '#ffffff',
+                border: '1px solid #d8cdb8',
+                borderRadius: 8,
+                cursor: 'pointer',
+                WebkitAppearance: 'none',
+                appearance: 'none',
+                boxSizing: 'border-box',
+              }}
+            >
               <strong>{c.key}.</strong> {c.text}
             </button>
           ))}
@@ -713,7 +738,7 @@ export default function BoardPassPage() {
               marginBottom: 16,
             }}
           >
-            Unlock Full Access — $49/month
+            {!isNativeApp ? 'Unlock Full Access — $49/month' : storePrice ? `Unlock Full Access — ${storePrice}/month` : 'Unlock Full Access'}
           </a>
           <div style={{ marginBottom: 16 }}>
             <RestorePurchasesButton onRestored={handleRestored} />

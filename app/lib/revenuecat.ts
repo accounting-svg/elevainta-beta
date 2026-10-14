@@ -27,14 +27,28 @@ export async function ensureIdentified(supabaseUserId: string): Promise<void> {
   await Purchases.logIn({ appUserID: supabaseUserId })
 }
 
+// The package a purchase would buy — shared so the displayed price is always
+// the price of exactly what gets purchased.
+async function currentPackage() {
+  const { current } = await Purchases.getOfferings()
+  return current?.monthly ?? current?.availablePackages[0]
+}
+
+// The store's localized price string (e.g. "$49.99", "€54,99") for the
+// package a purchase would buy, or null if no package is available.
+export async function getStorePriceString(supabaseUserId: string): Promise<string | null> {
+  await ensureIdentified(supabaseUserId)
+  const pkg = await currentPackage()
+  return pkg?.product.priceString ?? null
+}
+
 // Returns true if the purchase completed and granted an active entitlement.
 // Throws if the user cancels or the purchase fails — callers should catch
 // and ignore a user-initiated cancellation rather than surfacing an error.
 export async function purchaseSubscription(supabaseUserId: string): Promise<boolean> {
   await ensureIdentified(supabaseUserId)
 
-  const { current } = await Purchases.getOfferings()
-  const pkg = current?.monthly ?? current?.availablePackages[0]
+  const pkg = await currentPackage()
   if (!pkg) {
     throw new Error('No RevenueCat offering package available to purchase')
   }

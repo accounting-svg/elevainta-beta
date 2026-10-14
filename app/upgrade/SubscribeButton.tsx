@@ -5,6 +5,7 @@ import { Capacitor } from '@capacitor/core'
 import { PURCHASES_ERROR_CODE, type PurchasesError } from '@revenuecat/purchases-capacitor'
 import { purchaseSubscription, syncSubscription } from '../lib/revenuecat'
 import { trackEvent } from '../lib/trackEvent'
+import { useStorePrice } from '../lib/useStorePrice'
 
 const buttonStyle: React.CSSProperties = {
   display: 'block',
@@ -26,6 +27,7 @@ const buttonStyle: React.CSSProperties = {
 export default function SubscribeButton({ stripeUrl, userId }: { stripeUrl: string; userId: string }) {
   const router = useRouter()
   const [purchasing, setPurchasing] = useState(false)
+  const { price } = useStorePrice()
 
   if (!Capacitor.isNativePlatform()) {
     const handleWebSubscribeClick = async (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -76,7 +78,7 @@ export default function SubscribeButton({ stripeUrl, userId }: { stripeUrl: stri
 
   return (
     <button onClick={handlePurchase} disabled={purchasing} style={{ ...buttonStyle, opacity: purchasing ? 0.7 : 1 }}>
-      {purchasing ? 'PROCESSING…' : 'SUBSCRIBE FOR $49/MONTH'}
+      {purchasing ? 'PROCESSING…' : price ? `SUBSCRIBE FOR ${price}/MONTH` : 'SUBSCRIBE'}
     </button>
   )
 }
