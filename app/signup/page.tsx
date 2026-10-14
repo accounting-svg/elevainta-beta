@@ -116,7 +116,7 @@ function SignupForm() {
             marginBottom: 16,
             border: '1px solid #ddd',
             borderRadius: 3,
-            fontSize: '0.95rem',
+            fontSize: '1rem',
             outline: 'none',
             boxSizing: 'border-box',
           }}
@@ -138,7 +138,7 @@ function SignupForm() {
             marginBottom: 24,
             border: '1px solid #ddd',
             borderRadius: 3,
-            fontSize: '0.95rem',
+            fontSize: '1rem',
             outline: 'none',
             boxSizing: 'border-box',
           }}

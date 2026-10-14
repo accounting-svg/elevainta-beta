@@ -337,24 +337,37 @@ export default function BoardPassPage() {
 
     if (lifetimeAnswered + attempted + 1 >= 50) {
       // Re-fetch subscription status fresh from DB — the cached value can be stale
-      // if the Stripe webhook fired after the page loaded.
-      const { data: { user: currentUser } } = await supabase.auth.getUser();
-      let freshStatus = subscriptionStatus;
-      let freshEndDate = subscriptionEndDate;
-      if (currentUser) {
-        const { data: freshProfile } = await supabase
+      // if the Stripe webhook fired after the page loaded. Capped at 5s: if the
+      // check stalls or fails, fall back to the cached status (not active here),
+      // which shows the paywall instead of freezing on the question.
+      const fetchFresh = async () => {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user) return { user: null, profile: null };
+        const { data: profile } = await supabase
           .from('profiles')
           .select('subscription_status, subscription_end_date, stripe_customer_id, subscription_provider')
-          .eq('id', currentUser.id)
+          .eq('id', user.id)
           .single();
-        if (freshProfile) {
-          freshStatus = freshProfile.subscription_status;
-          freshEndDate = freshProfile.subscription_end_date ?? null;
-          setSubscriptionStatus(freshStatus);
-          setSubscriptionEndDate(freshEndDate);
-          setStripeCustomerId(freshProfile.stripe_customer_id ?? null);
-          setSubscriptionProvider(freshProfile.subscription_provider ?? null);
-        }
+        return { user, profile };
+      };
+      const timeout = new Promise<null>((resolve) => setTimeout(() => resolve(null), 5000));
+      let fresh: Awaited<ReturnType<typeof fetchFresh>> | null = null;
+      try {
+        fresh = await Promise.race([fetchFresh(), timeout]);
+      } catch (err) {
+        console.error('Subscription re-check failed:', err);
+      }
+
+      const currentUser = fresh?.user ?? null;
+      let freshStatus = subscriptionStatus;
+      let freshEndDate = subscriptionEndDate;
+      if (fresh?.profile) {
+        freshStatus = fresh.profile.subscription_status;
+        freshEndDate = fresh.profile.subscription_end_date ?? null;
+        setSubscriptionStatus(freshStatus);
+        setSubscriptionEndDate(freshEndDate);
+        setStripeCustomerId(fresh.profile.stripe_customer_id ?? null);
+        setSubscriptionProvider(fresh.profile.subscription_provider ?? null);
       }
       if (isEffectivelyActive(freshStatus, freshEndDate)) {
         setView('rationale');
@@ -579,7 +592,7 @@ export default function BoardPassPage() {
                 type="number" min="0" max={totalAvailable}
                 value={customCounts[cat] || 0}
                 onChange={(e) => setCustomCounts(prev => ({ ...prev, [cat]: parseInt(e.target.value) || 0 }))}
-                style={{ width: '60px', textAlign: 'center', border: '2px solid #8a7550', fontWeight: 'bold' }}
+                style={{ width: '60px', textAlign: 'center', border: '2px solid #8a7550', fontWeight: 'bold', fontSize: 16 }}
               />
             </div>
           );

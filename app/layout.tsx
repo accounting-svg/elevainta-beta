@@ -23,7 +23,7 @@ export default function RootLayout({
       const viewport = document.querySelector('meta[name="viewport"]')
       const content = viewport?.getAttribute('content') ?? ''
       if (viewport && !content.includes('viewport-fit')) {
-        viewport.setAttribute('content', `${content}, viewport-fit=cover`)
+        viewport.setAttribute('content', `${content}, viewport-fit=cover, maximum-scale=1`)
       }
       const root = document.documentElement.style
       root.setProperty('--ios-safe-top', 'env(safe-area-inset-top)')
