@@ -301,21 +301,30 @@ export default function BoardPassPage() {
     } else {
       setSessionMissed(prev => [...prev, q]);
       trackEvent('answer_incorrect');
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) {
-        const { error } = await supabase.from('opportunity_flashcards').upsert({
-          user_id: user.id,
-          topic: q.topic,
-          question_text: q.question,
-          correct_answer: q.correctAnswer,
-          rationale: q.rationale,
-          memory_hook: q.memoryHook,
-          board_trap: q.boardTrap,
-          mastery_level: 0,
-          subject: q.subject
-        });
-        if (error) console.error('Vault save error:', error);
-      }
+      // Save to the Vault in the background. Showing the rationale must never
+      // wait on this network call — if it stalls or fails, the user would be
+      // stuck on the question with their answer already recorded.
+      (async () => {
+        try {
+          const { data: { user } } = await supabase.auth.getUser();
+          if (user) {
+            const { error } = await supabase.from('opportunity_flashcards').upsert({
+              user_id: user.id,
+              topic: q.topic,
+              question_text: q.question,
+              correct_answer: q.correctAnswer,
+              rationale: q.rationale,
+              memory_hook: q.memoryHook,
+              board_trap: q.boardTrap,
+              mastery_level: 0,
+              subject: q.subject
+            });
+            if (error) console.error('Vault save error:', error);
+          }
+        } catch (err) {
+          console.error('Vault save error:', err);
+        }
+      })();
     }
     const isEffectivelyActive = (status: string | null, endDate: string | null) =>
       status === 'active' || (endDate != null && new Date(endDate) > new Date());
