@@ -5,7 +5,9 @@ const config: CapacitorConfig = {
   appName: 'RDH Rising',
   webDir: 'public',
   server: {
-    url: 'https://elevainta.vercel.app'
+    url: 'https://elevainta.vercel.app',
+    // Bundled page (in webDir) shown when the live site can't load, e.g. offline
+    errorPath: 'offline.html'
   }
 };
 

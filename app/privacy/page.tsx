@@ -7,7 +7,7 @@ export default function PrivacyPage() {
       {/* Page Header */}
       <div style={{ borderBottom: `1px solid ${gold}`, padding: '48px 24px 36px', textAlign: 'center' }}>
         <p style={{ fontSize: '0.7rem', letterSpacing: '3px', color: dim, marginBottom: 12, textTransform: 'uppercase' }}>
-          Elevanta Inc
+          Elevainta, Inc.
         </p>
         <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: '2rem', fontWeight: 700, color: '#FFFFFF', marginBottom: 12, letterSpacing: '1px' }}>
           Privacy Policy
@@ -21,14 +21,14 @@ export default function PrivacyPage() {
       <div style={{ maxWidth: 760, margin: '0 auto', padding: '48px 24px 80px' }}>
 
         <Section title="1. Overview" gold={gold}>
-          Elevanta Inc operates Coach Elevé, an NBDHE board preparation platform. This Privacy Policy explains how we collect, use, store, and protect your personal information when you use our Service.
+          Elevainta, Inc. operates RDH Rising, an NBDHE board preparation platform. This Privacy Policy explains how we collect, use, store, and protect your personal information when you use our Service.
         </Section>
 
         <Section title="2. Information We Collect" gold={gold}>
           We collect the following categories of information:
           <ul style={{ marginTop: 12, paddingLeft: 20, lineHeight: '2' }}>
             <li><strong style={{ color: gold }}>Account Information</strong> — Name, email address, and password.</li>
-            <li><strong style={{ color: gold }}>Payment Information</strong> — Processed and stored securely by Stripe. Elevanta Inc does not store raw card data.</li>
+            <li><strong style={{ color: gold }}>Payment Information</strong> — Processed and stored securely by our payment processors: Apple (App Store), Google (Google Play), RevenueCat, and Stripe. Elevainta, Inc. does not store raw card data.</li>
             <li><strong style={{ color: gold }}>Study Activity</strong> — Questions answered, scores, weak areas, and session history.</li>
             <li><strong style={{ color: gold }}>Subscription Status</strong> — Your current plan and billing period.</li>
             <li><strong style={{ color: gold }}>Technical Information</strong> — Device type, browser, IP address, and access timestamps.</li>
@@ -38,9 +38,9 @@ export default function PrivacyPage() {
         <Section title="3. How We Use Your Information" gold={gold}>
           We use the information we collect to:
           <ul style={{ marginTop: 12, paddingLeft: 20, lineHeight: '2' }}>
-            <li>Provide and operate the Coach Elevé platform.</li>
+            <li>Provide and operate the RDH Rising platform.</li>
             <li>Personalize your study experience and surface weak areas.</li>
-            <li>Process subscription payments through Stripe.</li>
+            <li>Process subscription payments through Apple, Google, RevenueCat, and Stripe.</li>
             <li>Send transactional emails such as receipts and account notifications.</li>
             <li>Respond to support requests and inquiries.</li>
             <li>Analyze aggregate usage patterns to improve the Service.</li>
@@ -49,13 +49,16 @@ export default function PrivacyPage() {
         </Section>
 
         <Section title="4. Data Storage" gold={gold}>
-          Your data is stored on Supabase infrastructure with encryption at rest and in transit. Payment data is handled exclusively by Stripe and is subject to Stripe's Privacy Policy. Elevanta Inc does not store raw payment card information on its servers.
+          Your data is stored on Supabase infrastructure with encryption at rest and in transit. Payment data is handled by Apple, Google, RevenueCat, and Stripe and is subject to their respective privacy policies. Elevainta, Inc. does not store raw payment card information on its servers.
         </Section>
 
         <Section title="5. Data Sharing" gold={gold}>
           We do not sell your personal data. We share your information only with the following service providers, each bound by confidentiality obligations:
           <ul style={{ marginTop: 12, paddingLeft: 20, lineHeight: '2' }}>
-            <li><strong style={{ color: gold }}>Stripe</strong> — Payment processing.</li>
+            <li><strong style={{ color: gold }}>Apple</strong> — Payment processing for App Store purchases.</li>
+            <li><strong style={{ color: gold }}>Google</strong> — Payment processing for Google Play purchases.</li>
+            <li><strong style={{ color: gold }}>RevenueCat</strong> — In-app subscription management for App Store and Google Play purchases.</li>
+            <li><strong style={{ color: gold }}>Stripe</strong> — Payment processing for website purchases.</li>
             <li><strong style={{ color: gold }}>Supabase</strong> — Database and authentication infrastructure.</li>
             <li><strong style={{ color: gold }}>Vercel</strong> — Application hosting and delivery.</li>
             <li>Other confidential service providers as necessary to operate the platform.</li>
@@ -78,7 +81,7 @@ export default function PrivacyPage() {
         </Section>
 
         <Section title="8. Children's Privacy" gold={gold}>
-          Coach Elevé is not intended for individuals under the age of 18. We do not knowingly collect personal information from anyone under 18. If we become aware that a minor has provided us with personal data, we will delete it promptly.
+          RDH Rising is not intended for individuals under the age of 18. We do not knowingly collect personal information from anyone under 18. If we become aware that a minor has provided us with personal data, we will delete it promptly.
         </Section>
 
         <Section title="9. Cookies" gold={gold}>
@@ -86,7 +89,7 @@ export default function PrivacyPage() {
         </Section>
 
         <Section title="10. California Privacy Rights (CCPA)" gold={gold}>
-          If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA). Elevanta Inc does not sell personal information as defined under the CCPA. To submit a privacy request, email <EmailLink email="support@elevainta.com" gold={gold} />.
+          If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA). Elevainta, Inc. does not sell personal information as defined under the CCPA. To submit a privacy request, email <EmailLink email="support@elevainta.com" gold={gold} />.
         </Section>
 
         <Section title="11. Changes to This Policy" gold={gold}>
@@ -138,7 +141,7 @@ function LegalFooter({ gold, current }: { gold: string; current: string }) {
           support@elevainta.com
         </a>
       </div>
-      <p style={{ fontSize: '0.75rem', color: '#5A5040' }}>© 2026 Elevanta Inc. All rights reserved.</p>
+      <p style={{ fontSize: '0.75rem', color: '#5A5040' }}>© 2026 Elevainta, Inc. All rights reserved.</p>
     </div>
   )
 }

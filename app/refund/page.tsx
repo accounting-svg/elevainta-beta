@@ -7,7 +7,7 @@ export default function RefundPage() {
       {/* Page Header */}
       <div style={{ borderBottom: `1px solid ${gold}`, padding: '48px 24px 36px', textAlign: 'center' }}>
         <p style={{ fontSize: '0.7rem', letterSpacing: '3px', color: dim, marginBottom: 12, textTransform: 'uppercase' }}>
-          Elevanta Inc
+          Elevainta, Inc.
         </p>
         <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: '2rem', fontWeight: 700, color: '#FFFFFF', marginBottom: 12, letterSpacing: '1px' }}>
           Refund &amp; Cancellation Policy
@@ -20,8 +20,23 @@ export default function RefundPage() {
       {/* Content */}
       <div style={{ maxWidth: 760, margin: '0 auto', padding: '48px 24px 80px' }}>
 
+        {/* App Store / Google Play purchases — highlighted box */}
+        <div style={{ border: `1px solid ${gold}`, borderRadius: 4, padding: '28px 28px', marginBottom: 40 }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', color: gold, fontWeight: 600, marginBottom: 12, letterSpacing: '0.5px' }}>
+            App Store &amp; Google Play Purchases
+          </h2>
+          <div style={{ fontSize: '0.95rem', lineHeight: '1.8', color: '#C8BEA8' }}>
+            <p style={{ marginBottom: 12 }}>
+              Purchases made through the Apple App Store or Google Play are billed, renewed, canceled, and refunded by Apple or Google under their terms. To cancel or request a refund for these purchases, use your App Store or Google Play account settings.
+            </p>
+            <p style={{ marginBottom: 0 }}>
+              The cancellation, refund, and plan change terms below apply to purchases made on our website.
+            </p>
+          </div>
+        </div>
+
         <Section title="1. Subscription Cancellation" gold={gold}>
-          You may cancel your Coach Elevé subscription at any time. Upon cancellation:
+          You may cancel your RDH Rising subscription at any time. Upon cancellation:
           <ul style={{ marginTop: 12, paddingLeft: 20, lineHeight: '2' }}>
             <li>Access to paid features continues through the end of your current billing period.</li>
             <li>Your study history and account data are preserved and accessible if you resubscribe.</li>
@@ -49,7 +64,7 @@ export default function RefundPage() {
               The Fail-Free Guarantee is <strong style={{ color: '#FFFFFF' }}>not a refund</strong>. It is a service extension offered as a commitment to your success.
             </p>
             <p style={{ marginBottom: 12 }}>
-              If you are an active paid subscriber and you fail the NBDHE examination, you are eligible to receive <strong style={{ color: gold }}>2 additional months of Coach Elevé access at no charge</strong>.
+              If you are an active paid subscriber and you fail the NBDHE examination, you are eligible to receive <strong style={{ color: gold }}>2 additional months of RDH Rising access at no charge</strong>.
             </p>
             <p style={{ marginBottom: 0 }}>
               For full eligibility requirements, submission instructions, and conditions, see{' '}
@@ -59,7 +74,7 @@ export default function RefundPage() {
         </div>
 
         <Section title="4. Free Tier" gold={gold}>
-          The free tier of Coach Elevé involves no payment and is not subject to this Refund and Cancellation Policy.
+          The free tier of RDH Rising involves no payment and is not subject to this Refund and Cancellation Policy.
         </Section>
 
         <Section title="5. Plan Changes" gold={gold}>
@@ -114,7 +129,7 @@ function LegalFooter({ gold, current }: { gold: string; current: string }) {
           support@elevainta.com
         </a>
       </div>
-      <p style={{ fontSize: '0.75rem', color: '#5A5040' }}>© 2026 Elevanta Inc. All rights reserved.</p>
+      <p style={{ fontSize: '0.75rem', color: '#5A5040' }}>© 2026 Elevainta, Inc. All rights reserved.</p>
     </div>
   )
 }

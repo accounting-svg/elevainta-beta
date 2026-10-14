@@ -7,7 +7,7 @@ export default function SupportPage() {
       {/* Page Header */}
       <div style={{ borderBottom: `1px solid ${gold}`, padding: '48px 24px 36px', textAlign: 'center' }}>
         <p style={{ fontSize: '0.7rem', letterSpacing: '3px', color: dim, marginBottom: 12, textTransform: 'uppercase' }}>
-          Elevanta Inc
+          Elevainta, Inc.
         </p>
         <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: '2rem', fontWeight: 700, color: '#FFFFFF', marginBottom: 12, letterSpacing: '1px' }}>
           Support
@@ -32,6 +32,16 @@ export default function SupportPage() {
           </p>
         </div>
 
+        {/* App Store / Google Play purchases */}
+        <div style={{ marginBottom: 40 }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', color: gold, fontWeight: 600, marginBottom: 12, letterSpacing: '0.5px' }}>
+            App Store &amp; Google Play Purchases
+          </h2>
+          <p style={{ fontSize: '0.95rem', lineHeight: '1.8', color: '#C8BEA8' }}>
+            Purchases made through the Apple App Store or Google Play are billed, renewed, canceled, and refunded by Apple or Google under their terms. To cancel or request a refund for these purchases, use your App Store or Google Play account settings.
+          </p>
+        </div>
+
         {/* Fail-Free Guarantee — gold border box */}
         <div style={{ border: `1px solid ${gold}`, borderRadius: 4, padding: '28px', marginBottom: 40 }}>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', color: gold, fontWeight: 600, marginBottom: 12, letterSpacing: '0.5px' }}>
@@ -53,7 +63,7 @@ export default function SupportPage() {
 
           <FAQ
             question="How do I cancel my subscription?"
-            answer="Log into your account, go to settings, and select Cancel Subscription. Your access continues until the end of your billing period."
+            answer="If you subscribed through the App Store or Google Play, manage or cancel your subscription in your App Store or Google Play account settings. If you subscribed on our website, use Manage Subscription in the app. Your access continues until the end of your billing period."
             gold={gold}
           />
           <FAQ
@@ -68,14 +78,15 @@ export default function SupportPage() {
           />
           <FAQ
             question="How do I upgrade my plan?"
-            answer="Log into your account and go to settings to view and change your subscription plan."
+            answer="If you subscribed through the App Store or Google Play, manage your subscription in your App Store or Google Play account settings. If you subscribed on our website, use Manage Subscription in the app."
             gold={gold}
           />
           <FAQ
             question="I was charged after cancelling. What do I do?"
             answer={
               <>
-                Email{' '}
+                For App Store or Google Play purchases, request a refund through your App Store or Google Play account settings.
+                {' '}For purchases made on our website, email{' '}
                 <a href="mailto:support@elevainta.com" style={{ color: gold, textDecoration: 'underline' }}>support@elevainta.com</a>
                 {' '}within 7 days of the charge with your account email and the charge date.
               </>
@@ -112,7 +123,7 @@ function LegalFooter({ gold }: { gold: string }) {
         <a href="/refund" style={{ color: gold, textDecoration: 'none', fontSize: '0.85rem', letterSpacing: '0.5px' }}>Refund Policy</a>
         <a href="mailto:support@elevainta.com" style={{ color: gold, textDecoration: 'none', fontSize: '0.85rem', letterSpacing: '0.5px' }}>support@elevainta.com</a>
       </div>
-      <p style={{ fontSize: '0.75rem', color: '#5A5040' }}>© 2026 Elevanta Inc. All rights reserved.</p>
+      <p style={{ fontSize: '0.75rem', color: '#5A5040' }}>© 2026 Elevainta, Inc. All rights reserved.</p>
     </div>
   )
 }

@@ -227,7 +227,11 @@ export default function SuccessPage() {
           color: '#999',
           marginTop: 12,
         }}>
-          Cancel anytime from your account settings
+          {!Capacitor.isNativePlatform()
+            ? 'Cancel anytime from your account settings'
+            : Capacitor.getPlatform() === 'ios'
+              ? 'Manage or cancel anytime in your App Store settings'
+              : 'Manage or cancel anytime in your Google Play settings'}
         </p>
       </div>
     </main>

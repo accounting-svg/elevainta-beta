@@ -7,7 +7,7 @@ export default function TermsPage() {
       {/* Page Header */}
       <div style={{ borderBottom: `1px solid ${gold}`, padding: '48px 24px 36px', textAlign: 'center' }}>
         <p style={{ fontSize: '0.7rem', letterSpacing: '3px', color: dim, marginBottom: 12, textTransform: 'uppercase' }}>
-          Elevanta Inc
+          Elevainta, Inc.
         </p>
         <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: '2rem', fontWeight: 700, color: '#FFFFFF', marginBottom: 12, letterSpacing: '1px' }}>
           Terms of Service
@@ -21,11 +21,11 @@ export default function TermsPage() {
       <div style={{ maxWidth: 760, margin: '0 auto', padding: '48px 24px 80px' }}>
 
         <Section title="1. Acceptance of Terms" gold={gold}>
-          By accessing or using Coach Elevé, you agree to be bound by these Terms of Service. Coach Elevé is a product of Elevanta Inc. If you do not agree to these terms, you may not use the platform.
+          By accessing or using RDH Rising, you agree to be bound by these Terms of Service. RDH Rising is a product of Elevainta, Inc. If you do not agree to these terms, you may not use the platform.
         </Section>
 
         <Section title="2. Description of Service" gold={gold}>
-          Coach Elevé is a National Board Dental Hygiene Examination (NBDHE) board preparation platform. The platform provides practice questions, weak area tracking, and flashcard tools to assist candidates preparing for the NBDHE.
+          RDH Rising is a National Board Dental Hygiene Examination (NBDHE) board preparation platform. The platform provides practice questions, weak area tracking, and flashcard tools to assist candidates preparing for the NBDHE.
         </Section>
 
         <Section title="3. Eligibility" gold={gold}>
@@ -37,12 +37,10 @@ export default function TermsPage() {
         </Section>
 
         <Section title="5. Subscription Plans" gold={gold}>
-          Coach Elevé offers the following plans:
+          RDH Rising offers the following plans:
           <ul style={{ marginTop: 12, paddingLeft: 20, lineHeight: '2' }}>
             <li><strong style={{ color: gold }}>Free</strong> — Access to 50 practice questions, no credit card required.</li>
-            <li><strong style={{ color: gold }}>Student Mode</strong> — $19.99/month. Full question bank access with study tracking.</li>
-            <li><strong style={{ color: gold }}>Board Prep Only</strong> — $49.00/month. Focused NBDHE preparation features.</li>
-            <li><strong style={{ color: gold }}>Full Access Bundle</strong> — $59.99/month. Complete access to all platform features.</li>
+            <li><strong style={{ color: gold }}>Paid Subscription</strong> — Current prices are shown at the time of purchase.</li>
           </ul>
           Prices are in USD and subject to change with notice. Subscriptions renew automatically unless cancelled.
         </Section>
@@ -50,7 +48,7 @@ export default function TermsPage() {
         <Section title="6. Fail-Free Guarantee" gold={gold}>
           An active paid subscriber who fails the NBDHE examination may request two (2) months of complimentary service extension under the following conditions:
           <ul style={{ marginTop: 12, paddingLeft: 20, lineHeight: '2' }}>
-            <li>The subscriber must submit an official NBDHE score report to Elevanta Inc within 30 days of the examination date.</li>
+            <li>The subscriber must submit an official NBDHE score report to Elevainta, Inc. within 30 days of the examination date.</li>
             <li>The guarantee is limited to one (1) use per account.</li>
             <li>The subscriber must be on an active paid plan at the time of the examination.</li>
           </ul>
@@ -58,12 +56,15 @@ export default function TermsPage() {
         </Section>
 
         <Section title="7. Refund Policy" gold={gold}>
-          All subscription payments are non-refundable except in cases of verifiable billing errors. If you believe a billing error has occurred, contact <EmailLink email="support@elevainta.com" gold={gold} /> within 7 days of the charge. See our{' '}
+          <p style={{ margin: '0 0 12px' }}>
+            Purchases made through the Apple App Store or Google Play are billed, renewed, canceled, and refunded by Apple or Google under their terms. To cancel or request a refund for these purchases, use your App Store or Google Play account settings.
+          </p>
+          For purchases made on our website: all subscription payments are non-refundable except in cases of verifiable billing errors. If you believe a billing error has occurred, contact <EmailLink email="support@elevainta.com" gold={gold} /> within 7 days of the charge. See our{' '}
           <a href="/refund" style={{ color: gold, textDecoration: 'underline' }}>Refund and Cancellation Policy</a> for full details.
         </Section>
 
         <Section title="8. Intellectual Property" gold={gold}>
-          All content on Coach Elevé, including but not limited to practice questions, rationales, graphics, and software, is owned by Elevanta Inc and protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works from any content without prior written permission.
+          All content on RDH Rising, including but not limited to practice questions, rationales, graphics, and software, is owned by Elevainta, Inc. and protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works from any content without prior written permission.
         </Section>
 
         <Section title="9. Acceptable Use" gold={gold}>
@@ -76,19 +77,19 @@ export default function TermsPage() {
         </Section>
 
         <Section title="10. Disclaimer of Warranties" gold={gold}>
-          The Service is provided "as is" and "as available" without warranties of any kind, either express or implied. Elevanta Inc does not guarantee that use of the platform will result in passing the NBDHE or any other examination.
+          The Service is provided "as is" and "as available" without warranties of any kind, either express or implied. Elevainta, Inc. does not guarantee that use of the platform will result in passing the NBDHE or any other examination.
         </Section>
 
         <Section title="11. Limitation of Liability" gold={gold}>
-          To the fullest extent permitted by law, Elevanta Inc shall not be liable for any indirect, incidental, special, or consequential damages arising out of your use of the Service. Elevanta Inc's total liability to you for any claim shall not exceed the total amount you paid in the three (3) months preceding the claim.
+          To the fullest extent permitted by law, Elevainta, Inc. shall not be liable for any indirect, incidental, special, or consequential damages arising out of your use of the Service. Elevainta, Inc.'s total liability to you for any claim shall not exceed the total amount you paid in the three (3) months preceding the claim.
         </Section>
 
         <Section title="12. Changes to Terms" gold={gold}>
-          Elevanta Inc reserves the right to modify these Terms at any time. We will notify you of material changes via email or an in-app notice. Continued use of the Service after notice constitutes acceptance of the updated Terms.
+          Elevainta, Inc. reserves the right to modify these Terms at any time. We will notify you of material changes via email or an in-app notice. Continued use of the Service after notice constitutes acceptance of the updated Terms.
         </Section>
 
         <Section title="13. Governing Law" gold={gold}>
-          These Terms are governed by the laws of the state in which Elevanta Inc is incorporated, without regard to conflict of law principles.
+          These Terms are governed by the laws of the state in which Elevainta, Inc. is incorporated, without regard to conflict of law principles.
         </Section>
 
         <Section title="14. Contact" gold={gold}>
@@ -136,7 +137,7 @@ function LegalFooter({ gold, current }: { gold: string; current: string }) {
           support@elevainta.com
         </a>
       </div>
-      <p style={{ fontSize: '0.75rem', color: '#5A5040' }}>© 2026 Elevanta Inc. All rights reserved.</p>
+      <p style={{ fontSize: '0.75rem', color: '#5A5040' }}>© 2026 Elevainta, Inc. All rights reserved.</p>
     </div>
   )
 }

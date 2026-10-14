@@ -4,6 +4,8 @@ import { redirect } from 'next/navigation'
 import SubscribeButton from './SubscribeButton'
 import RestorePurchasesButton from './RestorePurchasesButton'
 import PriceDisplay from './PriceDisplay'
+import SubscriptionDisclosure from './SubscriptionDisclosure'
+import UpgradeLegalNotes from './UpgradeLegalNotes'
 import TrackPageView from './TrackPageView'
 
 const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/aFabIUfj292T0VnaxEeAg00'
@@ -124,21 +126,9 @@ export default async function UpgradePage() {
         {/* CTA Button */}
         <SubscribeButton stripeUrl={stripeUrl} userId={user.id} />
         <RestorePurchasesButton />
+        <SubscriptionDisclosure />
 
-        <p style={{ textAlign: 'center', fontSize: '0.75rem', color: '#999', marginTop: 12, lineHeight: 1.6 }}>
-          By subscribing, you agree to our{' '}
-          <a href="/terms" style={{ color: '#C9A84C', textDecoration: 'none' }}>Terms of Service</a> and{' '}
-          <a href="/refund" style={{ color: '#C9A84C', textDecoration: 'none' }}>Refund Policy</a>.
-        </p>
-
-        <p style={{
-          textAlign: 'center',
-          fontSize: '0.8rem',
-          color: '#999',
-          marginTop: 12,
-        }}>
-          Cancel anytime from your account
-        </p>
+        <UpgradeLegalNotes />
       </div>
     </main>
   )

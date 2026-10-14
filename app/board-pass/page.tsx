@@ -8,6 +8,7 @@ import { Capacitor } from '@capacitor/core'
 import { useBackButtonOverride } from '../lib/backButton'
 import { trackEvent } from '../lib/trackEvent'
 import RestorePurchasesButton from '../upgrade/RestorePurchasesButton'
+import SubscriptionDisclosure from '../upgrade/SubscriptionDisclosure'
 import { useStorePrice } from '../lib/useStorePrice'
 import { primaryButton, secondaryButton, dangerButton } from '../lib/buttonStyles'
 
@@ -524,7 +525,7 @@ export default function BoardPassPage() {
               fontSize: '0.85rem',
               letterSpacing: '0.5px',
             }}>
-              Your subscription is managed through your web account.
+              Your subscription is active.
             </p>
           ) : (
             <button
@@ -737,6 +738,7 @@ export default function BoardPassPage() {
           </a>
           <div style={{ marginBottom: 16 }}>
             <RestorePurchasesButton onRestored={handleRestored} />
+            <SubscriptionDisclosure />
           </div>
           <button
             onClick={() => setSubject(null)}
