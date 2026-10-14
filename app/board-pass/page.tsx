@@ -422,7 +422,7 @@ export default function BoardPassPage() {
       <img src="/rdh-rising-logo.png" alt="RDH Rising" style={{ width: 36, height: 36, borderRadius: '50%', border: '1px solid #C5A46D', objectFit: 'contain', backgroundColor: '#C9A84C', padding: 4, boxSizing: 'border-box', flexShrink: 0 }} />
       <div style={{ flex: 1 }}>
         <p style={{ color: '#C5A46D', fontWeight: 700, fontSize: '0.82rem', letterSpacing: '0.4px', marginBottom: 2 }}>
-          Add Coach Elevé to your home screen
+          Add RDH Rising to your home screen
         </p>
         <p style={{ color: '#aaa', fontSize: '0.75rem', lineHeight: 1.4 }}>
           {isIOS
@@ -448,7 +448,7 @@ export default function BoardPassPage() {
   if (!subject) {
     return (
       <main style={{ maxWidth: 600, margin: '40px auto', textAlign: 'center', padding: '0 20px' }}>
-        <h1 style={{ color: '#C5A46D', fontSize: '3.5rem' }}>Coach Elevé</h1>
+        <h1 style={{ color: '#C5A46D', fontSize: '3.5rem' }}>RDH Rising</h1>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginTop: '30px' }}>
 
           {/* 1. MAIN START */}

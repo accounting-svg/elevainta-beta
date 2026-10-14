@@ -89,7 +89,7 @@ export default function LoginPage() {
           letterSpacing: '1px',
           marginBottom: 28,
         }}>
-          COACH ELEVÉ
+          RDH RISING
         </p>
 
         <label style={{ display: 'block', fontSize: '0.75rem', letterSpacing: '1px', color: '#555', marginBottom: 4 }}>

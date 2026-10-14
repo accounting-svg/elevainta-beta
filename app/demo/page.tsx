@@ -225,7 +225,7 @@ window.speechSynthesis.speak(listenSpeech);
     <div style={{ maxWidth: 600, margin: '40px auto', textAlign: 'center' }}>
       {view === 'home' && (
         <main style={{ maxWidth: 600, margin: '40px auto', textAlign: 'center' }}>
-          <h1 style={{ color: '#C5A46D', fontSize: '3.5rem' }}>Coach Elevé</h1>
+          <h1 style={{ color: '#C5A46D', fontSize: '3.5rem' }}>RDH Rising</h1>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', marginTop: '30px' }}>
               
